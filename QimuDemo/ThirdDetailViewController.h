@@ -7,7 +7,18 @@
 //
 
 #import "BaseViewController.h"
+#import "ThirdFootView.h"
+#import "ThirdHeaderView.h"
 
-@interface ThirdDetailViewController : BaseViewController
+
+@interface ThirdDetailViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,backActionDelegate,headerViewDelegate>
+
+@property (nonatomic ,strong) UITableView *detailTableView;
+
+@property (nonatomic ,strong) ThirdHeaderView *headerView;
+@property (nonatomic ,strong) ThirdFootView *footView;
+
+@property (nonatomic ,strong) NSDictionary *myDataDic;
+@property (nonatomic ,strong) NSArray *myDataArr;
 
 @end

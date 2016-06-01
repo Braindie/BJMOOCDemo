@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdHeaderView : UIView
+@protocol headerViewDelegate <NSObject>
+
+- (void)openOtherViewCtrl;
+
+@end
+
+@interface ThirdHeaderView : UIView{
+
+    
+}
+
+@property (nonatomic ,assign) id<headerViewDelegate> delegate;
+
+
+
 
 @end

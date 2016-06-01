@@ -1,6 +1,6 @@
  [
   {
-  "Type": “精选”,
+  "Type": "精选",
   "Symptoms": [
                {
                "Food_Name": "炒饭",
@@ -9,16 +9,10 @@
                {
                "Food_Name": "炒面",
                },
-               {
-               "Food_Name": "焖面",
-               },
-               {
-               "Food_Name": "凉面",
-               }
                ]
   },
   {
-  "Type": “最新”,
+  "Type": "最新",
   "Symptoms": [
                {
                "Food_Name": "面包",
@@ -35,7 +29,7 @@
                ]
   },
   {
-  "Type": “最热”,
+  "Type": "最热",
   "Symptoms": [
                {
                "Food_Name": "湘菜",
@@ -54,7 +48,7 @@
                ]
   },
   {
-  "Type": “专区”,
+  "Type": "专区",
   "Symptoms": [
                {
                "Food_Name": "烤箱食谱",

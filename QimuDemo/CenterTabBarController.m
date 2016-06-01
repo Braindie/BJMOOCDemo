@@ -1,8 +1,8 @@
 //
 //  CenterTabBarController.m
-//  Weibo
+//  Demo
 //
-//  Created by wxhl on 15-6-6.
+//  Created by zwj on 15-6-6.
 //  Copyright (c) 2015年 Braindie. All rights reserved.
 //
 
@@ -10,10 +10,13 @@
 #import "BaseNavigationController.h"
 
 #import "HomeViewController.h"
-#import "MessageViewController.h"
-#import "ProfileViewController.h"
-#import "DiscoverViewController.h"
-#import "MoreViewController.h"
+#import "SecondViewCtrl.h"
+#import "ThirdViewCtroller.h"
+#import "FourthViewCtrl.h"
+//#import "MessageViewController.h"
+//#import "ProfileViewController.h"
+//#import "DiscoverViewController.h"
+//#import "MoreViewController.h"
 
 #import "AppDelegate.h"
 
@@ -35,56 +38,58 @@
       //自定义标签栏
       [self _initCustomTabBarView];
       
-      //创建多线程
-      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            //创建定时器
-            [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(timeAction:) userInfo:nil repeats:YES];
-            //保持多线程活跃状态
-            [[NSRunLoop currentRunLoop] run];
-      });
+//      //创建多线程
+//      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            //创建定时器
+//            [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(timeAction:) userInfo:nil repeats:YES];
+//            //保持多线程活跃状态
+//            [[NSRunLoop currentRunLoop] run];
+//      });
 }
 
 - (void)timeAction:(NSTimer *)timer{
       
       //如果首页由于网络问题没有实现数据就不需要实现未读消息提示了
       //获取首页所在的导航控制器对象
-      BaseNavigationController *homeNavCtrl = [self.viewControllers firstObject];
+//      BaseNavigationController *homeNavCtrl = [self.viewControllers firstObject];
       //获取首页视图控制器
-      HomeViewController *homeVC = [homeNavCtrl.viewControllers firstObject];
-      if (homeVC.dataList.count == 0) {
-            return;
-      }
-      
+//      HomeViewController *homeVC = [homeNavCtrl.viewControllers firstObject];
+//      if (homeVC.dataList.count == 0) {
+//            return;
+//      }
+
       NSLog(@"------");
       
-      //开始做网络请求
-      if (_unReadCountService == nil) {
-            //创建未读消息网络请求
-            _unReadCountService = [[UnReadCountService alloc] initWithApiUrl:@"2/remind/unread_count.json"];
-            _unReadCountService.httpMethod = @"GET";
-      }
-      //设置参数
-      AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-      _unReadCountService.wb_token = appDelegate.wb_token;
-      _unReadCountService.uid = [appDelegate.wb_userId longLongValue];
-      //开始网络请求
-      
-      [_unReadCountService requestWeiboFinishBlock:^(id result) {
-            // 获取当前用户的未读微博数
-            int status = [result[@"status"] intValue];
-            if (status >= 1) {
-                  // 显示微博未读数视图
-                  [self loadUnReadWeiboCountViewWithWeiboCount:status];
-            } else {
-                  // 隐藏微博未读数视图
-                  _unReadCountView.hidden = YES;
-            }
-            
-      } failureBlock:^(NSError *error) {
-            
-      }];
+//      //开始做网络请求
+//      if (_unReadCountService == nil) {
+//            //创建未读消息网络请求
+//            _unReadCountService = [[UnReadCountService alloc] initWithApiUrl:@"2/remind/unread_count.json"];
+//            _unReadCountService.httpMethod = @"GET";
+//      }
+//      //设置参数
+//      AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//      _unReadCountService.wb_token = appDelegate.wb_token;
+//      _unReadCountService.uid = [appDelegate.wb_userId longLongValue];
+//      //开始网络请求
+//      
+//      [_unReadCountService requestWeiboFinishBlock:^(id result) {
+//            // 获取当前用户的未读微博数
+//            int status = [result[@"status"] intValue];
+//            if (status >= 1) {
+//                  // 显示微博未读数视图
+//                  [self loadUnReadWeiboCountViewWithWeiboCount:status];
+//            } else {
+//                  // 隐藏微博未读数视图
+//                  _unReadCountView.hidden = YES;
+//            }
+//            
+//      } failureBlock:^(NSError *error) {
+//            
+//      }];
 }
 
+
+/*
 #pragma mark - 未读微博提示视图
 - (void)loadUnReadWeiboCountViewWithWeiboCount:(NSInteger)count
 {
@@ -112,16 +117,17 @@
       _unReadCountView.hidden = NO;
       
 }
-
+*/
 
 
 // 2.自定义标签栏
 - (void)_initCustomTabBarView
 {
       self.tabBar.hidden = YES;
-      
+
       // 1.创建自定义标签栏
-      _tabbarView = [ThemeControl creatThemeImageViewWithImageName:@"mask_navbar.png" frame:CGRectMake(0, kScreenHeight - 49, kScreenWidth, 49)];
+      _tabbarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-49, self.view.frame.size.width, 49)];
+      [_tabbarView setImage:[UIImage imageNamed:@"5.31.03.png"]];
       _tabbarView.backgroundColor = [UIColor clearColor];
       // 开启事件
       _tabbarView.userInteractionEnabled = YES;
@@ -131,15 +137,19 @@
       
 
       // 2.创建标签控制器的选项按钮
-      NSArray *imageNames = @[@"home_tab_icon_1.png",
-                              @"home_tab_icon_2.png",
-                              @"home_tab_icon_3.png",
-                              @"home_tab_icon_4.png",
-                              @"home_tab_icon_5.png"];
-      float itemWith = kScreenWidth / imageNames.count;
+      NSArray *imageNames = @[@"class_0.png",
+                              @"xuexi_0.png",
+                              @"zixun_0.png",
+                              @"class_0.png",
+                              @"xuexi_0.png"];
+      float itemWith = self.view.frame.size.width / imageNames.count;
       for (int i = 0; i < imageNames.count; i++) {
             // 创建选项按钮
-            UIButton *item = [ThemeControl createThemeButtonWithTitleImageName:imageNames[i] bgImageName:nil frame:CGRectMake(i * itemWith, 0, itemWith, 49)];
+//            UIButton *item = [ThemeControl createThemeButtonWithTitleImageName:imageNames[i] bgImageName:nil frame:CGRectMake(i * itemWith, 0, itemWith, 49)];
+//          UIButton *item  = [[UIButton alloc] initWithFrame:CGRectMake(i * itemWith, 0, itemWith, 49)];
+          UIButton *item = [UIButton buttonWithType:UIButtonTypeCustom];
+          item.frame = CGRectMake(i * itemWith, 0, itemWith, 49);
+          [item setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
             // 设置tag
             item.tag = i;
       
@@ -150,8 +160,9 @@
             // 如果当前创建的是第一个选项按钮
             if (i == 0) {
                   // 创建选中按钮的背景图片
-                  _selectedImageView = [ThemeControl creatThemeImageViewWithImageName:@"home_bottom_tab_arrow.png" frame:CGRectMake(0, 0, 64, 45)];
-            
+                _selectedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 45)];
+
+                _selectedImageView.backgroundColor = [UIColor orangeColor];
                   // 设置图片
                   [_tabbarView insertSubview:_selectedImageView atIndex:0];
                   // 设置选中按钮的位置
@@ -163,20 +174,20 @@
 // 初始化子视图控制器
 - (void)_initViews
 {
-      // 1.创建首页视图控制器
+      // 1.创建
       HomeViewController *homeVC = [[HomeViewController alloc] init];
       
-      // 2.创建消息
-      MessageViewController *messageVC = [[MessageViewController alloc] init];
+      // 2.创建
+      SecondViewCtrl *messageVC = [[SecondViewCtrl alloc] init];
       
-      // 3.创建个人中心
-      ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+      // 3.创建
+      ThirdViewCtroller *profileVC = [[ThirdViewCtroller alloc] init];
       
-      // 4.创建广场
-      DiscoverViewController *discoverVC = [[DiscoverViewController alloc] init];
+      // 4.创建
+      FourthViewCtrl *discoverVC = [[FourthViewCtrl alloc] init];
       
-      // 5.创建更多
-      MoreViewController *moreVC = [[MoreViewController alloc] init];
+      // 5.创建
+      UIViewController *moreVC = [[UIViewController alloc] init];
       
       // 6.创建所有控制器集合的数组
       NSArray *viewCtrls = @[homeVC,messageVC,profileVC,discoverVC,moreVC];
@@ -190,7 +201,7 @@
             // 添加到数组中
             [baseNavs addObject:baseNav];
       }
-      
+
       // 8.把所有的导航控制器给标签控制器
       self.viewControllers = baseNavs;
 }
@@ -206,9 +217,6 @@
       }];
 }
 
-
-
-
 #pragma mark - UINavigationControllerDelegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
@@ -221,19 +229,10 @@
       }
 }
 
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
-
-
 
 /*
 #pragma mark - Navigation

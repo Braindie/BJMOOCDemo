@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface UITopBarView : UIView
+
+@property (nonatomic, strong) UILabel *label;
+
+- (void)updateData;
 
 @end

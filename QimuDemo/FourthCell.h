@@ -10,4 +10,9 @@
 
 @interface FourthCell : UITableViewCell
 
+
+@property (nonatomic, strong) UILabel *label;
+
+@property (nonatomic, strong) NSDictionary *dictionary;
+
 @end

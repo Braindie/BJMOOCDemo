@@ -8,6 +8,13 @@
 
 #import "BaseViewController.h"
 
-@interface FourthViewCtrl : BaseViewController
+@interface FourthViewCtrl : BaseViewController<UITableViewDataSource,UITableViewDelegate>{
+
+
+}
+
+@property (nonatomic, strong) NSArray *myDataArr;
+
+@property (nonatomic, strong) UITableView *fourthTableView;
 
 @end

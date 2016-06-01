@@ -1,9 +1,9 @@
 //
-//  BaseNavigationController.m
-//  WXWeibo
+//  CenterTabBarController.m
+//  Demo
 //
-//  Created by 朱思明 on 15/6/6.
-//  Copyright (c) 2015年 朱思明. All rights reserved.
+//  Created by zwj on 15-6-6.
+//  Copyright (c) 2015年 Braindie. All rights reserved.
 //
 
 #import "BaseNavigationController.h"
@@ -19,7 +19,7 @@
       self = [super initWithRootViewController:rootViewController];
       if (self) {
             //注册通知
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeNameChanged:) name:kThemeNotification object:nil];
+//            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeNameChanged:) name:kThemeNotification object:nil];
       }
       
       return self;
@@ -29,8 +29,8 @@
 - (void)dealloc{
       
       //移除通知
-      [[NSNotificationCenter defaultCenter] removeObserver:self name:kThemeNotification object:nil];
-      
+//      [[NSNotificationCenter defaultCenter] removeObserver:self name:kThemeNotification object:nil];
+
 }
 
 
@@ -50,14 +50,16 @@
 #pragma mark - 主题切换通知事件
 - (void)themeNameChanged:(NSNotification *)notif{
       
-      //设置导航栏背景图片
-      UIImage *image = [[ThemeManager shareThemeManager] getThemeImageWithImageName:@"mask_titlebar.png"];
-      CGImageRef endImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(10, 0, kScreenWidth, 64));
+//      设置导航栏背景图片
+//      UIImage *image = [[ThemeManager shareThemeManager] getThemeImageWithImageName:@"mask_titlebar.png"];
+    UIImage *image = [UIImage imageNamed:@"5.31.03.png"];
+
+
+      CGImageRef endImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(10, 0, self.view.frame.size.width, 64));
       
       image = [UIImage imageWithCGImage:endImageRef];
       [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-      
-      //释放cf类库的对象
+//      释放cf类库的对象
       CFRelease(endImageRef);
 }
 

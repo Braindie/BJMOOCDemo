@@ -1,9 +1,9 @@
 //
-//  BaseViewController.h
-//  WXWeibo
+//  CenterTabBarController.m
+//  Demo
 //
-//  Created by 朱思明 on 15/6/6.
-//  Copyright (c) 2015年 朱思明. All rights reserved.
+//  Created by zwj on 15-6-6.
+//  Copyright (c) 2015年 Braindie. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

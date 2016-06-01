@@ -10,4 +10,12 @@
 
 @interface HomeSectionHeaderView : UICollectionReusableView
 
+
+@property (nonatomic, strong) UIButton *moreButton;
+@property (nonatomic, strong) UIButton *titleButton;
+
+
+
+- (void)moreBtnClicked:(id)sender;
+
 @end

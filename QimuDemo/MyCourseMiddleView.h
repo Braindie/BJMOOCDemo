@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyCourseMiddleView : UIView
+@protocol delegate <NSObject>
+
+- (void)presentCommentView;
+
+@end
+
+@interface MyCourseMiddleView : UIView<UITextFieldDelegate>
+
+@property (nonatomic ,strong) UILabel *commentLable;
+//@property (nonatomic ,strong) UITextField *myTextField;
+
+@property (nonatomic ,assign) id<delegate> delegate;
+
+@property (nonatomic ,strong) UIButton *myTextField;
 
 @end

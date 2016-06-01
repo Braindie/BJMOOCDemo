@@ -10,4 +10,18 @@
 
 @interface CommentCell : UITableViewCell
 
+@property (nonatomic ,strong) UILabel *nameLabel;
+@property (nonatomic ,strong) UILabel *contentLabel;
+@property (nonatomic ,strong) UILabel *dataLabel;
+
+@property (nonatomic ,strong) UIButton *supportSumBtn;
+
+//@property (nonatomic ,copy) NSString *btnString;
+
+
+//@property (nonatomic, strong) UIImageView *supportImage;
+
+@property (nonatomic, strong) UIImageView *lineImage;
+
+
 @end

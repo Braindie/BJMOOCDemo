@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdFootView : UIView
+@protocol backActionDelegate <NSObject>
+
+- (void)backUp;
+- (void)commentAction;
+
+@end
+
+@interface ThirdFootView : UIView{
+    
+}
+
+@property (nonatomic, assign) id<backActionDelegate> backDelegate;
+
+
+
+
+
 
 @end

@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface MyCommentViewController : BaseViewController
+@interface MyCommentViewController : BaseViewController<UITextViewDelegate>
 
 @end

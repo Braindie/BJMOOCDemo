@@ -8,6 +8,18 @@
 
 #import "BaseViewController.h"
 
-@interface MyCourseDetailController : BaseViewController
+@interface MyCourseDetailController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+{
+
+
+}
+
+
+@property (nonatomic ,strong) NSDictionary *myDataDic;
+@property (nonatomic ,strong) NSArray *myDataArr;
+@property (nonatomic ,strong) NSArray *myCommentArr;
+
+@property (nonatomic ,strong) UITableView *myDetailTableView;
+
 
 @end

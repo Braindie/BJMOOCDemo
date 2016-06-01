@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "CenterTabBarController.h"
+#import "GuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor blackColor];
+    [_window makeKeyAndVisible];
+
+
+      NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/isFirst.plist"];
+
+      NSDictionary *isFirstdic = [NSDictionary dictionaryWithContentsOfFile:filePath];
+      BOOL isFirst = [[isFirstdic objectForKey:@"isFirst"] boolValue];
+      if (!isFirst) {
+
+            self.window.rootViewController = [[GuideViewController alloc] init];
+      }else{
+
+            self.window.rootViewController = [[CenterTabBarController alloc] init];
+      }
+
+        NSDictionary *dic = @{@"isFirst":@YES};
+      [dic writeToFile:filePath atomically:YES];
+
+
+
+//    //4.创建菜单视图控制器
+//    CenterTabBarController *menuVC = [[CenterTabBarController alloc] init];
+//    self.window.rootViewController = menuVC;
+
+
+
+
+
+
+
+
+
+
+
     return YES;
 }
 

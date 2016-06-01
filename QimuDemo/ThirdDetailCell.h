@@ -10,4 +10,12 @@
 
 @interface ThirdDetailCell : UITableViewCell
 
+@property (nonatomic,copy) NSString * CellType;
+
+
+@property (nonatomic ,strong) UILabel *folderTitleLabel;
+@property (nonatomic ,strong) UIImageView *stateImage;
+@property (nonatomic, strong) UILabel *titleLabel;
+-(void) UpdateRtLabel;
+
 @end
