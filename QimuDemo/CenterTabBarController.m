@@ -13,6 +13,7 @@
 #import "SecondViewCtrl.h"
 #import "ThirdViewCtroller.h"
 #import "FourthViewCtrl.h"
+#import "FiveViewCtrl.h"
 //#import "MessageViewController.h"
 //#import "ProfileViewController.h"
 //#import "DiscoverViewController.h"
@@ -187,7 +188,7 @@
       FourthViewCtrl *discoverVC = [[FourthViewCtrl alloc] init];
       
       // 5.创建
-      UIViewController *moreVC = [[UIViewController alloc] init];
+      FiveViewCtrl *moreVC = [[FiveViewCtrl alloc] init];
       
       // 6.创建所有控制器集合的数组
       NSArray *viewCtrls = @[homeVC,messageVC,profileVC,discoverVC,moreVC];
