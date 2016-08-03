@@ -448,9 +448,7 @@
 		E593FF871D2A40D60082F356 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FF771D2A40D60082F356 /* UIView+WebCacheOperation.m */; };
 		E593FF8F1D2A412A0082F356 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FF8A1D2A412A0082F356 /* PhotoModel.m */; };
 		E593FF901D2A412A0082F356 /* PhotoSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FF8C1D2A412A0082F356 /* PhotoSelectView.m */; };
-		E593FF911D2A412A0082F356 /* PhotoSelectViewCtrlDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FF8E1D2A412A0082F356 /* PhotoSelectViewCtrlDemo.m */; };
 		E593FF951D2A60FE0082F356 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FF941D2A60FE0082F356 /* FiveViewCtrl.m */; };
-		E593FFB81D2A650F0082F356 /* APNumberPad.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E593FF971D2A650F0082F356 /* APNumberPad.bundle */; };
 		E593FFB91D2A650F0082F356 /* btn_clear_input_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E593FF981D2A650F0082F356 /* btn_clear_input_normal.png */; };
 		E593FFBA1D2A650F0082F356 /* btn_clear_input_normal_hui.png in Resources */ = {isa = PBXBuildFile; fileRef = E593FF991D2A650F0082F356 /* btn_clear_input_normal_hui.png */; };
 		E593FFBB1D2A650F0082F356 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = E593FF9A1D2A650F0082F356 /* checked.png */; };
@@ -1009,11 +1007,8 @@
 		E593FF8A1D2A412A0082F356 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
 		E593FF8B1D2A412A0082F356 /* PhotoSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSelectView.h; sourceTree = "<group>"; };
 		E593FF8C1D2A412A0082F356 /* PhotoSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectView.m; sourceTree = "<group>"; };
-		E593FF8D1D2A412A0082F356 /* PhotoSelectViewCtrlDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSelectViewCtrlDemo.h; sourceTree = "<group>"; };
-		E593FF8E1D2A412A0082F356 /* PhotoSelectViewCtrlDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectViewCtrlDemo.m; sourceTree = "<group>"; };
 		E593FF931D2A60FE0082F356 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
 		E593FF941D2A60FE0082F356 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
-		E593FF971D2A650F0082F356 /* APNumberPad.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = APNumberPad.bundle; sourceTree = "<group>"; };
 		E593FF981D2A650F0082F356 /* btn_clear_input_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_clear_input_normal.png; sourceTree = "<group>"; };
 		E593FF991D2A650F0082F356 /* btn_clear_input_normal_hui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_clear_input_normal_hui.png; sourceTree = "<group>"; };
 		E593FF9A1D2A650F0082F356 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
@@ -1739,9 +1734,9 @@
 			children = (
 				E593FEF21D2A3FD90082F356 /* Utils */,
 				E593FEFA1D2A3FD90082F356 /* ZLCamera */,
-				E593FF031D2A3FD90082F356 /* ZLPhoto.h */,
 				E593FF041D2A3FD90082F356 /* ZLPhotoBrowser */,
 				E593FF181D2A3FD90082F356 /* ZLPhotoPicker */,
+				E593FF031D2A3FD90082F356 /* ZLPhoto.h */,
 				E593FF341D2A3FD90082F356 /* ZLPhotoPickerCommon.h */,
 			);
 			path = ZLPhotoLib;
@@ -1957,8 +1952,6 @@
 				E593FF8A1D2A412A0082F356 /* PhotoModel.m */,
 				E593FF8B1D2A412A0082F356 /* PhotoSelectView.h */,
 				E593FF8C1D2A412A0082F356 /* PhotoSelectView.m */,
-				E593FF8D1D2A412A0082F356 /* PhotoSelectViewCtrlDemo.h */,
-				E593FF8E1D2A412A0082F356 /* PhotoSelectViewCtrlDemo.m */,
 			);
 			path = PhotoSelect;
 			sourceTree = "<group>";
@@ -1975,7 +1968,6 @@
 		E593FF961D2A650F0082F356 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				E593FF971D2A650F0082F356 /* APNumberPad.bundle */,
 				E593FF981D2A650F0082F356 /* btn_clear_input_normal.png */,
 				E593FF991D2A650F0082F356 /* btn_clear_input_normal_hui.png */,
 				E593FF9A1D2A650F0082F356 /* checked.png */,
@@ -2092,7 +2084,6 @@
 				787D86CA1C0EEA1200DC473D /* 0login_1_06.png in Resources */,
 				787D86D01C0EEA1200DC473D /* ScreenImage.png in Resources */,
 				787D87591C0EEA1200DC473D /* Icon-60.png in Resources */,
-				E593FFB81D2A650F0082F356 /* APNumberPad.bundle in Resources */,
 				787D87571C0EEA1200DC473D /* voice.png in Resources */,
 				787D87441C0EEA1200DC473D /* video_directory0.png in Resources */,
 				787D870C1C0EEA1200DC473D /* icon5.png in Resources */,
@@ -2563,7 +2554,6 @@
 				788A93821C3375B5005F2E13 /* MyCourseDetailController.m in Sources */,
 				78F9AFE81C1AC0BE00A58594 /* SMPageControl.m in Sources */,
 				E593FF8F1D2A412A0082F356 /* PhotoModel.m in Sources */,
-				E593FF911D2A412A0082F356 /* PhotoSelectViewCtrlDemo.m in Sources */,
 				78F6B4751C1818AA00A1248F /* UITopBarView.m in Sources */,
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E593FF381D2A3FD90082F356 /* ZLCameraImageView.m in Sources */,

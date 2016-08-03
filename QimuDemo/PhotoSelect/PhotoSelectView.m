@@ -19,6 +19,7 @@
 @interface PhotoSelectView () <ZLPhotoPickerBrowserViewControllerDataSource,ZLPhotoPickerBrowserViewControllerDelegate,UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSMutableArray *imageList ;//当前显示的图片列表
+
 @property (nonatomic, assign) NSInteger wSpace ;//水平空白
 @property (nonatomic, assign) NSInteger hSpace ;//垂直空白
 @property (nonatomic, assign) NSInteger imageWidth ;//缩略图宽度
@@ -52,9 +53,9 @@
 -(void) initParams{
     self.backgroundColor = [UIColor whiteColor];
     self.imageList = [NSMutableArray array];
-    self.maxImageNum = 9;
+    self.maxImageNum = 5;
     self.rows = 1;
-    self.columns = 3; //默认三列
+    self.columns = 5; //默认五列
     self.wSpace = 10;
     self.hSpace = 10;
     self.imageWidth = 100;
@@ -180,13 +181,13 @@
             btn.tag = i;
             [btn addTarget:self action:@selector(onClickImage:) forControlEvents:UIControlEventTouchUpInside];
             
-            if (!self.isOnlyPreview) {//添加删除图片按钮
-                UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.imageWidth-20, 0,20,20)] ;
-                [deleteBtn setImage:[UIImage imageNamed:@"zl_X"] forState:UIControlStateNormal];
-                deleteBtn.tag = 1234 + i ;
-                [deleteBtn addTarget:self action:@selector(onClickDeleteLabel:) forControlEvents:UIControlEventTouchUpInside] ;
-                [contentView addSubview:deleteBtn];
-            }
+//            if (!self.isOnlyPreview) {//添加删除图片按钮
+//                UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.imageWidth-20, 0,20,20)] ;
+//                [deleteBtn setImage:[UIImage imageNamed:@"zl_X"] forState:UIControlStateNormal];
+//                deleteBtn.tag = 1234 + i ;
+//                [deleteBtn addTarget:self action:@selector(onClickDeleteLabel:) forControlEvents:UIControlEventTouchUpInside] ;
+//                [contentView addSubview:deleteBtn];
+//            }
             
         }
         
@@ -202,18 +203,18 @@
 
 
 
-#pragma mark - 添加图片事件
+#pragma mark - 点击“+”添加图片
 - (void)onClickAddBtn {
     UIActionSheet *myActionSheet = [[UIActionSheet alloc]initWithTitle:nil
                                                               delegate:self
                                                      cancelButtonTitle:@"取消"
                                                 destructiveButtonTitle:nil
-                                                     otherButtonTitles:@"打开照相机",@"从手机相册获取",nil];
+                                                     otherButtonTitles:@"拍照",@"从手机相册选择",nil];
     
     [myActionSheet showInView:[UIApplication sharedApplication].keyWindow];
 }
 
-#pragma mark - 添加图片对话框ActionSheet Delegate
+//添加图片对话框ActionSheet Delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex)
@@ -226,6 +227,7 @@
             break;
     }
 }
+
 //打开相机
 - (void)openCamera{
     ZLCameraViewController *cameraVc = [[ZLCameraViewController alloc] init];
@@ -255,7 +257,6 @@
 
 
 #pragma mark - 浏览图片事件
-
 - (void)onClickImage:(UIButton *)btn{
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:btn.tag inSection:0];
     // 图片游览器

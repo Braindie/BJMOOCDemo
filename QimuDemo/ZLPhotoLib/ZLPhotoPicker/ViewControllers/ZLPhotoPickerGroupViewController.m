@@ -54,7 +54,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"选择相册";
+    self.title = @"";
 
     // 设置按钮
     [self setupButtons];
