@@ -402,6 +402,16 @@
 		78F6B4641C18034E00A1248F /* UINavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B4631C18034E00A1248F /* UINavBarView.m */; };
 		78F6B4751C1818AA00A1248F /* UITopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F6B4741C1818AA00A1248F /* UITopBarView.m */; };
 		78F9AFE81C1AC0BE00A58594 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F9AFE71C1AC0BE00A58594 /* SMPageControl.m */; };
+		E533E0471D6ADDBE000A148D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E03C1D6ADDBE000A148D /* FMDatabase.m */; };
+		E533E0481D6ADDBE000A148D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E03E1D6ADDBE000A148D /* FMDatabaseAdditions.m */; };
+		E533E0491D6ADDBE000A148D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E0401D6ADDBE000A148D /* FMDatabasePool.m */; };
+		E533E04A1D6ADDBE000A148D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E0421D6ADDBE000A148D /* FMDatabaseQueue.m */; };
+		E533E04B1D6ADDBE000A148D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E0451D6ADDBE000A148D /* FMResultSet.m */; };
+		E533E04C1D6ADDBE000A148D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E533E0461D6ADDBE000A148D /* Info.plist */; };
+		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
+		E533E0521D6AE000000A148D /* ZDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E0511D6AE000000A148D /* ZDBModel.m */; };
+		E533E0551D6AE3EA000A148D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E0541D6AE3EA000A148D /* UserModel.m */; };
+		E533E0581D6AE7BF000A148D /* ZDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E533E0571D6AE7BF000A148D /* ZDBHelper.m */; };
 		E593FF351D2A3FD90082F356 /* UIImage+ZLPhotoLib.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FEF51D2A3FD90082F356 /* UIImage+ZLPhotoLib.m */; };
 		E593FF361D2A3FD90082F356 /* UIView+ZLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FEF71D2A3FD90082F356 /* UIView+ZLExtension.m */; };
 		E593FF371D2A3FD90082F356 /* ZLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E593FEFC1D2A3FD90082F356 /* ZLCamera.m */; };
@@ -912,6 +922,25 @@
 		78F9AFE61C1AC0BE00A58594 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		78F9AFE71C1AC0BE00A58594 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		D7751DBBC36D19D48003C570 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E533E03B1D6ADDBE000A148D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		E533E03C1D6ADDBE000A148D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		E533E03D1D6ADDBE000A148D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		E533E03E1D6ADDBE000A148D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E533E03F1D6ADDBE000A148D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		E533E0401D6ADDBE000A148D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		E533E0411D6ADDBE000A148D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		E533E0421D6ADDBE000A148D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		E533E0431D6ADDBE000A148D /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		E533E0441D6ADDBE000A148D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		E533E0451D6ADDBE000A148D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		E533E0461D6ADDBE000A148D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E533E0501D6AE000000A148D /* ZDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBModel.h; sourceTree = "<group>"; };
+		E533E0511D6AE000000A148D /* ZDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBModel.m; sourceTree = "<group>"; };
+		E533E0531D6AE3EA000A148D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		E533E0541D6AE3EA000A148D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		E533E0561D6AE7BF000A148D /* ZDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBHelper.h; sourceTree = "<group>"; };
+		E533E0571D6AE7BF000A148D /* ZDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBHelper.m; sourceTree = "<group>"; };
 		E593FEF41D2A3FD90082F356 /* UIImage+ZLPhotoLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZLPhotoLib.h"; sourceTree = "<group>"; };
 		E593FEF51D2A3FD90082F356 /* UIImage+ZLPhotoLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZLPhotoLib.m"; sourceTree = "<group>"; };
 		E593FEF61D2A3FD90082F356 /* UIView+ZLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZLExtension.h"; sourceTree = "<group>"; };
@@ -1048,6 +1077,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */,
 				379101C8DB87F4F11A288833 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,6 +1096,7 @@
 				78F6B4741C1818AA00A1248F /* UITopBarView.m */,
 				78F6B45F1C17FDA100A1248F /* MyTableViewCell.h */,
 				78F6B4601C17FDA100A1248F /* MyTableViewCell.m */,
+				788A937C1C337500005F2E13 /* 详情 */,
 			);
 			name = "第二页";
 			sourceTree = "<group>";
@@ -1131,6 +1162,8 @@
 		787D84491C0EC08100DC473D /* QimuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E533E04F1D6ADFE3000A148D /* ZDBModel */,
+				E533E03A1D6ADDBE000A148D /* fmdb */,
 				E593FF881D2A412A0082F356 /* PhotoSelect */,
 				E593FF561D2A40D60082F356 /* SDWebImage */,
 				E593FF4F1D2A409B0082F356 /* DACircularProgress */,
@@ -1655,7 +1688,6 @@
 				788A93771C33737E005F2E13 /* FourthViewCtrl.m */,
 				788A93791C3373AF005F2E13 /* FourthCell.h */,
 				788A937A1C3373AF005F2E13 /* FourthCell.m */,
-				788A937C1C337500005F2E13 /* 详情 */,
 			);
 			name = "第四页";
 			sourceTree = "<group>";
@@ -1715,6 +1747,7 @@
 		93DAFFD63881AFA0C44E21DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */,
 				D7751DBBC36D19D48003C570 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -1727,6 +1760,38 @@
 				2E567C074CC87CF1971DFD55 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E533E03A1D6ADDBE000A148D /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				E533E03B1D6ADDBE000A148D /* FMDatabase.h */,
+				E533E03C1D6ADDBE000A148D /* FMDatabase.m */,
+				E533E03D1D6ADDBE000A148D /* FMDatabaseAdditions.h */,
+				E533E03E1D6ADDBE000A148D /* FMDatabaseAdditions.m */,
+				E533E03F1D6ADDBE000A148D /* FMDatabasePool.h */,
+				E533E0401D6ADDBE000A148D /* FMDatabasePool.m */,
+				E533E0411D6ADDBE000A148D /* FMDatabaseQueue.h */,
+				E533E0421D6ADDBE000A148D /* FMDatabaseQueue.m */,
+				E533E0431D6ADDBE000A148D /* FMDB.h */,
+				E533E0441D6ADDBE000A148D /* FMResultSet.h */,
+				E533E0451D6ADDBE000A148D /* FMResultSet.m */,
+				E533E0461D6ADDBE000A148D /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		E533E04F1D6ADFE3000A148D /* ZDBModel */ = {
+			isa = PBXGroup;
+			children = (
+				E533E0501D6AE000000A148D /* ZDBModel.h */,
+				E533E0511D6AE000000A148D /* ZDBModel.m */,
+				E533E0561D6AE7BF000A148D /* ZDBHelper.h */,
+				E533E0571D6AE7BF000A148D /* ZDBHelper.m */,
+				E533E0531D6AE3EA000A148D /* UserModel.h */,
+				E533E0541D6AE3EA000A148D /* UserModel.m */,
+			);
+			path = ZDBModel;
 			sourceTree = "<group>";
 		};
 		E593FEF11D2A3FD90082F356 /* ZLPhotoLib */ = {
@@ -2176,6 +2241,7 @@
 				787D871D1C0EEA1200DC473D /* icon7.png in Resources */,
 				787D87921C0EEA1200DC473D /* center_bg.png in Resources */,
 				787D87761C0EEA1200DC473D /* voice.png in Resources */,
+				E533E04C1D6ADDBE000A148D /* Info.plist in Resources */,
 				787D86711C0EEA1200DC473D /* starxiao_k.png in Resources */,
 				787D866D1C0EEA1200DC473D /* star_gb_.png in Resources */,
 				787D872A1C0EEA1200DC473D /* hudong_1@3x.png in Resources */,
@@ -2531,6 +2597,7 @@
 				787D84861C0EDF4E00DC473D /* BaseNavigationController.m in Sources */,
 				E593FF411D2A3FD90082F356 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				787274C21C1FE53100EDE82F /* ThirdFootView.m in Sources */,
+				E533E0551D6AE3EA000A148D /* UserModel.m in Sources */,
 				E593FF811D2A40D60082F356 /* UIButton+WebCache.m in Sources */,
 				E593FF7E1D2A40D60082F356 /* SDWebImageDownloaderOperation.m in Sources */,
 				E593FF471D2A3FD90082F356 /* ZLPhotoPickerAssetsViewController.m in Sources */,
@@ -2546,17 +2613,20 @@
 				787D847D1C0EDB9D00DC473D /* CenterTabBarController.m in Sources */,
 				789CE6E31C16C4E100F52AEF /* HomeSectionHeaderView.m in Sources */,
 				787274C51C20063A00EDE82F /* CommentViewCtrl.m in Sources */,
+				E533E0481D6ADDBE000A148D /* FMDatabaseAdditions.m in Sources */,
 				E593FF421D2A3FD90082F356 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				7877D85A1C0FD332004A0521 /* HomeViewCell.m in Sources */,
 				E593FF871D2A40D60082F356 /* UIView+WebCacheOperation.m in Sources */,
 				E593FF3C1D2A3FD90082F356 /* ZLPhotoRect.m in Sources */,
 				78A391D71C213451004A51DD /* CommentCell.m in Sources */,
 				788A93821C3375B5005F2E13 /* MyCourseDetailController.m in Sources */,
+				E533E04B1D6ADDBE000A148D /* FMResultSet.m in Sources */,
 				78F9AFE81C1AC0BE00A58594 /* SMPageControl.m in Sources */,
 				E593FF8F1D2A412A0082F356 /* PhotoModel.m in Sources */,
 				78F6B4751C1818AA00A1248F /* UITopBarView.m in Sources */,
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E593FF381D2A3FD90082F356 /* ZLCameraImageView.m in Sources */,
+				E533E0581D6AE7BF000A148D /* ZDBHelper.m in Sources */,
 				E593FF791D2A40D60082F356 /* NSData+ImageContentType.m in Sources */,
 				E593FF861D2A40D60082F356 /* UIImageView+WebCache.m in Sources */,
 				787274BF1C1FE42700EDE82F /* ThirdDetailCell.m in Sources */,
@@ -2586,12 +2656,16 @@
 				787274BC1C1FE30B00EDE82F /* ThirdHeaderView.m in Sources */,
 				788A93851C337854005F2E13 /* MyCourseHeaderView.m in Sources */,
 				787274B61C1FBBB300EDE82F /* ThirdDetailViewController.m in Sources */,
+				E533E0471D6ADDBE000A148D /* FMDatabase.m in Sources */,
 				E593FF7C1D2A40D60082F356 /* SDWebImageDecoder.m in Sources */,
+				E533E04A1D6ADDBE000A148D /* FMDatabaseQueue.m in Sources */,
 				E593FF551D2A409B0082F356 /* DALabeledCircularProgressView.m in Sources */,
 				E593FF3B1D2A3FD90082F356 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E593FF441D2A3FD90082F356 /* ZLPhotoPickerDatas.m in Sources */,
 				789B64FA1C3E454000CD8A4E /* GuideViewController.m in Sources */,
 				E593FF7A1D2A40D60082F356 /* SDImageCache.m in Sources */,
+				E533E0521D6AE000000A148D /* ZDBModel.m in Sources */,
+				E533E0491D6ADDBE000A148D /* FMDatabasePool.m in Sources */,
 				E593FF801D2A40D60082F356 /* SDWebImagePrefetcher.m in Sources */,
 				E593FF7D1D2A40D60082F356 /* SDWebImageDownloader.m in Sources */,
 				E593FF841D2A40D60082F356 /* UIImage+WebP.m in Sources */,

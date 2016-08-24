@@ -10,6 +10,8 @@
 #import "FourthCell.h"
 #import "MyCourseDetailController.h"
 
+#import "UserModel.h"
+
 static NSString *identifer = @"tableViewCell";
 
 
@@ -129,8 +131,23 @@ static NSString *identifer = @"tableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    MyCourseDetailController *myCourseDetailViewCtrl = [[MyCourseDetailController alloc] init];
-    [self.navigationController pushViewController:myCourseDetailViewCtrl animated:NO];
+//    MyCourseDetailController *myCourseDetailViewCtrl = [[MyCourseDetailController alloc] init];
+//    [self.navigationController pushViewController:myCourseDetailViewCtrl animated:NO];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i < 100; i++) {
+            UserModel *userModel = [[UserModel alloc] init];
+//            userModel.name = [NSString stringWithFormat:@"张%d",i];
+//            userModel.sex = @"男";
+//            userModel.mobile = [NSString stringWithFormat:@"110-%d",i];
+            userModel.pk = i;
+            [array addObject:userModel];
+        }
+        //批量保存数据
+        [UserModel deleteObjects:array];
+//        [UserModel saveObjects:array];
+    });
     
 }
 

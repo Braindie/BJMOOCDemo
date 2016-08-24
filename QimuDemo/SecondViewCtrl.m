@@ -8,6 +8,7 @@
 
 #import "SecondViewCtrl.h"
 #import "MyTableViewCell.h"
+#import "MyCourseDetailController.h"
 
 #define SCREEN_WIDTH                    ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT                   ([UIScreen mainScreen].bounds.size.height)
@@ -220,6 +221,11 @@
 
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MyCourseDetailController *myCourseDetailViewCtrl = [[MyCourseDetailController alloc] init];
+    [self.navigationController pushViewController:myCourseDetailViewCtrl animated:NO];
+}
 
 
 #pragma mark - UITableViewDelegate
