@@ -1,0 +1,71 @@
+ [
+  {
+  "Type": "精选",
+  "Symptoms": [
+               {
+               "Food_Name": "炒饭",
+               "Picture":"Picture"
+               },
+               {
+               "Food_Name": "炒面",
+               },
+               ]
+  },
+  {
+  "Type": "最新",
+  "Symptoms": [
+               {
+               "Food_Name": "面包",
+               },
+               {
+               "Food_Name": "饼干",
+               },
+               {
+               "Food_Name": "戚风蛋糕",
+               },
+               {
+               "Food_Name": "泡芙",
+               }
+               ]
+  },
+  {
+  "Type": "最热",
+  "Symptoms": [
+               {
+               "Food_Name": "湘菜",
+               },
+               {
+               "Food_Name": "粤菜",
+               },
+               {
+               "Food_Name": "鲁菜",
+               "Picture":"Picture"
+               },
+               {
+               "Food_Name": "东北菜",
+               "Picture":"Picture"
+               },
+               ]
+  },
+  {
+  "Type": "专区",
+  "Symptoms": [
+               {
+               "Food_Name": "烤箱食谱",
+               "Picture":"Picture"
+               },
+               {
+               "Food_Name": "面包机食谱",
+               "Picture":"Picture"
+               },
+               {
+               "Food_Name": "电饭煲美食",
+               "Picture":"Picture"
+               },
+               {
+               "Food_Name": "豆浆机食谱",
+               "Picture":"Picture"
+               }
+               ]
+  }
+  ]
