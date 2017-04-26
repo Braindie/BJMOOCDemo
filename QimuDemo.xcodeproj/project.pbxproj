@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		379101C8DB87F4F11A288833 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7751DBBC36D19D48003C570 /* libPods.a */; };
+		2D9D078FE6CACFB6EB4D537B /* libPods-QimuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 663F7F912F2E5BE1FB55A012 /* libPods-QimuDemo.a */; };
 		787274AD1C1FB56100EDE82F /* ThirdViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 787274AC1C1FB56100EDE82F /* ThirdViewCtroller.m */; };
 		787274B61C1FBBB300EDE82F /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 787274B51C1FBBB300EDE82F /* ThirdDetailViewController.m */; };
 		787274B91C1FBF1100EDE82F /* ThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 787274B81C1FBF1100EDE82F /* ThirdCell.m */; };
@@ -482,7 +482,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E567C074CC87CF1971DFD55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		15E917B695E9727DF7CCAAC7 /* Pods-QimuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.release.xcconfig"; sourceTree = "<group>"; };
+		663F7F912F2E5BE1FB55A012 /* libPods-QimuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QimuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		787274AB1C1FB56100EDE82F /* ThirdViewCtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCtroller.h; sourceTree = "<group>"; };
 		787274AC1C1FB56100EDE82F /* ThirdViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCtroller.m; sourceTree = "<group>"; };
 		787274B41C1FBBB300EDE82F /* ThirdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailViewController.h; sourceTree = "<group>"; };
@@ -899,7 +900,7 @@
 		78F6B4741C1818AA00A1248F /* UITopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopBarView.m; sourceTree = "<group>"; };
 		78F9AFE61C1AC0BE00A58594 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		78F9AFE71C1AC0BE00A58594 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
-		D7751DBBC36D19D48003C570 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E533E03B1D6ADDBE000A148D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		E533E03C1D6ADDBE000A148D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		E533E03D1D6ADDBE000A148D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1047,7 +1048,6 @@
 		E593FFB41D2A650F0082F356 /* zl_X@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zl_X@2x.png"; sourceTree = "<group>"; };
 		E593FFB51D2A650F0082F356 /* zl_X@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zl_X@3x.png"; sourceTree = "<group>"; };
 		E593FFB71D2A650F0082F356 /* ZLPhotoLib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZLPhotoLib.bundle; sourceTree = "<group>"; };
-		F1C9FD0B804D2E2E36BC4D23 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1056,7 +1056,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */,
-				379101C8DB87F4F11A288833 /* libPods.a in Frameworks */,
+				2D9D078FE6CACFB6EB4D537B /* libPods-QimuDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,8 +1124,8 @@
 			children = (
 				787D84491C0EC08100DC473D /* QimuDemo */,
 				787D84481C0EC08100DC473D /* Products */,
-				BADC2FBC6084E2F3A23E2D6B /* Pods */,
 				93DAFFD63881AFA0C44E21DB /* Frameworks */,
+				9C346E50D90A1DB3461D4183 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1707,16 +1707,16 @@
 			isa = PBXGroup;
 			children = (
 				E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */,
-				D7751DBBC36D19D48003C570 /* libPods.a */,
+				663F7F912F2E5BE1FB55A012 /* libPods-QimuDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BADC2FBC6084E2F3A23E2D6B /* Pods */ = {
+		9C346E50D90A1DB3461D4183 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F1C9FD0B804D2E2E36BC4D23 /* Pods.debug.xcconfig */,
-				2E567C074CC87CF1971DFD55 /* Pods.release.xcconfig */,
+				8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */,
+				15E917B695E9727DF7CCAAC7 /* Pods-QimuDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2042,12 +2042,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 787D845E1C0EC08100DC473D /* Build configuration list for PBXNativeTarget "QimuDemo" */;
 			buildPhases = (
-				52E7C472468BE5DB2C588BB6 /* Check Pods Manifest.lock */,
+				CA7E67EDFA4DA75391BD2A7B /* [CP] Check Pods Manifest.lock */,
 				787D84431C0EC08100DC473D /* Sources */,
 				787D84441C0EC08100DC473D /* Frameworks */,
 				787D84451C0EC08100DC473D /* Resources */,
-				4910CBF3F227317450E4E110 /* Embed Pods Frameworks */,
-				32C4341751951D7CDC4F79E8 /* Copy Pods Resources */,
+				A36FF6BBBFFB71754CF34B43 /* [CP] Embed Pods Frameworks */,
+				925C98BA36129A4CCC93DD5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2485,49 +2485,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32C4341751951D7CDC4F79E8 /* Copy Pods Resources */ = {
+		925C98BA36129A4CCC93DD5C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4910CBF3F227317450E4E110 /* Embed Pods Frameworks */ = {
+		A36FF6BBBFFB71754CF34B43 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52E7C472468BE5DB2C588BB6 /* Check Pods Manifest.lock */ = {
+		CA7E67EDFA4DA75391BD2A7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2731,7 +2731,7 @@
 		};
 		787D845F1C0EC08100DC473D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1C9FD0B804D2E2E36BC4D23 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2747,7 +2747,7 @@
 		};
 		787D84601C0EC08100DC473D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E567C074CC87CF1971DFD55 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 15E917B695E9727DF7CCAAC7 /* Pods-QimuDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
