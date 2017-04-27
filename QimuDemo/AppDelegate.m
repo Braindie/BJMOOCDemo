@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CenterTabBarController.h"
-#import "GuideViewController.h"
+//#import "GuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,13 +30,16 @@
 
       NSDictionary *isFirstdic = [NSDictionary dictionaryWithContentsOfFile:filePath];
       BOOL isFirst = [[isFirstdic objectForKey:@"isFirst"] boolValue];
-      if (!isFirst) {
+    
+    self.window.rootViewController = [[CenterTabBarController alloc] init];
 
-            self.window.rootViewController = [[GuideViewController alloc] init];
-      }else{
-
-            self.window.rootViewController = [[CenterTabBarController alloc] init];
-      }
+//      if (!isFirst) {
+//
+//            self.window.rootViewController = [[GuideViewController alloc] init];
+//      }else{
+//
+//            self.window.rootViewController = [[CenterTabBarController alloc] init];
+//      }
 
         NSDictionary *dic = @{@"isFirst":@YES};
       [dic writeToFile:filePath atomically:YES];
