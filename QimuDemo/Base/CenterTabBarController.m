@@ -40,33 +40,33 @@
 - (void)_initCustomTabBarView{
 
     
-    UINavigationController *mainPage = [self controllerWithBarTitle:@"first"
+    UINavigationController *mainPage = [self controllerWithBarTitle:@"First"
                                                         class:[HomeViewController class]
                                                 normalImgName:@"AccountYes"
                                               selectedImgName:@"AccountYes"
                                                           tag:1001];
     
-    UINavigationController *licai= [self controllerWithBarTitle: @"sec"
+    UINavigationController *licai= [self controllerWithBarTitle: @"Second"
                                                           class:[SecondViewCtrl class]
                                                   normalImgName:@"AccountYes"
                                                 selectedImgName:@"AccountYes"
                                                             tag:1002];
     
     
-    UINavigationController *community=[self controllerWithBarTitle: @"thir"
+    UINavigationController *community=[self controllerWithBarTitle: @"Third"
                                                              class:[ThirdViewCtroller class]
                                                      normalImgName:@"AccountYes"
                                                    selectedImgName:@"AccountYes"
                                                                tag:1003];
     
     
-    UINavigationController *wode =[self controllerWithBarTitle:@"four"
+    UINavigationController *wode =[self controllerWithBarTitle:@"Fourth"
                                                          class:[FourthViewCtrl class]
                                                  normalImgName:@"AccountYes"
                                                selectedImgName:@"AccountYes"
                                                            tag:1004];
     
-    UINavigationController *zhan =[self controllerWithBarTitle:@"five"
+    UINavigationController *zhan =[self controllerWithBarTitle:@"Fifth"
                                                          class:[FiveViewCtrl class]
                                                  normalImgName:@"AccountYes"
                                                selectedImgName:@"AccountYes"
@@ -100,8 +100,8 @@
     
     
     [item setTitlePositionAdjustment:UIOffsetMake(0, -3)];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor orangeColor]} forState:UIControlStateSelected];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateNormal];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
     [nav setTabBarItem:item];
     return nav;
 }

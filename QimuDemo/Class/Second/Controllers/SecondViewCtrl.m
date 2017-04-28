@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.isNavCtrlSet = YES;
-    self.navigationItem.title = @"学习";
+    self.navigationItem.title = @"视频";
 
 //    //加载数据
     [self loadTopData];

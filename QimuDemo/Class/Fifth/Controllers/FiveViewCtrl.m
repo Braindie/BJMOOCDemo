@@ -24,7 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.isNavCtrlSet = YES;
-    self.navigationItem.title = @"图片展示";
+    self.navigationItem.title = @"图片选择器";
 
     
     [self creatView];

@@ -22,7 +22,7 @@ static NSString *identifer = @"tableViewCell";
 
     self.isNavCtrlSet = YES;
 
-    self.navigationItem.title = @"学习";
+    self.navigationItem.title = @"直播";
 
 
     //    //加载数据
