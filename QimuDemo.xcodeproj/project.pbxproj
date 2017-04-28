@@ -436,7 +436,6 @@
 		E5A9E7131EB19D9B0072EA61 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E6F41EB19D9B0072EA61 /* ZLPhotoPickerFooterCollectionReusableView.m */; };
 		E5A9E7141EB19D9B0072EA61 /* ZLPhotoPickerGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E6F61EB19D9B0072EA61 /* ZLPhotoPickerGroupTableViewCell.m */; };
 		E5A9E7151EB19D9B0072EA61 /* ZLPhotoPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E6F81EB19D9B0072EA61 /* ZLPhotoPickerImageView.m */; };
-		E5A9E7891EB1A39D0072EA61 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7201EB1A39D0072EA61 /* FiveViewCtrl.m */; };
 		E5A9E78A1EB1A39D0072EA61 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7261EB1A39D0072EA61 /* HomeViewController.m */; };
 		E5A9E78B1EB1A39D0072EA61 /* HomeSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E72A1EB1A39D0072EA61 /* HomeSectionHeaderView.m */; };
 		E5A9E78C1EB1A39D0072EA61 /* HomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E72C1EB1A39D0072EA61 /* HomeViewCell.m */; };
@@ -451,23 +450,24 @@
 		E5A9E79E1EB1A39D0072EA61 /* MyCourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7581EB1A39D0072EA61 /* MyCourseHeaderView.m */; };
 		E5A9E79F1EB1A39D0072EA61 /* MyCourseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */; };
 		E5A9E7A01EB1A39D0072EA61 /* MyCourseMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E75C1EB1A39D0072EA61 /* MyCourseMiddleView.m */; };
-		E5A9E7A11EB1A39D0072EA61 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E75F1EB1A39D0072EA61 /* MyTableViewCell.m */; };
-		E5A9E7A21EB1A39D0072EA61 /* SecondViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7611EB1A39D0072EA61 /* SecondViewCtrl.m */; };
-		E5A9E7A31EB1A39D0072EA61 /* UINavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7631EB1A39D0072EA61 /* UINavBarView.m */; };
-		E5A9E7A41EB1A39D0072EA61 /* UITopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7651EB1A39D0072EA61 /* UITopBarView.m */; };
-		E5A9E7A51EB1A39D0072EA61 /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76A1EB1A39D0072EA61 /* ThirdDetailViewController.m */; };
 		E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */; };
 		E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */; };
 		E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */; };
 		E5A9E7A91EB1A39D0072EA61 /* IntroduceViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7731EB1A39D0072EA61 /* IntroduceViewCtrl.m */; };
 		E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E77F1EB1A39D0072EA61 /* ThirdCell.m */; };
-		E5A9E7AF1EB1A39D0072EA61 /* ThirdDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7811EB1A39D0072EA61 /* ThirdDetailCell.m */; };
 		E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */; };
 		E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7851EB1A39D0072EA61 /* ThirdHeaderView.m */; };
 		E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B41EB1A3DB0072EA61 /* BaseNavigationController.m */; };
 		E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */; };
 		E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */; };
-		E5A9E7C11EB1A6060072EA61 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7C01EB1A6060072EA61 /* CYLDBManager.m */; };
+		E5B7CC421EB2E325005378E1 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC411EB2E325005378E1 /* CYLDBManager.m */; };
+		E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */; };
+		E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */; };
+		E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC491EB2E62E005378E1 /* UINavBarView.m */; };
+		E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */; };
+		E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */; };
+		E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */; };
+		E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */; };
 		E5C5FC381EB228B9006E70FA /* AccountYes.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C5FC351EB228B9006E70FA /* AccountYes.png */; };
 		E5C5FC391EB228B9006E70FA /* AccountYes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C5FC361EB228B9006E70FA /* AccountYes@2x.png */; };
 		E5C5FC3A1EB228B9006E70FA /* AccountYes@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C5FC371EB228B9006E70FA /* AccountYes@3x.png */; };
@@ -958,8 +958,6 @@
 		E5A9E6F71EB19D9B0072EA61 /* ZLPhotoPickerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhotoPickerImageView.h; sourceTree = "<group>"; };
 		E5A9E6F81EB19D9B0072EA61 /* ZLPhotoPickerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPhotoPickerImageView.m; sourceTree = "<group>"; };
 		E5A9E6F91EB19D9B0072EA61 /* ZLPhotoPickerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhotoPickerCommon.h; sourceTree = "<group>"; };
-		E5A9E71F1EB1A39D0072EA61 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
-		E5A9E7201EB1A39D0072EA61 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
 		E5A9E7251EB1A39D0072EA61 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E5A9E7261EB1A39D0072EA61 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E5A9E7291EB1A39D0072EA61 /* HomeSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSectionHeaderView.h; sourceTree = "<group>"; };
@@ -988,16 +986,6 @@
 		E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseListCell.m; sourceTree = "<group>"; };
 		E5A9E75B1EB1A39D0072EA61 /* MyCourseMiddleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseMiddleView.h; sourceTree = "<group>"; };
 		E5A9E75C1EB1A39D0072EA61 /* MyCourseMiddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseMiddleView.m; sourceTree = "<group>"; };
-		E5A9E75E1EB1A39D0072EA61 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
-		E5A9E75F1EB1A39D0072EA61 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
-		E5A9E7601EB1A39D0072EA61 /* SecondViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewCtrl.h; sourceTree = "<group>"; };
-		E5A9E7611EB1A39D0072EA61 /* SecondViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewCtrl.m; sourceTree = "<group>"; };
-		E5A9E7621EB1A39D0072EA61 /* UINavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavBarView.h; sourceTree = "<group>"; };
-		E5A9E7631EB1A39D0072EA61 /* UINavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavBarView.m; sourceTree = "<group>"; };
-		E5A9E7641EB1A39D0072EA61 /* UITopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopBarView.h; sourceTree = "<group>"; };
-		E5A9E7651EB1A39D0072EA61 /* UITopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopBarView.m; sourceTree = "<group>"; };
-		E5A9E7691EB1A39D0072EA61 /* ThirdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailViewController.h; sourceTree = "<group>"; };
-		E5A9E76A1EB1A39D0072EA61 /* ThirdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailViewController.m; sourceTree = "<group>"; };
 		E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCtroller.h; sourceTree = "<group>"; };
 		E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCtroller.m; sourceTree = "<group>"; };
 		E5A9E76E1EB1A39D0072EA61 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
@@ -1008,8 +996,6 @@
 		E5A9E7731EB1A39D0072EA61 /* IntroduceViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewCtrl.m; sourceTree = "<group>"; };
 		E5A9E77E1EB1A39D0072EA61 /* ThirdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCell.h; sourceTree = "<group>"; };
 		E5A9E77F1EB1A39D0072EA61 /* ThirdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCell.m; sourceTree = "<group>"; };
-		E5A9E7801EB1A39D0072EA61 /* ThirdDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailCell.h; sourceTree = "<group>"; };
-		E5A9E7811EB1A39D0072EA61 /* ThirdDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailCell.m; sourceTree = "<group>"; };
 		E5A9E7821EB1A39D0072EA61 /* ThirdFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdFootView.h; sourceTree = "<group>"; };
 		E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdFootView.m; sourceTree = "<group>"; };
 		E5A9E7841EB1A39D0072EA61 /* ThirdHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdHeaderView.h; sourceTree = "<group>"; };
@@ -1020,8 +1006,22 @@
 		E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E5A9E7B71EB1A3DB0072EA61 /* CenterTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTabBarController.h; sourceTree = "<group>"; };
 		E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTabBarController.m; sourceTree = "<group>"; };
-		E5A9E7BF1EB1A6060072EA61 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
-		E5A9E7C01EB1A6060072EA61 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
+		E5B7CC401EB2E325005378E1 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
+		E5B7CC411EB2E325005378E1 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
+		E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewCtrl.h; sourceTree = "<group>"; };
+		E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewCtrl.m; sourceTree = "<group>"; };
+		E5B7CC461EB2E62E005378E1 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		E5B7CC481EB2E62E005378E1 /* UINavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavBarView.h; sourceTree = "<group>"; };
+		E5B7CC491EB2E62E005378E1 /* UINavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavBarView.m; sourceTree = "<group>"; };
+		E5B7CC4A1EB2E62E005378E1 /* UITopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopBarView.h; sourceTree = "<group>"; };
+		E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopBarView.m; sourceTree = "<group>"; };
+		E5B7CC4F1EB2E8DD005378E1 /* ThirdDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailCell.h; sourceTree = "<group>"; };
+		E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailCell.m; sourceTree = "<group>"; };
+		E5B7CC511EB2E8DD005378E1 /* ThirdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailViewController.h; sourceTree = "<group>"; };
+		E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailViewController.m; sourceTree = "<group>"; };
+		E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
+		E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
 		E5C5FC351EB228B9006E70FA /* AccountYes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccountYes.png; sourceTree = "<group>"; };
 		E5C5FC361EB228B9006E70FA /* AccountYes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AccountYes@2x.png"; sourceTree = "<group>"; };
 		E5C5FC371EB228B9006E70FA /* AccountYes@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AccountYes@3x.png"; sourceTree = "<group>"; };
@@ -1061,9 +1061,9 @@
 		787D84491C0EC08100DC473D /* QimuDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E7B21EB1A3DB0072EA61 /* Base */,
 				787D844D1C0EC08100DC473D /* AppDelegate.h */,
 				787D844E1C0EC08100DC473D /* AppDelegate.m */,
+				E5A9E7B21EB1A3DB0072EA61 /* Base */,
 				E5A9E7161EB1A39D0072EA61 /* Class */,
 				E5A9E3A51EB19D0B0072EA61 /* Resource */,
 				E5A9E2CF1EB19B850072EA61 /* ThirdFremework */,
@@ -1882,11 +1882,11 @@
 		E5A9E7161EB1A39D0072EA61 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E71D1EB1A39D0072EA61 /* Fifth */,
 				E5A9E7231EB1A39D0072EA61 /* FIrst */,
-				E5A9E72D1EB1A39D0072EA61 /* Fourth */,
 				E5A9E74E1EB1A39D0072EA61 /* Second */,
 				E5A9E7671EB1A39D0072EA61 /* Third */,
+				E5A9E72D1EB1A39D0072EA61 /* Fourth */,
+				E5A9E71D1EB1A39D0072EA61 /* Fifth */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -1895,8 +1895,6 @@
 			isa = PBXGroup;
 			children = (
 				E5A9E71E1EB1A39D0072EA61 /* Controllers */,
-				E5A9E71F1EB1A39D0072EA61 /* FiveViewCtrl.h */,
-				E5A9E7201EB1A39D0072EA61 /* FiveViewCtrl.m */,
 				E5A9E7211EB1A39D0072EA61 /* Models */,
 				E5A9E7221EB1A39D0072EA61 /* Views */,
 			);
@@ -1906,6 +1904,8 @@
 		E5A9E71E1EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */,
+				E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1937,8 +1937,6 @@
 		E5A9E7241EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E7BF1EB1A6060072EA61 /* CYLDBManager.h */,
-				E5A9E7C01EB1A6060072EA61 /* CYLDBManager.m */,
 				E5A9E7251EB1A39D0072EA61 /* HomeViewController.h */,
 				E5A9E7261EB1A39D0072EA61 /* HomeViewController.m */,
 			);
@@ -1948,6 +1946,8 @@
 		E5A9E7271EB1A39D0072EA61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E5B7CC401EB2E325005378E1 /* CYLDBManager.h */,
+				E5B7CC411EB2E325005378E1 /* CYLDBManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1966,9 +1966,9 @@
 		E5A9E72D1EB1A39D0072EA61 /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
+				E5A9E7341EB1A39D0072EA61 /* ViewController */,
 				E5A9E72E1EB1A39D0072EA61 /* Model */,
 				E5A9E7311EB1A39D0072EA61 /* View */,
-				E5A9E7341EB1A39D0072EA61 /* ViewController */,
 				E5A9E7371EB1A39D0072EA61 /* ViewModel */,
 			);
 			path = Fourth;
@@ -2016,17 +2016,9 @@
 			isa = PBXGroup;
 			children = (
 				E5A9E74F1EB1A39D0072EA61 /* Controllers */,
-				E5A9E7501EB1A39D0072EA61 /* Detail */,
 				E5A9E75D1EB1A39D0072EA61 /* Models */,
-				E5A9E75E1EB1A39D0072EA61 /* MyTableViewCell.h */,
-				E5A9E75F1EB1A39D0072EA61 /* MyTableViewCell.m */,
-				E5A9E7601EB1A39D0072EA61 /* SecondViewCtrl.h */,
-				E5A9E7611EB1A39D0072EA61 /* SecondViewCtrl.m */,
-				E5A9E7621EB1A39D0072EA61 /* UINavBarView.h */,
-				E5A9E7631EB1A39D0072EA61 /* UINavBarView.m */,
-				E5A9E7641EB1A39D0072EA61 /* UITopBarView.h */,
-				E5A9E7651EB1A39D0072EA61 /* UITopBarView.m */,
 				E5A9E7661EB1A39D0072EA61 /* Views */,
+				E5A9E7501EB1A39D0072EA61 /* Detail */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -2034,6 +2026,8 @@
 		E5A9E74F1EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
+				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2041,18 +2035,18 @@
 		E5A9E7501EB1A39D0072EA61 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E7511EB1A39D0072EA61 /* MyCommentCell.h */,
-				E5A9E7521EB1A39D0072EA61 /* MyCommentCell.m */,
-				E5A9E7531EB1A39D0072EA61 /* MyCommentViewController.h */,
-				E5A9E7541EB1A39D0072EA61 /* MyCommentViewController.m */,
 				E5A9E7551EB1A39D0072EA61 /* MyCourseDetailController.h */,
 				E5A9E7561EB1A39D0072EA61 /* MyCourseDetailController.m */,
 				E5A9E7571EB1A39D0072EA61 /* MyCourseHeaderView.h */,
 				E5A9E7581EB1A39D0072EA61 /* MyCourseHeaderView.m */,
-				E5A9E7591EB1A39D0072EA61 /* MyCourseListCell.h */,
-				E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */,
 				E5A9E75B1EB1A39D0072EA61 /* MyCourseMiddleView.h */,
 				E5A9E75C1EB1A39D0072EA61 /* MyCourseMiddleView.m */,
+				E5A9E7591EB1A39D0072EA61 /* MyCourseListCell.h */,
+				E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */,
+				E5A9E7511EB1A39D0072EA61 /* MyCommentCell.h */,
+				E5A9E7521EB1A39D0072EA61 /* MyCommentCell.m */,
+				E5A9E7531EB1A39D0072EA61 /* MyCommentViewController.h */,
+				E5A9E7541EB1A39D0072EA61 /* MyCommentViewController.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -2067,6 +2061,12 @@
 		E5A9E7661EB1A39D0072EA61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5B7CC461EB2E62E005378E1 /* MyTableViewCell.h */,
+				E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */,
+				E5B7CC481EB2E62E005378E1 /* UINavBarView.h */,
+				E5B7CC491EB2E62E005378E1 /* UINavBarView.m */,
+				E5B7CC4A1EB2E62E005378E1 /* UITopBarView.h */,
+				E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2085,8 +2085,6 @@
 		E5A9E7681EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E7691EB1A39D0072EA61 /* ThirdDetailViewController.h */,
-				E5A9E76A1EB1A39D0072EA61 /* ThirdDetailViewController.m */,
 				E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */,
 				E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */,
 			);
@@ -2096,12 +2094,16 @@
 		E5A9E76D1EB1A39D0072EA61 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E76E1EB1A39D0072EA61 /* CommentCell.h */,
-				E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */,
-				E5A9E7701EB1A39D0072EA61 /* CommentViewCtrl.h */,
-				E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */,
+				E5B7CC511EB2E8DD005378E1 /* ThirdDetailViewController.h */,
+				E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */,
 				E5A9E7721EB1A39D0072EA61 /* IntroduceViewCtrl.h */,
 				E5A9E7731EB1A39D0072EA61 /* IntroduceViewCtrl.m */,
+				E5A9E7701EB1A39D0072EA61 /* CommentViewCtrl.h */,
+				E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */,
+				E5A9E76E1EB1A39D0072EA61 /* CommentCell.h */,
+				E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */,
+				E5B7CC4F1EB2E8DD005378E1 /* ThirdDetailCell.h */,
+				E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -2118,8 +2120,6 @@
 			children = (
 				E5A9E77E1EB1A39D0072EA61 /* ThirdCell.h */,
 				E5A9E77F1EB1A39D0072EA61 /* ThirdCell.m */,
-				E5A9E7801EB1A39D0072EA61 /* ThirdDetailCell.h */,
-				E5A9E7811EB1A39D0072EA61 /* ThirdDetailCell.m */,
 				E5A9E7821EB1A39D0072EA61 /* ThirdFootView.h */,
 				E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */,
 				E5A9E7841EB1A39D0072EA61 /* ThirdHeaderView.h */,
@@ -2652,7 +2652,6 @@
 				E5A9E7A91EB1A39D0072EA61 /* IntroduceViewCtrl.m in Sources */,
 				E5A9E7031EB19D9B0072EA61 /* ZLPhotoRect.m in Sources */,
 				E5A9E78C1EB1A39D0072EA61 /* HomeViewCell.m in Sources */,
-				E5A9E7A21EB1A39D0072EA61 /* SecondViewCtrl.m in Sources */,
 				E5A9E7061EB19D9B0072EA61 /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				E5A9E70E1EB19D9B0072EA61 /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				E5A9E70C1EB19D9B0072EA61 /* ZLPhotoPickerGroup.m in Sources */,
@@ -2661,13 +2660,14 @@
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
 				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
 				E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */,
-				E5A9E7C11EB1A6060072EA61 /* CYLDBManager.m in Sources */,
 				E5A9E3711EB19B850072EA61 /* MASConstraintMaker.m in Sources */,
+				E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */,
 				E5A9E7081EB19D9B0072EA61 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				E5A9E7131EB19D9B0072EA61 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				E5A9E79B1EB1A39D0072EA61 /* MyCommentCell.m in Sources */,
 				E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */,
 				E5A9E79D1EB1A39D0072EA61 /* MyCourseDetailController.m in Sources */,
+				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */,
 				E5A9E7A01EB1A39D0072EA61 /* MyCourseMiddleView.m in Sources */,
 				E5A9E7051EB19D9B0072EA61 /* ZLPhotoPickerBrowserViewController.m in Sources */,
@@ -2678,15 +2678,13 @@
 				E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */,
 				E5A9E79F1EB1A39D0072EA61 /* MyCourseListCell.m in Sources */,
 				E5A9E6FE1EB19D9B0072EA61 /* ZLCamera.m in Sources */,
-				E5A9E7A31EB1A39D0072EA61 /* UINavBarView.m in Sources */,
-				E5A9E7A41EB1A39D0072EA61 /* UITopBarView.m in Sources */,
 				E5A9E3761EB19B850072EA61 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				E5B7CC421EB2E325005378E1 /* CYLDBManager.m in Sources */,
 				E5A9E7001EB19D9B0072EA61 /* ZLCameraView.m in Sources */,
 				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
 				E5A9E70D1EB19D9B0072EA61 /* ZLNavigationController.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
 				E5A9E3741EB19B850072EA61 /* MASViewConstraint.m in Sources */,
-				E5A9E7891EB1A39D0072EA61 /* FiveViewCtrl.m in Sources */,
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E5A9E79E1EB1A39D0072EA61 /* MyCourseHeaderView.m in Sources */,
 				E5A9E3751EB19B850072EA61 /* NSArray+MASAdditions.m in Sources */,
@@ -2694,20 +2692,21 @@
 				E5A9E7091EB19D9B0072EA61 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				E5A9E79C1EB1A39D0072EA61 /* MyCommentViewController.m in Sources */,
 				E5A9E3701EB19B850072EA61 /* MASConstraint.m in Sources */,
+				E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */,
 				E5A9E36F1EB19B850072EA61 /* MASCompositeConstraint.m in Sources */,
 				E5A9E7151EB19D9B0072EA61 /* ZLPhotoPickerImageView.m in Sources */,
+				E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,
-				E5A9E7AF1EB1A39D0072EA61 /* ThirdDetailCell.m in Sources */,
 				E5A9E7101EB19D9B0072EA61 /* ZLPhotoPickerViewController.m in Sources */,
 				E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */,
-				E5A9E7A51EB1A39D0072EA61 /* ThirdDetailViewController.m in Sources */,
-				E5A9E7A11EB1A39D0072EA61 /* MyTableViewCell.m in Sources */,
+				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
 				E5A9E3781EB19B850072EA61 /* ViewController+MASAdditions.m in Sources */,
 				E5A9E3731EB19B850072EA61 /* MASViewAttribute.m in Sources */,
 				E5A9E7021EB19D9B0072EA61 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E5A9E6FC1EB19D9B0072EA61 /* UIImage+ZLPhotoLib.m in Sources */,
 				E5A9E2CC1EB19B520072EA61 /* UserModel.m in Sources */,
+				E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */,
 				E5A9E6FF1EB19D9B0072EA61 /* ZLCameraImageView.m in Sources */,
 				E5A9E70A1EB19D9B0072EA61 /* ZLPhotoAssets.m in Sources */,
 				E5A9E3721EB19B850072EA61 /* MASLayoutConstraint.m in Sources */,
@@ -2715,6 +2714,7 @@
 				E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */,
 				E5A9E6FB1EB19D9B0072EA61 /* PhotoSelectView.m in Sources */,
 				E5A9E6FA1EB19D9B0072EA61 /* PhotoModel.m in Sources */,
+				E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */,
 				E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */,
 				E5A9E7011EB19D9B0072EA61 /* ZLCameraViewController.m in Sources */,
 				E5A9E70B1EB19D9B0072EA61 /* ZLPhotoPickerDatas.m in Sources */,

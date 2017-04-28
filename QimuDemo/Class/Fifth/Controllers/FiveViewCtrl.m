@@ -24,15 +24,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.isNavCtrlSet = YES;
-    
-    self.title = @"图片展示";
+    self.navigationItem.title = @"图片展示";
+
     
     [self creatView];
 }
 
 
 - (void)creatView{
-    self.photoView = [[PhotoSelectView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)  withIsOnlyPreview:NO] ;
+    self.photoView = [[PhotoSelectView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 200)  withIsOnlyPreview:NO] ;
 
     self.photoView.delegate = self ;
 

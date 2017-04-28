@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeViewCell.h"
 #import "HomeSectionHeaderView.h"
-#import "CYLDBManager.h"
+#import "CYLDBManager.h"//json文件解析
 
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -33,7 +33,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     self.isNavCtrlSet = YES;
 
-    self.title = @"精选";
+    self.navigationItem.title = @"精选";
 
     //加载数据
     [self loadTopData];

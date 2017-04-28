@@ -22,7 +22,8 @@ static NSString *identifer = @"tableViewCell";
 
     self.isNavCtrlSet = YES;
 
-    self.title = @"学习";
+    self.navigationItem.title = @"学习";
+
 
     //    //加载数据
     [self loadTopData];
@@ -128,6 +129,7 @@ static NSString *identifer = @"tableViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     ThirdDetailViewController *thirdDetailViewCtrl = [[ThirdDetailViewController alloc] init];
+    thirdDetailViewCtrl.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:thirdDetailViewCtrl animated:NO];
     
 }

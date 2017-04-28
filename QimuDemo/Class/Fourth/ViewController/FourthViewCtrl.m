@@ -29,8 +29,8 @@
 
 //    self.isNavCtrlSet = YES;
 
-    self.title = @"学习";
-    
+    self.navigationItem.title = @"MVVM";
+
     //创建视图
     [self.view addSubview:self.fourthTableView];
 }
@@ -49,7 +49,7 @@
         _fourthTableView.delegate = self.serivce;
         _fourthTableView.dataSource = self.serivce;
         [_fourthTableView registerClass:NSClassFromString(@"FourthCell") forCellReuseIdentifier:@"FourthCell"];
-        _fourthTableView.backgroundColor = [UIColor redColor];
+//        _fourthTableView.backgroundColor = [UIColor redColor];
     }
     return _fourthTableView;
 }
