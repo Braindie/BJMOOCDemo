@@ -9,6 +9,9 @@
 #import "ThirdViewCtroller.h"
 #import "ThirdCell.h"
 #import "ThirdDetailViewController.h"
+
+#import "KxMovieViewController.h"
+
 static NSString *identifer = @"tableViewCell";
 
 @implementation ThirdViewCtroller
@@ -128,9 +131,17 @@ static NSString *identifer = @"tableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    ThirdDetailViewController *thirdDetailViewCtrl = [[ThirdDetailViewController alloc] init];
-    thirdDetailViewCtrl.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:thirdDetailViewCtrl animated:NO];
+//    ThirdDetailViewController *thirdDetailViewCtrl = [[ThirdDetailViewController alloc] init];
+//    thirdDetailViewCtrl.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:thirdDetailViewCtrl animated:NO];
+    
+    
+    KxMovieViewController *vc = [KxMovieViewController movieViewControllerWithContentPath:@"http://pull99.a8.com/live/1493629218418259.flv" parameters:nil];
+    [self presentViewController:vc animated:YES completion:nil];
+//    http://pull99.a8.com/live/1493629218418259.flv
+//    http://pull.a8.com/live/1493627977729613.flv
+//    江苏卫视
+//    http://14.18.17.141:9009/live/chid=23
     
 }
 
