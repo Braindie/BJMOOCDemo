@@ -10,7 +10,7 @@
 #import "HomeViewCell.h"
 #import "HomeSectionHeaderView.h"
 #import "CYLDBManager.h"//json文件解析
-
+#import "FirstDetailViewController.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -353,6 +353,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    /*
     //二级菜单数组
     NSArray *symptoms = [NSArray arrayWithArray:[self.dataArr2[indexPath.section] objectForKey:kDataSourceSectionKey]];
     NSString *sectionTitle = [self.dataArr2[indexPath.section] objectForKey:@"Type"];
@@ -370,6 +371,11 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     dispatch_after(when, dispatch_get_main_queue(), ^{
         [alert dismissWithClickedButtonIndex:0 animated:YES];
     });
+    */
+    
+    FirstDetailViewController *vc = [[FirstDetailViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 

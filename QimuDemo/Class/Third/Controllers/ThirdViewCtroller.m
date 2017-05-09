@@ -12,6 +12,9 @@
 
 #import "KxMovieViewController.h"
 
+#import "AFHTTPSessionManager.h"
+
+
 static NSString *identifer = @"tableViewCell";
 
 @implementation ThirdViewCtroller
@@ -30,7 +33,41 @@ static NSString *identifer = @"tableViewCell";
 
     //    //加载数据
     [self loadTopData];
+    
+    static AFHTTPSessionManager *manager = nil;
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:sessionConfiguration];
+    manager.requestSerializer.timeoutInterval = 25 ;
 
+    NSDictionary *ps = @{@"uid": @(133825214),
+                        @"interest": @(1)
+                        };
+//    NSURLSessionDataTask * dataTask = [manager POST:@"http://116.211.167.106/api/live/aggregation?"
+//                                         parameters:ps
+//                                           progress:nil
+//                                            success:^(NSURLSessionTask *task, id responseObject) {
+//                                                
+//                                                NSInteger statusCode = ((NSHTTPURLResponse *)task.response).statusCode ;
+//                                                
+//                                                NSLog(@"success，statusCode: %ld", (long)statusCode );
+//                                 
+//                                            }
+//                                            failure:^(NSURLSessionTask *task, NSError *error) {
+//                                                
+//                                                NSInteger statusCode = ((NSHTTPURLResponse *)task.response).statusCode ;
+//                                                NSLog(@"success，statusCode: %ld", (long)statusCode );
+//                                     
+//                                            }] ;
+    
+//    [manager GET:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
+    
+    
 
     //    //创建视图
     [self creatView];
@@ -47,6 +84,20 @@ static NSString *identifer = @"tableViewCell";
 
 
 - (void)loadTopData{
+    
+    NSURL *URL = [NSURL URLWithString:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1"];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+
+    [manager GET:URL.absoluteString parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
 
     NSMutableDictionary * dic1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"移动课件1",@"title",
                           @"name1",@"标准课件1",
@@ -97,7 +148,7 @@ static NSString *identifer = @"tableViewCell";
 //    [courseDic setValue:[self.myDetailDic objectForKey:@"learningState"] forKey:@"learningState"];
 //    [courseDic setValue:[self.myDetailDic objectForKey:@"learnedPeriod"] forKey:@"learnedPeriod"];
 
-    NSArray *arr = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];
+    NSArray *arr = [NSArray arrayWithObjects:@"映客直播",@"虎牙直播",@"YY直播",@"斗鱼直播",@"熊猫直播",@"龙珠直播",@"大王直播",@"上海",@"广州",@"深圳", nil];
 //    self.myDataArr = [NSMutableArray arrayWithObjects:courseDic,dic1,dic2,dic3,dic4,nil];
     self.myDataArr = [NSMutableArray arrayWithArray:arr];
 }
@@ -136,7 +187,7 @@ static NSString *identifer = @"tableViewCell";
 //    [self.navigationController pushViewController:thirdDetailViewCtrl animated:NO];
     
     
-    KxMovieViewController *vc = [KxMovieViewController movieViewControllerWithContentPath:@"http://pull99.a8.com/live/1493629218418259.flv" parameters:nil];
+    KxMovieViewController *vc = [KxMovieViewController movieViewControllerWithContentPath:@"http://pull3.a8.com/live/1493695600453022.flv" parameters:nil];
     [self presentViewController:vc animated:YES completion:nil];
 //    http://pull99.a8.com/live/1493629218418259.flv
 //    http://pull.a8.com/live/1493627977729613.flv

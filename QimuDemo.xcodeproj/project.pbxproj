@@ -12,6 +12,13 @@
 		787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844E1C0EC08100DC473D /* AppDelegate.m */; };
 		787D84571C0EC08100DC473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787D84561C0EC08100DC473D /* Assets.xcassets */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
+		E5A061B11EC1AD3300B23589 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B01EC1AD3300B23589 /* FirstDetailViewController.m */; };
+		E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B41EC1AE7900B23589 /* CYLDBManager.m */; };
+		E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B81EC1AEF400B23589 /* BunnyCollectionView.m */; };
+		E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061BC1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m */; };
+		E5A061C01EC1B07400B23589 /* MonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061BF1EC1B07400B23589 /* MonthCollectionViewCell.m */; };
+		E5A061C41EC1B35000B23589 /* MonthXibCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061C21EC1B35000B23589 /* MonthXibCollectionViewCell.m */; };
+		E5A061C51EC1B35000B23589 /* MonthXibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A061C31EC1B35000B23589 /* MonthXibCollectionViewCell.xib */; };
 		E5A9E2CC1EB19B520072EA61 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2C71EB19B520072EA61 /* UserModel.m */; };
 		E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2C91EB19B520072EA61 /* ZDBHelper.m */; };
 		E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2CB1EB19B520072EA61 /* ZDBModel.m */; };
@@ -476,7 +483,6 @@
 		E5B6D7621EB33D0F00B19FF3 /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B6D75C1EB33D0F00B19FF3 /* KxMovieGLView.m */; };
 		E5B6D7631EB33D0F00B19FF3 /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B6D75E1EB33D0F00B19FF3 /* KxMovieViewController.m */; };
 		E5B6D7651EB33D7C00B19FF3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6D7641EB33D7C00B19FF3 /* VideoToolbox.framework */; };
-		E5B7CC421EB2E325005378E1 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC411EB2E325005378E1 /* CYLDBManager.m */; };
 		E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */; };
 		E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */; };
 		E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC491EB2E62E005378E1 /* UINavBarView.m */; };
@@ -500,6 +506,19 @@
 		787D845B1C0EC08100DC473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E5A061AF1EC1AD3300B23589 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
+		E5A061B01EC1AD3300B23589 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
+		E5A061B31EC1AE7900B23589 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
+		E5A061B41EC1AE7900B23589 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
+		E5A061B71EC1AEF400B23589 /* BunnyCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BunnyCollectionView.h; sourceTree = "<group>"; };
+		E5A061B81EC1AEF400B23589 /* BunnyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BunnyCollectionView.m; sourceTree = "<group>"; };
+		E5A061BB1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		E5A061BC1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		E5A061BE1EC1B07400B23589 /* MonthCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthCollectionViewCell.h; sourceTree = "<group>"; };
+		E5A061BF1EC1B07400B23589 /* MonthCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthCollectionViewCell.m; sourceTree = "<group>"; };
+		E5A061C11EC1B35000B23589 /* MonthXibCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthXibCollectionViewCell.h; sourceTree = "<group>"; };
+		E5A061C21EC1B35000B23589 /* MonthXibCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthXibCollectionViewCell.m; sourceTree = "<group>"; };
+		E5A061C31EC1B35000B23589 /* MonthXibCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthXibCollectionViewCell.xib; sourceTree = "<group>"; };
 		E5A9E2C61EB19B520072EA61 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		E5A9E2C71EB19B520072EA61 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		E5A9E2C81EB19B520072EA61 /* ZDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBHelper.h; sourceTree = "<group>"; };
@@ -1136,8 +1155,6 @@
 		E5B6D75D1EB33D0F00B19FF3 /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
 		E5B6D75E1EB33D0F00B19FF3 /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
 		E5B6D7641EB33D7C00B19FF3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		E5B7CC401EB2E325005378E1 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
-		E5B7CC411EB2E325005378E1 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
 		E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewCtrl.h; sourceTree = "<group>"; };
 		E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewCtrl.m; sourceTree = "<group>"; };
 		E5B7CC461EB2E62E005378E1 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
@@ -1246,9 +1263,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E514D99D1EB878D60011A886 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E5A061B21EC1AE7900B23589 /* CYLDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				E5A061B31EC1AE7900B23589 /* CYLDBManager.h */,
+				E5A061B41EC1AE7900B23589 /* CYLDBManager.m */,
+			);
+			path = CYLDBManager;
+			sourceTree = "<group>";
+		};
+		E5A061B61EC1AEAE00B23589 /* BJView */ = {
+			isa = PBXGroup;
+			children = (
+				E5A061B71EC1AEF400B23589 /* BunnyCollectionView.h */,
+				E5A061B81EC1AEF400B23589 /* BunnyCollectionView.m */,
+			);
+			path = BJView;
+			sourceTree = "<group>";
+		};
+		E5A061BA1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout */ = {
+			isa = PBXGroup;
+			children = (
+				E5A061BB1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.h */,
+				E5A061BC1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m */,
+			);
+			path = UICollectionViewLeftAlignedLayout;
+			sourceTree = "<group>";
+		};
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E5A061B61EC1AEAE00B23589 /* BJView */,
 				E5A9E6B11EB19D9B0072EA61 /* PhotoSelect */,
 				E5A9E6B61EB19D9B0072EA61 /* ZLPhotoLib */,
 				E5A9E2C51EB19B520072EA61 /* ZDBModel */,
@@ -1272,6 +1324,8 @@
 		E5A9E2CF1EB19B850072EA61 /* ThirdFremework */ = {
 			isa = PBXGroup;
 			children = (
+				E5A061BA1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout */,
+				E5A061B21EC1AE7900B23589 /* CYLDBManager */,
 				E5B6D7531EB33D0F00B19FF3 /* kxmovie */,
 				E5B6D6DF1EB335C200B19FF3 /* FFmpeg-iOS */,
 				E5A9E2D01EB19B850072EA61 /* DACircularProgress */,
@@ -2086,6 +2140,8 @@
 			children = (
 				E5A9E7251EB1A39D0072EA61 /* HomeViewController.h */,
 				E5A9E7261EB1A39D0072EA61 /* HomeViewController.m */,
+				E5A061AF1EC1AD3300B23589 /* FirstDetailViewController.h */,
+				E5A061B01EC1AD3300B23589 /* FirstDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2093,8 +2149,6 @@
 		E5A9E7271EB1A39D0072EA61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E5B7CC401EB2E325005378E1 /* CYLDBManager.h */,
-				E5B7CC411EB2E325005378E1 /* CYLDBManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2106,6 +2160,11 @@
 				E5A9E72A1EB1A39D0072EA61 /* HomeSectionHeaderView.m */,
 				E5A9E72B1EB1A39D0072EA61 /* HomeViewCell.h */,
 				E5A9E72C1EB1A39D0072EA61 /* HomeViewCell.m */,
+				E5A061BE1EC1B07400B23589 /* MonthCollectionViewCell.h */,
+				E5A061BF1EC1B07400B23589 /* MonthCollectionViewCell.m */,
+				E5A061C11EC1B35000B23589 /* MonthXibCollectionViewCell.h */,
+				E5A061C21EC1B35000B23589 /* MonthXibCollectionViewCell.m */,
+				E5A061C31EC1B35000B23589 /* MonthXibCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2221,9 +2280,9 @@
 		E5A9E7671EB1A39D0072EA61 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				E514D99D1EB878D60011A886 /* Models */,
 				E5A9E7681EB1A39D0072EA61 /* Controllers */,
 				E5A9E76D1EB1A39D0072EA61 /* Detail */,
-				E5A9E77C1EB1A39D0072EA61 /* Models */,
 				E5A9E77D1EB1A39D0072EA61 /* Views */,
 			);
 			path = Third;
@@ -2253,13 +2312,6 @@
 				E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		E5A9E77C1EB1A39D0072EA61 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E5A9E77D1EB1A39D0072EA61 /* Views */ = {
@@ -2469,6 +2521,8 @@
 		E5B6D7531EB33D0F00B19FF3 /* kxmovie */ = {
 			isa = PBXGroup;
 			children = (
+				E5B6D75D1EB33D0F00B19FF3 /* KxMovieViewController.h */,
+				E5B6D75E1EB33D0F00B19FF3 /* KxMovieViewController.m */,
 				E5B6D7541EB33D0F00B19FF3 /* KxAudioManager.h */,
 				E5B6D7551EB33D0F00B19FF3 /* KxAudioManager.m */,
 				E5B6D7561EB33D0F00B19FF3 /* KxLogger.h */,
@@ -2478,8 +2532,6 @@
 				E5B6D75A1EB33D0F00B19FF3 /* KxMovieDecoder.m */,
 				E5B6D75B1EB33D0F00B19FF3 /* KxMovieGLView.h */,
 				E5B6D75C1EB33D0F00B19FF3 /* KxMovieGLView.m */,
-				E5B6D75D1EB33D0F00B19FF3 /* KxMovieViewController.h */,
-				E5B6D75E1EB33D0F00B19FF3 /* KxMovieViewController.m */,
 			);
 			path = kxmovie;
 			sourceTree = "<group>";
@@ -2555,6 +2607,7 @@
 				E5A9E60C1EB19D470072EA61 /* icon42.png in Resources */,
 				E5A9E5AC1EB19D470072EA61 /* 25.png in Resources */,
 				E5A9E66B1EB19D470072EA61 /* Icon-Small.png in Resources */,
+				E5A061C51EC1B35000B23589 /* MonthXibCollectionViewCell.xib in Resources */,
 				E5A9E6651EB19D470072EA61 /* Icon-72@2x.png in Resources */,
 				E5A9E6171EB19D470072EA61 /* icon52.png in Resources */,
 				E5A9E3C11EB19D0B0072EA61 /* 屏幕快照 2016-05-24 下午5.45.27.png in Resources */,
@@ -2990,6 +3043,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A9E7041EB19D9B0072EA61 /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
+				E5A061C01EC1B07400B23589 /* MonthCollectionViewCell.m in Sources */,
 				E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */,
 				E5A9E70F1EB19D9B0072EA61 /* ZLPhotoPickerGroupViewController.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
@@ -3001,9 +3055,11 @@
 				E5A9E70C1EB19D9B0072EA61 /* ZLPhotoPickerGroup.m in Sources */,
 				E5A9E7121EB19D9B0072EA61 /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				E5A9E7111EB19D9B0072EA61 /* ZLPhotoPickerCollectionView.m in Sources */,
+				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
 				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
 				E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */,
+				E5A061C41EC1B35000B23589 /* MonthXibCollectionViewCell.m in Sources */,
 				E5A9E3711EB19B850072EA61 /* MASConstraintMaker.m in Sources */,
 				E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */,
 				E5A9E7081EB19D9B0072EA61 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
@@ -3012,6 +3068,7 @@
 				E5A9E79B1EB1A39D0072EA61 /* MyCommentCell.m in Sources */,
 				E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */,
 				E5A9E79D1EB1A39D0072EA61 /* MyCourseDetailController.m in Sources */,
+				E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */,
 				E5A9E7A01EB1A39D0072EA61 /* MyCourseMiddleView.m in Sources */,
@@ -3024,7 +3081,6 @@
 				E5A9E79F1EB1A39D0072EA61 /* MyCourseListCell.m in Sources */,
 				E5A9E6FE1EB19D9B0072EA61 /* ZLCamera.m in Sources */,
 				E5A9E3761EB19B850072EA61 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				E5B7CC421EB2E325005378E1 /* CYLDBManager.m in Sources */,
 				E5A9E7001EB19D9B0072EA61 /* ZLCameraView.m in Sources */,
 				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
 				E5A9E70D1EB19D9B0072EA61 /* ZLNavigationController.m in Sources */,
@@ -3043,6 +3099,7 @@
 				E5A9E7151EB19D9B0072EA61 /* ZLPhotoPickerImageView.m in Sources */,
 				E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
+				E5A061B11EC1AD3300B23589 /* FirstDetailViewController.m in Sources */,
 				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,
 				E5A9E7101EB19D9B0072EA61 /* ZLPhotoPickerViewController.m in Sources */,
 				E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */,
@@ -3051,6 +3108,7 @@
 				E5A9E3731EB19B850072EA61 /* MASViewAttribute.m in Sources */,
 				E5A9E7021EB19D9B0072EA61 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E5A9E6FC1EB19D9B0072EA61 /* UIImage+ZLPhotoLib.m in Sources */,
+				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				E5A9E2CC1EB19B520072EA61 /* UserModel.m in Sources */,
 				E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */,
 				E5A9E6FF1EB19D9B0072EA61 /* ZLCameraImageView.m in Sources */,
