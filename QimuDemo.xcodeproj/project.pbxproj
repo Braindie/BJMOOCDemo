@@ -11,7 +11,13 @@
 		787D844C1C0EC08100DC473D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844B1C0EC08100DC473D /* main.m */; };
 		787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844E1C0EC08100DC473D /* AppDelegate.m */; };
 		787D84571C0EC08100DC473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787D84561C0EC08100DC473D /* Assets.xcassets */; };
+		E50AAC0A1EC3F8A7002AB8C2 /* BunnyPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AAC091EC3F8A7002AB8C2 /* BunnyPhotoView.m */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
+		E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D907F1EE1313B00AE856B /* LiveListModel.m */; };
+		E54D90831EE1325E00AE856B /* LiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90821EE1325E00AE856B /* LiverModel.m */; };
+		E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90851EE1361C00AE856B /* LiveListCell.m */; };
+		E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54D90861EE1361C00AE856B /* LiveListCell.xib */; };
+		E54D908B1EE13D8F00AE856B /* LiverCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */; };
 		E5A061B11EC1AD3300B23589 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B01EC1AD3300B23589 /* FirstDetailViewController.m */; };
 		E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B41EC1AE7900B23589 /* CYLDBManager.m */; };
 		E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B81EC1AEF400B23589 /* BunnyCollectionView.m */; };
@@ -490,9 +496,6 @@
 		E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */; };
 		E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */; };
 		E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */; };
-		E5C5FC381EB228B9006E70FA /* AccountYes.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C5FC351EB228B9006E70FA /* AccountYes.png */; };
-		E5C5FC391EB228B9006E70FA /* AccountYes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C5FC361EB228B9006E70FA /* AccountYes@2x.png */; };
-		E5C5FC3A1EB228B9006E70FA /* AccountYes@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C5FC371EB228B9006E70FA /* AccountYes@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -505,7 +508,18 @@
 		787D84561C0EC08100DC473D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787D845B1C0EC08100DC473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E50AAC081EC3F8A7002AB8C2 /* BunnyPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BunnyPhotoView.h; sourceTree = "<group>"; };
+		E50AAC091EC3F8A7002AB8C2 /* BunnyPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BunnyPhotoView.m; sourceTree = "<group>"; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E54D907E1EE1313B00AE856B /* LiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListModel.h; sourceTree = "<group>"; };
+		E54D907F1EE1313B00AE856B /* LiveListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
+		E54D90811EE1325E00AE856B /* LiverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiverModel.h; sourceTree = "<group>"; };
+		E54D90821EE1325E00AE856B /* LiverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiverModel.m; sourceTree = "<group>"; };
+		E54D90841EE1361C00AE856B /* LiveListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListCell.h; sourceTree = "<group>"; };
+		E54D90851EE1361C00AE856B /* LiveListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListCell.m; sourceTree = "<group>"; };
+		E54D90861EE1361C00AE856B /* LiveListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveListCell.xib; sourceTree = "<group>"; };
+		E54D90891EE13D8F00AE856B /* LiverCreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiverCreatorModel.h; sourceTree = "<group>"; };
+		E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiverCreatorModel.m; sourceTree = "<group>"; };
 		E5A061AF1EC1AD3300B23589 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
 		E5A061B01EC1AD3300B23589 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
 		E5A061B31EC1AE7900B23589 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
@@ -1169,9 +1183,6 @@
 		E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailViewController.m; sourceTree = "<group>"; };
 		E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
 		E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
-		E5C5FC351EB228B9006E70FA /* AccountYes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccountYes.png; sourceTree = "<group>"; };
-		E5C5FC361EB228B9006E70FA /* AccountYes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AccountYes@2x.png"; sourceTree = "<group>"; };
-		E5C5FC371EB228B9006E70FA /* AccountYes@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AccountYes@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1263,9 +1274,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E50AAC071EC3F87D002AB8C2 /* BJPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				E50AAC081EC3F8A7002AB8C2 /* BunnyPhotoView.h */,
+				E50AAC091EC3F8A7002AB8C2 /* BunnyPhotoView.m */,
+			);
+			path = BJPhotoView;
+			sourceTree = "<group>";
+		};
 		E514D99D1EB878D60011A886 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E54D907E1EE1313B00AE856B /* LiveListModel.h */,
+				E54D907F1EE1313B00AE856B /* LiveListModel.m */,
+				E54D90811EE1325E00AE856B /* LiverModel.h */,
+				E54D90821EE1325E00AE856B /* LiverModel.m */,
+				E54D90891EE13D8F00AE856B /* LiverCreatorModel.h */,
+				E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1300,6 +1326,7 @@
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E50AAC071EC3F87D002AB8C2 /* BJPhotoView */,
 				E5A061B61EC1AEAE00B23589 /* BJView */,
 				E5A9E6B11EB19D9B0072EA61 /* PhotoSelect */,
 				E5A9E6B61EB19D9B0072EA61 /* ZLPhotoLib */,
@@ -1380,9 +1407,6 @@
 		E5A9E3A51EB19D0B0072EA61 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E5C5FC351EB228B9006E70FA /* AccountYes.png */,
-				E5C5FC361EB228B9006E70FA /* AccountYes@2x.png */,
-				E5C5FC371EB228B9006E70FA /* AccountYes@3x.png */,
 				E5A9E3C21EB19D470072EA61 /* Page */,
 				E5A9E3E41EB19D470072EA61 /* YidongiPhoneImages */,
 				E5A9E3A61EB19D0B0072EA61 /* 5.31.03.png */,
@@ -2323,6 +2347,9 @@
 				E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */,
 				E5A9E7841EB1A39D0072EA61 /* ThirdHeaderView.h */,
 				E5A9E7851EB1A39D0072EA61 /* ThirdHeaderView.m */,
+				E54D90841EE1361C00AE856B /* LiveListCell.h */,
+				E54D90851EE1361C00AE856B /* LiveListCell.m */,
+				E54D90861EE1361C00AE856B /* LiveListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2805,7 +2832,6 @@
 				E5A9E63D1EB19D470072EA61 /* light.png in Resources */,
 				E5A9E57C1EB19D470072EA61 /* step.png in Resources */,
 				E5A9E6911EB19D470072EA61 /* checkbox_n.png in Resources */,
-				E5C5FC381EB228B9006E70FA /* AccountYes.png in Resources */,
 				E5A9E5901EB19D470072EA61 /* newStar_f.png in Resources */,
 				E5A9E5AB1EB19D470072EA61 /* 24.png in Resources */,
 				E5A9E64A1EB19D470072EA61 /* video_back_b0.png in Resources */,
@@ -2827,6 +2853,7 @@
 				E5A9E57F1EB19D470072EA61 /* top.png in Resources */,
 				E5A9E3B91EB19D0B0072EA61 /* home_icon_list@2x.png in Resources */,
 				E5A9E6A61EB19D470072EA61 /* radio.png in Resources */,
+				E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */,
 				E5A9E5C11EB19D470072EA61 /* NoImage_200.png in Resources */,
 				E5A9E6931EB19D470072EA61 /* checked.png in Resources */,
 				E5A9E62A1EB19D470072EA61 /* class_1.png in Resources */,
@@ -2835,7 +2862,6 @@
 				E5A9E5D41EB19D470072EA61 /* iphone6.png in Resources */,
 				E5A9E6751EB19D470072EA61 /* bm_s.png in Resources */,
 				E5A9E62F1EB19D470072EA61 /* hudong_0.png in Resources */,
-				E5C5FC391EB228B9006E70FA /* AccountYes@2x.png in Resources */,
 				E5A9E6821EB19D470072EA61 /* other.png in Resources */,
 				E5A9E3BD1EB19D0B0072EA61 /* pic2.jpg in Resources */,
 				E5A9E6451EB19D470072EA61 /* progress_point.png in Resources */,
@@ -2894,7 +2920,6 @@
 				E5A9E5A61EB19D470072EA61 /* xls_file.png in Resources */,
 				E5A9E5591EB19D470072EA61 /* login.png in Resources */,
 				E5A9E56E1EB19D470072EA61 /* no_play.png in Resources */,
-				E5C5FC3A1EB228B9006E70FA /* AccountYes@3x.png in Resources */,
 				E5A9E5FB1EB19D470072EA61 /* icon27.png in Resources */,
 				E5A9E6611EB19D470072EA61 /* Icon-60.png in Resources */,
 				E5A9E6251EB19D470072EA61 /* icon7.png in Resources */,
@@ -3032,7 +3057,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3079,7 +3104,9 @@
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
 				E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */,
 				E5A9E79F1EB1A39D0072EA61 /* MyCourseListCell.m in Sources */,
+				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E5A9E6FE1EB19D9B0072EA61 /* ZLCamera.m in Sources */,
+				E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */,
 				E5A9E3761EB19B850072EA61 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				E5A9E7001EB19D9B0072EA61 /* ZLCameraView.m in Sources */,
 				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
@@ -3091,6 +3118,7 @@
 				E5A9E3751EB19B850072EA61 /* NSArray+MASAdditions.m in Sources */,
 				E5B6D7621EB33D0F00B19FF3 /* KxMovieGLView.m in Sources */,
 				E5A9E7141EB19D9B0072EA61 /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
+				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E5A9E7091EB19D9B0072EA61 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				E5A9E79C1EB1A39D0072EA61 /* MyCommentViewController.m in Sources */,
 				E5A9E3701EB19B850072EA61 /* MASConstraint.m in Sources */,
@@ -3111,6 +3139,7 @@
 				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				E5A9E2CC1EB19B520072EA61 /* UserModel.m in Sources */,
 				E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */,
+				E50AAC0A1EC3F8A7002AB8C2 /* BunnyPhotoView.m in Sources */,
 				E5A9E6FF1EB19D9B0072EA61 /* ZLCameraImageView.m in Sources */,
 				E5A9E70A1EB19D9B0072EA61 /* ZLPhotoAssets.m in Sources */,
 				E5A9E3721EB19B850072EA61 /* MASLayoutConstraint.m in Sources */,
@@ -3126,6 +3155,7 @@
 				E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */,
 				E5B6D75F1EB33D0F00B19FF3 /* KxAudioManager.m in Sources */,
 				E5A9E6FD1EB19D9B0072EA61 /* UIView+ZLExtension.m in Sources */,
+				E54D908B1EE13D8F00AE856B /* LiverCreatorModel.m in Sources */,
 				E5B6D7611EB33D0F00B19FF3 /* KxMovieDecoder.m in Sources */,
 				E5A9E78A1EB1A39D0072EA61 /* HomeViewController.m in Sources */,
 			);
@@ -3222,6 +3252,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -3238,6 +3269,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QimuDemo/ThirdFremework/FFmpeg-iOS/lib",
 					"$(SRCROOT)/QimuDemo/ThirdFremework/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/QimuDemo/MyFramework/BJPhotoView/libexidcard",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = China.QimuDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3253,6 +3285,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -3269,6 +3302,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QimuDemo/ThirdFremework/FFmpeg-iOS/lib",
 					"$(SRCROOT)/QimuDemo/ThirdFremework/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/QimuDemo/MyFramework/BJPhotoView/libexidcard",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = China.QimuDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,7 +15,7 @@ static NSString *kCellIdentifier = @"CellIdentifier";
 
 @interface BunnyCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSArray *myDataArr;
+@property (nonatomic, copy) NSArray *myDataArr;
 @property (nonatomic, assign) NSInteger currentSelectItem;
 @end
 
@@ -37,8 +37,6 @@ static NSString *kCellIdentifier = @"CellIdentifier";
     self.currentSelectItem = 1111;
     self.backgroundColor = [UIColor orangeColor];
     
-    self.myDataArr = @[@"工薪族",@"私营业主",@"网店买卖",@"学生",@"其他",@"有缴纳",@"无缴纳"];
-    
     CGRect collectionViewFrame = CGRectMake(0,  0, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height-80);
     UICollectionViewLeftAlignedLayout *layout = [[UICollectionViewLeftAlignedLayout alloc] init];
     
@@ -52,11 +50,8 @@ static NSString *kCellIdentifier = @"CellIdentifier";
     //注册cell
 //    [self.collectionView registerClass:[MonthCollectionViewCell class]
 //            forCellWithReuseIdentifier:kCellIdentifier];
-    
     [self.collectionView registerNib:[UINib nibWithNibName:@"MonthXibCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:kCellIdentifier];
     
-    //注册headerView
-//    [self.collectionView registerClass:[MonthCollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kHeaderViewCellIdentifier];
     
     self.collectionView.allowsMultipleSelection = YES;
     self.collectionView.showsHorizontalScrollIndicator = NO;
@@ -66,22 +61,24 @@ static NSString *kCellIdentifier = @"CellIdentifier";
     self.collectionView.scrollEnabled = YES;
     [self addSubview:self.collectionView];
 }
+
+
+- (void)setDataSource:(id<BunnyCollectionViewDataSource>)dataSource{
+    _dataSource = dataSource;
+    
+    if ([_dataSource respondsToSelector:@selector(arrayInCollectionView:)]) {
+        _myDataArr = [[_dataSource arrayInCollectionView:self] copy];
+    }
+}
+
+
 #pragma mark -  UICollectionViewDataSource Method
-
-//- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-//    return [self.myDataArr count];
-//}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.myDataArr count];
 }
 
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    // 需要配置的代码
-//    [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     
     MonthXibCollectionViewCell *cell =
     (MonthXibCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier
@@ -95,17 +92,18 @@ static NSString *kCellIdentifier = @"CellIdentifier";
 //    cell.layer.borderWidth = 0.5;
 //    cell.layer.masksToBounds = YES;
 
-    
     if (self.currentSelectItem < 1110) {
         if (indexPath.row == self.currentSelectItem) {
             [cell.titleImage setImage:[UIImage imageNamed:@"xin_hongbao_xuanzhong"]];
+            if ([_delegate respondsToSelector:@selector(currentSelectedItem:)]) {
+                [_delegate currentSelectedItem:self.myDataArr[indexPath.row]];
+            }
         }else{
             [cell.titleImage setImage:[UIImage imageNamed:@"xin_hongbao_weixuanzhong"]];
         }
     }else{
         [cell.titleImage setImage:[UIImage imageNamed:@"xin_hongbao_weixuanzhong"]];
     }
-    
     
     return cell;
 }
@@ -114,15 +112,6 @@ static NSString *kCellIdentifier = @"CellIdentifier";
     self.currentSelectItem = indexPath.row;
     [collectionView reloadData];
 }
-
-//取消选中某个Item时触发的方法
-//- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    MonthXibCollectionViewCell *cell = (MonthXibCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    [cell.titleImage setImage:[UIImage imageNamed:@"xin_hongbao_weixuanzhong"]];
-////    [collectionView reloadData];
-//}
-
-
 
 
 //根据文字长度获取label宽度
@@ -158,12 +147,6 @@ static NSString *kCellIdentifier = @"CellIdentifier";
                    layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     return 1;
 }
-//header的大小
-//- (CGSize)collectionView:(UICollectionView *)collectionView
-//                  layout:(UICollectionViewLayout*)collectionViewLayout
-//referenceSizeForHeaderInSection:(NSInteger)section{
-//    return CGSizeMake([UIScreen mainScreen].bounds.size.width - 50, 38);
-//}
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
                         layout:(UICollectionViewLayout *)collectionViewLayout

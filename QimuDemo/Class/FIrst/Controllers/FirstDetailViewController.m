@@ -9,7 +9,7 @@
 #import "FirstDetailViewController.h"
 #import "BunnyCollectionView.h"
 
-@interface FirstDetailViewController ()
+@interface FirstDetailViewController ()<BunnyCollectionViewDelegate,BunnyCollectionViewDataSource>
 
 @end
 
@@ -27,12 +27,24 @@
     
     
     BunnyCollectionView *view = [[BunnyCollectionView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 500)];
+    view.dataSource = self;
+    view.delegate = self;
     [self.view addSubview:view];
     
     
     
     
 }
+
+#pragma mark - 
+- (NSArray *)arrayInCollectionView:(BunnyCollectionView *)view{
+    return @[@"工薪族",@"私营业主",@"网店买卖",@"学生",@"其他",@"有缴纳"];
+}
+
+- (void)currentSelectedItem:(NSString *)model{
+    NSLog(@"%@",model);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -3,7 +3,7 @@
 
 ## First
 UICollectionView
-
+详情有个UICollectionViewLeftAlignedLayout左布局
 
 
 
@@ -16,7 +16,12 @@ UICollectionView
 
 ## Third
 ### 直播
+使用AFN请求映客直播列表/br
+使用YYModel把json转换成Model/br
 
+使用FFMpeg实现拉流/br
+使用kxmovie进行视频播放
+使用MBProgressHUD作为加载提示框
 
 
 
@@ -38,5 +43,6 @@ UICollectionView
 
 ## Fifth
 ### 图片选择器 
+### OCR（光学字符识别）文字识别
 
 

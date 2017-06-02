@@ -42,33 +42,33 @@
     
     UINavigationController *mainPage = [self controllerWithBarTitle:@"First"
                                                         class:[HomeViewController class]
-                                                normalImgName:@"AccountYes"
+                                                normalImgName:@"wode1_1"
                                               selectedImgName:@"AccountYes"
                                                           tag:1001];
     
     UINavigationController *licai= [self controllerWithBarTitle: @"Second"
                                                           class:[SecondViewCtrl class]
-                                                  normalImgName:@"AccountYes"
+                                                  normalImgName:@"wode1_1"
                                                 selectedImgName:@"AccountYes"
                                                             tag:1002];
     
     
     UINavigationController *community=[self controllerWithBarTitle: @"Third"
                                                              class:[ThirdViewCtroller class]
-                                                     normalImgName:@"AccountYes"
+                                                     normalImgName:@"wode1_1"
                                                    selectedImgName:@"AccountYes"
                                                                tag:1003];
     
     
     UINavigationController *wode =[self controllerWithBarTitle:@"Fourth"
                                                          class:[FourthViewCtrl class]
-                                                 normalImgName:@"AccountYes"
+                                                 normalImgName:@"wode1_1"
                                                selectedImgName:@"AccountYes"
                                                            tag:1004];
     
     UINavigationController *zhan =[self controllerWithBarTitle:@"Fifth"
                                                          class:[FiveViewCtrl class]
-                                                 normalImgName:@"AccountYes"
+                                                 normalImgName:@"wode1_1"
                                                selectedImgName:@"AccountYes"
                                                            tag:1004];
     
@@ -100,8 +100,8 @@
     
     
     [item setTitlePositionAdjustment:UIOffsetMake(0, -3)];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateNormal];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
     [nav setTabBarItem:item];
     return nav;
 }

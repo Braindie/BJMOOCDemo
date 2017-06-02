@@ -9,7 +9,7 @@
 #import "FiveViewCtrl.h"
 #import "PhotoSelectView.h"
 
-@interface FiveViewCtrl ()
+@interface FiveViewCtrl ()<BunnyPhotoViewDelegate>
 @property (nonatomic, strong) PhotoSelectView *photoView;
 @end
 
@@ -28,6 +28,8 @@
 
     
     [self creatView];
+    
+    [self creatPhotoView];
 }
 
 
@@ -47,6 +49,28 @@
     };
     [self.view addSubview:self.photoView];
 }
+
+- (void)creatPhotoView{
+    self.b1PhotoView = [[BunnyPhotoView alloc] initWithFrame:CGRectMake(20, 264, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+    self.b1PhotoView.VCdelegate = self;
+    [self.view addSubview:self.b1PhotoView];
+    
+    self.b2PhotoView = [[BunnyPhotoView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-60)/2 + 40, 264, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+    [self.view addSubview:self.b2PhotoView];
+    
+    self.b1ImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 380, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+//    self.b1ImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.b1ImageView setImage:[UIImage imageNamed:@"headerView"]];
+    [self.view addSubview:self.b1ImageView];
+    
+    self.b2ImageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-60)/2 + 40, 380, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+//    self.b1ImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.b2ImageView setImage:[UIImage imageNamed:@"headerView"]];
+    [self.view addSubview:self.b2ImageView];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
