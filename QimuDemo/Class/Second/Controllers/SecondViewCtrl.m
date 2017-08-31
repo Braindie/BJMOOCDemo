@@ -37,7 +37,7 @@
 
 - (void)loadTopData{
 
-    NSArray *dataArr1 = [NSArray arrayWithObjects:@"data1",@"data2",@"data3",@"data4",@"data5",@"data6",@"data7",@"data8",@"data9",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1",@"data1", nil];
+    NSArray *dataArr1 = [NSArray arrayWithObjects:@"data1",@"data2",@"data3",@"data4",@"data5",@"data6",@"data7",@"data8",@"data9", nil];
 
     NSArray *arr10 = [NSArray arrayWithObjects:@"最新",@"最热",nil];
     NSArray *arr11 = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];

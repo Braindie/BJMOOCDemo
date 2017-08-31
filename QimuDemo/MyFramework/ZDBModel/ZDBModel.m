@@ -90,7 +90,7 @@
 }
 
 
-//获取该类的所有属性
+//获取该类的所有属性（runtime的使用）
 + (NSDictionary *)getPropertys
 {
     NSMutableArray *proNames = [NSMutableArray array];
@@ -201,7 +201,6 @@
                 *rollback = YES;
                 return;
             }
-        
         }
     }];
     

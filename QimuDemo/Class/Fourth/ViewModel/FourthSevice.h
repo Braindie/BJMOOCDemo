@@ -10,19 +10,16 @@
 #import "FourthVM.h"
 #import "FourthViewCtrl.h"
 
-//@class FourthViewCtrl,FourthVM;
 
 @interface FourthSevice : NSObject<UITableViewDelegate,UITableViewDataSource>
 
-
+/**
+ *   界面
+ */
 @property (nonatomic, strong) UITableView *tableView;
-
+/**
+ *   数据源
+ */
 @property (nonatomic, strong) FourthVM *viewModel;
-
-//@property (nonatomic, weak) FourthViewCtrl *fourthVC;
-
-@property (nonatomic, strong) NSArray *myDataArr;
-
-- (void)initWithTableView:(UITableView *)tableView;
 
 @end

@@ -10,17 +10,13 @@
 
 @interface UserModel : ZDBModel
 
-
-
-///** 账号 */
-//@property (nonatomic, copy)     NSString                    *account;
 /** 名字 */
 @property (nonatomic, copy)     NSString                    *name;
 /** 性别 */
 @property (nonatomic, copy)     NSString                    *sex;
 /** 手机号码 */
 @property (nonatomic, copy)     NSString                    *mobile;
-
-
+/** 手机号码 */
+@property (nonatomic, copy)     NSString                    *detail;
 
 @end

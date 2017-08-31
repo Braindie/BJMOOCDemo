@@ -7,19 +7,13 @@
 //
 
 #import "FourthSevice.h"
-#import "FourthViewCtrl.h"
 #import "FourthCell.h"
 #import "FourthModel.h"
 
 
-static NSString *identifer = @"FourthCell";
+//static NSString *identifer = @"FourthCell";
 
 @implementation FourthSevice
-
-
-- (void)initWithTableView:(UITableView *)tableView{
-    
-}
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -32,15 +26,12 @@ static NSString *identifer = @"FourthCell";
     if (cell == nil) {
         cell = [[FourthCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FourthCell"];
     }
-    cell.label.text = @"MVVM";
-    cell.backgroundColor = [UIColor redColor];
+    cell.label.text = [NSString stringWithFormat:@"%@---%@---%@",self.viewModel.name,self.viewModel.price,self.viewModel.discount];
     
-    cell.label.text = self.myDataArr[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     
     NSLog(@"%s",__func__);
 }

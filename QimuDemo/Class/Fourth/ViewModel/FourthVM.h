@@ -11,6 +11,10 @@
 
 @interface FourthVM : NSObject
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *price;
+@property (nonatomic, strong) NSString *discount;
 
+- (id)initWithName:(NSString *)name price:(NSString *)price discount:(NSString *)discount;
 
 @end

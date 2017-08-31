@@ -12,7 +12,19 @@
 
 @implementation FourthVM
 
+- (id)initWithName:(NSString *)name price:(NSString *)price discount:(NSString *)discount{
+    if (self = [super init]) {
+        _name = name;
+        _price = price;
+        _discount = discount;
+        [self chuliModel];
+    }
+    return self;
+}
 
-
+- (void)chuliModel{
+    
+    self.name = @"处理后的name";
+}
 
 @end
