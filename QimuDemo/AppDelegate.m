@@ -10,6 +10,8 @@
 #import "CenterTabBarController.h"
 //#import "GuideViewController.h"
 
+#define kname @"12345"
+
 @interface AppDelegate ()
 
 @end

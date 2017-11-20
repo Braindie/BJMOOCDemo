@@ -31,6 +31,8 @@
 static dispatch_queue_t url_session_manager_creation_queue() {
     static dispatch_queue_t af_url_session_manager_creation_queue;
     static dispatch_once_t onceToken;
+    //保证了即使是在多线程的环境下，也不会创建其他队列
+
     dispatch_once(&onceToken, ^{
         af_url_session_manager_creation_queue = dispatch_queue_create("com.alamofire.networking.session.manager.creation", DISPATCH_QUEUE_SERIAL);
     });
@@ -43,6 +45,11 @@ static void url_session_manager_create_task_safely(dispatch_block_t block) {
         // Fix of bug
         // Open Radar:http://openradar.appspot.com/radar?id=5871104061079552 (status: Fixed in iOS8)
         // Issue about:https://github.com/AFNetworking/AFNetworking/issues/2093
+        
+        //理解下，第一为什么用sync，因为是想要主线程等在这，等执行完，在返回，因为必须执行完dataTask才有数据，传值才有意义。
+        //第二，为什么要用串行队列，因为这块是为了防止ios8以下内部的dataTaskWithRequest是并发创建的，
+        //这样会导致taskIdentifiers这个属性值不唯一，因为后续要用taskIdentifiers来作为Key对应delegate。
+
         dispatch_sync(url_session_manager_creation_queue(), block);
     } else {
         block();
@@ -147,8 +154,11 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
 - (void)setupProgressForTask:(NSURLSessionTask *)task {
     __weak __typeof__(task) weakTask = task;
 
+    //拿到上传下载期望的数据大小
     self.uploadProgress.totalUnitCount = task.countOfBytesExpectedToSend;
     self.downloadProgress.totalUnitCount = task.countOfBytesExpectedToReceive;
+    
+    //将上传与下载进度和 任务绑定在一起，直接cancel suspend resume进度条，可以cancel...任务
     [self.uploadProgress setCancellable:YES];
     [self.uploadProgress setCancellationHandler:^{
         __typeof__(weakTask) strongTask = weakTask;
@@ -184,6 +194,7 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
         }];
     }
 
+    //观察task的这些属性
     [task addObserver:self
            forKeyPath:NSStringFromSelector(@selector(countOfBytesReceived))
               options:NSKeyValueObservingOptionNew
@@ -202,6 +213,7 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
               options:NSKeyValueObservingOptionNew
               context:NULL];
 
+    //观察progress这两个属性
     [self.downloadProgress addObserver:self
                             forKeyPath:NSStringFromSelector(@selector(fractionCompleted))
                                options:NSKeyValueObservingOptionNew
@@ -521,23 +533,23 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     self.sessionConfiguration = configuration;
 
     self.operationQueue = [[NSOperationQueue alloc] init];
-    self.operationQueue.maxConcurrentOperationCount = 1;
-
+    self.operationQueue.maxConcurrentOperationCount = 1;//并发线程数为1
+    //代理的继承，实际上NSURLSession去判断了，你实现了哪个方法回去调用，包括子代理的方法
     self.session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:self.operationQueue];
-
+    //相应转码
     self.responseSerializer = [AFJSONResponseSerializer serializer];
-
+    //设置默认安全策略
     self.securityPolicy = [AFSecurityPolicy defaultPolicy];
 
 #if !TARGET_OS_WATCH
     self.reachabilityManager = [AFNetworkReachabilityManager sharedManager];
 #endif
-
+    //存储NSURL task与AFURLSessionManagerTaskDelegate的字典（重点，在AFN中，每一个task都会匹配一个AFURLSessionManagerTaskDelegate来做task的delegate事件处理，即AF对task的代理进行了封装）
     self.mutableTaskDelegatesKeyedByTaskIdentifier = [[NSMutableDictionary alloc] init];
-
+    //设置AFURLSessionManagerTaskDelegate字典的锁，确保字典在多线程访问下的线程安全
     self.lock = [[NSLock alloc] init];
     self.lock.name = AFURLSessionManagerLockName;
-
+    //设置task的关联代理，用来异步获取当前session的所有未完成的task（里面的数组都是空的，这里的作用是为了从后台回来，重新初始化session，防止一些之前的后台请求任务导致程序的crash）
     [self.session getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
         for (NSURLSessionDataTask *task in dataTasks) {
             [self addDelegateForDataTask:task uploadProgress:nil downloadProgress:nil completionHandler:nil];
@@ -606,9 +618,14 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     NSParameterAssert(task);
     NSParameterAssert(delegate);
 
+    //加锁保证字典线程安全
     [self.lock lock];
+    // 将AF delegate放入以taskIdentifier标记的词典中（同一个NSURLSession中的taskIdentifier是唯一的）
     self.mutableTaskDelegatesKeyedByTaskIdentifier[@(task.taskIdentifier)] = delegate;
+    // 为AF delegate 设置task 的progress监听
     [delegate setupProgressForTask:task];
+    
+    //添加task开始和暂停的通知
     [self addNotificationObserverForTask:task];
     [self.lock unlock];
 }
@@ -619,12 +636,18 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
              completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
     AFURLSessionManagerTaskDelegate *delegate = [[AFURLSessionManagerTaskDelegate alloc] init];
+    
+    // AFURLSessionManagerTaskDelegate与AFURLSessionManager建立相互关系
     delegate.manager = self;
     delegate.completionHandler = completionHandler;
 
+    //这个taskDescriptionForSessionTasks用来发送开始和挂起通知的时候会用到,就是用这个值来Post通知，来两者对应
     dataTask.taskDescription = self.taskDescriptionForSessionTasks;
+    
+    // ***** 将AF delegate对象与 dataTask建立关系
     [self setDelegate:delegate forTask:dataTask];
 
+    // 设置AF delegate的上传进度，下载进度块。
     delegate.uploadProgressBlock = uploadProgressBlock;
     delegate.downloadProgressBlock = downloadProgressBlock;
 }
@@ -779,6 +802,8 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
                                 completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
     __block NSURLSessionUploadTask *uploadTask = nil;
+    //第一件事，创建NSURLSessionDataTask，里面适配了Ios8以下taskIdentifiers，函数创建task对象。
+    //其实现应该是因为iOS 8.0以下版本中会并发地创建多个task对象，而同步有没有做好，导致taskIdentifiers 不唯一…这边做了一个串行处理
     url_session_manager_create_task_safely(^{
         uploadTask = [self.session uploadTaskWithRequest:request fromFile:fileURL];
     });
