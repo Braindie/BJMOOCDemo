@@ -45,7 +45,6 @@ static NSString *identifer = @"tableViewCell";
     //    //创建视图
     [self creatView];
     
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
