@@ -473,6 +473,7 @@
 		E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B41EB1A3DB0072EA61 /* BaseNavigationController.m */; };
 		E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */; };
 		E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */; };
+		E5B0E9701FCD57E700AB3675 /* FiveDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B0E96F1FCD57E700AB3675 /* FiveDetailViewController.m */; };
 		E5B6D6DA1EB3302F00B19FF3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6D6D91EB3302F00B19FF3 /* libz.tbd */; };
 		E5B6D6DC1EB3303800B19FF3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6D6DB1EB3303800B19FF3 /* libbz2.tbd */; };
 		E5B6D6DE1EB3304000B19FF3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6D6DD1EB3304000B19FF3 /* libiconv.tbd */; };
@@ -1055,6 +1056,8 @@
 		E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E5A9E7B71EB1A3DB0072EA61 /* CenterTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTabBarController.h; sourceTree = "<group>"; };
 		E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTabBarController.m; sourceTree = "<group>"; };
+		E5B0E96E1FCD57E700AB3675 /* FiveDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiveDetailViewController.h; sourceTree = "<group>"; };
+		E5B0E96F1FCD57E700AB3675 /* FiveDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiveDetailViewController.m; sourceTree = "<group>"; };
 		E5B6D6D91EB3302F00B19FF3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E5B6D6DB1EB3303800B19FF3 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		E5B6D6DD1EB3304000B19FF3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -2120,8 +2123,6 @@
 			isa = PBXGroup;
 			children = (
 				E5A9E71E1EB1A39D0072EA61 /* Controllers */,
-				E5A9E7211EB1A39D0072EA61 /* Models */,
-				E5A9E7221EB1A39D0072EA61 /* Views */,
 			);
 			path = Fifth;
 			sourceTree = "<group>";
@@ -2131,22 +2132,10 @@
 			children = (
 				E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */,
 				E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */,
+				E5B0E96E1FCD57E700AB3675 /* FiveDetailViewController.h */,
+				E5B0E96F1FCD57E700AB3675 /* FiveDetailViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E5A9E7211EB1A39D0072EA61 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		E5A9E7221EB1A39D0072EA61 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E5A9E7231EB1A39D0072EA61 /* FIrst */ = {
@@ -2246,7 +2235,6 @@
 			isa = PBXGroup;
 			children = (
 				E5A9E74F1EB1A39D0072EA61 /* Controllers */,
-				E5A9E75D1EB1A39D0072EA61 /* Models */,
 				E5A9E7661EB1A39D0072EA61 /* Views */,
 				E5A9E7501EB1A39D0072EA61 /* Detail */,
 			);
@@ -2279,13 +2267,6 @@
 				E5A9E7541EB1A39D0072EA61 /* MyCommentViewController.m */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		E5A9E75D1EB1A39D0072EA61 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E5A9E7661EB1A39D0072EA61 /* Views */ = {
@@ -3148,6 +3129,7 @@
 				E5A9E6FB1EB19D9B0072EA61 /* PhotoSelectView.m in Sources */,
 				E5A9E6FA1EB19D9B0072EA61 /* PhotoModel.m in Sources */,
 				E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */,
+				E5B0E9701FCD57E700AB3675 /* FiveDetailViewController.m in Sources */,
 				E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */,
 				E5A9E7011EB19D9B0072EA61 /* ZLCameraViewController.m in Sources */,
 				E5A9E70B1EB19D9B0072EA61 /* ZLPhotoPickerDatas.m in Sources */,

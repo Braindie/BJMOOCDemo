@@ -7,6 +7,7 @@
 //
 
 #import "MyCourseHeaderView.h"
+#import "UIImageView+WebCache.h"
 
 @implementation MyCourseHeaderView
 
@@ -21,7 +22,9 @@
 - (void)addView{
 
     UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
-    [headerView setImage:[UIImage imageNamed:@"headerView.png"]];
+//    [headerView setImage:[UIImage imageNamed:@"headerView.png"]];
+    [headerView sd_setImageWithURL:[NSURL URLWithString:@"http://picture.youth.cn/qtdb/201705/W020170509396200729137.jpg"] placeholderImage:[UIImage imageNamed:@"headerView.png"]];
+
     [self addSubview:headerView];
 
 

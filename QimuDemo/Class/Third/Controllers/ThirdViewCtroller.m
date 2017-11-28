@@ -35,7 +35,7 @@ static NSString *identifer = @"tableViewCell";
 
     self.isNavCtrlSet = NO;
 
-    self.navigationItem.title = @"映客直播列表";
+    self.navigationItem.title = @"二姐直播列表";
 
 
     //    //加载数据
@@ -117,7 +117,16 @@ static NSString *identifer = @"tableViewCell";
     if (self.myDataArr.count != 0) {
         LiverModel *model = self.myDataArr[indexPath.row];
         cell.titleLabel.text = model.creator.nick;
-        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.creator.portrait]];
+        
+//        [SDWebImageDownloader.sharedDownloader setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+//                                     forHTTPHeaderField:@"Accept"]; 
+//        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.creator.portrait]];
+        
+        //之前用公司有拦截的网络会报这个错Domain=NSURLErrorDomain Code=-1005
+        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.creator.portrait] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            NSLog(@"%@",error);
+        }];
+        
 //        NSURL *url = [NSURL URLWithString:model.creator.portrait];
 //        [cell.titleImage sd_setImageWithURL:url placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //            NSLog(@"error : %@",error);
