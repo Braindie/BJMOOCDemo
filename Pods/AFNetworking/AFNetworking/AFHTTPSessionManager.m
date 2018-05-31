@@ -54,7 +54,7 @@
 - (instancetype)init {
     return [self initWithBaseURL:nil];
 }
-
+//初始化带url
 - (instancetype)initWithBaseURL:(NSURL *)url {
     return [self initWithBaseURL:url sessionConfiguration:nil];
 }
@@ -62,7 +62,7 @@
 - (instancetype)initWithSessionConfiguration:(NSURLSessionConfiguration *)configuration {
     return [self initWithBaseURL:nil sessionConfiguration:configuration];
 }
-
+//初始化带url和系统NSURLSessionConfiguration
 - (instancetype)initWithBaseURL:(NSURL *)url
            sessionConfiguration:(NSURLSessionConfiguration *)configuration
 {

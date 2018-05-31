@@ -14,4 +14,10 @@
 @property (nonatomic ,assign) BOOL isCustomBack;
 @property (nonatomic ,assign) BOOL isNavCtrlSet;
 
+
+//设置的左右按钮事件
+- (void)leftButtonAction:(UIButton *)button;
+
+- (void)rightButtonAction:(UIButton *)button;
+
 @end

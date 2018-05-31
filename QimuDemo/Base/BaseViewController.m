@@ -66,13 +66,13 @@
                   // 设置标题图片的位置
 //                  leftButton.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
 
-                  [leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                  [leftButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
                   // 创建右侧按钮
                 UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 rightButton.frame = CGRectMake(0, 0, 30, 30);
                 [rightButton setImage:[UIImage imageNamed:@"btn_set.png"] forState:UIControlStateNormal];
-                [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                [rightButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
                 UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
                 UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:rightButton];

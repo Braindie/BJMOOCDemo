@@ -18,6 +18,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+// 几乎说有的类都围绕这个类展开的业务逻辑
 
 #import "AFURLSessionManager.h"
 #import <objc/runtime.h>
@@ -519,7 +520,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 - (instancetype)init {
     return [self initWithSessionConfiguration:nil];
 }
-
+//初始化最终调用了这个方法
 - (instancetype)initWithSessionConfiguration:(NSURLSessionConfiguration *)configuration {
     self = [super init];
     if (!self) {

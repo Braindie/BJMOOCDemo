@@ -11,6 +11,7 @@
 #import "HomeSectionHeaderView.h"
 #import "CYLDBManager.h"//json文件解析
 #import "FirstDetailViewController.h"
+#import "QMBaiduViewController.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -40,14 +41,18 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     //创建视图
     [self creatView];
-
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.backgroundView.scrollEnabled = YES;
     [self updateViewHeight];
+}
+
+- (void)leftButtonAction:(UIButton *)button{
+    QMBaiduViewController *vc = [[QMBaiduViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

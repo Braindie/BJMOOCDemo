@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/FIrst/Controllers/HomeViewController.m"
-            timestampString = "516010472.385552"
+            timestampString = "549439884.2373331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -161,54 +161,6 @@
             endingLineNumber = "79"
             landmarkName = "-loadTopData"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-            timestampString = "532944954.609868"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "512"
-            endingLineNumber = "512"
-            landmarkName = "downloadTaskDidFinishDownloading"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AFURLSessionManager downloadTaskDidFinishDownloading]"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-                  timestampString = "533551640.747023"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "512"
-                  endingLineNumber = "512"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AFURLSessionManager setDownloadTaskDidFinishDownloading:]"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-                  timestampString = "533551640.749458"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "512"
-                  endingLineNumber = "512"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "533551626.835781"
+            timestampString = "535613455.575848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -346,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "533551626.835862"
+            timestampString = "535613455.576654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
@@ -410,7 +362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "533551626.836228"
+            timestampString = "535613455.577154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -506,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "533551626.836699"
+            timestampString = "535613455.577524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -586,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "533551626.837042"
+            timestampString = "535613455.577822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "243"
