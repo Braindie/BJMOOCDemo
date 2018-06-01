@@ -123,7 +123,7 @@
                                                  downloadProgress:downloadProgress
                                                           success:success
                                                           failure:failure];
-    //开始网络请求
+    //开始系统网络请求
     [dataTask resume];
 
     return dataTask;
@@ -250,6 +250,9 @@
     return dataTask;
 }
 
+/**
+ *   初始化NSURLSessionDataTask
+ */
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
                                        URLString:(NSString *)URLString
                                       parameters:(id)parameters

@@ -7,7 +7,6 @@
 //
 
 #import "QMBaiduViewController.h"
-#import <BaiduTraceSDK/BaiduTraceSDK.h>
 
 @interface QMBaiduViewController ()
 
@@ -22,8 +21,7 @@
     self.navigationItem.title = @"百度鹰眼";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    BTKServiceOption *sop = [[BTKServiceOption alloc] initWithAK:@"asdf1234asdf1234" mcode:@"com.yingyan.sdk" serviceID:100000 keepAlive:false];
-    [[BTKAction sharedInstance] initInfo:sop];
+
 
 }
 

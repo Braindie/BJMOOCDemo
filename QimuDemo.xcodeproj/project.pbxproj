@@ -498,9 +498,6 @@
 		E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */; };
 		E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */; };
 		E5F57E291FF342DC005F1417 /* QMBaiduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F57E281FF342DC005F1417 /* QMBaiduViewController.m */; };
-		E5F57E2D1FF34671005F1417 /* BaiduTraceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F57E2C1FF34671005F1417 /* BaiduTraceSDK.framework */; };
-		E5F57E2E1FF34990005F1417 /* BaiduTraceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F57E2C1FF34671005F1417 /* BaiduTraceSDK.framework */; };
-		E5F57E2F1FF34990005F1417 /* BaiduTraceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5F57E2C1FF34671005F1417 /* BaiduTraceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -510,7 +507,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E5F57E2F1FF34990005F1417 /* BaiduTraceSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1206,7 +1202,6 @@
 		E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
 		E5F57E271FF342DC005F1417 /* QMBaiduViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMBaiduViewController.h; sourceTree = "<group>"; };
 		E5F57E281FF342DC005F1417 /* QMBaiduViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMBaiduViewController.m; sourceTree = "<group>"; };
-		E5F57E2C1FF34671005F1417 /* BaiduTraceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduTraceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1214,7 +1209,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F57E2E1FF34990005F1417 /* BaiduTraceSDK.framework in Frameworks */,
 				E5B6D7651EB33D7C00B19FF3 /* VideoToolbox.framework in Frameworks */,
 				E5B6D6DE1EB3304000B19FF3 /* libiconv.tbd in Frameworks */,
 				E5B6D6DC1EB3303800B19FF3 /* libbz2.tbd in Frameworks */,
@@ -1226,7 +1220,6 @@
 				E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */,
 				E5B6D74F1EB335C200B19FF3 /* libavformat.a in Frameworks */,
 				2D9D078FE6CACFB6EB4D537B /* libPods-QimuDemo.a in Frameworks */,
-				E5F57E2D1FF34671005F1417 /* BaiduTraceSDK.framework in Frameworks */,
 				E5B6D7511EB335C200B19FF3 /* libswresample.a in Frameworks */,
 				E5B6D74C1EB335C200B19FF3 /* libavcodec.a in Frameworks */,
 			);
@@ -1377,7 +1370,6 @@
 		E5A9E2CF1EB19B850072EA61 /* ThirdFremework */ = {
 			isa = PBXGroup;
 			children = (
-				E5F57E2C1FF34671005F1417 /* BaiduTraceSDK.framework */,
 				E5A061BA1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout */,
 				E5A061B21EC1AE7900B23589 /* CYLDBManager */,
 				E5B6D7531EB33D0F00B19FF3 /* kxmovie */,
