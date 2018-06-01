@@ -10,19 +10,24 @@
 //#import "ThirdCell.h"
 //#import "ThirdDetailViewController.h"
 #import "LiveListCell.h"
-
-#import "KxMovieViewController.h"
-
-#import "AFHTTPSessionManager.h"
 #import "LiveListModel.h"
 #import "LiverModel.h"
+
+#import <MBProgressHUD/MBProgressHUD.h>
+
+#import "AFHTTPSessionManager.h"
+
 #import <YYModel/YYModel.h>
 
 #import "UIImageView+WebCache.h"
 
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "KxMovieViewController.h"
 
-static NSString *identifer = @"tableViewCell";
+@interface ThirdViewCtroller ()<NSURLSessionDataDelegate>
+
+@property (nonatomic, strong) NSMutableData *mData;
+
+@end
 
 @implementation ThirdViewCtroller
 
@@ -35,29 +40,28 @@ static NSString *identifer = @"tableViewCell";
 
     self.isNavCtrlSet = NO;
 
-    self.navigationItem.title = @"二姐直播列表";
+    self.navigationItem.title = @"直播列表";
+    
+    //创建视图
+    self.thirdTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64) style:UITableViewStylePlain];
+    self.thirdTableView.delegate = self;
+    self.thirdTableView.dataSource = self;
+    [self.view addSubview:self.thirdTableView];
+    self.thirdTableView.hidden = YES;
+    
+    
+    //加载数据
+//    [self requestDataWithAFN];
+    
+    self.mData = [[NSMutableData alloc] init];
+    [self requestDataWithNSURLSession];
 
-
-    //    //加载数据
-    [self loadTopData];
-    
-    
-    //    //创建视图
-    [self creatView];
-    
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    self.navigationController.navigationBarHidden = NO;
-}
-- (void)viewWillAppear:(BOOL)animated{
-    self.navigationController.navigationBarHidden = NO;
-}
-
-
-- (void)loadTopData{
+#pragma mark - AFN
+- (void)requestDataWithAFN{
     
-    NSURL *URL = [NSURL URLWithString:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1"];
+    NSString *urlString = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
 
@@ -65,7 +69,7 @@ static NSString *identifer = @"tableViewCell";
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.label.text = @"加载中";
     
-    [manager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -75,9 +79,18 @@ static NSString *identifer = @"tableViewCell";
 
         NSLog(@"%@",model);
         self.myDataArr = [NSMutableArray arrayWithArray:model.lives];
-        self.thirdTableView.hidden = NO;
-        [self.thirdTableView reloadData];
+        if (self.myDataArr.count == 0) {
+            self.thirdTableView.hidden = YES;
+        }else{
+            self.thirdTableView.hidden = NO;
+            [self.thirdTableView reloadData];
+        }
         
+        
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:model.error_msg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alertVC addAction:action];
+        [self presentViewController:alertVC animated:YES completion:nil];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -87,18 +100,67 @@ static NSString *identifer = @"tableViewCell";
 
 }
 
-- (void)creatView{
-
-    self.thirdTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64) style:UITableViewStylePlain];
-    self.thirdTableView.delegate = self;
-    self.thirdTableView.dataSource = self;
-    [self.view addSubview:self.thirdTableView];
-    self.thirdTableView.hidden = YES;
+#pragma mark - NSURLSession
+- (void)requestDataWithNSURLSession{
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:queue];
     
+    
+    
+    NSURL *url = [NSURL URLWithString:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *mRequest = [NSMutableURLRequest requestWithURL:url];
+    mRequest.HTTPMethod = @"Get";
+    
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:mRequest];
+    
+    
+//    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//    }];
+    [task resume];
+}
+
+#pragma mark -- NSURLSessionDelegate
+//最后一条消息
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error{
+    NSLog(@"%s",__func__);
+}
+//身份认证凭证
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
+    NSLog(@"%s",__func__);
+}
+
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session{
+    NSLog(@"%s",__func__);
 }
 
 
+#pragma mark -- NSURLSessionDataDelegate
+//收到相应
+//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler{
+//    NSLog(@"%s",__func__);
+//
+//    //默认情况下不接收数据
+//    //必须告诉系统是否接收服务器返回的数据。。。。。。否则：下面的代理就不再调用了。。。。
+//    completionHandler(NSURLSessionResponseAllow);
+//}
 
+//接收到服务器数据（多次调用）
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
+    NSLog(@"%s",__func__);
+    
+    //!< 拼接服务器返回的数据
+    [self.mData appendData:data];
+}
+
+//任务完成时调用
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
+    NSLog(@"%s",__func__);
+    
+    //解析服务器返回的数据
+    NSLog(@"mData = %@", [[NSString alloc] initWithData:self.mData encoding:NSUTF8StringEncoding]);
+}
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

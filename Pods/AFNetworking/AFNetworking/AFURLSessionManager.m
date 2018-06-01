@@ -302,6 +302,7 @@ didCompleteWithError:(NSError *)error
     } else {
         dispatch_async(url_session_manager_processing_queue(), ^{
             NSError *serializationError = nil;
+            
             responseObject = [manager.responseSerializer responseObjectForResponse:task.response data:data error:&serializationError];
 
             if (self.downloadFileURL) {
@@ -990,7 +991,8 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     return [[self class] instancesRespondToSelector:selector];
 }
 
-#pragma mark - NSURLSessionDelegate
+#pragma mark - 系统代理
+#pragma mark -- NSURLSessionDelegate
 //当前这个session已经失效时，该代理方法被调用。
 /*
  如果你使用finishTasksAndInvalidate函数使该session失效，
@@ -1047,7 +1049,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
     }
 }
 
-#pragma mark - NSURLSessionTaskDelegate
+#pragma mark -- NSURLSessionTaskDelegate
 //被服务器重定向的时候调用
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
@@ -1161,7 +1163,7 @@ didCompleteWithError:(NSError *)error
     }
 }
 
-#pragma mark - NSURLSessionDataDelegate
+#pragma mark -- NSURLSessionDataDelegate
 //收到服务器响应后调用
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
@@ -1235,7 +1237,7 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask
     }
 }
 
-#pragma mark - NSURLSessionDownloadDelegate
+#pragma mark -- NSURLSessionDownloadDelegate
 //下载完成的时候调用
 - (void)URLSession:(NSURLSession *)session
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
