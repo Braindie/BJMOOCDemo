@@ -20,7 +20,8 @@
 
 ## Third
 ### 直播
-使用AFN请求映客直播列表</br>
+AFN和NSURLSession的研究</br>
+网络请求映客直播列表（地址失效了）</br>
 使用YYModel把json转换成Model</br>
 
 使用FFMpeg实现拉流</br>
@@ -41,6 +42,6 @@
 
 ## Fifth
 ### 图片选择器 
-### OCR（光学字符识别）文字识别
+### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 
 
