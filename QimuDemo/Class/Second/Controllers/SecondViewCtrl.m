@@ -8,10 +8,11 @@
 
 #import "SecondViewCtrl.h"
 #import "MyTableViewCell.h"
-#import "MyCourseDetailController.h"
 
-#define SCREEN_WIDTH                    ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT                   ([UIScreen mainScreen].bounds.size.height)
+#import "SGWCustomBlockAlertManager.h"
+#import "SGWBlockAlertManager.h"
+#import "UILabel+StringFrame.h"
+#import "HxToastView.h"
 
 @implementation SecondViewCtrl
 
@@ -220,14 +221,30 @@
 
 }
 
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MyCourseDetailController *myCourseDetailViewCtrl = [[MyCourseDetailController alloc] init];
-    [self.navigationController pushViewController:myCourseDetailViewCtrl animated:NO];
+    for (int i = 0; i<5; i++) {
+        [SGWCustomBlockAlertManager alertWithMessage:@"你确定取消吗" cancelButtonTitle:@"取消" cancelBlock:nil];
+//        [SGWBlockAlertManager alertWithTitle:@"" message:@"我是提示框" cancelButtonTitle:@"取消"];
+    }
+    
+    
+    [UILabel showErrorProgressLabelWithString:@"我就是个提示框，我就是个提示框"];
+    
+    
+//    CGSize toastSize = [HxToastView sizeForText:@"我就是个提示框，我就是个提示框"];
+//    HxToastView *toastView = [[HxToastView alloc] initWithFrame:CGRectZero];
+//    toastView.frame = CGRectMake((self.view.bounds.size.width - toastSize.width) / 2, (SCREEN_HEIGHT-toastSize.height-10)/2 - 20, toastSize.width, toastSize.height+10);
+//    [self.view addSubview:toastView];
+//    [self.view bringSubviewToFront:toastView];
+//    [toastView setToastText:@"我就是个提示框，我就是个提示框"];
+//    [toastView show:YES];
+
+
 }
 
-
-#pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataArr1.count;

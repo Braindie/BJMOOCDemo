@@ -11,7 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "FiveDetailViewController.h"
 
-@interface FiveViewCtrl ()<BunnyPhotoViewDelegate>
+@interface FiveViewCtrl ()
 @property (nonatomic, strong) PhotoSelectView *photoView;
 /**
  *    图片
@@ -67,12 +67,12 @@
 }
 
 - (void)creatPhotoView{
-    self.b1PhotoView = [[BunnyPhotoView alloc] initWithFrame:CGRectMake(20, 264, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
-    self.b1PhotoView.VCdelegate = self;
-    [self.view addSubview:self.b1PhotoView];
-    
-    self.b2PhotoView = [[BunnyPhotoView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-60)/2 + 40, 264, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
-    [self.view addSubview:self.b2PhotoView];
+//    self.b1PhotoView = [[BunnyPhotoView alloc] initWithFrame:CGRectMake(20, 264, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+//    self.b1PhotoView.VCdelegate = self;
+//    [self.view addSubview:self.b1PhotoView];
+//
+//    self.b2PhotoView = [[BunnyPhotoView alloc] initWithFrame:CGRectMake((self.view.frame.size.width-60)/2 + 40, 264, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+//    [self.view addSubview:self.b2PhotoView];
     
     
     

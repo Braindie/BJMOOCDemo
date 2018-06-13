@@ -37,6 +37,19 @@
 		E505EAEC20C548B700851764 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E505EAD020C548B700851764 /* ZLPhotoPickerFooterCollectionReusableView.m */; };
 		E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E505EAD120C548B700851764 /* ZLPhotoPickerImageView.m */; };
 		E505EAEE20C548B700851764 /* ZLPhotoPickerGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E505EAD220C548B700851764 /* ZLPhotoPickerGroupTableViewCell.m */; };
+		E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475B020CF97CD00B79605 /* SGWMultiSelectionAlertView.m */; };
+		E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475B620CF97CD00B79605 /* SGWCustomBlockAlertManager.m */; };
+		E51475C520CF97CD00B79605 /* SGWMultiSelectionAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51475B820CF97CD00B79605 /* SGWMultiSelectionAlertView.xib */; };
+		E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475B920CF97CD00B79605 /* SGWDismissAlertView.m */; };
+		E51475C720CF97CD00B79605 /* SGWCancelAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51475BB20CF97CD00B79605 /* SGWCancelAlertView.xib */; };
+		E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475BC20CF97CD00B79605 /* SGWCancelAlertView.m */; };
+		E51475C920CF97CD00B79605 /* SGWDismissAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51475BD20CF97CD00B79605 /* SGWDismissAlertView.xib */; };
+		E51475CA20CF97CD00B79605 /* SGWBlockAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475BF20CF97CD00B79605 /* SGWBlockAlertManager.m */; };
+		E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475CD20CFB18300B79605 /* UILabel+StringFrame.m */; };
+		E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D120CFB1CE00B79605 /* UIView+Extension.m */; };
+		E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D420CFB3BD00B79605 /* DingCopyLabel.m */; };
+		E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D620CFB3BD00B79605 /* HxToastView.m */; };
+		E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
 		E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D907F1EE1313B00AE856B /* LiveListModel.m */; };
 		E54D90831EE1325E00AE856B /* LiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90821EE1325E00AE856B /* LiverModel.m */; };
@@ -438,12 +451,6 @@
 		E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7361EB1A39D0072EA61 /* FourthViewCtrl.m */; };
 		E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7391EB1A39D0072EA61 /* FourthSevice.m */; };
 		E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */; };
-		E5A9E79B1EB1A39D0072EA61 /* MyCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7521EB1A39D0072EA61 /* MyCommentCell.m */; };
-		E5A9E79C1EB1A39D0072EA61 /* MyCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7541EB1A39D0072EA61 /* MyCommentViewController.m */; };
-		E5A9E79D1EB1A39D0072EA61 /* MyCourseDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7561EB1A39D0072EA61 /* MyCourseDetailController.m */; };
-		E5A9E79E1EB1A39D0072EA61 /* MyCourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7581EB1A39D0072EA61 /* MyCourseHeaderView.m */; };
-		E5A9E79F1EB1A39D0072EA61 /* MyCourseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */; };
-		E5A9E7A01EB1A39D0072EA61 /* MyCourseMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E75C1EB1A39D0072EA61 /* MyCourseMiddleView.m */; };
 		E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */; };
 		E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */; };
 		E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */; };
@@ -565,6 +572,30 @@
 		E505EAD220C548B700851764 /* ZLPhotoPickerGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPhotoPickerGroupTableViewCell.m; sourceTree = "<group>"; };
 		E505EAD320C548B700851764 /* ZLPhotoPickerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhotoPickerCommon.h; sourceTree = "<group>"; };
 		E505EAD420C548B700851764 /* ZLPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPhoto.h; sourceTree = "<group>"; };
+		E51475B020CF97CD00B79605 /* SGWMultiSelectionAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWMultiSelectionAlertView.m; sourceTree = "<group>"; };
+		E51475B120CF97CD00B79605 /* SGWDismissAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWDismissAlertView.h; sourceTree = "<group>"; };
+		E51475B320CF97CD00B79605 /* SGWCustomBlockAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWCustomBlockAlertManager.h; sourceTree = "<group>"; };
+		E51475B420CF97CD00B79605 /* SGWCancelAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWCancelAlertView.h; sourceTree = "<group>"; };
+		E51475B620CF97CD00B79605 /* SGWCustomBlockAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWCustomBlockAlertManager.m; sourceTree = "<group>"; };
+		E51475B820CF97CD00B79605 /* SGWMultiSelectionAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGWMultiSelectionAlertView.xib; sourceTree = "<group>"; };
+		E51475B920CF97CD00B79605 /* SGWDismissAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWDismissAlertView.m; sourceTree = "<group>"; };
+		E51475BA20CF97CD00B79605 /* SGWMultiSelectionAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWMultiSelectionAlertView.h; sourceTree = "<group>"; };
+		E51475BB20CF97CD00B79605 /* SGWCancelAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGWCancelAlertView.xib; sourceTree = "<group>"; };
+		E51475BC20CF97CD00B79605 /* SGWCancelAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWCancelAlertView.m; sourceTree = "<group>"; };
+		E51475BD20CF97CD00B79605 /* SGWDismissAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGWDismissAlertView.xib; sourceTree = "<group>"; };
+		E51475BF20CF97CD00B79605 /* SGWBlockAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWBlockAlertManager.m; sourceTree = "<group>"; };
+		E51475C020CF97CD00B79605 /* SGWBlockAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWBlockAlertManager.h; sourceTree = "<group>"; };
+		E51475CB20CF98B500B79605 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E51475CD20CFB18300B79605 /* UILabel+StringFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+StringFrame.m"; sourceTree = "<group>"; };
+		E51475CE20CFB18300B79605 /* UILabel+StringFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+StringFrame.h"; sourceTree = "<group>"; };
+		E51475D020CFB1CE00B79605 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E51475D120CFB1CE00B79605 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		E51475D420CFB3BD00B79605 /* DingCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DingCopyLabel.m; sourceTree = "<group>"; };
+		E51475D620CFB3BD00B79605 /* HxToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HxToastView.m; sourceTree = "<group>"; };
+		E51475D720CFB3BD00B79605 /* DingCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DingCopyLabel.h; sourceTree = "<group>"; };
+		E51475D820CFB3BD00B79605 /* HxToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HxToastView.h; sourceTree = "<group>"; };
+		E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorner.m"; sourceTree = "<group>"; };
+		E51475DE20CFB45000B79605 /* UIView+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorner.h"; sourceTree = "<group>"; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E54D907E1EE1313B00AE856B /* LiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListModel.h; sourceTree = "<group>"; };
 		E54D907F1EE1313B00AE856B /* LiveListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
@@ -985,18 +1016,6 @@
 		E5A9E7391EB1A39D0072EA61 /* FourthSevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthSevice.m; sourceTree = "<group>"; };
 		E5A9E73A1EB1A39D0072EA61 /* FourthVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthVM.h; sourceTree = "<group>"; };
 		E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVM.m; sourceTree = "<group>"; };
-		E5A9E7511EB1A39D0072EA61 /* MyCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentCell.h; sourceTree = "<group>"; };
-		E5A9E7521EB1A39D0072EA61 /* MyCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentCell.m; sourceTree = "<group>"; };
-		E5A9E7531EB1A39D0072EA61 /* MyCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentViewController.h; sourceTree = "<group>"; };
-		E5A9E7541EB1A39D0072EA61 /* MyCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentViewController.m; sourceTree = "<group>"; };
-		E5A9E7551EB1A39D0072EA61 /* MyCourseDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseDetailController.h; sourceTree = "<group>"; };
-		E5A9E7561EB1A39D0072EA61 /* MyCourseDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseDetailController.m; sourceTree = "<group>"; };
-		E5A9E7571EB1A39D0072EA61 /* MyCourseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseHeaderView.h; sourceTree = "<group>"; };
-		E5A9E7581EB1A39D0072EA61 /* MyCourseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseHeaderView.m; sourceTree = "<group>"; };
-		E5A9E7591EB1A39D0072EA61 /* MyCourseListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseListCell.h; sourceTree = "<group>"; };
-		E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseListCell.m; sourceTree = "<group>"; };
-		E5A9E75B1EB1A39D0072EA61 /* MyCourseMiddleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseMiddleView.h; sourceTree = "<group>"; };
-		E5A9E75C1EB1A39D0072EA61 /* MyCourseMiddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseMiddleView.m; sourceTree = "<group>"; };
 		E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCtroller.h; sourceTree = "<group>"; };
 		E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCtroller.m; sourceTree = "<group>"; };
 		E5A9E76E1EB1A39D0072EA61 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
@@ -1226,6 +1245,7 @@
 		787D844A1C0EC08100DC473D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E51475CB20CF98B500B79605 /* PrefixHeader.pch */,
 				787D844B1C0EC08100DC473D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1418,6 +1438,68 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E51475AE20CF97CD00B79605 /* BJCustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E51475D320CFB3BD00B79605 /* CustomToastAlertView */,
+				E51475CC20CFB18300B79605 /* CustomLabelAlertView */,
+				E51475AF20CF97CD00B79605 /* CustomBlockAlertView */,
+				E51475BE20CF97CD00B79605 /* CustomUIAlertView */,
+			);
+			path = BJCustomAlertView;
+			sourceTree = "<group>";
+		};
+		E51475AF20CF97CD00B79605 /* CustomBlockAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E51475B320CF97CD00B79605 /* SGWCustomBlockAlertManager.h */,
+				E51475B620CF97CD00B79605 /* SGWCustomBlockAlertManager.m */,
+				E51475BA20CF97CD00B79605 /* SGWMultiSelectionAlertView.h */,
+				E51475B020CF97CD00B79605 /* SGWMultiSelectionAlertView.m */,
+				E51475B820CF97CD00B79605 /* SGWMultiSelectionAlertView.xib */,
+				E51475B420CF97CD00B79605 /* SGWCancelAlertView.h */,
+				E51475BC20CF97CD00B79605 /* SGWCancelAlertView.m */,
+				E51475BB20CF97CD00B79605 /* SGWCancelAlertView.xib */,
+				E51475B120CF97CD00B79605 /* SGWDismissAlertView.h */,
+				E51475B920CF97CD00B79605 /* SGWDismissAlertView.m */,
+				E51475BD20CF97CD00B79605 /* SGWDismissAlertView.xib */,
+			);
+			path = CustomBlockAlertView;
+			sourceTree = "<group>";
+		};
+		E51475BE20CF97CD00B79605 /* CustomUIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E51475C020CF97CD00B79605 /* SGWBlockAlertManager.h */,
+				E51475BF20CF97CD00B79605 /* SGWBlockAlertManager.m */,
+			);
+			path = CustomUIAlertView;
+			sourceTree = "<group>";
+		};
+		E51475CC20CFB18300B79605 /* CustomLabelAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E51475D020CFB1CE00B79605 /* UIView+Extension.h */,
+				E51475D120CFB1CE00B79605 /* UIView+Extension.m */,
+				E51475CE20CFB18300B79605 /* UILabel+StringFrame.h */,
+				E51475CD20CFB18300B79605 /* UILabel+StringFrame.m */,
+			);
+			path = CustomLabelAlertView;
+			sourceTree = "<group>";
+		};
+		E51475D320CFB3BD00B79605 /* CustomToastAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E51475DE20CFB45000B79605 /* UIView+RoundedCorner.h */,
+				E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */,
+				E51475D820CFB3BD00B79605 /* HxToastView.h */,
+				E51475D620CFB3BD00B79605 /* HxToastView.m */,
+				E51475D720CFB3BD00B79605 /* DingCopyLabel.h */,
+				E51475D420CFB3BD00B79605 /* DingCopyLabel.m */,
+			);
+			path = CustomToastAlertView;
+			sourceTree = "<group>";
+		};
 		E514D99D1EB878D60011A886 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,6 +1543,7 @@
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E51475AE20CF97CD00B79605 /* BJCustomAlertView */,
 				E5A061B61EC1AEAE00B23589 /* BJView */,
 				E5A9E6B11EB19D9B0072EA61 /* PhotoSelect */,
 				E5A9E2C51EB19B520072EA61 /* ZDBModel */,
@@ -2124,7 +2207,6 @@
 			children = (
 				E5A9E74F1EB1A39D0072EA61 /* Controllers */,
 				E5A9E7661EB1A39D0072EA61 /* Views */,
-				E5A9E7501EB1A39D0072EA61 /* Detail */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -2136,25 +2218,6 @@
 				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E5A9E7501EB1A39D0072EA61 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				E5A9E7551EB1A39D0072EA61 /* MyCourseDetailController.h */,
-				E5A9E7561EB1A39D0072EA61 /* MyCourseDetailController.m */,
-				E5A9E7571EB1A39D0072EA61 /* MyCourseHeaderView.h */,
-				E5A9E7581EB1A39D0072EA61 /* MyCourseHeaderView.m */,
-				E5A9E75B1EB1A39D0072EA61 /* MyCourseMiddleView.h */,
-				E5A9E75C1EB1A39D0072EA61 /* MyCourseMiddleView.m */,
-				E5A9E7591EB1A39D0072EA61 /* MyCourseListCell.h */,
-				E5A9E75A1EB1A39D0072EA61 /* MyCourseListCell.m */,
-				E5A9E7511EB1A39D0072EA61 /* MyCommentCell.h */,
-				E5A9E7521EB1A39D0072EA61 /* MyCommentCell.m */,
-				E5A9E7531EB1A39D0072EA61 /* MyCommentViewController.h */,
-				E5A9E7541EB1A39D0072EA61 /* MyCommentViewController.m */,
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		E5A9E7661EB1A39D0072EA61 /* Views */ = {
@@ -2625,6 +2688,7 @@
 				E5A9E5871EB19D470072EA61 /* focus_default.png in Resources */,
 				E5A9E3B61EB19D0B0072EA61 /* data.json in Resources */,
 				E5A9E5CA1EB19D470072EA61 /* zan_01.png in Resources */,
+				E51475C520CF97CD00B79605 /* SGWMultiSelectionAlertView.xib in Resources */,
 				E5A9E3B51EB19D0B0072EA61 /* collectioBtn.png in Resources */,
 				E5A9E5E01EB19D470072EA61 /* my_favorite.png in Resources */,
 				E5A9E6781EB19D470072EA61 /* course_add0.png in Resources */,
@@ -2668,6 +2732,7 @@
 				E5A9E5A91EB19D470072EA61 /* 18.png in Resources */,
 				E5A9E5E41EB19D470072EA61 /* backFace.png in Resources */,
 				E5A9E59F1EB19D470072EA61 /* viewfile.png in Resources */,
+				E51475C920CF97CD00B79605 /* SGWDismissAlertView.xib in Resources */,
 				E5A9E5771EB19D470072EA61 /* star_gb_.png in Resources */,
 				E5A9E5961EB19D470072EA61 /* ppt_file.png in Resources */,
 				E5A9E6441EB19D470072EA61 /* progress_cross_ok.png in Resources */,
@@ -2872,6 +2937,7 @@
 				E5A9E6361EB19D470072EA61 /* xuexi_1.png in Resources */,
 				E5A9E5DD1EB19D470072EA61 /* btn_fav_no.png in Resources */,
 				E5A9E5471EB19D470072EA61 /* default_header.png in Resources */,
+				E51475C720CF97CD00B79605 /* SGWCancelAlertView.xib in Resources */,
 				E5A9E6461EB19D470072EA61 /* suspended.png in Resources */,
 				E5A9E58C1EB19D470072EA61 /* mp4_file.png in Resources */,
 				E5A9E6201EB19D470072EA61 /* icon60.png in Resources */,
@@ -2989,44 +3055,47 @@
 				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
 				E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */,
+				E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */,
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,
 				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
 				E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */,
 				E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */,
 				E5B6D7631EB33D0F00B19FF3 /* KxMovieViewController.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
-				E5A9E79B1EB1A39D0072EA61 /* MyCommentCell.m in Sources */,
 				E505EAD820C548B700851764 /* ZLCameraView.m in Sources */,
 				E505EAE920C548B700851764 /* ZLPhotoPickerViewController.m in Sources */,
+				E51475CA20CF97CD00B79605 /* SGWBlockAlertManager.m in Sources */,
 				E5ABA24E20C0FA4B00A2C172 /* MonthCollectionViewCell.m in Sources */,
 				E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */,
-				E5A9E79D1EB1A39D0072EA61 /* MyCourseDetailController.m in Sources */,
 				E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */,
+				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
 				E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */,
-				E5A9E7A01EB1A39D0072EA61 /* MyCourseMiddleView.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
 				E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */,
-				E5A9E79F1EB1A39D0072EA61 /* MyCourseListCell.m in Sources */,
+				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
+				E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */,
 				E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */,
 				E505EADC20C548B700851764 /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
+				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
 				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
 				E5ABA25020C0FA4B00A2C172 /* MonthXibCollectionViewCell.m in Sources */,
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,
+				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
+				E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
-				E5A9E79E1EB1A39D0072EA61 /* MyCourseHeaderView.m in Sources */,
 				E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */,
 				E505EAD720C548B700851764 /* ZLCamera.m in Sources */,
 				E505EADF20C548B700851764 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				E5B6D7621EB33D0F00B19FF3 /* KxMovieGLView.m in Sources */,
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
-				E5A9E79C1EB1A39D0072EA61 /* MyCommentViewController.m in Sources */,
+				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
 				E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E5ABA24A20C0FA4B00A2C172 /* QMBaiduViewController.m in Sources */,
@@ -3036,6 +3105,7 @@
 				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,
 				E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */,
 				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
+				E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */,
 				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				E5A9E2CC1EB19B520072EA61 /* UserModel.m in Sources */,
 				E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */,
@@ -3164,6 +3234,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QimuDemo/ThirdFremework",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QimuDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -3202,6 +3274,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QimuDemo/ThirdFremework",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QimuDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
