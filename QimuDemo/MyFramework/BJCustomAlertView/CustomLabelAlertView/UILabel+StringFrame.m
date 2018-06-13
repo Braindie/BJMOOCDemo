@@ -65,11 +65,7 @@
             isOpen = NO;
             
         }];
-        
-      
-    
     }
-      
 }
 
 + (void)showErrorProgressLabelWithString:(NSString *)string onView:(UIView *)view

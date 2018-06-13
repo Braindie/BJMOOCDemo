@@ -1490,10 +1490,10 @@
 		E51475D320CFB3BD00B79605 /* CustomToastAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				E51475DE20CFB45000B79605 /* UIView+RoundedCorner.h */,
-				E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */,
 				E51475D820CFB3BD00B79605 /* HxToastView.h */,
 				E51475D620CFB3BD00B79605 /* HxToastView.m */,
+				E51475DE20CFB45000B79605 /* UIView+RoundedCorner.h */,
+				E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */,
 				E51475D720CFB3BD00B79605 /* DingCopyLabel.h */,
 				E51475D420CFB3BD00B79605 /* DingCopyLabel.m */,
 			);

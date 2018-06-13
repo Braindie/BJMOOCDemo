@@ -17,10 +17,10 @@
 获取model的属性作为本地数据库表中的key。
 
 ### Toast
-1、</br>
-2、</br>
-3、</br>
-4、</br>
+1、自定义Alert</br>
+2、系统Alert</br>
+3、UILabel分类Toast</br>
+4、HxToastView.h</br>switch case中初始化对象要用放入大括号里面，否则会报错
 
 
 ## Third

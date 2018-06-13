@@ -38,7 +38,7 @@
 
 - (void)loadTopData{
 
-    NSArray *dataArr1 = [NSArray arrayWithObjects:@"data1",@"data2",@"data3",@"data4",@"data5",@"data6",@"data7",@"data8",@"data9", nil];
+    NSArray *dataArr1 = [NSArray arrayWithObjects:@"SGWCustomBlockAlertManager.h",@"SGWBlockAlertManager.h",@"UILabel+StringFrame.h",@"HxToastView.h",@"data5",@"data6",@"data7",@"data8",@"data9", nil];
 
     NSArray *arr10 = [NSArray arrayWithObjects:@"最新",@"最热",nil];
     NSArray *arr11 = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];
@@ -225,22 +225,34 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    for (int i = 0; i<5; i++) {
-        [SGWCustomBlockAlertManager alertWithMessage:@"你确定取消吗" cancelButtonTitle:@"取消" cancelBlock:nil];
-//        [SGWBlockAlertManager alertWithTitle:@"" message:@"我是提示框" cancelButtonTitle:@"取消"];
+    switch (indexPath.row) {
+        case 0:
+            [SGWCustomBlockAlertManager alertWithMessage:@"你确定取消吗" cancelButtonTitle:@"取消" cancelBlock:nil];
+            break;
+            
+        case 1:
+            [SGWBlockAlertManager alertWithTitle:@"" message:@"我是提示框" cancelButtonTitle:@"取消"];
+            break;
+            
+        case 2:
+            [UILabel showErrorProgressLabelWithString:@"我就是个提示框，我就是个提示框"];
+            break;
+            
+        case 3:{
+            CGSize toastSize = [HxToastView sizeForText:@"我就是个提示框，我就是个提示框"];
+            HxToastView *toastView = [[HxToastView alloc] initWithFrame:CGRectZero];
+            toastView.frame = CGRectMake((self.view.bounds.size.width - toastSize.width) / 2, (SCREEN_HEIGHT-toastSize.height-10)/2 - 20, toastSize.width, toastSize.height+10);
+            [self.view addSubview:toastView];
+            [self.view bringSubviewToFront:toastView];
+            [toastView setToastText:@"我就是个提示框，我就是个提示框"];
+            [toastView show:YES];
+        }
+            break;
+            
+        default:
+            break;
     }
-    
-    
-    [UILabel showErrorProgressLabelWithString:@"我就是个提示框，我就是个提示框"];
-    
-    
-//    CGSize toastSize = [HxToastView sizeForText:@"我就是个提示框，我就是个提示框"];
-//    HxToastView *toastView = [[HxToastView alloc] initWithFrame:CGRectZero];
-//    toastView.frame = CGRectMake((self.view.bounds.size.width - toastSize.width) / 2, (SCREEN_HEIGHT-toastSize.height-10)/2 - 20, toastSize.width, toastSize.height+10);
-//    [self.view addSubview:toastView];
-//    [self.view bringSubviewToFront:toastView];
-//    [toastView setToastText:@"我就是个提示框，我就是个提示框"];
-//    [toastView show:YES];
+
 
 
 }
