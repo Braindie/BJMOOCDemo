@@ -10,6 +10,7 @@
 #import "PhotoSelectView.h"
 #import "UIImageView+WebCache.h"
 #import "FiveDetailViewController.h"
+#import "BJLoadingView.h"
 
 @interface FiveViewCtrl ()
 @property (nonatomic, strong) PhotoSelectView *photoView;
@@ -31,13 +32,20 @@
     
     self.isNavCtrlSet = YES;
     self.navigationItem.title = @"图片选择器";
+    
+    
+    
+    
+    BJLoadingView *view = [[BJLoadingView alloc] initWithFrame:CGRectMake(50, 100, 40, 31)];
+    [self.view addSubview:view];
+    [view startLoading];
 
     
-    [self creatView];
-    
-    [self creatPhotoView];
-    
-    [self creatImageView];
+//    [self creatView];
+//
+//    [self creatPhotoView];
+//
+//    [self creatImageView];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -88,9 +96,9 @@
     [self.view addSubview:self.b2ImageView];
 }
 
-- (void)creatImageView{
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 500, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
-    [self.view addSubview:self.imageView];
+- (void)creatImageView {
+//    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 500, (self.view.frame.size.width-60)/2, (self.view.frame.size.width-60)/2*540/856)];
+//    [self.view addSubview:self.imageView];
 //    [image sd_setImageWithURL:[NSURL URLWithString:@"http://img5.imgtn.bdimg.com/it/u=49366202,632101467&fm=27&gp=0.jpg"] placeholderImage:[UIImage imageNamed:@""]];
     
     
@@ -102,13 +110,16 @@
 //        NSLog(@"%@",error);
 //    }];
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake((self.view.frame.size.width-60)/2+50, 500, 120, 30);
-    btn.backgroundColor = [UIColor orangeColor];
-    btn.titleLabel.textColor = [UIColor blueColor];
-    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"跳一下" forState:UIControlStateNormal];
-    [self.view addSubview:btn];
+    
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    btn.frame = CGRectMake((self.view.frame.size.width-60)/2+50, 500, 120, 30);
+//    btn.backgroundColor = [UIColor orangeColor];
+//    btn.titleLabel.textColor = [UIColor blueColor];
+//    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+//    [btn setTitle:@"跳一下" forState:UIControlStateNormal];
+//    [self.view addSubview:btn];
+    
+
 
 }
 

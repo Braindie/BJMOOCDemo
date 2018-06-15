@@ -56,6 +56,8 @@
 		E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90851EE1361C00AE856B /* LiveListCell.m */; };
 		E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54D90861EE1361C00AE856B /* LiveListCell.xib */; };
 		E54D908B1EE13D8F00AE856B /* LiverCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */; };
+		E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977F920D3B0D200AE6DBD /* BJLoadingView.m */; };
+		E55977FD20D3CB6600AE6DBD /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977FC20D3CB6600AE6DBD /* BJWaveView.m */; };
 		E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B41EC1AE7900B23589 /* CYLDBManager.m */; };
 		E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B81EC1AEF400B23589 /* BunnyCollectionView.m */; };
 		E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061BC1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m */; };
@@ -606,6 +608,10 @@
 		E54D90861EE1361C00AE856B /* LiveListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveListCell.xib; sourceTree = "<group>"; };
 		E54D90891EE13D8F00AE856B /* LiverCreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiverCreatorModel.h; sourceTree = "<group>"; };
 		E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiverCreatorModel.m; sourceTree = "<group>"; };
+		E55977F820D3B0D200AE6DBD /* BJLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLoadingView.h; sourceTree = "<group>"; };
+		E55977F920D3B0D200AE6DBD /* BJLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLoadingView.m; sourceTree = "<group>"; };
+		E55977FB20D3CB6600AE6DBD /* BJWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJWaveView.h; sourceTree = "<group>"; };
+		E55977FC20D3CB6600AE6DBD /* BJWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJWaveView.m; sourceTree = "<group>"; };
 		E5A061B31EC1AE7900B23589 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
 		E5A061B41EC1AE7900B23589 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
 		E5A061B71EC1AEF400B23589 /* BunnyCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BunnyCollectionView.h; sourceTree = "<group>"; };
@@ -1513,6 +1519,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E55977F720D3B0BF00AE6DBD /* BJLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				E55977F820D3B0D200AE6DBD /* BJLoadingView.h */,
+				E55977F920D3B0D200AE6DBD /* BJLoadingView.m */,
+				E55977FB20D3CB6600AE6DBD /* BJWaveView.h */,
+				E55977FC20D3CB6600AE6DBD /* BJWaveView.m */,
+			);
+			path = BJLoadingView;
+			sourceTree = "<group>";
+		};
 		E5A061B21EC1AE7900B23589 /* CYLDBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,6 +1560,7 @@
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E55977F720D3B0BF00AE6DBD /* BJLoadingView */,
 				E51475AE20CF97CD00B79605 /* BJCustomAlertView */,
 				E5A061B61EC1AEAE00B23589 /* BJView */,
 				E5A9E6B11EB19D9B0072EA61 /* PhotoSelect */,
@@ -2311,10 +2329,10 @@
 		E5ABA23820C0FA4A00A2C172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */,
-				E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */,
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
+				E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */,
+				E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */,
 				E5ABA23B20C0FA4A00A2C172 /* QMBaiduViewController.h */,
 				E5ABA23D20C0FA4A00A2C172 /* QMBaiduViewController.m */,
 			);
@@ -3049,6 +3067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E505EAE620C548B700851764 /* ZLPhotoPickerGroupViewController.m in Sources */,
+				E55977FD20D3CB6600AE6DBD /* BJWaveView.m in Sources */,
 				E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
 				E5A9E7A91EB1A39D0072EA61 /* IntroduceViewCtrl.m in Sources */,
@@ -3083,6 +3102,7 @@
 				E505EADC20C548B700851764 /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
+				E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */,
 				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
 				E5ABA25020C0FA4B00A2C172 /* MonthXibCollectionViewCell.m in Sources */,
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,

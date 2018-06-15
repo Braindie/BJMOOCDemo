@@ -13,6 +13,8 @@
 #import "FirstDetailViewController.h"
 #import "QMBaiduViewController.h"
 
+#import "BJWaveView.h"
+
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -20,6 +22,25 @@
 static NSString * CellIdentifier           = @"CellIdentifier";
 static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
+
+@interface HomeViewController ()
+
+//@property (nonatomic, strong) UIScrollView  * myScrollView;     //滚动广告底图
+//@property (nonatomic, strong) UIPageControl * myPageControl;    //翻页控件
+
+
+@property (nonatomic, strong) UIScrollView *backScrollView;
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+
+
+@property (nonatomic ,strong) NSMutableArray *collectionData;
+
+@property (nonatomic ,strong) NSMutableArray *dataArr1;
+
+@property (nonatomic ,strong) NSArray *dataArr2;
+
+@end
 
 
 @implementation HomeViewController
@@ -45,7 +66,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.backgroundView.scrollEnabled = YES;
+    self.backScrollView.scrollEnabled = YES;
     [self updateViewHeight];
 }
 
@@ -65,7 +86,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
                                            CGRectGetWidth(self.collectionView.frame),
                                            self.collectionView.contentSize.height +
                                            1000);
-    self.backgroundView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width,
+    self.backScrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width,
                                                  self.collectionView.contentSize.height +
                                                  1000);
 }
@@ -90,13 +111,16 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 - (void)creatView{
 
     //底层视图
-    self.backgroundView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)];
-    self.backgroundView.showsVerticalScrollIndicator = NO;
-    self.backgroundView.alwaysBounceVertical = YES;
-    self.backgroundView.backgroundColor = [UIColor colorWithRed:252.0f/255.f green:252.0f/255.f blue:252.0f/255.f alpha:2.f];
+    self.backScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)];
+    self.backScrollView.showsVerticalScrollIndicator = NO;
+    self.backScrollView.alwaysBounceVertical = YES;
+    self.backScrollView.backgroundColor = [UIColor colorWithRed:252.0f/255.f green:252.0f/255.f blue:252.0f/255.f alpha:2.f];
 //    self.backgroundView.scrollEnabled = YES;
-
-    [self.view addSubview:self.backgroundView];
+    [self.view addSubview:self.backScrollView];
+    
+    
+    BJWaveView *waveView = [[BJWaveView alloc] initWithFrame:CGRectMake(0, 150, SCREEN_WIDTH, 50)];
+    [self.backScrollView addSubview:waveView];
 
     //头视图
 //    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
@@ -138,40 +162,36 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 //
 
 
-    self.myScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320+55, (320+55)/2.2)];
-    self.myScrollView.pagingEnabled = YES;
-    self.myScrollView.showsVerticalScrollIndicator = NO;
-    self.myScrollView.showsHorizontalScrollIndicator = NO;
-    self.myScrollView.tag = 1111;
-    self.myScrollView.backgroundColor = [UIColor whiteColor];
-
-    self.myPageControl = [[UIPageControl alloc]initWithFrame:CGRectMake((320+55)/2-50, self.myScrollView.frame.size.height-25, 100, 25)];
-    self.myPageControl.tag = 1212;
-    self.myPageControl.backgroundColor = [UIColor clearColor];
-    self.myPageControl.numberOfPages = 5;
-    self.myPageControl.currentPage = 0;
-    [self.myPageControl addTarget:self action:@selector(changePage) forControlEvents:UIControlEventValueChanged];
-
-    //单指单击
-    UITapGestureRecognizer *singleFingerOne = [[UITapGestureRecognizer   alloc] initWithTarget:self
-                                                                                        action:@selector(handleSingleFingerEvent:)];
-    singleFingerOne.numberOfTouchesRequired = 1; //手指数
-    singleFingerOne.numberOfTapsRequired = 1; //tap次数
-    [self.myScrollView addGestureRecognizer:singleFingerOne];
-
-
+//    self.myScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320+55, (320+55)/2.2)];
+//    self.myScrollView.pagingEnabled = YES;
+//    self.myScrollView.showsVerticalScrollIndicator = NO;
+//    self.myScrollView.showsHorizontalScrollIndicator = NO;
+//    self.myScrollView.tag = 1111;
+//    self.myScrollView.backgroundColor = [UIColor redColor];
+//
+//    self.myPageControl = [[UIPageControl alloc]initWithFrame:CGRectMake((320+55)/2-50, self.myScrollView.frame.size.height-25, 100, 25)];
+//    self.myPageControl.tag = 1212;
+//    self.myPageControl.backgroundColor = [UIColor clearColor];
+//    self.myPageControl.numberOfPages = 5;
+//    self.myPageControl.currentPage = 0;
+//    [self.myPageControl addTarget:self action:@selector(changePage) forControlEvents:UIControlEventValueChanged];
+//
+//    //单指单击
+//    UITapGestureRecognizer *singleFingerOne = [[UITapGestureRecognizer   alloc] initWithTarget:self
+//                                                                                        action:@selector(handleSingleFingerEvent:)];
+//    singleFingerOne.numberOfTouchesRequired = 1; //手指数
+//    singleFingerOne.numberOfTapsRequired = 1; //tap次数
+//    [self.myScrollView addGestureRecognizer:singleFingerOne];
 
 
 
-    //
+
+
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
 //    UICollectionViewLeftAlignedLayout *layout = [[UICollectionViewLeftAlignedLayout alloc] init];
     CGFloat width = (kScreenWidth - 10 * 4) / 2;
     CGFloat height = width / 5 * 4;
     layout.itemSize = CGSizeMake(width, height);
-
-
-
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 200, kScreenWidth, kScreenHeight-49-kScreenWidth*3/5) collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor grayColor];
@@ -182,9 +202,6 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
 
-
-
-
     //注册单元格
     [self.collectionView registerClass:[HomeViewCell class] forCellWithReuseIdentifier:CellIdentifier];
     [self.collectionView registerClass:[HomeSectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeaderViewCellIdentifier];
@@ -192,73 +209,11 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     layout.sectionInset = UIEdgeInsetsMake(100,0,0,0);
     layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 50);//必填
 
-
     self.collectionView.scrollsToTop = NO;
     self.collectionView.scrollEnabled = NO;
 
-
-    [self.backgroundView addSubview:self.collectionView];
-
-
-
-
-
-
-
-//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth*3/5)];
-//    scrollView.backgroundColor = [UIColor orangeColor];
-//
-//
-//    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
-//    tableView.dataSource = self;
-//    tableView.delegate = self;
-//
-//    tableView.tableHeaderView = scrollView;
-//
-//    [self.view addSubview:tableView];
-
+    [self.backScrollView addSubview:self.collectionView];
 }
-
-
-
-#pragma mark - UITableViewDelegate
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//
-//    return 3;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//    NSString *identifier = @"homeTableCell";
-//    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-//
-//    if (cell == nil) {
-//        cell = [[HomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-//    }
-//    return cell;
-//
-//}
-//
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//    if (indexPath == 0) {
-//        return 400;
-////    }else if (indexPath == 1){
-////        return 600;
-//    }
-//    else{
-//        return 600;
-//    }
-//}
-
-
-
-
-
-
-
-
 
 
 #pragma mark -UICollectionViewDataSource
