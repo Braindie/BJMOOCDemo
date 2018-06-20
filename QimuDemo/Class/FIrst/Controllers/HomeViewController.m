@@ -11,7 +11,7 @@
 #import "HomeSectionHeaderView.h"
 #import "CYLDBManager.h"//json文件解析
 #import "FirstDetailViewController.h"
-#import "QMBaiduViewController.h"
+#import "FirstTableViewController.h"
 
 #import "BJWaveView.h"
 
@@ -23,7 +23,7 @@ static NSString * CellIdentifier           = @"CellIdentifier";
 static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 //@property (nonatomic, strong) UIScrollView  * myScrollView;     //滚动广告底图
 //@property (nonatomic, strong) UIPageControl * myPageControl;    //翻页控件
@@ -71,7 +71,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 }
 
 - (void)leftButtonAction:(UIButton *)button{
-    QMBaiduViewController *vc = [[QMBaiduViewController alloc] init];
+    FirstTableViewController *vc = [[FirstTableViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -35,7 +35,7 @@ static NSString *kCellIdentifier = @"CellIdentifier";
 - (void)builUI{
     //初始化当前选中的item，1111代表未选择
     self.currentSelectItem = 1111;
-    self.backgroundColor = [UIColor orangeColor];
+    self.backgroundColor = [UIColor clearColor];
     
     CGRect collectionViewFrame = CGRectMake(0,  0, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height-80);
     UICollectionViewLeftAlignedLayout *layout = [[UICollectionViewLeftAlignedLayout alloc] init];

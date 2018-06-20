@@ -20,19 +20,16 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.isNavCtrlSet = YES;
-    
+    self.isCustomBack = YES;
+
     self.navigationItem.title = @"详情";
     
     
-    
-    BunnyCollectionView *view = [[BunnyCollectionView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 500)];
+
+    BunnyCollectionView *view = [[BunnyCollectionView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200)];
     view.dataSource = self;
     view.delegate = self;
     [self.view addSubview:view];
-    
-    
-    
     
 }
 

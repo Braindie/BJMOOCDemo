@@ -9,8 +9,7 @@
 #import "BaseViewController.h"
 //#import "SMPageControl.h"
 
-@interface HomeViewController : BaseViewController<UICollectionViewDataSource,UICollectionViewDelegate>{
-}
+@interface HomeViewController : BaseViewController
 
 
 

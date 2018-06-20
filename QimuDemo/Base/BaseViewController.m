@@ -29,16 +29,14 @@
 #pragma mark - 自定义标题
 - (void)setTitle:(NSString *)title
 {
-      [super setTitle:title];
+    [super setTitle:title];
       
-      // 自定义标题
-//      UILabel *titleLabel = [ThemeControl createThemeLabelWithTextColorKey:@"Msg_Text_color" frame:CGRectMake(0, 0, 120, 44)];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 44)];
-      titleLabel.font = [UIFont boldSystemFontOfSize:18];
-      titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.text = title;;
-      self.navigationItem.titleView = titleLabel;
-      
+   // 自定义标题
+   UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 44)];
+   titleLabel.font = [UIFont boldSystemFontOfSize:18];
+   titleLabel.textAlignment = NSTextAlignmentCenter;
+   titleLabel.text = title;;
+   self.navigationItem.titleView = titleLabel;
 }
 
 
@@ -56,29 +54,20 @@
                   // 01 创建左侧按钮
                 UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 leftButton.frame = CGRectMake(0, 0, 30, 30);
-//                leftButton.titleLabel.text = @"我的";
-//                [leftButton setTitle:@"我的" forState:UIControlStateSelected];
-//                [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-                [leftButton setImage:[UIImage imageNamed:@"btn_set.png"] forState:UIControlStateNormal];
-                  // 设置文本的大小和位置
-                  leftButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-//                  leftButton.titleEdgeInsets = UIEdgeInsetsMake(0, -15, 0, 0);
-                  // 设置标题图片的位置
-//                  leftButton.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-
-                  [leftButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                [leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+                [leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
                   // 创建右侧按钮
                 UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 rightButton.frame = CGRectMake(0, 0, 30, 30);
-                [rightButton setImage:[UIImage imageNamed:@"btn_set.png"] forState:UIControlStateNormal];
-                [rightButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+                [rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+                [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
                 UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
                 UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 
-                self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn1,btn2, nil];
-
+                self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:btn1, nil];
+                self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn2, nil];
             }
       }
 }
@@ -87,15 +76,11 @@
 - (void)leftButtonAction:(UIButton *)button
 {
       // 显示左侧视图控制器
-//      [self.mm_drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-    NSLog(@"按钮二");
 }
 
 - (void)rightButtonAction:(UIButton *)button
 {
       // 现实右侧视图控制器
-//      [self.mm_drawerController openDrawerSide:MMDrawerSideRight animated:YES completion:nil];
-    NSLog(@"按钮一");
 }
 
 
@@ -110,16 +95,10 @@
             //如果——isCustomBack == yes 我们就使用自定义初始化按钮
             if (_isCustomBack == YES) {
                   // 创建主题按钮
-//                  UIButton *backButton = [ThemeControl createThemeButtonWithTitleImageName:nil bgImageName:@"titlebar_button_back_9.png" title:@"返回" frame:CGRectMake(0, 0, 60, 44)];
-
                 UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
-                backButton.titleLabel.text = @"返回";
-                backButton.backgroundColor = [UIColor orangeColor];
-//                [backButton setImage:[UIImage imageNamed:@"titlebar_button_back_9.png"] forState:UIControlStateNormal];
-                  //设置字体大小
-                  backButton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-                  backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -50, 0, 0);
-
+                backButton.backgroundColor = [UIColor clearColor];
+                [backButton setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+                backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
                   //添加事件
                   [backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
                   //设置导航栏上

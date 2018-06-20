@@ -74,7 +74,7 @@
     
     self.viewControllers=@[mainPage,licai,community,wode,zhan];
     
-    [self.tabBar setBackgroundColor:[UIColor orangeColor]];
+//    [self.tabBar setBackgroundColor:[UIColor orangeColor]];
     
 }
 
