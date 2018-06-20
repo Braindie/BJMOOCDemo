@@ -35,7 +35,7 @@ AFN和NSURLSession的研究</br>
 
 使用FFMpeg实现拉流</br>
 使用kxmovie进行视频播放</br>
-使用MBProgressHUD作为加载提示框
+`Loading`使用MBProgressHUD作为加载提示框
 
 
 
@@ -51,7 +51,7 @@ AFN和NSURLSession的研究</br>
 
 ## Fifth
 ### 图片选择器 
-### Loading波浪动图
+### `Loading`波浪动图
 ### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 
 
