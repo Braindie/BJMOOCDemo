@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstDetailTableViewViewController">
+            <connections>
+                <outlet property="cbTextField" destination="dtk-1B-ylP" id="F7a-iX-Wun"/>
+                <outlet property="cbTextView" destination="5iw-Va-fxx" id="0Zm-xo-6qR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-1B-ylP">
+                    <rect key="frame" x="30" y="70" width="315" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVb-I1-NpD">
+                    <rect key="frame" x="133" y="120" width="108" height="30"/>
+                    <state key="normal" title="向外设写入数据"/>
+                    <connections>
+                        <action selector="cbSendBtnAction:" destination="-1" eventType="touchUpInside" id="UPj-Fa-32V"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5iw-Va-fxx">
+                    <rect key="frame" x="30" y="223" width="314" height="344"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBU-30-GkT">
+                    <rect key="frame" x="118" y="587" width="138" height="30"/>
+                    <state key="normal" title="从外设读取到的数据"/>
+                    <connections>
+                        <action selector="cbGetBtnAction:" destination="-1" eventType="touchUpInside" id="hwh-Yd-rQZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5iw-Va-fxx" firstAttribute="top" secondItem="OVb-I1-NpD" secondAttribute="bottom" constant="73" id="3nE-vK-i2c"/>
+                <constraint firstItem="NBU-30-GkT" firstAttribute="top" secondItem="5iw-Va-fxx" secondAttribute="bottom" constant="20" id="FLR-3Z-S4z"/>
+                <constraint firstItem="5iw-Va-fxx" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="GLU-q3-zML"/>
+                <constraint firstItem="dtk-1B-ylP" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="Oiy-oR-yC6"/>
+                <constraint firstItem="dtk-1B-ylP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T5u-0E-dnH"/>
+                <constraint firstItem="OVb-I1-NpD" firstAttribute="top" secondItem="dtk-1B-ylP" secondAttribute="bottom" constant="20" id="Uum-5h-ODr"/>
+                <constraint firstItem="NBU-30-GkT" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="YC6-3w-MeK"/>
+                <constraint firstItem="5iw-Va-fxx" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="ZyD-9h-1Dw"/>
+                <constraint firstItem="dtk-1B-ylP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="l2r-c5-CnL"/>
+                <constraint firstItem="OVb-I1-NpD" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="on5-5z-egC"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="NBU-30-GkT" secondAttribute="bottom" constant="50" id="t7z-Gm-wXo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
