@@ -2,9 +2,13 @@
 
 
 ## First
-首页有个UICollectionView基本布局
-详情有个UICollectionViewLeftAlignedLayout左布局
+### 界面布局
+首页Header有个波浪图</br>
+首页有个UICollectionView基本布局</br>
+详情有个UICollectionViewLeftAlignedLayout左布局</br>
 
+### 蓝牙通讯
+蓝牙中心设备</br>
 
 
 ## Second
@@ -20,7 +24,7 @@
 1、自定义Alert</br>
 2、系统Alert</br>
 3、UILabel分类Toast</br>
-4、HxToastView.h</br>switch case中初始化对象要用放入大括号里面，否则会报错
+4、HxToastView.h（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
 
 ## Third
@@ -47,6 +51,7 @@ AFN和NSURLSession的研究</br>
 
 ## Fifth
 ### 图片选择器 
+### Loading波浪动图
 ### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 
 
