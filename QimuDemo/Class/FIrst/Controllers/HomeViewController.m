@@ -13,6 +13,8 @@
 #import "FirstDetailViewController.h"
 #import "FirstTableViewController.h"
 
+#import "FirstRightDetailViewController.h"
+
 #import "BJWaveView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -72,6 +74,12 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (void)leftButtonAction:(UIButton *)button{
     FirstTableViewController *vc = [[FirstTableViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)rightButtonAction:(UIButton *)button{
+    FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

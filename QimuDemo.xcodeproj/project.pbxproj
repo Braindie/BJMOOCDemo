@@ -56,6 +56,10 @@
 		E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90851EE1361C00AE856B /* LiveListCell.m */; };
 		E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54D90861EE1361C00AE856B /* LiveListCell.xib */; };
 		E54D908B1EE13D8F00AE856B /* LiverCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */; };
+		E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26520DB5AE00037805A /* BJBarChartView.m */; };
+		E555B26920DB5B040037805A /* BJChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26820DB5B040037805A /* BJChartModel.m */; };
+		E555B26C20DB5C510037805A /* FirstRightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */; };
+		E555B27420DBAEA00037805A /* BJKChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B27320DBAEA00037805A /* BJKChartView.m */; };
 		E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977F920D3B0D200AE6DBD /* BJLoadingView.m */; };
 		E55977FD20D3CB6600AE6DBD /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977FC20D3CB6600AE6DBD /* BJWaveView.m */; };
 		E56E6A9920D8E3A500A0E78C /* MonthXibCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E6A9620D8E3A500A0E78C /* MonthXibCollectionViewCell.m */; };
@@ -274,6 +278,14 @@
 		E54D90861EE1361C00AE856B /* LiveListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveListCell.xib; sourceTree = "<group>"; };
 		E54D90891EE13D8F00AE856B /* LiverCreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiverCreatorModel.h; sourceTree = "<group>"; };
 		E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiverCreatorModel.m; sourceTree = "<group>"; };
+		E555B26420DB5AE00037805A /* BJBarChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBarChartView.h; sourceTree = "<group>"; };
+		E555B26520DB5AE00037805A /* BJBarChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBarChartView.m; sourceTree = "<group>"; };
+		E555B26720DB5B040037805A /* BJChartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJChartModel.h; sourceTree = "<group>"; };
+		E555B26820DB5B040037805A /* BJChartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJChartModel.m; sourceTree = "<group>"; };
+		E555B26A20DB5C510037805A /* FirstRightDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstRightDetailViewController.h; path = QimuDemo/Class/FIrst/Controllers/FirstRightDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstRightDetailViewController.m; path = QimuDemo/Class/FIrst/Controllers/FirstRightDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		E555B27220DBAEA00037805A /* BJKChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJKChartView.h; sourceTree = "<group>"; };
+		E555B27320DBAEA00037805A /* BJKChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKChartView.m; sourceTree = "<group>"; };
 		E55977F820D3B0D200AE6DBD /* BJLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLoadingView.h; sourceTree = "<group>"; };
 		E55977F920D3B0D200AE6DBD /* BJLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLoadingView.m; sourceTree = "<group>"; };
 		E55977FB20D3CB6600AE6DBD /* BJWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJWaveView.h; sourceTree = "<group>"; };
@@ -852,6 +864,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E555B26320DB5AB00037805A /* BJChart */ = {
+			isa = PBXGroup;
+			children = (
+				E555B26420DB5AE00037805A /* BJBarChartView.h */,
+				E555B26520DB5AE00037805A /* BJBarChartView.m */,
+				E555B26720DB5B040037805A /* BJChartModel.h */,
+				E555B26820DB5B040037805A /* BJChartModel.m */,
+				E555B27220DBAEA00037805A /* BJKChartView.h */,
+				E555B27320DBAEA00037805A /* BJKChartView.m */,
+			);
+			path = BJChart;
+			sourceTree = "<group>";
+		};
 		E55977F720D3B0BF00AE6DBD /* BJLoadingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +921,7 @@
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E555B26320DB5AB00037805A /* BJChart */,
 				E55977F720D3B0BF00AE6DBD /* BJLoadingView */,
 				E51475AE20CF97CD00B79605 /* BJCustomAlertView */,
 				E5A061B61EC1AEAE00B23589 /* BJView */,
@@ -1210,6 +1236,8 @@
 			children = (
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
+				E555B26A20DB5C510037805A /* FirstRightDetailViewController.h */,
+				E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */,
 				E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */,
 				E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */,
 				E56E6A9B20D8E3EA00A0E78C /* FirstTableViewController.h */,
@@ -1625,11 +1653,13 @@
 				E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */,
 				E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */,
 				E5B6D7631EB33D0F00B19FF3 /* KxMovieViewController.m in Sources */,
+				E555B26C20DB5C510037805A /* FirstRightDetailViewController.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
 				E505EAD820C548B700851764 /* ZLCameraView.m in Sources */,
 				E505EAE920C548B700851764 /* ZLPhotoPickerViewController.m in Sources */,
 				E51475CA20CF97CD00B79605 /* SGWBlockAlertManager.m in Sources */,
 				E5ABA24E20C0FA4B00A2C172 /* MonthCollectionViewCell.m in Sources */,
+				E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */,
 				E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */,
 				E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */,
 				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
@@ -1664,11 +1694,13 @@
 				E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */,
+				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E56E6A9E20D8E3EA00A0E78C /* FirstTableViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,
 				E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */,
+				E555B27420DBAEA00037805A /* BJKChartView.m in Sources */,
 				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
 				E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */,
 				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
