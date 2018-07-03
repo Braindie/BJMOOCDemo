@@ -21,7 +21,6 @@
 
 #import "UIImageView+WebCache.h"
 
-#import "KxMovieViewController.h"
 
 @interface ThirdViewCtroller ()<NSURLSessionDataDelegate>
 
@@ -39,6 +38,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.isNavCtrlSet = NO;
+    
 
     self.navigationItem.title = @"直播列表";
     
@@ -49,21 +49,30 @@
     [self.view addSubview:self.thirdTableView];
     self.thirdTableView.hidden = YES;
     
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
     
     //加载数据
-//    [self requestDataWithAFN];
+        [self requestDataWithAFN];
     
-    self.mData = [[NSMutableData alloc] init];
-    [self requestDataWithNSURLSession];
+//    self.mData = [[NSMutableData alloc] init];
+//    [self requestDataWithNSURLSession];
 
 }
 
 #pragma mark - AFN
 - (void)requestDataWithAFN{
     
-    NSString *urlString = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2";
+    NSString *urlString = @"http://cbox.cntv.cn/json2015/fenleierjiye/tiyuyexinban/sports2017/2018wordcup/renwuguojia/index.json";
+
+//    NSString *urlString = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"application/json", nil];
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -74,23 +83,18 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [hud hideAnimated:YES];
+        NSDictionary *dic = (NSDictionary *)responseObject;
         NSLog(@"JSON: %@", responseObject);
-        LiveListModel *model = [LiveListModel yy_modelWithJSON:responseObject];
+        LiveListModel *model = [LiveListModel yy_modelWithJSON:dic[@"data"]];
 
         NSLog(@"%@",model);
-        self.myDataArr = [NSMutableArray arrayWithArray:model.lives];
+        self.myDataArr = [NSMutableArray arrayWithArray:model.itemList];
         if (self.myDataArr.count == 0) {
             self.thirdTableView.hidden = YES;
         }else{
             self.thirdTableView.hidden = NO;
             [self.thirdTableView reloadData];
         }
-        
-        
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:model.error_msg preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        [alertVC addAction:action];
-        [self presentViewController:alertVC animated:YES completion:nil];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -107,7 +111,10 @@
     
     
     
-    NSURL *url = [NSURL URLWithString:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2"];
+//    NSURL *url = [NSURL URLWithString:@"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2"];
+    NSURL *url = [NSURL URLWithString:@"http://cbox.cntv.cn/json2015/fenleierjiye/tiyuyexinban/sports2017/2018wordcup/renwuguojia/index.json"];
+
+    
 //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSMutableURLRequest *mRequest = [NSMutableURLRequest requestWithURL:url];
     mRequest.HTTPMethod = @"Get";
@@ -178,14 +185,14 @@
 
     if (self.myDataArr.count != 0) {
         LiverModel *model = self.myDataArr[indexPath.row];
-        cell.titleLabel.text = model.creator.nick;
+        cell.titleLabel.text = model.title;
         
 //        [SDWebImageDownloader.sharedDownloader setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
 //                                     forHTTPHeaderField:@"Accept"]; 
 //        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.creator.portrait]];
         
         //之前用公司有拦截的网络会报这个错Domain=NSURLErrorDomain Code=-1005
-        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.creator.portrait] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.PlayerBigImg] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             NSLog(@"%@",error);
         }];
         
@@ -193,7 +200,7 @@
 //        [cell.titleImage sd_setImageWithURL:url placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //            NSLog(@"error : %@",error);
 //        }];
-        cell.titleUrl.text = model.stream_addr;
+        cell.titleUrl.text = model.countryDetailsUrl;
     }
 
     return cell;
@@ -205,15 +212,18 @@
 //    thirdDetailViewCtrl.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController pushViewController:thirdDetailViewCtrl animated:NO];
     
-    LiverModel *model = self.myDataArr[indexPath.row];
-    NSString *url = model.stream_addr;
-    KxMovieViewController *vc = [KxMovieViewController movieViewControllerWithContentPath:url parameters:nil];
-    [self presentViewController:vc animated:YES completion:nil];
+//    LiverModel *model = self.myDataArr[indexPath.row];
+    NSString *url = @"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8";
+
     
 //    http://pull99.a8.com/live/1493629218418259.flv
 //    http://pull.a8.com/live/1493627977729613.flv
 //    江苏卫视
 //    http://14.18.17.141:9009/live/chid=23
+    
+//    http://221.228.226.23/11/t/j/v/b/tjvbwspwhqdmgouolposcsfafpedmb/sh.yinyuetai.com/691201536EE4912BF7E4F1E2C67B8119.mp4
+    
+//    rtmp://pull-g.kktv8.com/livekktv/100987038
     
 }
 

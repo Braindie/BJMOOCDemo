@@ -14,7 +14,7 @@
 
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"lives" : [LiverModel class]};
+    return @{@"itemList" : [LiverModel class]};
 }
 
 @end

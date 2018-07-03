@@ -28,13 +28,11 @@
 
 
 ## Third
-### 直播
+### 网络
 AFN和NSURLSession的研究</br>
 网络请求映客直播列表（地址失效了）</br>
 使用YYModel把json转换成Model</br>
 
-使用FFMpeg实现拉流</br>
-使用kxmovie进行视频播放</br>
 `Loading`使用MBProgressHUD作为加载提示框
 
 
