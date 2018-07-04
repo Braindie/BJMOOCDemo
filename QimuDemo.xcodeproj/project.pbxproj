@@ -55,7 +55,6 @@
 		E54D90831EE1325E00AE856B /* LiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90821EE1325E00AE856B /* LiverModel.m */; };
 		E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90851EE1361C00AE856B /* LiveListCell.m */; };
 		E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54D90861EE1361C00AE856B /* LiveListCell.xib */; };
-		E54D908B1EE13D8F00AE856B /* LiverCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */; };
 		E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26520DB5AE00037805A /* BJBarChartView.m */; };
 		E555B26920DB5B040037805A /* BJChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26820DB5B040037805A /* BJChartModel.m */; };
 		E555B26C20DB5C510037805A /* FirstRightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */; };
@@ -264,8 +263,6 @@
 		E54D90841EE1361C00AE856B /* LiveListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListCell.h; sourceTree = "<group>"; };
 		E54D90851EE1361C00AE856B /* LiveListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListCell.m; sourceTree = "<group>"; };
 		E54D90861EE1361C00AE856B /* LiveListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveListCell.xib; sourceTree = "<group>"; };
-		E54D90891EE13D8F00AE856B /* LiverCreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiverCreatorModel.h; sourceTree = "<group>"; };
-		E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiverCreatorModel.m; sourceTree = "<group>"; };
 		E555B26420DB5AE00037805A /* BJBarChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBarChartView.h; sourceTree = "<group>"; };
 		E555B26520DB5AE00037805A /* BJBarChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBarChartView.m; sourceTree = "<group>"; };
 		E555B26720DB5B040037805A /* BJChartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJChartModel.h; sourceTree = "<group>"; };
@@ -729,8 +726,6 @@
 				E54D907F1EE1313B00AE856B /* LiveListModel.m */,
 				E54D90811EE1325E00AE856B /* LiverModel.h */,
 				E54D90821EE1325E00AE856B /* LiverModel.m */,
-				E54D90891EE13D8F00AE856B /* LiverCreatorModel.h */,
-				E54D908A1EE13D8F00AE856B /* LiverCreatorModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1394,7 +1389,6 @@
 				E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */,
 				E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */,
 				E505EAE820C548B700851764 /* ZLNavigationController.m in Sources */,
-				E54D908B1EE13D8F00AE856B /* LiverCreatorModel.m in Sources */,
 				E505EAEC20C548B700851764 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				E505EADB20C548B700851764 /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
 				E505EAEA20C548B700851764 /* ZLPhotoPickerCollectionView.m in Sources */,

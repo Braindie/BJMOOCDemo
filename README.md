@@ -53,3 +53,6 @@ AFN和NSURLSession的研究</br>
 ### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 
 
+# 下拉刷新，下拉加载BJRefresh
+还没写KVO
+

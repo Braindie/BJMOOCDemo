@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LiverCreatorModel.h"
 
 @interface LiverModel : NSObject
 
@@ -16,11 +15,13 @@
 @property (nonatomic, copy) NSString *PlayerBigImg;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *countryDetailsUrl;
+@property (nonatomic, copy) NSString *playerName;
+
+
 
 
 //推流地址
 @property (nonatomic, strong) NSString *stream_addr;
 
-@property (nonatomic, strong) LiverCreatorModel *creator;
 
 @end

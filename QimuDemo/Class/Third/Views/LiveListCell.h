@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiverModel.h"
 
 @interface LiveListCell : UITableViewCell
+
+@property (nonatomic, strong) LiverModel *model;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleUrl;

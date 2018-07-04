@@ -18,8 +18,8 @@
 #import "AFHTTPSessionManager.h"
 
 #import <YYModel/YYModel.h>
+#import "UITableView+FDTemplateLayoutCell.h"
 
-#import "UIImageView+WebCache.h"
 
 
 @interface ThirdViewCtroller ()<NSURLSessionDataDelegate>
@@ -40,7 +40,7 @@
     self.isNavCtrlSet = NO;
     
 
-    self.navigationItem.title = @"直播列表";
+    self.navigationItem.title = @"世界杯";
     
     //创建视图
     self.thirdTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64) style:UITableViewStylePlain];
@@ -49,14 +49,15 @@
     [self.view addSubview:self.thirdTableView];
     self.thirdTableView.hidden = YES;
     
+    self.thirdTableView.fd_debugLogEnabled = YES;
+
+    
 
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    
-    
+        
     //加载数据
         [self requestDataWithAFN];
     
@@ -169,6 +170,9 @@
     NSLog(@"mData = %@", [[NSString alloc] initWithData:self.mData encoding:NSUTF8StringEncoding]);
 }
 
+
+
+
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.myDataArr.count;
@@ -176,35 +180,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    LiveListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
+    LiveListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LiveListCell"];
     if (cell == nil) {
         UINib *nib = [UINib nibWithNibName:@"LiveListCell" bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:@"CellID"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
+        [tableView registerNib:nib forCellReuseIdentifier:@"LiveListCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"LiveListCell"];
     }
-
-    if (self.myDataArr.count != 0) {
-        LiverModel *model = self.myDataArr[indexPath.row];
-        cell.titleLabel.text = model.title;
-        
-//        [SDWebImageDownloader.sharedDownloader setValue:@"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
-//                                     forHTTPHeaderField:@"Accept"]; 
-//        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.creator.portrait]];
-        
-        //之前用公司有拦截的网络会报这个错Domain=NSURLErrorDomain Code=-1005
-        [cell.titleImage sd_setImageWithURL:[NSURL URLWithString:model.PlayerBigImg] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-            NSLog(@"%@",error);
-        }];
-        
-//        NSURL *url = [NSURL URLWithString:model.creator.portrait];
-//        [cell.titleImage sd_setImageWithURL:url placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-//            NSLog(@"error : %@",error);
-//        }];
-        cell.titleUrl.text = model.countryDetailsUrl;
-    }
+    
+//    [self configureCell:cell atIndextPath:indexPath];
+    
+//    cell.fd_enforceFrameLayout = NO;
+    cell.model = self.myDataArr[indexPath.row];
 
     return cell;
 }
+
+//- (void)configureCell:(LiveListCell *)cell atIndextPath:(NSIndexPath *)indexPath{
+//    cell.fd_enforceFrameLayout = NO;
+//
+//    cell.model = self.myDataArr[indexPath.row];
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
@@ -220,15 +215,18 @@
 //    http://pull.a8.com/live/1493627977729613.flv
 //    江苏卫视
 //    http://14.18.17.141:9009/live/chid=23
-    
 //    http://221.228.226.23/11/t/j/v/b/tjvbwspwhqdmgouolposcsfafpedmb/sh.yinyuetai.com/691201536EE4912BF7E4F1E2C67B8119.mp4
-    
 //    rtmp://pull-g.kktv8.com/livekktv/100987038
     
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return self.view.frame.size.width;
+    
+    return [tableView fd_heightForCellWithIdentifier:@"LiveListCell" configuration:^(id cell) {
+//        [self configureCell:cell atIndextPath:indexPath];
+    }];
+    
+//    return 100;
 }
 
 
