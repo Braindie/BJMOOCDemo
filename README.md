@@ -11,6 +11,7 @@
 蓝牙中心设备</br>
 
 
+
 ## Second
 ### 界面布局
 视频筛选列表界面</br>
@@ -26,6 +27,12 @@
 3、UILabel分类Toast</br>
 4、HxToastView.h（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
+### Loading
+`Loading`波浪动图
+
+### Refresh
+还没写KVO
+
 
 ## Third
 ### 网络
@@ -33,8 +40,7 @@ AFN和NSURLSession的研究</br>
 网络请求映客直播列表（地址失效了）</br>
 使用YYModel把json转换成Model</br>
 
-`Loading`使用MBProgressHUD作为加载提示框
-
+MBProgressHUD
 
 
 ## Fourth
@@ -49,10 +55,7 @@ AFN和NSURLSession的研究</br>
 
 ## Fifth
 ### 图片选择器 
-### `Loading`波浪动图
 ### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 
 
-# 下拉刷新，下拉加载BJRefresh
-还没写KVO
 
