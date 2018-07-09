@@ -8,7 +8,7 @@
 详情有个UICollectionViewLeftAlignedLayout左布局</br>
 
 ### 蓝牙通讯
-导航栏左侧按钮有蓝牙通讯的代码，蓝牙中心设备</br>
+左侧按钮有蓝牙通讯的代码，蓝牙中心设备</br>
 
 
 
@@ -19,8 +19,10 @@
 视频播放详情界面
 
 ### 波浪图
+左侧按钮有个波浪图</br>
 
 ### 柱状图，折线图
+左侧按钮有个柱状图，折线图</br>
 
 ### Toast
 1、自定义Alert</br>
@@ -29,7 +31,7 @@
 4、HxToastView.h（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
 ### Loading
-`Loading`波浪动图
+左侧按钮`Loading`波浪动图
 
 ### Refresh
 还没写

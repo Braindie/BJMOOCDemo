@@ -13,10 +13,6 @@
 #import "FirstDetailViewController.h"
 #import "FirstTableViewController.h"
 
-#import "FirstRightDetailViewController.h"
-
-#import "BJWaveView.h"
-
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -79,9 +75,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 }
 
 - (void)rightButtonAction:(UIButton *)button{
-    FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 
@@ -126,9 +120,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 //    self.backgroundView.scrollEnabled = YES;
     [self.view addSubview:self.backScrollView];
     
-    
-    BJWaveView *waveView = [[BJWaveView alloc] initWithFrame:CGRectMake(0, 150, SCREEN_WIDTH, 50)];
-    [self.backScrollView addSubview:waveView];
+
 
     //头视图
 //    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];

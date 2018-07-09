@@ -57,7 +57,6 @@
 		E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54D90861EE1361C00AE856B /* LiveListCell.xib */; };
 		E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26520DB5AE00037805A /* BJBarChartView.m */; };
 		E555B26920DB5B040037805A /* BJChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26820DB5B040037805A /* BJChartModel.m */; };
-		E555B26C20DB5C510037805A /* FirstRightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */; };
 		E555B27420DBAEA00037805A /* BJKChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B27320DBAEA00037805A /* BJKChartView.m */; };
 		E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977F920D3B0D200AE6DBD /* BJLoadingView.m */; };
 		E55977FD20D3CB6600AE6DBD /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977FC20D3CB6600AE6DBD /* BJWaveView.m */; };
@@ -144,6 +143,8 @@
 		E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC491EB2E62E005378E1 /* UINavBarView.m */; };
 		E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */; };
 		E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */; };
+		E5C30E7620F3651A00690449 /* FirstRightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C30E7520F3651A00690449 /* FirstRightDetailViewController.m */; };
+		E5C30E7920F365E800690449 /* SecondLeftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C30E7820F365E800690449 /* SecondLeftDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -259,8 +260,6 @@
 		E555B26520DB5AE00037805A /* BJBarChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBarChartView.m; sourceTree = "<group>"; };
 		E555B26720DB5B040037805A /* BJChartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJChartModel.h; sourceTree = "<group>"; };
 		E555B26820DB5B040037805A /* BJChartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJChartModel.m; sourceTree = "<group>"; };
-		E555B26A20DB5C510037805A /* FirstRightDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstRightDetailViewController.h; path = QimuDemo/Class/FIrst/Controllers/FirstRightDetailViewController.h; sourceTree = SOURCE_ROOT; };
-		E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstRightDetailViewController.m; path = QimuDemo/Class/FIrst/Controllers/FirstRightDetailViewController.m; sourceTree = SOURCE_ROOT; };
 		E555B27220DBAEA00037805A /* BJKChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJKChartView.h; sourceTree = "<group>"; };
 		E555B27320DBAEA00037805A /* BJKChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKChartView.m; sourceTree = "<group>"; };
 		E55977F820D3B0D200AE6DBD /* BJLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLoadingView.h; sourceTree = "<group>"; };
@@ -383,6 +382,10 @@
 		E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopBarView.m; sourceTree = "<group>"; };
 		E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
 		E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
+		E5C30E7420F3651900690449 /* FirstRightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstRightDetailViewController.h; sourceTree = "<group>"; };
+		E5C30E7520F3651A00690449 /* FirstRightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstRightDetailViewController.m; sourceTree = "<group>"; };
+		E5C30E7720F365E800690449 /* SecondLeftDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondLeftDetailViewController.h; sourceTree = "<group>"; };
+		E5C30E7820F365E800690449 /* SecondLeftDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondLeftDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -979,6 +982,10 @@
 			children = (
 				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
 				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
+				E5C30E7420F3651900690449 /* FirstRightDetailViewController.h */,
+				E5C30E7520F3651A00690449 /* FirstRightDetailViewController.m */,
+				E5C30E7720F365E800690449 /* SecondLeftDetailViewController.h */,
+				E5C30E7820F365E800690449 /* SecondLeftDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1052,8 +1059,6 @@
 			children = (
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
-				E555B26A20DB5C510037805A /* FirstRightDetailViewController.h */,
-				E555B26B20DB5C510037805A /* FirstRightDetailViewController.m */,
 				E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */,
 				E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */,
 				E56E6A9B20D8E3EA00A0E78C /* FirstTableViewController.h */,
@@ -1269,7 +1274,6 @@
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,
 				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
 				E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */,
-				E555B26C20DB5C510037805A /* FirstRightDetailViewController.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
 				E505EAD820C548B700851764 /* ZLCameraView.m in Sources */,
 				E505EAE920C548B700851764 /* ZLPhotoPickerViewController.m in Sources */,
@@ -1281,6 +1285,7 @@
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
+				E5C30E7920F365E800690449 /* SecondLeftDetailViewController.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
 				E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */,
@@ -1297,6 +1302,7 @@
 				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
 				E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
+				E5C30E7620F3651A00690449 /* FirstRightDetailViewController.m in Sources */,
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */,
 				E505EAD720C548B700851764 /* ZLCamera.m in Sources */,

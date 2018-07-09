@@ -13,6 +13,8 @@
 #import "SGWBlockAlertManager.h"
 #import "UILabel+StringFrame.h"
 #import "HxToastView.h"
+#import "FirstRightDetailViewController.h"
+#import "SecondLeftDetailViewController.h"
 
 @implementation SecondViewCtrl
 
@@ -32,9 +34,24 @@
 
 //    //创建视图
     [self creatView];
+    
+
 
     
 }
+
+- (void)leftButtonAction:(UIButton *)button{
+    SecondLeftDetailViewController *vc = [[SecondLeftDetailViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)rightButtonAction:(UIButton *)button{
+    FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 - (void)loadTopData{
 

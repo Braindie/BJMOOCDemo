@@ -10,7 +10,6 @@
 #import "PhotoSelectView.h"
 #import "UIImageView+WebCache.h"
 #import "FiveDetailViewController.h"
-#import "BJLoadingView.h"
 
 @interface FiveViewCtrl ()
 @property (nonatomic, strong) PhotoSelectView *photoView;
@@ -35,17 +34,13 @@
     
     
     
-    
-    BJLoadingView *view = [[BJLoadingView alloc] initWithFrame:CGRectMake(50, 100, 40, 31)];
-    [self.view addSubview:view];
-    [view startLoading];
 
     
-//    [self creatView];
-//
-//    [self creatPhotoView];
-//
-//    [self creatImageView];
+    [self creatView];
+
+    [self creatPhotoView];
+
+    [self creatImageView];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
