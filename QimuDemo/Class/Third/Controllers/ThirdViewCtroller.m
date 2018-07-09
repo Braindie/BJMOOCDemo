@@ -7,8 +7,6 @@
 //
 
 #import "ThirdViewCtroller.h"
-//#import "ThirdCell.h"
-//#import "ThirdDetailViewController.h"
 #import "LiveListCell.h"
 #import "LiveListModel.h"
 #import "LiverModel.h"
@@ -39,7 +37,6 @@
 
     self.isNavCtrlSet = NO;
     
-
     self.navigationItem.title = @"世界杯";
     
     //创建视图
@@ -51,7 +48,9 @@
     
     self.thirdTableView.fd_debugLogEnabled = YES;
 
-    
+    //使用FDTemplateLayoutCell必须要注册
+    UINib *nib = [UINib nibWithNibName:@"LiveListCell" bundle:nil];
+    [self.thirdTableView registerNib:nib forCellReuseIdentifier:@"LiveListCell"];
 
 }
 
@@ -181,52 +180,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     LiveListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LiveListCell"];
-    if (cell == nil) {
-        UINib *nib = [UINib nibWithNibName:@"LiveListCell" bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:@"LiveListCell"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"LiveListCell"];
-    }
-    
-//    [self configureCell:cell atIndextPath:indexPath];
-    
-//    cell.fd_enforceFrameLayout = NO;
     cell.model = self.myDataArr[indexPath.row];
 
     return cell;
 }
 
-//- (void)configureCell:(LiveListCell *)cell atIndextPath:(NSIndexPath *)indexPath{
-//    cell.fd_enforceFrameLayout = NO;
-//
-//    cell.model = self.myDataArr[indexPath.row];
-//}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-//    ThirdDetailViewController *thirdDetailViewCtrl = [[ThirdDetailViewController alloc] init];
-//    thirdDetailViewCtrl.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:thirdDetailViewCtrl animated:NO];
-    
-//    LiverModel *model = self.myDataArr[indexPath.row];
-    NSString *url = @"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8";
-
-    
-//    http://pull99.a8.com/live/1493629218418259.flv
-//    http://pull.a8.com/live/1493627977729613.flv
-//    江苏卫视
-//    http://14.18.17.141:9009/live/chid=23
-//    http://221.228.226.23/11/t/j/v/b/tjvbwspwhqdmgouolposcsfafpedmb/sh.yinyuetai.com/691201536EE4912BF7E4F1E2C67B8119.mp4
-//    rtmp://pull-g.kktv8.com/livekktv/100987038
-    
+//    NSString *url = @"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return [tableView fd_heightForCellWithIdentifier:@"LiveListCell" configuration:^(id cell) {
-//        [self configureCell:cell atIndextPath:indexPath];
+        LiveListCell *listCell = (LiveListCell *)cell;
+        listCell.model = self.myDataArr[indexPath.row];
     }];
-    
-//    return 100;
 }
 
 

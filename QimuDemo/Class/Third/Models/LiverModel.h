@@ -18,8 +18,6 @@
 @property (nonatomic, copy) NSString *playerName;
 
 
-
-
 //推流地址
 @property (nonatomic, strong) NSString *stream_addr;
 

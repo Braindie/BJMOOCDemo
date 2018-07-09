@@ -126,12 +126,6 @@
 		E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7391EB1A39D0072EA61 /* FourthSevice.m */; };
 		E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */; };
 		E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */; };
-		E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */; };
-		E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */; };
-		E5A9E7A91EB1A39D0072EA61 /* IntroduceViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7731EB1A39D0072EA61 /* IntroduceViewCtrl.m */; };
-		E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E77F1EB1A39D0072EA61 /* ThirdCell.m */; };
-		E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */; };
-		E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7851EB1A39D0072EA61 /* ThirdHeaderView.m */; };
 		E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B41EB1A3DB0072EA61 /* BaseNavigationController.m */; };
 		E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */; };
 		E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */; };
@@ -149,8 +143,6 @@
 		E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */; };
 		E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC491EB2E62E005378E1 /* UINavBarView.m */; };
 		E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */; };
-		E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */; };
-		E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */; };
 		E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */; };
 /* End PBXBuildFile section */
 
@@ -359,18 +351,6 @@
 		E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVM.m; sourceTree = "<group>"; };
 		E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCtroller.h; sourceTree = "<group>"; };
 		E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCtroller.m; sourceTree = "<group>"; };
-		E5A9E76E1EB1A39D0072EA61 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
-		E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
-		E5A9E7701EB1A39D0072EA61 /* CommentViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewCtrl.h; sourceTree = "<group>"; };
-		E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewCtrl.m; sourceTree = "<group>"; };
-		E5A9E7721EB1A39D0072EA61 /* IntroduceViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewCtrl.h; sourceTree = "<group>"; };
-		E5A9E7731EB1A39D0072EA61 /* IntroduceViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewCtrl.m; sourceTree = "<group>"; };
-		E5A9E77E1EB1A39D0072EA61 /* ThirdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCell.h; sourceTree = "<group>"; };
-		E5A9E77F1EB1A39D0072EA61 /* ThirdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCell.m; sourceTree = "<group>"; };
-		E5A9E7821EB1A39D0072EA61 /* ThirdFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdFootView.h; sourceTree = "<group>"; };
-		E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdFootView.m; sourceTree = "<group>"; };
-		E5A9E7841EB1A39D0072EA61 /* ThirdHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdHeaderView.h; sourceTree = "<group>"; };
-		E5A9E7851EB1A39D0072EA61 /* ThirdHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdHeaderView.m; sourceTree = "<group>"; };
 		E5A9E7B31EB1A3DB0072EA61 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		E5A9E7B41EB1A3DB0072EA61 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		E5A9E7B51EB1A3DB0072EA61 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -401,10 +381,6 @@
 		E5B7CC491EB2E62E005378E1 /* UINavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavBarView.m; sourceTree = "<group>"; };
 		E5B7CC4A1EB2E62E005378E1 /* UITopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopBarView.h; sourceTree = "<group>"; };
 		E5B7CC4B1EB2E62E005378E1 /* UITopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopBarView.m; sourceTree = "<group>"; };
-		E5B7CC4F1EB2E8DD005378E1 /* ThirdDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailCell.h; sourceTree = "<group>"; };
-		E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailCell.m; sourceTree = "<group>"; };
-		E5B7CC511EB2E8DD005378E1 /* ThirdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdDetailViewController.h; sourceTree = "<group>"; };
-		E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdDetailViewController.m; sourceTree = "<group>"; };
 		E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
 		E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1025,7 +1001,6 @@
 			children = (
 				E5A9E7681EB1A39D0072EA61 /* Controllers */,
 				E514D99D1EB878D60011A886 /* Models */,
-				E5A9E76D1EB1A39D0072EA61 /* Detail */,
 				E5A9E77D1EB1A39D0072EA61 /* Views */,
 			);
 			path = Third;
@@ -1040,32 +1015,9 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E5A9E76D1EB1A39D0072EA61 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				E5B7CC511EB2E8DD005378E1 /* ThirdDetailViewController.h */,
-				E5B7CC521EB2E8DD005378E1 /* ThirdDetailViewController.m */,
-				E5A9E7721EB1A39D0072EA61 /* IntroduceViewCtrl.h */,
-				E5A9E7731EB1A39D0072EA61 /* IntroduceViewCtrl.m */,
-				E5A9E7701EB1A39D0072EA61 /* CommentViewCtrl.h */,
-				E5A9E7711EB1A39D0072EA61 /* CommentViewCtrl.m */,
-				E5A9E76E1EB1A39D0072EA61 /* CommentCell.h */,
-				E5A9E76F1EB1A39D0072EA61 /* CommentCell.m */,
-				E5B7CC4F1EB2E8DD005378E1 /* ThirdDetailCell.h */,
-				E5B7CC501EB2E8DD005378E1 /* ThirdDetailCell.m */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		E5A9E77D1EB1A39D0072EA61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E77E1EB1A39D0072EA61 /* ThirdCell.h */,
-				E5A9E77F1EB1A39D0072EA61 /* ThirdCell.m */,
-				E5A9E7821EB1A39D0072EA61 /* ThirdFootView.h */,
-				E5A9E7831EB1A39D0072EA61 /* ThirdFootView.m */,
-				E5A9E7841EB1A39D0072EA61 /* ThirdHeaderView.h */,
-				E5A9E7851EB1A39D0072EA61 /* ThirdHeaderView.m */,
 				E54D90841EE1361C00AE856B /* LiveListCell.h */,
 				E54D90851EE1361C00AE856B /* LiveListCell.m */,
 				E54D90861EE1361C00AE856B /* LiveListCell.xib */,
@@ -1310,14 +1262,12 @@
 				E55977FD20D3CB6600AE6DBD /* BJWaveView.m in Sources */,
 				E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
-				E5A9E7A91EB1A39D0072EA61 /* IntroduceViewCtrl.m in Sources */,
 				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
 				E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */,
 				E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */,
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,
 				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
-				E5A9E7AE1EB1A39D0072EA61 /* ThirdCell.m in Sources */,
 				E5B7CC4E1EB2E62E005378E1 /* UITopBarView.m in Sources */,
 				E555B26C20DB5C510037805A /* FirstRightDetailViewController.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
@@ -1326,12 +1276,10 @@
 				E51475CA20CF97CD00B79605 /* SGWBlockAlertManager.m in Sources */,
 				E5ABA24E20C0FA4B00A2C172 /* MonthCollectionViewCell.m in Sources */,
 				E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */,
-				E5A9E7B11EB1A39D0072EA61 /* ThirdHeaderView.m in Sources */,
 				E5A061B91EC1AEF400B23589 /* BunnyCollectionView.m in Sources */,
 				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
-				E5A9E7A81EB1A39D0072EA61 /* CommentViewCtrl.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
@@ -1356,15 +1304,12 @@
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
 				E57C48CD20DA056E00595B12 /* FirstDetailTableViewViewController.m in Sources */,
-				E5B7CC541EB2E8DD005378E1 /* ThirdDetailViewController.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
-				E5B7CC531EB2E8DD005378E1 /* ThirdDetailCell.m in Sources */,
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E56E6A9E20D8E3EA00A0E78C /* FirstTableViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,
-				E5A9E7B01EB1A39D0072EA61 /* ThirdFootView.m in Sources */,
 				E555B27420DBAEA00037805A /* BJKChartView.m in Sources */,
 				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
 				E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */,
@@ -1386,7 +1331,6 @@
 				E5A9E6FA1EB19D9B0072EA61 /* PhotoModel.m in Sources */,
 				E5B7CC4D1EB2E62E005378E1 /* UINavBarView.m in Sources */,
 				E5B0E9701FCD57E700AB3675 /* FiveDetailViewController.m in Sources */,
-				E5A9E7A71EB1A39D0072EA61 /* CommentCell.m in Sources */,
 				E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */,
 				E505EAE820C548B700851764 /* ZLNavigationController.m in Sources */,
 				E505EAEC20C548B700851764 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,

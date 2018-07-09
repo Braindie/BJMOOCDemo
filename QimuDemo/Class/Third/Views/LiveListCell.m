@@ -23,25 +23,10 @@
     
     self.titleLabel.text = _model.playerName;
     
-//    self.titleImage.image = [UIImage imageNamed:@"blue"];
-    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:_model.PlayerBigImg] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        NSLog(@"%@",error);
-    }];
+    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:_model.PlayerBigImg]];
     
-    self.titleUrl.text = @"";
-    
+    self.titleUrl.text = _model.countryDetailsUrl;
 }
-
-// If you are not using auto layout, override this method, enable it by setting
-// "fd_enforceFrameLayout" to YES.
-//- (CGSize)sizeThatFits:(CGSize)size {
-//    CGFloat totalHeight = 0;
-//    totalHeight += [self.titleLabel sizeThatFits:size].height;
-//    totalHeight += [self.titleImage sizeThatFits:size].height;
-//    totalHeight += [self.titleUrl sizeThatFits:size].height;
-//    totalHeight += 40; // margins
-//    return CGSizeMake(size.width, totalHeight);
-//}
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

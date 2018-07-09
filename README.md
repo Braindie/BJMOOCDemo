@@ -2,24 +2,25 @@
 
 
 ## First
+
 ### 界面布局
-首页Header有个波浪图</br>
 首页有个UICollectionView基本布局</br>
 详情有个UICollectionViewLeftAlignedLayout左布局</br>
 
 ### 蓝牙通讯
-蓝牙中心设备</br>
+导航栏左侧按钮有蓝牙通讯的代码，蓝牙中心设备</br>
 
 
 
 ## Second
 ### 界面布局
 视频筛选列表界面</br>
+首页Header有个波浪图</br>
 视频播放详情界面
 
-### FMDB的封装ZDModel
-1、封装FMDB获取model中的属性；
-获取model的属性作为本地数据库表中的key。
+### 波浪图
+
+### 柱状图，折线图
 
 ### Toast
 1、自定义Alert</br>
@@ -31,16 +32,44 @@
 `Loading`波浪动图
 
 ### Refresh
-还没写KVO
+还没写
+
+
+### FMDB的封装ZDModel
+1、封装FMDB获取model中的属性；
+获取model的属性作为本地数据库表中的key。
+
 
 
 ## Third
-### 网络
-AFN和NSURLSession的研究</br>
-网络请求映客直播列表（地址失效了）</br>
-使用YYModel把json转换成Model</br>
+### AFN和NSURLSession
+- AFN
+注释在源码中
+- NSURLSession
+注释在代码中
 
-MBProgressHUD
+###  YYModel
+使用YYModel把json转换成Model
+
+### MBProgressHUD
+
+### UITableView-FDTemplateLayoutCell
+个人理解：提前把数据源放到Cell中计算高度
+- A prototype cell of UITableView in storyboard.
+- Use `-registerNib:forCellReuseIdentifier:` 
+- Use `-registerClass:forCellReuseIdentifier:`
+
+``` objc
+#import "UITableView+FDTemplateLayoutCell.h"
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [tableView fd_heightForCellWithIdentifier:@"reuse identifer" configuration:^(id cell) {
+        // Configure this cell with data, same as what you've done in "-tableView:cellForRowAtIndexPath:"
+        // Like:
+        //    cell.entity = self.feedEntities[indexPath.row];
+    }];
+}
+```
+
 
 
 ## Fourth
