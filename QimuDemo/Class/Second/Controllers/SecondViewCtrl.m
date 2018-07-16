@@ -83,160 +83,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
     [self.view addSubview:self.tableView];
-
-
-
-
-    self.navTabBar = [[UINavBarView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-    self.navTabBar.delegate = self;
-//    self.navTabBar.backgroundColor = [UIColor orangeColor];
-//    _navTabBar.lineColor = _navTabBarLineColor;
-//    _navTabBar.itemTitles = _titles;
-    self.navTabBar.dataArr11 = self.dataArr2;
-    self.navTabBar.dataArr12 = self.dataArr3;
-    self.navTabBar.dataArr10 = self.dataArr0;
-    self.navTabBar.dataArr13 = self.dataArr4;
-//    [self.navTabBar loadTopData];
-    [self.navTabBar updateData];
-
-//    [self.view addSubview:self.navTabBar];
-    self.tableView.tableHeaderView = self.navTabBar;
-
 }
 
-- (void)updateTopView:(BOOL)isTopBar{
-
-    if (isTopBar == NO) {//topbar
-
-
-//        [UIView animateWithDuration:1.1f animations:^{
-            self.navTabBar.hidden = YES;
-//        } completion:^(BOOL finished) {
-//            [UIView animateWithDuration:1.1f animations:^{
-                if (!isTopBar)
-                {
-                    if (self.TopBar == nil) {
-                        self.TopBar = [[UITopBarView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-//                        self.TopBar.backgroundColor = [UIColor redColor];
-
-
-                        [self.view addSubview:self.TopBar];
-                    }else{
-                        self.TopBar.hidden = NO;
-                    }
-
-
-                    //判断显示的数据
-                    if (self.string2 == nil && self.string3 == nil) {
-
-                        if (self.string1 == nil) {
-                            self.TopBar.label.text = @"最新";
-                        }else{
-                            self.TopBar.label.text = self.string1;
-                        }
-
-                    }else if (self.string1 == nil && self.string2 != nil && self.string3 != nil) {
-                        self.TopBar.label.text = [NSString stringWithFormat:@"最新 · %@ · %@",self.string2,self.string3];
-                    
-
-                    }else if (self.string1 == nil && self.string2 != nil && self.string3 == nil) {
-                        if ([self.string2 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = @"最新";
-                        }else{
-                            self.TopBar.label.text = [NSString stringWithFormat:@"最新 · %@",self.string2];
-                        }
-                    }else if(self.string1 == nil && self.string2 == nil && self.string3 != nil){
-                        if ([self.string3 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = @"最新";
-                        }else{
-                            self.TopBar.label.text = [NSString stringWithFormat:@"最新 · %@",self.string3];
-                        }
-
-                    }else if (self.string1 != nil && self.string2 != nil && self.string3 == nil){
-                        if ([self.string2 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = self.string1;
-                        }else{
-                            self.TopBar.label.text = [NSString stringWithFormat:@"%@ · %@",self.string1,self.string2];
-                        }
-                    }else if (self.string1 != nil && self.string2 == nil && self.string3 != nil){
-                        if ([self.string3 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = self.string1;
-                        }else{
-                            self.TopBar.label.text = [NSString stringWithFormat:@"%@ · %@",self.string1,self.string3];
-                        }
-                    }else if (self.string1 != nil && self.string2 != nil && self.string3 != nil){
-                        if([self.string2 isEqualToString:@"全部"] && [self.string3 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = self.string1;
-                        }else if ([self.string3 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = [NSString stringWithFormat:@"%@ · %@",self.string1,self.string2];
-                        }else if([self.string2 isEqualToString:@"全部"]) {
-                            self.TopBar.label.text = [NSString stringWithFormat:@"%@ · %@",self.string1,self.string3];
-                        }else{
-                            self.TopBar.label.text = [NSString stringWithFormat:@"%@ · %@ · %@",self.string1,self.string2,self.string3];
-                        }
-                    }
-                }
-//            }];
-//        }];
-
-        self.tableView.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
-    }else{//navbar
-
-
-
-//        [UIView animateWithDuration:1.1f animations:^{
-        self.TopBar.hidden = YES;
-//        } completion:^(BOOL finished) {
-        self.navTabBar.hidden = NO;
-//        }];
-
-        if (self.ISBar) {
-            self.tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        }else{
-            self.tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        }
-
-
-    }
-
-}
-
-- (void)itemPressedWithIndex1:(NSString *)str{
-
-    self.string1 = [NSString stringWithString:str];
-
-    
-}
-- (void)itemPressedWithIndex2:(NSString *)str{
-    self.string2 = [NSString stringWithString:str];
-
-}
-//- (void)itemPressedWithIndex3:(NSString *)str{
-//
-//    self.string3 = [NSString stringWithString:str];
-//
-//    self.tableView.frame = CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height);
-//
-//}
-
-- (void)itemPressedWithIndex3:(NSString *)str withIsBar:(BOOL *)isBar{
-
-    self.ISBar = isBar;
-    self.string3 = [NSString stringWithString:str];
-//    if (isBar) {
-//        self.tableView.frame = CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height);
-//    }else{
-//        self.tableView.frame = CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height);
-//    }
-    self.tableView.tableHeaderView = self.navTabBar;
-
-}
-
-- (void)itemPressedWithIndex4:(NSString *)str{
-
-    self.string4 = [NSString stringWithString:str];
-
-}
 
 #pragma mark - UITableViewDelegate
 
@@ -319,11 +167,9 @@
     if (PositionY < 150)
     {//手势为下滑，navbar
         NSLog(@"向下划 = %d",OffsetY);
-        [self updateTopView:YES];
 
     }else if (PositionY >= 150){
         NSLog(@"向上 = %d",OffsetY);
-        [self updateTopView:NO];
     }
 //    else //手势为上滑，topbar
 //    {

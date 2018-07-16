@@ -7,8 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "UINavBarView.h"
-#import "UITopBarView.h"
 
 
 @interface SecondViewCtrl : BaseViewController<UITableViewDataSource,UITableViewDelegate>
@@ -23,9 +21,6 @@
 
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UINavBarView *navTabBar;
-@property (nonatomic, strong) UITopBarView *TopBar;
-
 
 @property (nonatomic ,strong) NSMutableArray *dataArr1;
 
