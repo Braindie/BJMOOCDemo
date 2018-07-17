@@ -16,6 +16,8 @@
 #import "FirstRightDetailViewController.h"
 #import "SecondLeftDetailViewController.h"
 
+#import "BJRefresh.h"
+
 @implementation SecondViewCtrl
 
 
@@ -31,13 +33,9 @@
 //    //加载数据
     [self loadTopData];
 
-
 //    //创建视图
     [self creatView];
-    
 
-
-    
 }
 
 - (void)leftButtonAction:(UIButton *)button{
@@ -83,6 +81,12 @@
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
     [self.view addSubview:self.tableView];
+    
+    self.tableView.bj_header = [BJRefreshHeader headerWithRefreshingBlock:^{
+        
+    }];
+    
+//    [self.tableView.bj_header ]
 }
 
 
@@ -146,37 +150,36 @@
 
 
 #pragma mark - ScrollViewDelegate
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-
-    lastOffsetYaxis = scrollView.contentOffset;
-}
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//
+//    lastOffsetYaxis = scrollView.contentOffset;
+//}
 
 
 //下拉放大
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-
-    CGPoint currentTouchPosition = scrollView.contentOffset;
-
-    PositionY = currentTouchPosition.y;        //当前纵向滑动的位置距离起始点的位置
-    NSLog(@"******* = %d",PositionY);
-
-    OffsetY = PositionY - lastOffsetYaxis.y;
-
-    if (PositionY < 150)
-    {//手势为下滑，navbar
-        NSLog(@"向下划 = %d",OffsetY);
-
-    }else if (PositionY >= 150){
-        NSLog(@"向上 = %d",OffsetY);
-    }
-//    else //手势为上滑，topbar
-//    {
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//
+//
+//    CGPoint currentTouchPosition = scrollView.contentOffset;
+//
+//    PositionY = currentTouchPosition.y;        //当前纵向滑动的位置距离起始点的位置
+//    NSLog(@"******* = %d",PositionY);
+//
+//    OffsetY = PositionY - lastOffsetYaxis.y;
+//
+//    if (PositionY < 150)
+//    {//手势为下滑，navbar
+//        NSLog(@"向下划 = %d",OffsetY);
+//
+//    }else if (PositionY >= 150){
 //        NSLog(@"向上 = %d",OffsetY);
-////        [self updateTopView:NO];
 //    }
-}
+////    else //手势为上滑，topbar
+////    {
+////        NSLog(@"向上 = %d",OffsetY);
+//////        [self updateTopView:NO];
+////    }
+//}
 
 
 @end

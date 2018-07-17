@@ -7,3 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
+
+NSString *const BJRefreshKeyPathContentOffset = @"contentOffset";
+NSString *const BJRefreshKeyPathContentInset = @"contentInset";
+NSString *const BJRefreshKeyPathCotentSize = @"contentSize";
+
+NSString *const BJRefreshKeyPathPanState = @"state";

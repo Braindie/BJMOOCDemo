@@ -9,5 +9,6 @@
 #import "BJRefreshComponent.h"
 
 @interface BJRefreshHeader : BJRefreshComponent
-
+//!< 创建header
++ (instancetype)headerWithRefreshingBlock:(BJRefreshComponentRefreshingBlock)refershingBlock;
 @end

@@ -10,12 +10,18 @@
 
 @implementation BJRefreshHeader
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (instancetype)headerWithRefreshingBlock:(BJRefreshComponentRefreshingBlock)refershingBlock{
+    BJRefreshHeader *header = [[self alloc] init];
+    header.refreshingBlock = refershingBlock;
+    return header;
 }
-*/
+
+- (void)scrollViewContentOffsetDidChange:(NSDictionary *)changeDic{
+    [super scrollViewContentOffsetDidChange:changeDic];
+    
+    if (self.refreshState == BJRefreshStateRefreshing) {
+        
+    }
+}
 
 @end
