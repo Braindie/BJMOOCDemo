@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 
+UIKIT_EXTERN const CGFloat BJRefreshHeaderHeight;
+
+
 UIKIT_EXTERN NSString *const BJRefreshKeyPathContentOffset;
 UIKIT_EXTERN NSString *const BJRefreshKeyPathContentInset;
 UIKIT_EXTERN NSString *const BJRefreshKeyPathCotentSize;

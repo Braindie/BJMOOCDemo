@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
+const CGFloat BJRefreshHeaderHeight = 54.0;
+
+
 NSString *const BJRefreshKeyPathContentOffset = @"contentOffset";
 NSString *const BJRefreshKeyPathContentInset = @"contentInset";
 NSString *const BJRefreshKeyPathCotentSize = @"contentSize";
 
 NSString *const BJRefreshKeyPathPanState = @"state";
+
+

@@ -82,7 +82,7 @@
     self.tableView.dataSource =self;
     [self.view addSubview:self.tableView];
     
-    self.tableView.bj_header = [BJRefreshHeader headerWithRefreshingBlock:^{
+    self.tableView.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{
         
     }];
     

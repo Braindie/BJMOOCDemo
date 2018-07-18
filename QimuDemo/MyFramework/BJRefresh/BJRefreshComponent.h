@@ -47,6 +47,10 @@ typedef void (^BJRefreshComponentRefreshingBlock)(void);
 #pragma mark - KVO触发的方法，交给子类去实现
 //!< 初始化
 - (void)prepare;
+
+//!< layout时调用
+- (void)placeSubView;
+
 //!< contentOffset发生改变时调用
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)changeDic;
 //!< contentSize发生改变时调用

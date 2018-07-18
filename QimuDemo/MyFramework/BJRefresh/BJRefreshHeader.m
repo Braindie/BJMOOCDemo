@@ -16,6 +16,14 @@
     return header;
 }
 
+#pragma mark -
+- (void)prepare{
+    [super prepare];
+    
+    self.bj_h = BJRefreshHeaderHeight;
+}
+
+
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)changeDic{
     [super scrollViewContentOffsetDidChange:changeDic];
     

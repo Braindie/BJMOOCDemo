@@ -11,4 +11,4 @@
 
 #import "UIView+BJExtension.h"
 
-#import "BJRefreshHeader.h"
+#import "BJRefreshGifStateHeader.h"

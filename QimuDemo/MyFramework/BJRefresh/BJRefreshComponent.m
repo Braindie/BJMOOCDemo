@@ -24,6 +24,25 @@
     return self;
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    [self placeSubView];
+}
+
+- (void)placeSubView{}
+
+- (void)prepare{
+    self.backgroundColor = [UIColor clearColor];
+}
+
+- (void)setRefreshState:(BJRefreshState)refreshState{
+    _refreshState = refreshState;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setNeedsLayout];
+    });
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     
@@ -50,9 +69,7 @@
     }
 }
 
-- (void)prepare{
-    self.backgroundColor = [UIColor orangeColor];
-}
+
 
 
 - (void)addObservers{

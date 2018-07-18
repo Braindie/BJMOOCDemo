@@ -13,28 +13,23 @@
 
 
 ## Second
-### 界面布局
-视频筛选列表界面</br>
-首页Header有个波浪图</br>
-视频播放详情界面
-
 ### 波浪图
-左侧按钮有个波浪图</br>
+使用Layer实现波浪图</br>
 
 ### 柱状图，折线图
-左侧按钮有个柱状图，折线图</br>
+使用CoreGraphics实现柱状图，折线图</br>
 
 ### Toast
-1、自定义Alert</br>
-2、系统Alert</br>
-3、UILabel分类Toast</br>
-4、HxToastView.h（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
+1、自定义实现Alert</br>
+2、系统实现Alert</br>
+3、UILabel分类实现Toast</br>
+4、Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
 ### Loading
-左侧按钮`Loading`波浪动图
+使用Layer实现`Loading`的加载效果</br>
 
 ### Refresh
-还没写
+BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 ### FMDB的封装ZDModel
