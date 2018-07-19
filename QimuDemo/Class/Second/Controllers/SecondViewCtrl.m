@@ -86,7 +86,7 @@
         
     }];
     
-//    [self.tableView.bj_header ]
+//    [self.tableView.bj_header beginRefreshing];
 }
 
 

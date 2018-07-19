@@ -33,7 +33,7 @@
 - (void)placeSubView{}
 
 - (void)prepare{
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor orangeColor];
 }
 
 - (void)setRefreshState:(BJRefreshState)refreshState{
@@ -43,6 +43,36 @@
     });
 }
 
+- (void)setPullingPercent:(CGFloat)pullingPercent{
+    _pullingPercent = pullingPercent;
+}
+
+#pragma mark - 进入刷新状态
+- (void)beginRefreshing{
+    if (self.window) {
+        self.refreshState = BJRefreshStateRefreshing;
+    }else{
+        if (self.refreshState != BJRefreshStateRefreshing) {
+            self.refreshState = BJRefreshStateWillRefresh;
+            [self setNeedsDisplay];
+        }
+    }
+}
+- (void)beginRefreshingWithCompletionBlock:(void (^)(void))completionBlock{
+    self.beginRefreshIngCompletionBlock = completionBlock;
+    [self beginRefreshing];
+}
+
+#pragma mark - 进入刷新状态
+- (void)endRefreshing{
+    
+}
+
+- (void)endRefreshingWithCompletionBlock:(void (^)(void))completionBlock{
+    
+}
+
+#pragma mark -
 - (void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     
@@ -92,10 +122,10 @@
         return;
     }
     if ([keyPath isEqualToString:BJRefreshKeyPathContentOffset]) {
-        NSLog(@"BJRefreshKeyPathContentOffset");
+//        NSLog(@"BJRefreshKeyPathContentOffset");
         [self scrollViewContentOffsetDidChange:change];
     }else if ([keyPath isEqualToString:BJRefreshKeyPathPanState]){
-        NSLog(@"BJRefreshKeyPathPanState");
+//        NSLog(@"BJRefreshKeyPathPanState");
         [self scrollViewPanStateDidChange:change];
     }
 }

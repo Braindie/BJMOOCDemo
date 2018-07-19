@@ -52,6 +52,7 @@
 - (void)prepare{
     [super prepare];
     
+    // 设置普通状态的动画图片
     NSMutableArray *idleImageArr = [NSMutableArray array];
     for (NSUInteger i = 1; i<=8; i++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pic_%ld",(long)i]];
@@ -60,8 +61,15 @@
     [self setImageArray:idleImageArr forState:BJRefreshStateIdle];
     
     
+    // 设置即将刷新状态的动画图片
+    [self setImageArray:idleImageArr forState:BJRefreshStatePulling];
+    
+    // 设置正在刷新状态的动画图片
+    [self setImageArray:idleImageArr forState:BJRefreshStateRefreshing];
+    
 }
 
+#pragma mark -
 - (void)placeSubView{
     [super placeSubView];
     
@@ -74,19 +82,46 @@
 }
 
 - (void)setRefreshState:(BJRefreshState)refreshState{
-    NSArray *imageArray = self.stateImages[@(refreshState)];
-    if (imageArray.count == 0) {
+    [super setRefreshState:refreshState];
+    
+    //根据状态做事情
+    if (refreshState == BJRefreshStatePulling || refreshState == BJRefreshStateRefreshing) {
+        NSArray *imageArray = self.stateImages[@(refreshState)];
+        if (imageArray.count == 0) {
+            return;
+        }
+        
+        [self.gifView stopAnimating];
+        if (imageArray.count == 1) {
+            self.gifView.image = [imageArray firstObject];
+        }else{
+            self.gifView.animationImages = imageArray;
+            self.gifView.animationDuration = [self.stateDurations[@(refreshState)] doubleValue];
+            [self.gifView startAnimating];
+        }
+    }
+    else if (refreshState == BJRefreshStateIdle){
+        [self.gifView stopAnimating];
+    }
+
+}
+
+- (void)setPullingPercent:(CGFloat)pullingPercent{
+    [super setPullingPercent:pullingPercent];
+    
+    NSArray *images = self.stateImages[@(BJRefreshStateIdle)];
+    if (self.refreshState != BJRefreshStateIdle || images.count == 0) {
         return;
     }
     
     [self.gifView stopAnimating];
-    if (imageArray.count == 1) {
-        self.gifView.image = [imageArray firstObject];
-    }else{
-        self.gifView.animationImages = imageArray;
-        self.gifView.animationDuration = [self.stateDurations[@(refreshState)] doubleValue];
-        [self.gifView startAnimating];
+    
+    //设置当前需要显示的图片
+    NSUInteger index = images.count * pullingPercent;
+    if (index >= images.count) {
+        index = images.count-1;
     }
+    self.gifView.image = images[index];
 }
 
 #pragma mark -

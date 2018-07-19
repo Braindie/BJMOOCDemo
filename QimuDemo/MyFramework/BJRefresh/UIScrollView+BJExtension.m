@@ -7,10 +7,33 @@
 //
 
 #import "UIScrollView+BJExtension.h"
+#import <objc/runtime.h>
 
 @implementation UIScrollView (BJExtension)
 
+static BOOL mj_respondsToAdjustedContentInset;
+
+- (BOOL)gt_respondsToAdjustedContentInset {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        mj_respondsToAdjustedContentInset = [self respondsToSelector:@selector(adjustedContentInset)];
+    });
+    
+    return mj_respondsToAdjustedContentInset;
+}
+
 - (UIEdgeInsets)bj_inset{
+#ifdef __IPHONE_11_0
+    if ([self gt_respondsToAdjustedContentInset]) {
+        if (@available(iOS 11.0, *)) {
+            return self.adjustedContentInset;
+        } else {
+            // Fallback on earlier versions
+            return self.contentInset;
+        }
+    }
+#endif
     return self.contentInset;
 }
 
