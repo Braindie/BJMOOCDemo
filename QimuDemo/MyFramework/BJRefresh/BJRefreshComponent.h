@@ -37,6 +37,8 @@ typedef void (^BJRefreshComponentEndRefreshIngCompletionBlock)(void);
 #pragma mark - 刷新状态
 //!< 正在刷新的回调
 @property (nonatomic, copy) BJRefreshComponentRefreshingBlock refreshingBlock;
+//!< 触发回调
+- (void)executeRefreshingCallback;
 
 #pragma mark - 刷新状态控制
 //!< 当前刷新状态

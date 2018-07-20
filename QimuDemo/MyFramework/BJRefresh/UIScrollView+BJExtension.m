@@ -41,6 +41,15 @@ static BOOL mj_respondsToAdjustedContentInset;
 - (void)setBj_insetTop:(CGFloat)bj_insetTop{
     UIEdgeInsets inset = self.contentInset;
     inset.top = bj_insetTop;
+#ifdef __IPHONE_11_0
+    if ([self gt_respondsToAdjustedContentInset]) {
+        if (@available(iOS 11.0, *)) {
+            inset.top -= (self.adjustedContentInset.top - self.contentInset.top);
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+#endif
     self.contentInset = inset;
 }
 
@@ -52,6 +61,15 @@ static BOOL mj_respondsToAdjustedContentInset;
 - (void)setBj_insetBottom:(CGFloat)bj_insetBottom{
     UIEdgeInsets inset = self.contentInset;
     inset.top = bj_insetBottom;
+#ifdef __IPHONE_11_0
+    if ([self gt_respondsToAdjustedContentInset]) {
+        if (@available(iOS 11.0, *)) {
+            inset.bottom -= (self.adjustedContentInset.bottom - self.contentInset.bottom);
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+#endif
     self.contentInset = inset;
 }
 
@@ -63,6 +81,15 @@ static BOOL mj_respondsToAdjustedContentInset;
 - (void)setBj_insetLeft:(CGFloat)bj_insetLeft{
     UIEdgeInsets inset = self.contentInset;
     inset.left = bj_insetLeft;
+#ifdef __IPHONE_11_0
+    if ([self gt_respondsToAdjustedContentInset]) {
+        if (@available(iOS 11.0, *)) {
+            inset.left -= (self.adjustedContentInset.left - self.contentInset.left);
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+#endif
     self.contentInset = inset;
 }
 
@@ -74,6 +101,15 @@ static BOOL mj_respondsToAdjustedContentInset;
 - (void)setBj_insetRight:(CGFloat)bj_insetRight{
     UIEdgeInsets inset = self.contentInset;
     inset.right = bj_insetRight;
+#ifdef __IPHONE_11_0
+    if ([self gt_respondsToAdjustedContentInset]) {
+        if (@available(iOS 11.0, *)) {
+            inset.right -= (self.adjustedContentInset.right - self.contentInset.right);
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+#endif
     self.contentInset = inset;
 }
 

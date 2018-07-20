@@ -33,7 +33,7 @@
 - (void)placeSubView{}
 
 - (void)prepare{
-    self.backgroundColor = [UIColor orangeColor];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setRefreshState:(BJRefreshState)refreshState{
@@ -45,6 +45,15 @@
 
 - (void)setPullingPercent:(CGFloat)pullingPercent{
     _pullingPercent = pullingPercent;
+}
+
+#pragma mark -
+- (void)executeRefreshingCallback{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.refreshingBlock) {
+            self.refreshingBlock();
+        }
+    });
 }
 
 #pragma mark - 进入刷新状态
@@ -65,11 +74,14 @@
 
 #pragma mark - 进入刷新状态
 - (void)endRefreshing{
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.refreshState = BJRefreshStateIdle;
+    });
 }
 
 - (void)endRefreshingWithCompletionBlock:(void (^)(void))completionBlock{
-    
+    self.endRefreshIngCompletionBlock = completionBlock;
+    [self endRefreshing];
 }
 
 #pragma mark -

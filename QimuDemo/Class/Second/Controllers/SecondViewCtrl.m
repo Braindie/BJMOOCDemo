@@ -83,10 +83,19 @@
     [self.view addSubview:self.tableView];
     
     self.tableView.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{
-        
+        NSLog(@"开始刷新");
+        [self requestData];
     }];
-    
-//    [self.tableView.bj_header beginRefreshing];
+
+}
+
+- (void)requestData{
+    __weak UITableView *tableView = self.tableView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)),
+        dispatch_get_main_queue(), ^{
+            [tableView.bj_header endRefreshing];
+        
+    });
 }
 
 

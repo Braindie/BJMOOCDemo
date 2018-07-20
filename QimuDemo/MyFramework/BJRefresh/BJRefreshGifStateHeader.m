@@ -126,7 +126,7 @@
 
 #pragma mark -
 - (void)setImageArray:(NSArray *)imageArray forState:(BJRefreshState)state{
-    [self setImageArray:imageArray duration:imageArray.count*0.1 forState:BJRefreshStateIdle];
+    [self setImageArray:imageArray duration:imageArray.count*0.1 forState:state];
 }
 
 - (void)setImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration forState:(BJRefreshState)state{

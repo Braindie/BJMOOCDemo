@@ -7,6 +7,9 @@
 //
 
 #import "BJRefreshHeader.h"
+@interface BJRefreshHeader ()
+@property (assign, nonatomic) CGFloat insetTDelta;//!< 结束刷新时使用
+@end
 
 @implementation BJRefreshHeader
 
@@ -21,6 +24,35 @@
     [super prepare];
     
     self.bj_h = BJRefreshHeaderHeight;
+}
+
+- (void)setRefreshState:(BJRefreshState)refreshState{
+    [super setRefreshState:refreshState];
+    
+    if (refreshState == BJRefreshStateIdle) {//暂停的时候也会调这里
+        [UIView animateWithDuration:0.5 animations:^{
+            self.scrollView.bj_insetTop += self.insetTDelta;
+            
+        } completion:^(BOOL finished) {
+            if (self.endRefreshIngCompletionBlock) {
+                self.endRefreshIngCompletionBlock();
+            }
+        }];
+        
+        
+    }else if (refreshState == BJRefreshStateRefreshing){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.5 animations:^{
+                CGFloat top = self.scrollViewOriginalInset.top + self.bj_h;
+                self.scrollView.bj_insetTop = top;
+                CGPoint offset = self.scrollView.contentOffset;
+                offset.y = -top;
+                [self.scrollView setContentOffset:offset animated:NO];
+            } completion:^(BOOL finished) {
+                [self executeRefreshingCallback];
+            }];
+        });
+    }
 }
 
 #pragma mark -
@@ -41,7 +73,18 @@
     [super scrollViewContentOffsetDidChange:changeDic];
     
     if (self.refreshState == BJRefreshStateRefreshing) {
+        if (self.window == nil) {
+            return;
+        }
         
+        //header停留状态
+        CGFloat insetT = - self.scrollView.bj_offsetY > _scrollViewOriginalInset.top ? - self.scrollView.bj_offsetY : _scrollViewOriginalInset.top;
+        insetT = insetT > self.bj_h + _scrollViewOriginalInset.top ? self.bj_h + _scrollViewOriginalInset.top : insetT;
+        self.scrollView.bj_insetTop = insetT;
+        
+        self.insetTDelta = _scrollViewOriginalInset.top - insetT;
+        
+        return;
     }
     //
     _scrollViewOriginalInset = self.scrollView.bj_inset;
