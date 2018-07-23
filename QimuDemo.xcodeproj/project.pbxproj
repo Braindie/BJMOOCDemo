@@ -75,6 +75,7 @@
 		E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A136B20FC8BC1008C375C /* BJRefreshConst.m */; };
 		E57C48CD20DA056E00595B12 /* FirstDetailTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57C48CB20DA056E00595B12 /* FirstDetailTableViewViewController.m */; };
 		E57C48CE20DA056E00595B12 /* FirstDetailTableViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57C48CC20DA056E00595B12 /* FirstDetailTableViewViewController.xib */; };
+		E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E584B5C12105BBBC008674CB /* UIColor+BJColor.m */; };
 		E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B41EC1AE7900B23589 /* CYLDBManager.m */; };
 		E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061BC1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m */; };
 		E5A9E2CC1EB19B520072EA61 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2C71EB19B520072EA61 /* UserModel.m */; };
@@ -300,6 +301,8 @@
 		E57C48CA20DA056E00595B12 /* FirstDetailTableViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstDetailTableViewViewController.h; sourceTree = "<group>"; };
 		E57C48CB20DA056E00595B12 /* FirstDetailTableViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstDetailTableViewViewController.m; sourceTree = "<group>"; };
 		E57C48CC20DA056E00595B12 /* FirstDetailTableViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstDetailTableViewViewController.xib; sourceTree = "<group>"; };
+		E584B5C02105BBBC008674CB /* UIColor+BJColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+BJColor.h"; sourceTree = "<group>"; };
+		E584B5C12105BBBC008674CB /* UIColor+BJColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BJColor.m"; sourceTree = "<group>"; };
 		E5A061B31EC1AE7900B23589 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
 		E5A061B41EC1AE7900B23589 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
 		E5A061BB1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
@@ -788,6 +791,15 @@
 			path = BJLeftSelectedView;
 			sourceTree = "<group>";
 		};
+		E584B5BF2105BB94008674CB /* BJColor */ = {
+			isa = PBXGroup;
+			children = (
+				E584B5C02105BBBC008674CB /* UIColor+BJColor.h */,
+				E584B5C12105BBBC008674CB /* UIColor+BJColor.m */,
+			);
+			path = BJColor;
+			sourceTree = "<group>";
+		};
 		E5A061B21EC1AE7900B23589 /* CYLDBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,6 +821,7 @@
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E584B5BF2105BB94008674CB /* BJColor */,
 				E57A135320FC7D79008C375C /* BJRefresh */,
 				E57A135420FC7DCB008C375C /* BJLeftSelectedView */,
 				E555B26320DB5AB00037805A /* BJChart */,
@@ -1350,6 +1363,7 @@
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */,
 				E505EAD720C548B700851764 /* ZLCamera.m in Sources */,
+				E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */,
 				E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */,
 				E505EADF20C548B700851764 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,

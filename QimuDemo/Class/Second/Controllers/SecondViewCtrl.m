@@ -17,6 +17,7 @@
 #import "SecondLeftDetailViewController.h"
 
 #import "BJRefresh.h"
+#import "UIColor+BJColor.h"
 
 @implementation SecondViewCtrl
 
@@ -80,6 +81,7 @@
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
+    self.tableView.backgroundColor = [UIColor myColor];
     [self.view addSubview:self.tableView];
     
     self.tableView.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{

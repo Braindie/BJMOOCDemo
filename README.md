@@ -31,10 +31,17 @@
 ### Refresh
 BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
+### UIColor+BJColor
+使用分类（类方法重写get方法）来设置颜色和系统的设置颜色保持了一致，好处可能就是看着舒服，实际的实现原理还是一样的
+``` objc
+//RGB颜色值
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+//十六进制颜色码
+#define UIColorFromRGBWithAlpha(rgbValue, a) [UIColor \ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
+```
 
-### FMDB的封装ZDModel
-1、封装FMDB获取model中的属性；
-获取model的属性作为本地数据库表中的key。
+### MBProgressHUD
+
 
 
 
@@ -48,7 +55,11 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 ###  YYModel
 使用YYModel把json转换成Model
 
-### MBProgressHUD
+
+### FMDB的封装ZDModel
+1、封装FMDB获取model中的属性；
+获取model的属性作为本地数据库表中的key。
+
 
 ### UITableView-FDTemplateLayoutCell
 个人理解：提前把数据源放到Cell中计算高度
