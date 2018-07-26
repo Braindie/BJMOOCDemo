@@ -43,34 +43,35 @@
 
 
 #pragma mark - 使用左右设置按钮
-- (void)setIsNavCtrlSet:(BOOL)isNavCtrlSet
-{
-      if (_isNavCtrlSet != isNavCtrlSet) {
-            _isNavCtrlSet = isNavCtrlSet;
-            
-            // 创建右设置按钮
-            if (_isNavCtrlSet == YES) {
-                  _isNavCtrlSet = isNavCtrlSet;
-                  // 01 创建左侧按钮
-                UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                leftButton.frame = CGRectMake(0, 0, 30, 30);
-                [leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
-                [leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-
-                  // 创建右侧按钮
-                UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                rightButton.frame = CGRectMake(0, 0, 30, 30);
-                [rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
-                [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-
-                UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
-                UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
-
-                self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:btn1, nil];
-                self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn2, nil];
-            }
-      }
+- (void)setIsNavCtrlSetLeft:(BOOL)isNavCtrlSetLeft{
+    _isNavCtrlSetLeft = isNavCtrlSetLeft;
+    if (_isNavCtrlSetLeft) {
+        // 创建左侧按钮
+        UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        leftButton.frame = CGRectMake(0, 0, 30, 30);
+        [leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+        [leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+        
+        self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:btn1, nil];
+    }
 }
+- (void)setIsNavCtrlSetRight:(BOOL)isNavCtrlSetRight{
+    _isNavCtrlSetRight = isNavCtrlSetRight;
+    if (_isNavCtrlSetRight) {
+        // 创建右侧按钮
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightButton.frame = CGRectMake(0, 0, 30, 30);
+        [rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+        [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+        
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn2, nil];
+    }
+}
+
 
 //设置的左右按钮事件
 - (void)leftButtonAction:(UIButton *)button

@@ -4,8 +4,10 @@
 ## First
 
 ### 界面布局
-首页有个UICollectionView基本布局</br>
-详情有个UICollectionViewLeftAlignedLayout左布局</br>
+- 首页有个UICollectionView基本布局</br>
+- 详情有个UICollectionViewLeftAlignedLayout左布局</br>
+- 详情有个左上角的点击筛选
+- 详情有个筛选条
 
 ### 蓝牙通讯
 左侧按钮有蓝牙通讯的代码，蓝牙中心设备</br>

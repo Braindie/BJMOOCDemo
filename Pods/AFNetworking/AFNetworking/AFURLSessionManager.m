@@ -802,7 +802,10 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
         dataTask = [self.session dataTaskWithRequest:request];
     });
 
-    [self addDelegateForDataTask:dataTask uploadProgress:uploadProgressBlock downloadProgress:downloadProgressBlock completionHandler:completionHandler];
+    [self addDelegateForDataTask:dataTask
+                  uploadProgress:uploadProgressBlock
+                downloadProgress:downloadProgressBlock
+               completionHandler:completionHandler];
 
     return dataTask;
 }

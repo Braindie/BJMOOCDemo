@@ -35,8 +35,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.isNavCtrlSet = NO;
-    
+    self.isNavCtrlSetLeft = NO;
+    self.isNavCtrlSetRight = NO;
     self.navigationItem.title = @"世界杯";
     
     //创建视图

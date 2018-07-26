@@ -51,8 +51,8 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
 
-    self.isNavCtrlSet = YES;
-
+    self.isNavCtrlSetLeft = YES;
+    self.isNavCtrlSetRight = YES;
     self.navigationItem.title = @"精选";
 
     //加载数据

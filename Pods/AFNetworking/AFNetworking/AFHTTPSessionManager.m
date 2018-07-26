@@ -159,7 +159,13 @@
                        success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
                        failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
-    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"POST" URLString:URLString parameters:parameters uploadProgress:uploadProgress downloadProgress:nil success:success failure:failure];
+    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"POST"
+                                                        URLString:URLString
+                                                       parameters:parameters
+                                                   uploadProgress:uploadProgress
+                                                 downloadProgress:nil
+                                                          success:success
+                                                          failure:failure];
 
     [dataTask resume];
 
@@ -263,7 +269,10 @@
 {
     NSError *serializationError = nil;
     //把各种参数放到一个request实例中
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serializationError];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method
+                                                                   URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString]
+                                                                  parameters:parameters
+                                                                       error:&serializationError];
     if (serializationError) {
         if (failure) {
 #pragma clang diagnostic push

@@ -29,7 +29,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.isNavCtrlSet = YES;
+    self.isNavCtrlSetLeft = YES;
+    self.isNavCtrlSetRight = YES;
     self.navigationItem.title = @"图片选择器";
     
     

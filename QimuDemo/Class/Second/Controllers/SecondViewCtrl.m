@@ -28,7 +28,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.isNavCtrlSet = YES;
+    self.isNavCtrlSetLeft = YES;
+    self.isNavCtrlSetRight = YES;
+
     self.navigationItem.title = @"视频";
 
 //    //加载数据

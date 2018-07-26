@@ -73,8 +73,12 @@ static NSString *kCellIdentifier = @"CellIdentifier";
 
 
 #pragma mark -  UICollectionViewDataSource Method
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return self.myDataArr.count;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [self.myDataArr count];
+    return [self.myDataArr[section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -84,19 +88,13 @@ static NSString *kCellIdentifier = @"CellIdentifier";
     (MonthXibCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier
                                                                          forIndexPath:indexPath];
     
-    cell.titleLabel.text = self.myDataArr[indexPath.row];
-    
-//    cell.backgroundColor = [UIColor whiteColor];
-//    cell.layer.cornerRadius = 5;
-//    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    cell.layer.borderWidth = 0.5;
-//    cell.layer.masksToBounds = YES;
+    cell.titleLabel.text = self.myDataArr[indexPath.section][indexPath.row];
 
     if (self.currentSelectItem < 1110) {
         if (indexPath.row == self.currentSelectItem) {
             [cell.titleImage setImage:[UIImage imageNamed:@"xin_hongbao_xuanzhong"]];
             if ([_delegate respondsToSelector:@selector(currentSelectedItem:)]) {
-                [_delegate currentSelectedItem:self.myDataArr[indexPath.row]];
+                [_delegate currentSelectedItem:self.myDataArr[indexPath.section][indexPath.row]];
             }
         }else{
             [cell.titleImage setImage:[UIImage imageNamed:@"xin_hongbao_weixuanzhong"]];
@@ -135,7 +133,7 @@ static NSString *kCellIdentifier = @"CellIdentifier";
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSString *barNameStr = self.myDataArr[indexPath.row];
+    NSString *barNameStr = self.myDataArr[indexPath.section][indexPath.row];
     
     CGFloat wide = [self changeStationWidth:barNameStr anHeightTxtt:30 anfont:13];
     

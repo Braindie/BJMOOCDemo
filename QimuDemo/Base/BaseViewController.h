@@ -12,7 +12,9 @@
 
 
 @property (nonatomic ,assign) BOOL isCustomBack;
-@property (nonatomic ,assign) BOOL isNavCtrlSet;
+
+@property (nonatomic ,assign) BOOL isNavCtrlSetLeft;
+@property (nonatomic ,assign) BOOL isNavCtrlSetRight;
 
 
 //设置的左右按钮事件
