@@ -29,7 +29,9 @@
     
     self.isCustomBack = YES;
     self.isNavCtrlSetRight = YES;
-    self.navigationItem.title = @"详情";
+    [self.rightButton setTitle:@"筛选" forState:UIControlStateNormal];
+
+    self.navigationItem.title = @"筛选";
     
     _superMenuView = [[BJMenuRightView alloc] initWithOrigin:CGPointMake(SCREEN_WIDTH - 120, 64) withCellHeight:40 withHeight:40 * 8];
     _superMenuView.delegate = self;

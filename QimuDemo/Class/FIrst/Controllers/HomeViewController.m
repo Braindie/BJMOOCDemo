@@ -11,7 +11,11 @@
 #import "HomeSectionHeaderView.h"
 #import "CYLDBManager.h"//json文件解析
 #import "FirstDetailViewController.h"
-#import "FirstTableViewController.h"
+
+#import "SGWCustomBlockAlertManager.h"
+#import "SGWBlockAlertManager.h"
+#import "UILabel+StringFrame.h"
+#import "HxToastView.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -27,7 +31,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 //@property (nonatomic, strong) UIPageControl * myPageControl;    //翻页控件
 
 
-@property (nonatomic, strong) UIScrollView *backScrollView;
+//@property (nonatomic, strong) UIScrollView *backScrollView;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -49,12 +53,14 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 - (void)viewDidLoad{
 
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
 
     self.isNavCtrlSetLeft = YES;
-    self.isNavCtrlSetRight = YES;
+    self.isNavCtrlSetRight = NO;
     self.navigationItem.title = @"布局";
+    [self.leftButton setTitle:@"筛选" forState:UIControlStateNormal];
 
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     //加载数据
     [self loadTopData];
 
@@ -64,12 +70,11 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    self.backScrollView.scrollEnabled = YES;
     [self updateViewHeight];
 }
 
 - (void)leftButtonAction:(UIButton *)button{
-    FirstTableViewController *vc = [[FirstTableViewController alloc] init];
+    FirstDetailViewController *vc = [[FirstDetailViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -80,17 +85,15 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 
 - (void)updateViewHeight {
-    [self.collectionView.collectionViewLayout invalidateLayout];
-    [self.collectionView.collectionViewLayout prepareLayout];
-    //仅修改self.collectionView的高度,xyw值不变
-    self.collectionView.frame = CGRectMake(CGRectGetMinX(self.collectionView.frame),
-                                           CGRectGetMinY(self.collectionView.frame),
-                                           CGRectGetWidth(self.collectionView.frame),
-                                           self.collectionView.contentSize.height +
-                                           1000);
-    self.backScrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width,
-                                                 self.collectionView.contentSize.height +
-                                                 1000);
+//    [self.collectionView.collectionViewLayout invalidateLayout];
+//    [self.collectionView.collectionViewLayout prepareLayout];
+//    //仅修改self.collectionView的高度,xyw值不变
+//    self.collectionView.frame = CGRectMake(CGRectGetMinX(self.collectionView.frame),
+//                                           CGRectGetMinY(self.collectionView.frame),
+//                                           CGRectGetWidth(self.collectionView.frame),
+//                                           self.collectionView.contentSize.height +
+//                                           1000);
+
 }
 
 
@@ -112,13 +115,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (void)creatView{
 
-    //底层视图
-    self.backScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height)];
-    self.backScrollView.showsVerticalScrollIndicator = NO;
-    self.backScrollView.alwaysBounceVertical = YES;
-    self.backScrollView.backgroundColor = [UIColor colorWithRed:252.0f/255.f green:252.0f/255.f blue:252.0f/255.f alpha:2.f];
 //    self.backgroundView.scrollEnabled = YES;
-    [self.view addSubview:self.backScrollView];
     
 
 
@@ -193,7 +190,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     CGFloat height = width / 5 * 4;
     layout.itemSize = CGSizeMake(width, height);
 
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 200, kScreenWidth, kScreenHeight-49-kScreenWidth*3/5) collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-49) collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor grayColor];
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
@@ -209,10 +206,9 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     layout.sectionInset = UIEdgeInsetsMake(100,0,0,0);
     layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 50);//必填
 
-    self.collectionView.scrollsToTop = NO;
-    self.collectionView.scrollEnabled = NO;
 
-    [self.backScrollView addSubview:self.collectionView];
+    [self.view addSubview:self.collectionView];
+
 }
 
 
@@ -241,7 +237,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     HomeViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
 
     NSMutableArray *symptoms = [NSMutableArray arrayWithArray:[self.dataArr2[indexPath.section]
                                                                objectForKey:kDataSourceSectionKey]];
@@ -249,7 +245,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     [cell.button setTitle:text forState:UIControlStateNormal];
     [cell.button setTitle:text forState:UIControlStateSelected];
-//    [cell.button addTarget:self action:@selector(itemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     cell.section = indexPath.section;
     cell.row = indexPath.row;
 
@@ -333,9 +329,35 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     });
     */
     
-    FirstDetailViewController *vc = [[FirstDetailViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:{
+                [SGWCustomBlockAlertManager alertWithMessage:@"你确定取消吗" cancelButtonTitle:@"取消" cancelBlock:nil];
+            }
+                break;
+            case 1:{
+                [SGWBlockAlertManager alertWithTitle:@"" message:@"我是提示框" cancelButtonTitle:@"取消"];
+            }
+                break;
+            case 2:{
+                [UILabel showErrorProgressLabelWithString:@"我就是个提示框，我就是个提示框"];
+            }
+                break;
+            case 3:{
+                CGSize toastSize = [HxToastView sizeForText:@"我就是个提示框，我就是个提示框"];
+                HxToastView *toastView = [[HxToastView alloc] initWithFrame:CGRectZero];
+                toastView.frame = CGRectMake((self.view.bounds.size.width - toastSize.width) / 2, (SCREEN_HEIGHT-toastSize.height-10)/2 - 20, toastSize.width, toastSize.height+10);
+                [self.view addSubview:toastView];
+                [self.view bringSubviewToFront:toastView];
+                [toastView setToastText:@"我就是个提示框，我就是个提示框"];
+                [toastView show:YES];
+            }
+                break;
+            default:
+                break;
+        }
+    }
+
 
 }
 

@@ -34,8 +34,9 @@
 
 - (void)setup {
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.button.frame = CGRectMake(self.bounds.size.width/2, self.bounds.size.height/2, self.bounds.size.width/2, self.bounds.size.height/2);
+    self.button.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     [self.contentView addSubview:self.button];
+    self.button.userInteractionEnabled = NO;
 //    [self.button generalStyle];
 //    [self.button homeStyle];
     //    [self.button redStyle];

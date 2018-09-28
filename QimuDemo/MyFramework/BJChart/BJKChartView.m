@@ -95,6 +95,8 @@
         CGContextAddLineToPoint(ctx, point.x, point.y);//!< 添加一条线
         CGContextSetShadow(ctx, CGSizeMake(0, 0), 12);//!< 添加阴影(CGSize都为正表示朝上和朝右，12标示模糊度）
         CGContextSetShadowWithColor(ctx, CGSizeMake(0, 0), 12, [UIColor yellowColor].CGColor);//!< 阴影颜色
+        CGContextSetLineCap(ctx, kCGLineCapRound);
+        CGContextSetLineJoin(ctx, kCGLineJoinRound);
     }
     CGContextStrokePath(ctx);//!< 不加这句就只画了一条线
 

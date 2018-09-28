@@ -9,15 +9,13 @@
 #import "SecondViewCtrl.h"
 #import "MyTableViewCell.h"
 
-#import "SGWCustomBlockAlertManager.h"
-#import "SGWBlockAlertManager.h"
-#import "UILabel+StringFrame.h"
-#import "HxToastView.h"
+
 #import "FirstRightDetailViewController.h"
 #import "SecondLeftDetailViewController.h"
 
 #import "BJRefresh.h"
 #import "UIColor+BJColor.h"
+#import "SecondListViewController.h"
 
 @implementation SecondViewCtrl
 
@@ -30,6 +28,9 @@
 
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = YES;
+    
+    [self.leftButton setTitle:@"波浪" forState:UIControlStateNormal];
+    [self.rightButton setTitle:@"图表" forState:UIControlStateNormal];
 
     self.navigationItem.title = @"动画";
 
@@ -56,7 +57,15 @@
 
 - (void)loadTopData{
 
-    NSArray *dataArr1 = [NSArray arrayWithObjects:@"SGWCustomBlockAlertManager.h",@"SGWBlockAlertManager.h",@"UILabel+StringFrame.h",@"HxToastView.h",@"data5",@"data6",@"data7",@"data8",@"data9", nil];
+    NSArray *dataArr1 = [NSArray arrayWithObjects:
+                         @"大小动画（改变frame）",
+                         @"拉伸动画（改变bounds）",
+                         @"转移动画（改变center）",
+                         @"旋转动画（改变transform）",
+                         @"透明度动画（改变alpha）",
+                         @"Keyframe",
+                         @"Spring",
+                         @"Transition",@"data9",@"data9",@"data9",@"data9",@"data9",@"data9", nil];
 
     NSArray *arr10 = [NSArray arrayWithObjects:@"最新",@"最热",nil];
     NSArray *arr11 = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];
@@ -106,37 +115,26 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    switch (indexPath.row) {
-        case 0:
-            [SGWCustomBlockAlertManager alertWithMessage:@"你确定取消吗" cancelButtonTitle:@"取消" cancelBlock:nil];
-            break;
-            
-        case 1:
-            [SGWBlockAlertManager alertWithTitle:@"" message:@"我是提示框" cancelButtonTitle:@"取消"];
-            break;
-            
-        case 2:
-            [UILabel showErrorProgressLabelWithString:@"我就是个提示框，我就是个提示框"];
-            break;
-            
-        case 3:{
-            CGSize toastSize = [HxToastView sizeForText:@"我就是个提示框，我就是个提示框"];
-            HxToastView *toastView = [[HxToastView alloc] initWithFrame:CGRectZero];
-            toastView.frame = CGRectMake((self.view.bounds.size.width - toastSize.width) / 2, (SCREEN_HEIGHT-toastSize.height-10)/2 - 20, toastSize.width, toastSize.height+10);
-            [self.view addSubview:toastView];
-            [self.view bringSubviewToFront:toastView];
-            [toastView setToastText:@"我就是个提示框，我就是个提示框"];
-            [toastView show:YES];
-        }
-            break;
-            
-        default:
-            break;
+    SecondListViewController *vc = [[SecondListViewController alloc] init];
+    if (indexPath.row == 0) {
+        vc.animationType = @"大小动画";
+    }else if (indexPath.row == 1){
+        vc.animationType = @"拉伸动画";
+    }else if (indexPath.row == 2){
+        vc.animationType = @"转移动画";
+    }else if (indexPath.row == 3){
+        vc.animationType = @"旋转动画";
+    }else if (indexPath.row == 4){
+        vc.animationType = @"透明度动画";
+    }else if (indexPath.row == 5){
+        vc.animationType = @"Keyframe";
+    }else if (indexPath.row == 6){
+        vc.animationType = @"Spring";
+    }else if (indexPath.row == 7){
+        vc.animationType = @"Transition";
     }
-
-
-
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

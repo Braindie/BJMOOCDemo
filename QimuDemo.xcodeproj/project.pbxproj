@@ -62,8 +62,6 @@
 		E555B26920DB5B040037805A /* BJChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26820DB5B040037805A /* BJChartModel.m */; };
 		E555B27420DBAEA00037805A /* BJKChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B27320DBAEA00037805A /* BJKChartView.m */; };
 		E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977F920D3B0D200AE6DBD /* BJLoadingView.m */; };
-		E56E6A9E20D8E3EA00A0E78C /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E6A9C20D8E3EA00A0E78C /* FirstTableViewController.m */; };
-		E56E6A9F20D8E3EA00A0E78C /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56E6A9D20D8E3EA00A0E78C /* FirstTableViewController.xib */; };
 		E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A135520FC7DCB008C375C /* BunnyCollectionView.m */; };
 		E57A135B20FC7DCB008C375C /* MonthXibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */; };
 		E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A135920FC7DCB008C375C /* MonthXibCollectionViewCell.m */; };
@@ -72,8 +70,6 @@
 		E57A136620FC7F34008C375C /* BJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A136520FC7F34008C375C /* BJRefreshComponent.m */; };
 		E57A136920FC7F53008C375C /* BJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A136820FC7F53008C375C /* BJRefreshHeader.m */; };
 		E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A136B20FC8BC1008C375C /* BJRefreshConst.m */; };
-		E57C48CD20DA056E00595B12 /* FirstDetailTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57C48CB20DA056E00595B12 /* FirstDetailTableViewViewController.m */; };
-		E57C48CE20DA056E00595B12 /* FirstDetailTableViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57C48CC20DA056E00595B12 /* FirstDetailTableViewViewController.xib */; };
 		E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E584B5C12105BBBC008674CB /* UIColor+BJColor.m */; };
 		E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B41EC1AE7900B23589 /* CYLDBManager.m */; };
 		E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061BC1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m */; };
@@ -149,6 +145,11 @@
 		E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */; };
 		E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */; };
 		E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */; };
+		E5BCAA6A215E1B500020DD7B /* FirstDetailTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BCAA68215E1B500020DD7B /* FirstDetailTableViewViewController.m */; };
+		E5BCAA6B215E1B500020DD7B /* FirstDetailTableViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5BCAA69215E1B500020DD7B /* FirstDetailTableViewViewController.xib */; };
+		E5BCAA6F215E23DC0020DD7B /* FirstTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5BCAA6C215E23DC0020DD7B /* FirstTableViewController.xib */; };
+		E5BCAA70215E23DC0020DD7B /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BCAA6E215E23DC0020DD7B /* FirstTableViewController.m */; };
+		E5BCAA75215E39350020DD7B /* SecondListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BCAA74215E39350020DD7B /* SecondListViewController.m */; };
 		E5C30E7620F3651A00690449 /* FirstRightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C30E7520F3651A00690449 /* FirstRightDetailViewController.m */; };
 		E5C30E7920F365E800690449 /* SecondLeftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C30E7820F365E800690449 /* SecondLeftDetailViewController.m */; };
 		E5E49C462109CE23004ABAD1 /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C442109CE23004ABAD1 /* BJWaveView.m */; };
@@ -282,9 +283,6 @@
 		E555B27320DBAEA00037805A /* BJKChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKChartView.m; sourceTree = "<group>"; };
 		E55977F820D3B0D200AE6DBD /* BJLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLoadingView.h; sourceTree = "<group>"; };
 		E55977F920D3B0D200AE6DBD /* BJLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLoadingView.m; sourceTree = "<group>"; };
-		E56E6A9B20D8E3EA00A0E78C /* FirstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
-		E56E6A9C20D8E3EA00A0E78C /* FirstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
-		E56E6A9D20D8E3EA00A0E78C /* FirstTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewController.xib; sourceTree = "<group>"; };
 		E57A135520FC7DCB008C375C /* BunnyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BunnyCollectionView.m; sourceTree = "<group>"; };
 		E57A135620FC7DCB008C375C /* MonthXibCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthXibCollectionViewCell.h; sourceTree = "<group>"; };
 		E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthXibCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -300,9 +298,6 @@
 		E57A136820FC7F53008C375C /* BJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRefreshHeader.m; sourceTree = "<group>"; };
 		E57A136A20FC8BC1008C375C /* BJRefreshConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJRefreshConst.h; sourceTree = "<group>"; };
 		E57A136B20FC8BC1008C375C /* BJRefreshConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRefreshConst.m; sourceTree = "<group>"; };
-		E57C48CA20DA056E00595B12 /* FirstDetailTableViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstDetailTableViewViewController.h; sourceTree = "<group>"; };
-		E57C48CB20DA056E00595B12 /* FirstDetailTableViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstDetailTableViewViewController.m; sourceTree = "<group>"; };
-		E57C48CC20DA056E00595B12 /* FirstDetailTableViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstDetailTableViewViewController.xib; sourceTree = "<group>"; };
 		E584B5C02105BBBC008674CB /* UIColor+BJColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+BJColor.h"; sourceTree = "<group>"; };
 		E584B5C12105BBBC008674CB /* UIColor+BJColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BJColor.m"; sourceTree = "<group>"; };
 		E5A061B31EC1AE7900B23589 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
@@ -406,6 +401,14 @@
 		E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewCtrl.h; sourceTree = "<group>"; };
 		E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewCtrl.m; sourceTree = "<group>"; };
+		E5BCAA67215E1B500020DD7B /* FirstDetailTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailTableViewViewController.h; sourceTree = "<group>"; };
+		E5BCAA68215E1B500020DD7B /* FirstDetailTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailTableViewViewController.m; sourceTree = "<group>"; };
+		E5BCAA69215E1B500020DD7B /* FirstDetailTableViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstDetailTableViewViewController.xib; sourceTree = "<group>"; };
+		E5BCAA6C215E23DC0020DD7B /* FirstTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewController.xib; sourceTree = "<group>"; };
+		E5BCAA6D215E23DC0020DD7B /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
+		E5BCAA6E215E23DC0020DD7B /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
+		E5BCAA73215E39350020DD7B /* SecondListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondListViewController.h; sourceTree = "<group>"; };
+		E5BCAA74215E39350020DD7B /* SecondListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondListViewController.m; sourceTree = "<group>"; };
 		E5C30E7420F3651900690449 /* FirstRightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstRightDetailViewController.h; sourceTree = "<group>"; };
 		E5C30E7520F3651A00690449 /* FirstRightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstRightDetailViewController.m; sourceTree = "<group>"; };
 		E5C30E7720F365E800690449 /* SecondLeftDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondLeftDetailViewController.h; sourceTree = "<group>"; };
@@ -985,6 +988,12 @@
 				E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */,
 				E5B0E96E1FCD57E700AB3675 /* FiveDetailViewController.h */,
 				E5B0E96F1FCD57E700AB3675 /* FiveDetailViewController.m */,
+				E5BCAA6D215E23DC0020DD7B /* FirstTableViewController.h */,
+				E5BCAA6E215E23DC0020DD7B /* FirstTableViewController.m */,
+				E5BCAA6C215E23DC0020DD7B /* FirstTableViewController.xib */,
+				E5BCAA67215E1B500020DD7B /* FirstDetailTableViewViewController.h */,
+				E5BCAA68215E1B500020DD7B /* FirstDetailTableViewViewController.m */,
+				E5BCAA69215E1B500020DD7B /* FirstDetailTableViewViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1052,6 +1061,8 @@
 			children = (
 				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
 				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
+				E5BCAA73215E39350020DD7B /* SecondListViewController.h */,
+				E5BCAA74215E39350020DD7B /* SecondListViewController.m */,
 				E5C30E7420F3651900690449 /* FirstRightDetailViewController.h */,
 				E5C30E7520F3651A00690449 /* FirstRightDetailViewController.m */,
 				E5C30E7720F365E800690449 /* SecondLeftDetailViewController.h */,
@@ -1127,12 +1138,6 @@
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
 				E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */,
 				E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */,
-				E56E6A9B20D8E3EA00A0E78C /* FirstTableViewController.h */,
-				E56E6A9C20D8E3EA00A0E78C /* FirstTableViewController.m */,
-				E56E6A9D20D8E3EA00A0E78C /* FirstTableViewController.xib */,
-				E57C48CA20DA056E00595B12 /* FirstDetailTableViewViewController.h */,
-				E57C48CB20DA056E00595B12 /* FirstDetailTableViewViewController.m */,
-				E57C48CC20DA056E00595B12 /* FirstDetailTableViewViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1263,6 +1268,7 @@
 				E51475C920CF97CD00B79605 /* SGWDismissAlertView.xib in Resources */,
 				E5A9E54F1EB19D470072EA61 /* icon_addpic_unfocused.png in Resources */,
 				E5A9E3BE1EB19D0B0072EA61 /* pic3.jpg in Resources */,
+				E5BCAA6B215E1B500020DD7B /* FirstDetailTableViewViewController.xib in Resources */,
 				E5A9E54D1EB19D470072EA61 /* ic_picture_loading.png in Resources */,
 				E5A9E3C01EB19D0B0072EA61 /* pic5.jpg in Resources */,
 				E5A9E5501EB19D470072EA61 /* icon_current.png in Resources */,
@@ -1289,13 +1295,12 @@
 				E5A9E5451EB19D470072EA61 /* checked.png in Resources */,
 				E5A9E5581EB19D470072EA61 /* icon_normal@3x.png in Resources */,
 				E57A135B20FC7DCB008C375C /* MonthXibCollectionViewCell.xib in Resources */,
-				E56E6A9F20D8E3EA00A0E78C /* FirstTableViewController.xib in Resources */,
+				E5BCAA6F215E23DC0020DD7B /* FirstTableViewController.xib in Resources */,
 				E5A9E5471EB19D470072EA61 /* default_header.png in Resources */,
 				E51475C720CF97CD00B79605 /* SGWCancelAlertView.xib in Resources */,
 				E5A9E5531EB19D470072EA61 /* icon_my_retailer.png in Resources */,
 				E5A9E55F1EB19D470072EA61 /* zl_X@2x.png in Resources */,
 				E5A9E55E1EB19D470072EA61 /* zl_X.png in Resources */,
-				E57C48CE20DA056E00595B12 /* FirstDetailTableViewViewController.xib in Resources */,
 				E5A9E5421EB19D470072EA61 /* APNumberPad.bundle in Resources */,
 				E5A9E5481EB19D470072EA61 /* default_header@2x.png in Resources */,
 				E5A9E5561EB19D470072EA61 /* icon_normal.png in Resources */,
@@ -1360,6 +1365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5BCAA70215E23DC0020DD7B /* FirstTableViewController.m in Sources */,
 				E505EAE620C548B700851764 /* ZLPhotoPickerGroupViewController.m in Sources */,
 				E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
@@ -1395,11 +1401,13 @@
 				E505EADC20C548B700851764 /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
 				E508F86820FDF69100C9EF26 /* BJRefreshStateHeader.m in Sources */,
+				E5BCAA75215E39350020DD7B /* SecondListViewController.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
 				E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */,
 				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,
 				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
+				E5BCAA6A215E1B500020DD7B /* FirstDetailTableViewViewController.m in Sources */,
 				E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
 				E57A136620FC7F34008C375C /* BJRefreshComponent.m in Sources */,
@@ -1413,11 +1421,9 @@
 				E505EADF20C548B700851764 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
-				E57C48CD20DA056E00595B12 /* FirstDetailTableViewViewController.m in Sources */,
 				E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
-				E56E6A9E20D8E3EA00A0E78C /* FirstTableViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,

@@ -10,6 +10,7 @@
 #import "PhotoSelectView.h"
 #import "UIImageView+WebCache.h"
 #import "FiveDetailViewController.h"
+#import "FirstTableViewController.h"
 
 @interface FiveViewCtrl ()
 @property (nonatomic, strong) PhotoSelectView *photoView;
@@ -30,9 +31,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.isNavCtrlSetLeft = YES;
-    self.isNavCtrlSetRight = YES;
+    self.isNavCtrlSetRight = NO;
     self.navigationItem.title = @"功能";
-    
+    [self.leftButton setTitle:@"蓝牙" forState:UIControlStateNormal];
     
     
 
@@ -51,6 +52,13 @@
         NSLog(@"%@",error);
     }];
 }
+
+- (void)leftButtonAction:(UIButton *)button{
+    FirstTableViewController *vc = [[FirstTableViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 
 - (void)creatView{

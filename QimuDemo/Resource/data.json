@@ -12,19 +12,19 @@
                ]
   },
   {
-  "Type": "最新",
+  "Type": "Toast",
   "Symptoms": [
                {
-               "Food_Name": "面包",
+               "Food_Name": "SGWCustomBlockAlertManager.h",
                },
                {
-               "Food_Name": "饼干",
+               "Food_Name": "SGWBlockAlertManager.h",
                },
                {
-               "Food_Name": "戚风蛋糕",
+               "Food_Name": "UILabel+StringFrame.h",
                },
                {
-               "Food_Name": "泡芙",
+               "Food_Name": "HxToastView.h",
                }
                ]
   },
