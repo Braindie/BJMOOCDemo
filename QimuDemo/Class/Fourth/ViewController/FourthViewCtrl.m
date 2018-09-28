@@ -32,7 +32,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
 
-    self.navigationItem.title = @"MVVM";
+    self.navigationItem.title = @"架构";
     
 
     //创建视图

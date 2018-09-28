@@ -17,6 +17,9 @@
 @property (nonatomic ,assign) BOOL isNavCtrlSetRight;
 
 
+@property (nonatomic, strong) UIButton *leftButton;
+@property (nonatomic, strong) UIButton *rightButton;
+
 //设置的左右按钮事件
 - (void)leftButtonAction:(UIButton *)button;
 

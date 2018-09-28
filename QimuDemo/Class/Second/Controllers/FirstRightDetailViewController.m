@@ -31,7 +31,7 @@
     
     
     BJKChartView *kview = [[BJKChartView alloc] initWithFrame:CGRectMake(20, 350, SCREEN_WIDTH-20*2, 200)];
-    kview.backgroundColor = [UIColor orangeColor];
+    kview.backgroundColor = [UIColor blackColor];
     [self.view addSubview:kview];
     
 }

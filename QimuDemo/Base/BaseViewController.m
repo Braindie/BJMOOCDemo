@@ -47,12 +47,12 @@
     _isNavCtrlSetLeft = isNavCtrlSetLeft;
     if (_isNavCtrlSetLeft) {
         // 创建左侧按钮
-        UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        leftButton.frame = CGRectMake(0, 0, 30, 30);
-        [leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
-        [leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        self.leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.leftButton.frame = CGRectMake(0, 0, 30, 30);
+        [self.leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+        [self.leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         
-        UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+        UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:self.leftButton];
         
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:btn1, nil];
     }
@@ -61,12 +61,12 @@
     _isNavCtrlSetRight = isNavCtrlSetRight;
     if (_isNavCtrlSetRight) {
         // 创建右侧按钮
-        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        rightButton.frame = CGRectMake(0, 0, 30, 30);
-        [rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
-        [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        self.rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.rightButton.frame = CGRectMake(0, 0, 30, 30);
+        [self.rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+        [self.rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         
-        UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+        UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:self.rightButton];
         
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn2, nil];
     }

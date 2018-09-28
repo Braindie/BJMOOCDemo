@@ -1,11 +1,11 @@
 # QimuDemo
 
 
-## First
+## 布局
 
 ### 界面布局
-- 首页有个UICollectionView基本布局</br>
-- 详情有个UICollectionViewLeftAlignedLayout左布局</br>
+- 首页有个UICollectionView基本布局
+- 详情有个UICollectionViewLeftAlignedLayout左布局
 - 详情有个左上角的点击筛选
 - 详情有个筛选条
 
@@ -14,7 +14,7 @@
 
 
 
-## Second
+## 动画
 ### 波浪图
 使用Layer实现波浪图</br>
 
@@ -47,7 +47,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 
-## Third
+## 网络
 ### AFN和NSURLSession
 - AFN
 注释在源码中
@@ -82,7 +82,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 
-## Fourth
+## 架构
 ### MVVM
 ```
 1、FourthSevice：将UITableView的代理对象指给FourthSevice，在控制器中初始化VM，并把VM设置为UITableView的代理对象。
@@ -92,7 +92,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 
-## Fifth
+## 功能
 ### 图片选择器 
 ### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 

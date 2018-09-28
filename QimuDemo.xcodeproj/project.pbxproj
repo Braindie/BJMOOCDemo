@@ -1216,7 +1216,7 @@
 				TargetAttributes = {
 					787D84461C0EC08100DC473D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = Y64H5D3GHR;
+						DevelopmentTeam = TZUCHNJSDZ;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1546,7 +1546,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Y64H5D3GHR;
+				DEVELOPMENT_TEAM = TZUCHNJSDZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1580,7 +1580,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Y64H5D3GHR;
+				DEVELOPMENT_TEAM = TZUCHNJSDZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

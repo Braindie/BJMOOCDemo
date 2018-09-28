@@ -21,7 +21,7 @@ static NSString * CellIdentifier           = @"CellIdentifier";
 static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 
-@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 //@property (nonatomic, strong) UIScrollView  * myScrollView;     //滚动广告底图
 //@property (nonatomic, strong) UIPageControl * myPageControl;    //翻页控件
@@ -53,7 +53,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = YES;
-    self.navigationItem.title = @"精选";
+    self.navigationItem.title = @"布局";
 
     //加载数据
     [self loadTopData];
@@ -241,7 +241,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     HomeViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    cell.backgroundColor = [UIColor orangeColor];
+    cell.backgroundColor = [UIColor whiteColor];
 
     NSMutableArray *symptoms = [NSMutableArray arrayWithArray:[self.dataArr2[indexPath.section]
                                                                objectForKey:kDataSourceSectionKey]];
@@ -264,7 +264,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
         [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                            withReuseIdentifier:HeaderViewCellIdentifier
                                                   forIndexPath:indexPath];
-//        filterHeaderView.frame = CGRectMake(0, 0, self.view.frame.size.width, 50);
+//        filterHeaderView.frame = CGRectMake(0, 0, self.view.frame.size.width, 150);
         filterHeaderView.moreButton.hidden = NO;
 //        [self.collectionHeaderMoreBtnHideBoolArray[indexPath.section] boolValue];
 //        filterHeaderView.delegate = self;

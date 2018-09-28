@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/First/Controllers/HomeViewController.m"
-            timestampString = "554297624.141464"
+            timestampString = "559811405.3843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "325"
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/MyFramework/BJChart/BJKChartView.m"
-            timestampString = "551273324.1052361"
+            timestampString = "556014299.279019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-drawRect:"
             landmarkType = "7">
          </BreakpointContent>

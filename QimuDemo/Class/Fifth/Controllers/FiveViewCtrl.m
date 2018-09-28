@@ -31,7 +31,7 @@
     
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = YES;
-    self.navigationItem.title = @"图片选择器";
+    self.navigationItem.title = @"功能";
     
     
     

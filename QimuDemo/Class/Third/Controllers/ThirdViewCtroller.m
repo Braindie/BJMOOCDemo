@@ -37,7 +37,7 @@
 
     self.isNavCtrlSetLeft = NO;
     self.isNavCtrlSetRight = NO;
-    self.navigationItem.title = @"世界杯";
+    self.navigationItem.title = @"网络";
     
     //创建视图
     self.thirdTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64) style:UITableViewStylePlain];

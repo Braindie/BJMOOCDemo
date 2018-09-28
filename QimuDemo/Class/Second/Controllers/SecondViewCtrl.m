@@ -31,7 +31,7 @@
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = YES;
 
-    self.navigationItem.title = @"视频";
+    self.navigationItem.title = @"动画";
 
 //    //加载数据
     [self loadTopData];
