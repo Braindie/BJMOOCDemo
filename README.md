@@ -43,6 +43,9 @@ CADisplayLink就像是一个定时器，每隔几毫秒刷新一次屏幕。能�
 * `Loading`的加载效果</br>
 CABasicAnimation+CAShapeLayer实现
 
+* 点击按钮的动态效果
+CAKeyframeAnimation实现
+
 #### CoreGraphics
 
 * 使用CoreGraphics实现柱状图，折线图</br>
