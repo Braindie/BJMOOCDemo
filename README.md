@@ -1,9 +1,9 @@
 # QimuDemo
 
 
-## 布局
+## 一、布局
 
-### 界面布局
+#### 界面布局
 - 首页有个UICollectionView基本布局
 - 左上角的UICollectionViewLeftAlignedLayout左布局
 - 左上角的筛选列表
@@ -18,7 +18,7 @@
 
 
 
-## 动画
+## 二、动画
 #### 属性动画UIViewAnimation
 1. 大小动画（改变frame）
 2. 拉伸动画（改变bounds）
@@ -31,11 +31,17 @@
 
 
 #### 核心动画CoreAnimation
+1. CABasicAnimation：单一动画，可以看做只有头尾的关键帧动画
+2. CAKeyframeAnimation：关键帧动画，可以指定动画执行过程中每个阶段的动画
+3. CATransition：视图切换动画，提供了动画渐变效果
+4. CAAnimationGroup：同时播放多动画
 
-* 使用Layer实现波浪图</br>
+* 波浪图</br>
+CADisplayLink+CAShapeLayer实现<br/>
+CADisplayLink就像是一个定时器，每隔几毫秒刷新一次屏幕。能让我们以和屏幕刷新频率相同的频率去刷新我们绘制到屏幕上的内容。
 
-* 使用Layer实现`Loading`的加载效果</br>
-
+* `Loading`的加载效果</br>
+CABasicAnimation+CAShapeLayer实现
 
 #### CoreGraphics
 
@@ -60,7 +66,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 
-## 网络
+## 三、网络
 #### AFN和NSURLSession
 - AFN
 注释在源码中
@@ -95,7 +101,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 
-## 架构
+## 四、架构
 #### MVVM
 ```
 1、FourthSevice：将UITableView的代理对象指给FourthSevice，在控制器中初始化VM，并把VM设置为UITableView的代理对象。
@@ -105,7 +111,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 
-## 功能
+## 五、功能
 #### 图片选择器 
 #### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
 
