@@ -48,8 +48,10 @@
     if (_isNavCtrlSetLeft) {
         // 创建左侧按钮
         self.leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.leftButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        self.leftButton.titleLabel.font = [UIFont systemFontOfSize:15];
         self.leftButton.frame = CGRectMake(0, 0, 30, 30);
-        [self.leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+//        [self.leftButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
         [self.leftButton addTarget:self action:@selector(leftButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         
         UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithCustomView:self.leftButton];
@@ -62,8 +64,10 @@
     if (_isNavCtrlSetRight) {
         // 创建右侧按钮
         self.rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.rightButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        self.rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
         self.rightButton.frame = CGRectMake(0, 0, 30, 30);
-        [self.rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
+//        [self.rightButton setImage:[UIImage imageNamed:@"home_icon_list"] forState:UIControlStateNormal];
         [self.rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         
         UIBarButtonItem *btn2 = [[UIBarButtonItem alloc] initWithCustomView:self.rightButton];

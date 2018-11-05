@@ -27,11 +27,12 @@
 @property (nonatomic, weak) id<BJMenuRightViewDelegate> delegate;
 @property (nonatomic, weak) id<BJMenuRightViewDataSource> dataSource;
 //初始化方法
-- (instancetype)initWithOrigin:(CGPoint)origin withCellHeight:(CGFloat)cellHeight withHeight:(CGFloat)height;
-// 资金记录页面下拉菜单
-- (instancetype)initWithOrigin:(CGPoint)origin withCellHeight:(CGFloat)cellHeight withHeight:(CGFloat)height tableWidth:(CGFloat)tableWidth;
+- (instancetype)initWithMenuOrigin:(CGPoint)origin
+                    withMenuHeight:(CGFloat)height
+                     withMenuWidth:(CGFloat)width;
+
 //展示
-- (void)show;
+- (void)showMenu;
 //取消展示
-- (void)cancleShow;
+- (void)cancleMenu;
 @end

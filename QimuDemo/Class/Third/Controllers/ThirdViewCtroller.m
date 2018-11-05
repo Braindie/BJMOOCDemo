@@ -79,15 +79,14 @@
     hud.label.text = @"加载中";
     
     [manager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
+        NSLog(@"downloadProgress == %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [hud hideAnimated:YES];
         NSDictionary *dic = (NSDictionary *)responseObject;
-        NSLog(@"JSON: %@", responseObject);
+//        NSLog(@"JSON: %@", responseObject);
         LiveListModel *model = [LiveListModel yy_modelWithJSON:dic[@"data"]];
-
-        NSLog(@"%@",model);
+//        NSLog(@"%@",model);
         self.myDataArr = [NSMutableArray arrayWithArray:model.itemList];
         if (self.myDataArr.count == 0) {
             self.thirdTableView.hidden = YES;
@@ -99,9 +98,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         NSLog(@"Error: %@", error);
-
     }];
-
 }
 
 #pragma mark - NSURLSession
@@ -190,7 +187,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     return [tableView fd_heightForCellWithIdentifier:@"LiveListCell" configuration:^(id cell) {
         LiveListCell *listCell = (LiveListCell *)cell;
         listCell.model = self.myDataArr[indexPath.row];

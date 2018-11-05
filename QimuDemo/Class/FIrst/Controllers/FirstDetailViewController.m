@@ -33,7 +33,7 @@
 
     self.navigationItem.title = @"筛选";
     
-    _superMenuView = [[BJMenuRightView alloc] initWithOrigin:CGPointMake(SCREEN_WIDTH - 120, 64) withCellHeight:40 withHeight:40 * 8];
+    _superMenuView = [[BJMenuRightView alloc] initWithMenuOrigin:CGPointMake(SCREEN_WIDTH-120, 64) withMenuHeight:150 withMenuWidth:100];
     _superMenuView.delegate = self;
     _superMenuView.dataSource = self;
     
@@ -56,13 +56,11 @@
 #pragma mark - ButtonAction
 - (void)rightButtonAction:(UIButton *)button{
     if (!self.isOpen) {
-        [self.superMenuView show];
+        [self.superMenuView showMenu];
         self.isOpen = YES;
-//        [sender setImage:[UIImage imageNamed:@"orange_up"] forState:UIControlStateNormal];
     } else {
-        [self.superMenuView cancleShow];
+        [self.superMenuView cancleMenu];
         self.isOpen = NO;
-//        [sender setImage:[UIImage imageNamed:@"orange_down"] forState:UIControlStateNormal];
     }
 }
 

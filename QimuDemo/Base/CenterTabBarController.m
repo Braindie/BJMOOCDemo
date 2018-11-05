@@ -40,33 +40,33 @@
 - (void)_initCustomTabBarView{
 
     
-    UINavigationController *mainPage = [self controllerWithBarTitle:@"First"
+    UINavigationController *mainPage = [self controllerWithBarTitle:@"布局"
                                                         class:[HomeViewController class]
                                                 normalImgName:@"wode1_1"
                                               selectedImgName:@"AccountYes"
                                                           tag:1001];
     
-    UINavigationController *licai= [self controllerWithBarTitle: @"Second"
+    UINavigationController *licai= [self controllerWithBarTitle: @"动画"
                                                           class:[SecondViewCtrl class]
                                                   normalImgName:@"wode1_1"
                                                 selectedImgName:@"AccountYes"
                                                             tag:1002];
     
     
-    UINavigationController *community=[self controllerWithBarTitle: @"Third"
+    UINavigationController *community=[self controllerWithBarTitle: @"网络"
                                                              class:[ThirdViewCtroller class]
                                                      normalImgName:@"wode1_1"
                                                    selectedImgName:@"AccountYes"
                                                                tag:1003];
     
     
-    UINavigationController *wode =[self controllerWithBarTitle:@"Fourth"
+    UINavigationController *wode =[self controllerWithBarTitle:@"架构"
                                                          class:[FourthViewCtrl class]
                                                  normalImgName:@"wode1_1"
                                                selectedImgName:@"AccountYes"
                                                            tag:1004];
     
-    UINavigationController *zhan =[self controllerWithBarTitle:@"Fifth"
+    UINavigationController *zhan =[self controllerWithBarTitle:@"功能"
                                                          class:[FiveViewCtrl class]
                                                  normalImgName:@"wode1_1"
                                                selectedImgName:@"AccountYes"
