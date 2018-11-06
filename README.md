@@ -4,17 +4,19 @@
 ## 一、布局
 
 #### 界面布局
-- 首页有个UICollectionView基本布局
-- 左上角的UICollectionViewLeftAlignedLayout左布局
-- 左上角的筛选列表
-- 左上角的筛选条
+1. 首页有个UICollectionView基本布局
+2. 左上角的UICollectionViewLeftAlignedLayout左布局
+    - 相当于自定义Layout，看看实现方式
+3. 左上角的筛选列表
+    - 列表弹框使用了属性transform动画、alpha动画
+4. 左上角的筛选条
 
 
 #### Toast
-1、自定义实现Alert</br>
-2、系统实现Alert</br>
-3、UILabel分类实现Toast</br>
-4、Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
+1. 自定义实现Alert</br>
+2. 系统实现Alert</br>
+3. UILabel分类实现Toast</br>
+4. Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
 
 
@@ -23,7 +25,8 @@
 1. 大小动画（改变frame）
 2. 拉伸动画（改变bounds）
 3. 转移动画（改变center）
-4. 旋转动画（改变transform）
+4. 平移、旋转、缩放动画（改变transform）
+        - UIView有CGAffineTransform类型的属性transform，它是定义在二维空间上完成View的平移，旋转，缩放等效果的实现。
 5. 透明度动画（改变alpha）
 6. Keyframe
 7. Spring
@@ -32,28 +35,27 @@
 
 #### 核心动画CoreAnimation
 1. CABasicAnimation：单一动画，可以看做只有头尾的关键帧动画
+    -  `Loading`的加载效果，CABasicAnimation+CAShapeLayer实现
 2. CAKeyframeAnimation：关键帧动画，可以指定动画执行过程中每个阶段的动画
+    - 点击按钮的动态效果
+        CAKeyframeAnimation实现
 3. CATransition：视图切换动画，提供了动画渐变效果
 4. CAAnimationGroup：同时播放多动画
 
-* 波浪图</br>
+
+##### CALayer
+波浪图</br>
 CADisplayLink+CAShapeLayer实现<br/>
 CADisplayLink就像是一个定时器，每隔几毫秒刷新一次屏幕。能让我们以和屏幕刷新频率相同的频率去刷新我们绘制到屏幕上的内容。
 
-* `Loading`的加载效果</br>
-CABasicAnimation+CAShapeLayer实现
-
-* 点击按钮的动态效果
-CAKeyframeAnimation实现
 
 #### CoreGraphics
-
-* 使用CoreGraphics实现柱状图，折线图</br>
-
+1. 使用CoreGraphics实现柱状图，折线图</br>
 
 
 #### Refresh
 BJRefresh仿照MJRefresh实现动画的刷新效果</br>
+
 
 #### UIColor+BJColor
 使用分类（类方法重写get方法）来设置颜色和系统的设置颜色保持了一致，好处可能就是看着舒服，实际的实现原理还是一样的

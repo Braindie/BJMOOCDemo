@@ -33,7 +33,7 @@
 
     self.navigationItem.title = @"筛选";
     
-    _superMenuView = [[BJMenuRightView alloc] initWithMenuOrigin:CGPointMake(SCREEN_WIDTH-120, 64) withMenuHeight:150 withMenuWidth:100];
+    _superMenuView = [[BJMenuRightView alloc] initWithMenuOrigin:CGPointMake(SCREEN_WIDTH-30, 64) withMenuHeight:150 withMenuWidth:100];
     _superMenuView.delegate = self;
     _superMenuView.dataSource = self;
     

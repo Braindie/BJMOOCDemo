@@ -714,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/First/Controllers/FirstDetailViewController.m"
-            timestampString = "563107784.626532"
+            timestampString = "563186729.660259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/MyFramework/BJMenuRightView/BJMenuRightView.m"
-            timestampString = "563107784.626601"
+            timestampString = "563186729.660327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-initWithMenuOrigin:withMenuHeight:withMenuWidth:"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,12 +746,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/MyFramework/BJMenuRightView/BJMenuRightView.m"
-            timestampString = "563107784.6269701"
+            timestampString = "563186729.660691"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-showMenu"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-configSetting"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

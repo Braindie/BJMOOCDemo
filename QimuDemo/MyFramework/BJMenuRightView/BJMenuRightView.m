@@ -21,6 +21,8 @@ static NSString *cellID = @"BJCell";
 @property (nonatomic, strong) UIView *backGroundView;
 //!< 菜单栏上的列表
 @property (nonatomic, strong) UITableView *rightTableView;
+//!< 箭头
+@property (nonatomic, strong) CAShapeLayer *arrowLayer;
 
 //!< 菜单原点
 @property (nonatomic, assign) CGPoint origin;
@@ -33,18 +35,52 @@ static NSString *cellID = @"BJCell";
 //!< 圆角半径
 @property (nonatomic, assign) CGFloat cornerRadius;
 
+//!< 锚点
+@property (nonatomic, assign) CGPoint anchor;//(0 - 1之间)
+//!< 三角相对于弹框的坐标
+@property (nonatomic, assign) CGPoint arrowOrigin;
+
 @end
 
 @implementation BJMenuRightView
 
+- (UIView *)menuView{
+    if (!_menuView) {
+        _menuView = [[UIView alloc] initWithFrame:CGRectZero];
+        _menuView.layer.anchorPoint = self.anchor;//对frame有影响，放在frame前面
+        _menuView.frame = CGRectMake(SCREEN_WIDTH-10-_menuWidth, _origin.y, _menuWidth, _menuHeight);
+        _menuView.backgroundColor = [UIColor clearColor];
+
+        [_menuView.layer addSublayer:self.arrowLayer];
+        [_menuView addSubview:self.rightTableView];
+    }
+    return _menuView;
+}
+
+- (CAShapeLayer *)arrowLayer{
+    if (!_arrowLayer) {
+        _arrowLayer = [[CAShapeLayer alloc] init];
+        _arrowLayer.fillColor = [UIColor whiteColor].CGColor;
+        UIBezierPath *arrowPath = [UIBezierPath bezierPath];
+        [arrowPath moveToPoint:self.arrowOrigin];
+        [arrowPath addLineToPoint:CGPointMake(self.arrowOrigin.x-6, 8)];
+        [arrowPath addLineToPoint:CGPointMake(self.arrowOrigin.x+6, 8)];
+        [arrowPath closePath];
+        _arrowLayer.path = arrowPath.CGPath;
+    }
+    return _arrowLayer;
+}
+
 - (UITableView *)rightTableView{
     if (!_rightTableView) {
-        _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-120, 0, 100, 150) style:UITableViewStylePlain];
+        _rightTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 8, _menuWidth, _menuHeight) style:UITableViewStylePlain];
         _rightTableView.delegate = self;
         _rightTableView.dataSource = self;
         _rightTableView.backgroundColor = [UIColor whiteColor];
-        _rightTableView.layer.anchorPoint = CGPointMake(0.5, 0);
-
+        _rightTableView.showsVerticalScrollIndicator = NO;
+        _rightTableView.bounces = NO;
+        _rightTableView.layer.cornerRadius = _cornerRadius;
+        _rightTableView.layer.masksToBounds = YES;
     }
     return _rightTableView;
 }
@@ -77,8 +113,12 @@ static NSString *cellID = @"BJCell";
 }
 
 - (void)configSetting{
-    self.cellHeight = 30;
+    self.cellHeight = 40;
     self.cornerRadius = 5;
+    
+    self.arrowOrigin = CGPointMake(_origin.x+10+_menuWidth-SCREEN_WIDTH, 0);
+    
+    self.anchor = CGPointMake(self.arrowOrigin.x / _menuWidth, 0);
 }
 
 
@@ -87,7 +127,7 @@ static NSString *cellID = @"BJCell";
     [self addSubview:self.backGroundView];
     
     // 右上角表示图
-    [self.backGroundView addSubview:self.rightTableView];
+    [self.backGroundView addSubview:self.menuView];
     
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app.window addSubview:self];
@@ -95,12 +135,12 @@ static NSString *cellID = @"BJCell";
     [self animationStart];
 }
 - (void)cancleMenu{
-    
+
     [UIView animateWithDuration:.3 animations:^{
-        self.rightTableView.transform = CGAffineTransformMakeScale(0.001, 0.001);
+        self.menuView.transform = CGAffineTransformMakeScale(0.001, 0.001);
         self.backGroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     } completion:^(BOOL finished) {
-        self.rightTableView.transform= CGAffineTransformIdentity;
+        self.menuView.transform= CGAffineTransformIdentity;
         [self removeFromSuperview];
         
         if ([_delegate respondsToSelector:@selector(menuCheckCancleShow:)]) {
@@ -110,10 +150,10 @@ static NSString *cellID = @"BJCell";
 }
 
 - (void)animationStart{
-    self.rightTableView.transform = CGAffineTransformMakeScale(0.001, 0.001);
+    self.menuView.transform = CGAffineTransformMakeScale(0.001, 0.001);
     [UIView animateWithDuration:.3 animations:^{
         self.backGroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3];
-        self.rightTableView.transform = CGAffineTransformMakeScale(1, 1);
+        self.menuView.transform = CGAffineTransformMakeScale(1, 1);
     }];
 }
 
@@ -131,10 +171,11 @@ static NSString *cellID = @"BJCell";
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if ([_dataSource respondsToSelector:@selector(menu:cellForRowAtIndexPath:)]) {
         cell.textLabel.text = [_dataSource menu:self cellForRowAtIndexPath:0][indexPath.row];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.textLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.textColor = [UIColor darkGrayColor];
         cell.textLabel.font = [UIFont systemFontOfSize:13];
     }
     return cell;
@@ -173,6 +214,9 @@ static NSString *cellID = @"BJCell";
 }
 
 #pragma mark - UIGestureRecognizerDelegate
+/**
+ *   解决手势冲突
+ */
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     if ([touch.view isDescendantOfView:self.rightTableView]) {
         return NO;
