@@ -182,7 +182,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
         }
         
         NSString *titleString = self.titleArr[i];
-        CGPoint positionForTitle = CGPointMake(( i * 2 + 1) * numberOfTextLayer, self.height / 2);
+        CGPoint positionForTitle = CGPointMake(( i * 2 + 1) * numberOfTextLayer, 30);
         if (i == 0) {//“默认”初始时为淡金色
             CATextLayer *textLayer = [self createTitleLayerWithString:titleString position:positionForTitle color:[UIColor redColor]];
             
@@ -545,7 +545,6 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     CGSize size = CGSizeMake(30, 50);
 
     CATextLayer *layer = [CATextLayer new];
-    //    NSLog(@"%f",self.frame.size.width);
     CGFloat sizeWidth = (size.width < (self.frame.size.width / _numberOfColumn) - 25) ? size.width : self.frame.size.width / _numberOfColumn - 25;
     layer.bounds = CGRectMake(0, 0, sizeWidth, size.height);
     layer.string = string;

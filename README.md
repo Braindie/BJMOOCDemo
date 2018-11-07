@@ -5,11 +5,14 @@
 
 #### 界面布局
 1. 首页有个UICollectionView基本布局
+    * UICollectionViewFlowLayout是系统提供给我们一个封装好的流布局设置类
 2. 左上角的UICollectionViewLeftAlignedLayout左布局
-    - 相当于自定义Layout，看看实现方式
+    * 自定义UICollectionViewFlowLayout，重载了UICollectionViewLayout的两个方法，代码中有注释
 3. 左上角的筛选列表
-    - 列表弹框使用了属性transform动画、alpha动画
+    * 列表弹框使用了属性transform动画、alpha动画
 4. 左上角的筛选条
+    * CALayer的子类了解一下
+
 
 
 #### Toast
@@ -26,7 +29,7 @@
 2. 拉伸动画（改变bounds）
 3. 转移动画（改变center）
 4. 平移、旋转、缩放动画（改变transform）
-        - UIView有CGAffineTransform类型的属性transform，它是定义在二维空间上完成View的平移，旋转，缩放等效果的实现。
+        * UIView有CGAffineTransform类型的属性transform，它是定义在二维空间上完成View的平移，旋转，缩放等效果的实现。
 5. 透明度动画（改变alpha）
 6. Keyframe
 7. Spring
@@ -35,9 +38,9 @@
 
 #### 核心动画CoreAnimation
 1. CABasicAnimation：单一动画，可以看做只有头尾的关键帧动画
-    -  `Loading`的加载效果，CABasicAnimation+CAShapeLayer实现
+    *  `Loading`的加载效果，CABasicAnimation+CAShapeLayer实现
 2. CAKeyframeAnimation：关键帧动画，可以指定动画执行过程中每个阶段的动画
-    - 点击按钮的动态效果
+    * 点击按钮的动态效果
         CAKeyframeAnimation实现
 3. CATransition：视图切换动画，提供了动画渐变效果
 4. CAAnimationGroup：同时播放多动画

@@ -41,11 +41,13 @@
     BJMenuBarView *barView = [[BJMenuBarView alloc] initWithOrigin:CGPointMake(0, 64) andHeight:35];
     barView.delegate = self;
     barView.dataSource = self;
+    barView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:barView];
 
-    BunnyCollectionView *view = [[BunnyCollectionView alloc] initWithFrame:CGRectMake(0, 64+100, SCREEN_WIDTH, 500)];
+    BunnyCollectionView *view = [[BunnyCollectionView alloc] initWithFrame:CGRectMake(0, 64+100, SCREEN_WIDTH, 300)];
     view.dataSource = self;
     view.delegate = self;
+    view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:view];
     
     
@@ -109,27 +111,12 @@
 
 #pragma mark - BunnyCollectionViewDataSource
 - (NSArray *)arrayInCollectionView:(BunnyCollectionView *)view{
-    return @[@[@"工薪族",@"私营业主",@"网店买卖",@"学生",@"其他"],@[@"工薪族工薪族",@"私营业主工薪族",@"网店买卖工薪族",@"学生工薪族",@"其他工薪族",@"有缴纳工薪族工薪族工薪族工薪族"]];
+    return @[@"工薪族工薪族",@"私营业主工薪族",@"网店买卖工薪族",@"学生工薪族",@"其他工薪族",@"有缴纳工薪族工有缴纳工薪族工有缴纳工薪族工有缴纳工薪族工薪族工薪族工薪族",@"网店买卖工薪族"];
 }
 
 - (void)currentSelectedItem:(NSString *)model{
     NSLog(@"%@",model);
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

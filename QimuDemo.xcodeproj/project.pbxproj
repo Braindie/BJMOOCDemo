@@ -795,11 +795,11 @@
 		E57A135420FC7DCB008C375C /* BJLeftSelectedView */ = {
 			isa = PBXGroup;
 			children = (
-				E57A135520FC7DCB008C375C /* BunnyCollectionView.m */,
 				E57A135820FC7DCB008C375C /* BunnyCollectionView.h */,
+				E57A135520FC7DCB008C375C /* BunnyCollectionView.m */,
 				E57A135620FC7DCB008C375C /* MonthXibCollectionViewCell.h */,
-				E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */,
 				E57A135920FC7DCB008C375C /* MonthXibCollectionViewCell.m */,
+				E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */,
 			);
 			path = BJLeftSelectedView;
 			sourceTree = "<group>";
