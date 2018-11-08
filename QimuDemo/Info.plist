@@ -31,6 +31,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>App需要您的同意,才能访问相机</string>
+	<key>NSContactsUsageDescription</key>
+	<string>亲，通讯录看下</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>哥要获取你的位置</string>
 	<key>NSLocationAlwaysUsageDescription</key>

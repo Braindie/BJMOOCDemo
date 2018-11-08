@@ -53,6 +53,9 @@
 		E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D420CFB3BD00B79605 /* DingCopyLabel.m */; };
 		E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D620CFB3BD00B79605 /* HxToastView.m */; };
 		E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */; };
+		E5229CD121943E94004CC67B /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5229CD021943E94004CC67B /* BookModel.m */; };
+		E5229CD321943EC7004CC67B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD221943EC7004CC67B /* CoreTelephony.framework */; };
+		E5229CD521943ED7004CC67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD421943ED7004CC67B /* Security.framework */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
 		E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D907F1EE1313B00AE856B /* LiveListModel.m */; };
 		E54D90831EE1325E00AE856B /* LiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90821EE1325E00AE856B /* LiverModel.m */; };
@@ -267,6 +270,10 @@
 		E51475D820CFB3BD00B79605 /* HxToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HxToastView.h; sourceTree = "<group>"; };
 		E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorner.m"; sourceTree = "<group>"; };
 		E51475DE20CFB45000B79605 /* UIView+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorner.h"; sourceTree = "<group>"; };
+		E5229CCF21943E94004CC67B /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		E5229CD021943E94004CC67B /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		E5229CD221943EC7004CC67B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E5229CD421943ED7004CC67B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E54D907E1EE1313B00AE856B /* LiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListModel.h; sourceTree = "<group>"; };
 		E54D907F1EE1313B00AE856B /* LiveListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
@@ -430,6 +437,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5229CD521943ED7004CC67B /* Security.framework in Frameworks */,
+				E5229CD321943EC7004CC67B /* CoreTelephony.framework in Frameworks */,
 				E5B6D7651EB33D7C00B19FF3 /* VideoToolbox.framework in Frameworks */,
 				E5B6D6DE1EB3304000B19FF3 /* libiconv.tbd in Frameworks */,
 				E5B6D6DC1EB3303800B19FF3 /* libbz2.tbd in Frameworks */,
@@ -489,6 +498,8 @@
 		93DAFFD63881AFA0C44E21DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5229CD421943ED7004CC67B /* Security.framework */,
+				E5229CD221943EC7004CC67B /* CoreTelephony.framework */,
 				E5B6D7641EB33D7C00B19FF3 /* VideoToolbox.framework */,
 				E5B6D6DD1EB3304000B19FF3 /* libiconv.tbd */,
 				E5B6D6DB1EB3303800B19FF3 /* libbz2.tbd */,
@@ -746,6 +757,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E5229CCE21943E94004CC67B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5229CCF21943E94004CC67B /* BookModel.h */,
+				E5229CD021943E94004CC67B /* BookModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E555B26320DB5AB00037805A /* BJChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -976,6 +996,7 @@
 		E5A9E71D1EB1A39D0072EA61 /* Fifth */ = {
 			isa = PBXGroup;
 			children = (
+				E5229CCE21943E94004CC67B /* Models */,
 				E5A9E71E1EB1A39D0072EA61 /* Controllers */,
 			);
 			path = Fifth;
@@ -1393,6 +1414,7 @@
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
 				E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */,
+				E5229CD121943E94004CC67B /* BookModel.m in Sources */,
 				E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */,
 				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
