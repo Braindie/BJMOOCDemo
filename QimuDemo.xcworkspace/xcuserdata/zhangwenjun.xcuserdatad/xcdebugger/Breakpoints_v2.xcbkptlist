@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/Second/Controllers/SecondLeftDetailViewController.m"
-            timestampString = "559903072.748252"
+            timestampString = "563795996.416407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-clickAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -714,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/First/Controllers/FirstDetailViewController.m"
-            timestampString = "563272362.069862"
+            timestampString = "563790865.767581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"

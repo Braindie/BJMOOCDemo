@@ -17,32 +17,46 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - lottie-ios (2.5.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
-  - UITableView+FDTemplateLayoutCell (1.6)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - FMDB
+  - lottie-ios
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.2.2)
-  - UITableView+FDTemplateLayoutCell
+  - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FMDB
+    - lottie-ios
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+    - "UITableView+FDTemplateLayoutCell"
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
-  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 6a3e01e9575a81d65eba936e0c30721e4253dc8c
+PODFILE CHECKSUM: a8c9e1a5863cc260283d0360cd68552ab841cac7
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

@@ -9,6 +9,7 @@
 #import "SecondLeftDetailViewController.h"
 #import "BJWaveView.h"
 #import "BJLoadingView.h"
+#import "BJRingtLoadingView.h"
 
 @interface SecondLeftDetailViewController ()
 @property (nonatomic, strong) UIButton *likeBtn;
@@ -32,6 +33,10 @@
     BJLoadingView *view = [[BJLoadingView alloc] initWithFrame:CGRectMake(50, 300, 40, 31)];
     [self.view addSubview:view];
     [view startLoading];
+    
+    
+    BJRingtLoadingView *loadingView = [[BJRingtLoadingView alloc] initWithFrame:CGRectMake(150, 300, 100, 100)];
+    [self.view addSubview:loadingView];
     
     
 //    UIButton *likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];

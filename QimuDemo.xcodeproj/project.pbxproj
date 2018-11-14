@@ -57,6 +57,7 @@
 		E5229CD321943EC7004CC67B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD221943EC7004CC67B /* CoreTelephony.framework */; };
 		E5229CD521943ED7004CC67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD421943ED7004CC67B /* Security.framework */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
+		E5491DEC219AAA66003D9243 /* BJRingtLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */; };
 		E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D907F1EE1313B00AE856B /* LiveListModel.m */; };
 		E54D90831EE1325E00AE856B /* LiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90821EE1325E00AE856B /* LiverModel.m */; };
 		E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D90851EE1361C00AE856B /* LiveListCell.m */; };
@@ -275,6 +276,8 @@
 		E5229CD221943EC7004CC67B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E5229CD421943ED7004CC67B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E5491DEA219AAA66003D9243 /* BJRingtLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJRingtLoadingView.h; sourceTree = "<group>"; };
+		E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRingtLoadingView.m; sourceTree = "<group>"; };
 		E54D907E1EE1313B00AE856B /* LiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListModel.h; sourceTree = "<group>"; };
 		E54D907F1EE1313B00AE856B /* LiveListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
 		E54D90811EE1325E00AE856B /* LiverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiverModel.h; sourceTree = "<group>"; };
@@ -784,6 +787,8 @@
 			children = (
 				E55977F820D3B0D200AE6DBD /* BJLoadingView.h */,
 				E55977F920D3B0D200AE6DBD /* BJLoadingView.m */,
+				E5491DEA219AAA66003D9243 /* BJRingtLoadingView.h */,
+				E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */,
 			);
 			path = BJLoadingView;
 			sourceTree = "<group>";
@@ -1218,8 +1223,6 @@
 				787D84431C0EC08100DC473D /* Sources */,
 				787D84441C0EC08100DC473D /* Frameworks */,
 				787D84451C0EC08100DC473D /* Resources */,
-				A36FF6BBBFFB71754CF34B43 /* [CP] Embed Pods Frameworks */,
-				925C98BA36129A4CCC93DD5C /* [CP] Copy Pods Resources */,
 				E5F57E301FF34990005F1417 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -1331,36 +1334,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		925C98BA36129A4CCC93DD5C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A36FF6BBBFFB71754CF34B43 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA7E67EDFA4DA75391BD2A7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1392,6 +1365,7 @@
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
 				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
+				E5491DEC219AAA66003D9243 /* BJRingtLoadingView.m in Sources */,
 				E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */,
 				E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */,
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,

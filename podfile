@@ -9,4 +9,5 @@ target "QimuDemo" do
     pod 'Masonry','~>1.1.0'
     
     pod 'UITableView+FDTemplateLayoutCell','~>1.6'
+    pod 'lottie-ios'
 end
