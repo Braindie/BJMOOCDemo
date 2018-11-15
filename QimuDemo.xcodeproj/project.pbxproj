@@ -1224,6 +1224,7 @@
 				787D84441C0EC08100DC473D /* Frameworks */,
 				787D84451C0EC08100DC473D /* Resources */,
 				E5F57E301FF34990005F1417 /* Embed Frameworks */,
+				88F17751BE70A36AD64C0C28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1334,6 +1335,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		88F17751BE70A36AD64C0C28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA7E67EDFA4DA75391BD2A7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

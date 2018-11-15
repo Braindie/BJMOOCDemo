@@ -2,6 +2,8 @@ platform :ios, '9.0'
 
 target "QimuDemo" do
     pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'SVProgressHUD', '~> 2.0.4'
+    
     pod 'AFNetworking', '~> 3.1.0'#不要更新，有备注
     pod 'SDWebImage', '~>4.2.2'#不要更新，有备注
     pod 'FMDB'

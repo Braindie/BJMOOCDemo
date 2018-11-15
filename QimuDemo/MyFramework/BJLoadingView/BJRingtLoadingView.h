@@ -11,6 +11,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BJRingtLoadingView : UIView
+/**
+ *   暂停
+ */
+- (void)pauseAnimation;
+/**
+ *   重新开始
+ */
+- (void)resumeAnimation;
+
 
 @end
 

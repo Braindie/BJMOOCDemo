@@ -13,6 +13,8 @@
 
 @interface SecondLeftDetailViewController ()
 @property (nonatomic, strong) UIButton *likeBtn;
+
+@property (nonatomic, strong) BJRingtLoadingView *loadingView;
 @end
 
 @implementation SecondLeftDetailViewController
@@ -35,8 +37,8 @@
     [view startLoading];
     
     
-    BJRingtLoadingView *loadingView = [[BJRingtLoadingView alloc] initWithFrame:CGRectMake(150, 300, 100, 100)];
-    [self.view addSubview:loadingView];
+    _loadingView = [[BJRingtLoadingView alloc] initWithFrame:CGRectMake(150, 300, 100, 100)];
+    [self.view addSubview:_loadingView];
     
     
 //    UIButton *likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -59,10 +61,16 @@
 }
 
 - (void)clickAction:(UIButton *)sender{
+    
+    
     if (sender.isSelected == NO) {
         sender.selected = YES;
+        [self.loadingView pauseAnimation];
+
     }else{
         sender.selected = NO;
+        [self.loadingView resumeAnimation];
+
     }
     CAKeyframeAnimation *k = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
     k.values = @[@(0.1),@(1.0),@(1.2)];

@@ -23,6 +23,7 @@ PODS:
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
+  - SVProgressHUD (2.0.4)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYModel (1.0.4)
 
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.2.2)
+  - SVProgressHUD (~> 2.0.3)
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YYModel
 
@@ -44,6 +46,7 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - SDWebImage
+    - SVProgressHUD
     - "UITableView+FDTemplateLayoutCell"
     - YYModel
 
@@ -54,9 +57,10 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a8c9e1a5863cc260283d0360cd68552ab841cac7
+PODFILE CHECKSUM: 1023178b636d972b28416e9101ce907855ada776
 
 COCOAPODS: 1.5.3

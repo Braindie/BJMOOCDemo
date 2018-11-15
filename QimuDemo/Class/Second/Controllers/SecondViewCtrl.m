@@ -29,8 +29,8 @@
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = YES;
     
-    [self.leftButton setTitle:@"波浪" forState:UIControlStateNormal];
-    [self.rightButton setTitle:@"图表" forState:UIControlStateNormal];
+    [self.leftButton setTitle:@"QC" forState:UIControlStateNormal];
+    [self.rightButton setTitle:@"CG" forState:UIControlStateNormal];
 
     self.navigationItem.title = @"动画";
 
@@ -65,7 +65,7 @@
                          @"透明度动画（改变alpha）",
                          @"Keyframe",
                          @"Spring",
-                         @"Transition",@"data9",@"data9",@"data9",@"data9",@"data9",@"data9", nil];
+                         @"Transition", nil];
 
     NSArray *arr10 = [NSArray arrayWithObjects:@"最新",@"最热",nil];
     NSArray *arr11 = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];
