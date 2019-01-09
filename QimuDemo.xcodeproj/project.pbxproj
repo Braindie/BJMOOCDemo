@@ -66,6 +66,7 @@
 		E555B26920DB5B040037805A /* BJChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26820DB5B040037805A /* BJChartModel.m */; };
 		E555B27420DBAEA00037805A /* BJKChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B27320DBAEA00037805A /* BJKChartView.m */; };
 		E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977F920D3B0D200AE6DBD /* BJLoadingView.m */; };
+		E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */; };
 		E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A135520FC7DCB008C375C /* BunnyCollectionView.m */; };
 		E57A135B20FC7DCB008C375C /* MonthXibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */; };
 		E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A135920FC7DCB008C375C /* MonthXibCollectionViewCell.m */; };
@@ -293,6 +294,8 @@
 		E555B27320DBAEA00037805A /* BJKChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKChartView.m; sourceTree = "<group>"; };
 		E55977F820D3B0D200AE6DBD /* BJLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLoadingView.h; sourceTree = "<group>"; };
 		E55977F920D3B0D200AE6DBD /* BJLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLoadingView.m; sourceTree = "<group>"; };
+		E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJYoukuPlayerButton.m; sourceTree = "<group>"; };
+		E578765C21A2BBB80023F5D2 /* BJYoukuPlayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJYoukuPlayerButton.h; sourceTree = "<group>"; };
 		E57A135520FC7DCB008C375C /* BunnyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BunnyCollectionView.m; sourceTree = "<group>"; };
 		E57A135620FC7DCB008C375C /* MonthXibCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthXibCollectionViewCell.h; sourceTree = "<group>"; };
 		E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthXibCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -793,6 +796,15 @@
 			path = BJLoadingView;
 			sourceTree = "<group>";
 		};
+		E578765A21A2BBB80023F5D2 /* BJYoukuPlayerButton */ = {
+			isa = PBXGroup;
+			children = (
+				E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */,
+				E578765C21A2BBB80023F5D2 /* BJYoukuPlayerButton.h */,
+			);
+			path = BJYoukuPlayerButton;
+			sourceTree = "<group>";
+		};
 		E57A135320FC7D79008C375C /* BJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -859,6 +871,7 @@
 		E5A9E2C41EB19B520072EA61 /* MyFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E578765A21A2BBB80023F5D2 /* BJYoukuPlayerButton */,
 				E5E49C4B2109E4E2004ABAD1 /* BJMenuBarView */,
 				E5E49C472109E350004ABAD1 /* BJMenuRightView */,
 				E5E49C422109CE23004ABAD1 /* BJWaveView */,
@@ -1246,7 +1259,7 @@
 				TargetAttributes = {
 					787D84461C0EC08100DC473D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = TZUCHNJSDZ;
+						DevelopmentTeam = F79H2LLK8B;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1412,6 +1425,7 @@
 				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */,
+				E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */,
 				E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */,
 				E505EADC20C548B700851764 /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
@@ -1567,7 +1581,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TZUCHNJSDZ;
+				DEVELOPMENT_TEAM = F79H2LLK8B;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1601,7 +1615,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TZUCHNJSDZ;
+				DEVELOPMENT_TEAM = F79H2LLK8B;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

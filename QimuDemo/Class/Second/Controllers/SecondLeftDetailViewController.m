@@ -10,10 +10,11 @@
 #import "BJWaveView.h"
 #import "BJLoadingView.h"
 #import "BJRingtLoadingView.h"
+#import "BJYoukuPlayerButton.h"
 
 @interface SecondLeftDetailViewController ()
 @property (nonatomic, strong) UIButton *likeBtn;
-
+@property (nonatomic, strong) BJYoukuPlayerButton *youkuBtn;
 @property (nonatomic, strong) BJRingtLoadingView *loadingView;
 @end
 
@@ -40,6 +41,11 @@
     _loadingView = [[BJRingtLoadingView alloc] initWithFrame:CGRectMake(150, 300, 100, 100)];
     [self.view addSubview:_loadingView];
     
+    _youkuBtn = [[BJYoukuPlayerButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60) withState:BJYoukuPlayerButtonStatePlay];
+    _youkuBtn.center = CGPointMake(self.view.center.x, self.view.center.y);
+    [_youkuBtn addTarget:self action:@selector(youKuPlayMethod) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_youkuBtn];
+    
     
 //    UIButton *likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 //    likeBtn.frame = CGRectMake(50, 400, 50, 50);
@@ -60,8 +66,16 @@
 
 }
 
+- (void)youKuPlayMethod{
+    if (_youkuBtn.buttonState == BJYoukuPlayerButtonStatePause) {
+        _youkuBtn.buttonState = BJYoukuPlayerButtonStatePlay;
+    }else{
+        _youkuBtn.buttonState = BJYoukuPlayerButtonStatePause;
+    }
+}
+
+
 - (void)clickAction:(UIButton *)sender{
-    
     
     if (sender.isSelected == NO) {
         sender.selected = YES;

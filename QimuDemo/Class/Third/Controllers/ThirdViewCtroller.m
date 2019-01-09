@@ -76,7 +76,7 @@
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"加载中";
+//    hud.label.text = @"加载中";
     
     [manager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"downloadProgress == %@",downloadProgress);
@@ -96,7 +96,8 @@
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [hud hideAnimated:YES];
+
         NSLog(@"Error: %@", error);
     }];
 }
