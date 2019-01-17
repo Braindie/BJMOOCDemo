@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3FAA4000373DF568C945463B537A3665"
-               BlueprintName = "UITableView+FDTemplateLayoutCell"
+               BlueprintIdentifier = "C9EF9E6C574DE221F0B7B23EA854B42E"
+               BlueprintName = "YTKNetwork"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libUITableView+FDTemplateLayoutCell.a">
+               BuildableName = "libYTKNetwork.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

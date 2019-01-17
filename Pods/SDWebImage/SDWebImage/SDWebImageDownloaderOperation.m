@@ -113,7 +113,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     return shouldCancel;
 }
 
-//没找到在哪调这个开始方法的
+//没找到在哪调这个开始方法的（原来是系统方法）
 - (void)start {
     @synchronized (self) {
         if (self.isCancelled) {
