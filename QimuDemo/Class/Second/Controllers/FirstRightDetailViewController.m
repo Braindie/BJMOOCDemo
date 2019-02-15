@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"图表";
+    self.title = @"CoreGraphics";
     self.isCustomBack = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     

@@ -162,6 +162,7 @@
 		E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C4D2109E4EF004ABAD1 /* BJMenuBarView.m */; };
 		E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C512109E57D004ABAD1 /* MenuBTCollectionViewCell.m */; };
 		E5E49C542109E57E004ABAD1 /* MenuBTSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C522109E57E004ABAD1 /* MenuBTSectionHeaderView.m */; };
+		E5F90E882215653A00BD255D /* BJYYLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F90E872215653A00BD255D /* BJYYLabelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -436,6 +437,8 @@
 		E5E49C502109E57D004ABAD1 /* MenuBTSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBTSectionHeaderView.h; sourceTree = "<group>"; };
 		E5E49C512109E57D004ABAD1 /* MenuBTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBTCollectionViewCell.m; sourceTree = "<group>"; };
 		E5E49C522109E57E004ABAD1 /* MenuBTSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBTSectionHeaderView.m; sourceTree = "<group>"; };
+		E5F90E862215653A00BD255D /* BJYYLabelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJYYLabelView.h; sourceTree = "<group>"; };
+		E5F90E872215653A00BD255D /* BJYYLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJYYLabelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1115,6 +1118,8 @@
 			children = (
 				E5B7CC461EB2E62E005378E1 /* MyTableViewCell.h */,
 				E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */,
+				E5F90E862215653A00BD255D /* BJYYLabelView.h */,
+				E5F90E872215653A00BD255D /* BJYYLabelView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1401,6 +1406,7 @@
 				E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */,
 				E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */,
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,
+				E5F90E882215653A00BD255D /* BJYYLabelView.m in Sources */,
 				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
 				E57A136320FC7EF3008C375C /* UIScrollView+BJRefresh.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
@@ -1587,6 +1593,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QimuDemo/ThirdFremework",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QimuDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
@@ -1621,6 +1628,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/QimuDemo/ThirdFremework",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QimuDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (

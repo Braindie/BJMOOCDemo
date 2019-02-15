@@ -16,4 +16,6 @@ target "QimuDemo" do
     pod 'UITableView+FDTemplateLayoutCell','~>1.6'
     
     pod 'lottie-ios'
+    
+    pod 'YYAsyncLayer'
 end
