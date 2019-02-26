@@ -24,8 +24,6 @@
 - (void)addView{
 
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 300, 50)];
-    self.label.backgroundColor = [UIColor orangeColor];
-    //    self.label.text = [self.dictionary objectForKey:@"title"];
     [self addSubview:self.label];
 }
 

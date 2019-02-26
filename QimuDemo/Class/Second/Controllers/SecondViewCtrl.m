@@ -44,13 +44,13 @@
 
 - (void)leftButtonAction:(UIButton *)button{
     SecondLeftDetailViewController *vc = [[SecondLeftDetailViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)rightButtonAction:(UIButton *)button{
     FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -133,7 +133,7 @@
     }else if (indexPath.row == 7){
         vc.animationType = @"Transition";
     }
-    vc.hidesBottomBarWhenPushed = YES;
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

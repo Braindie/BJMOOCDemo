@@ -12,7 +12,7 @@
 #import "HomeViewController.h"
 #import "SecondViewCtrl.h"
 #import "ThirdViewCtroller.h"
-#import "FourthViewCtrl.h"
+#import "PatternViewController.h"
 #import "FiveViewCtrl.h"
 //#import "MessageViewController.h"
 //#import "ProfileViewController.h"
@@ -38,6 +38,8 @@
 
 
 - (void)_initCustomTabBarView{
+    //不加这句tabbar会跳
+    self.tabBar.translucent = NO;
 
     
     UINavigationController *mainPage = [self controllerWithBarTitle:@"布局"
@@ -61,7 +63,7 @@
     
     
     UINavigationController *wode =[self controllerWithBarTitle:@"架构"
-                                                         class:[FourthViewCtrl class]
+                                                         class:[PatternViewController class]
                                                  normalImgName:@"wode1_1"
                                                selectedImgName:@"AccountYes"
                                                            tag:1004];
@@ -86,38 +88,24 @@
                                               tag:(NSInteger)tag{
     
     UIViewController *returnVC=[[_class alloc] init];
-    UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:returnVC];
+    BaseNavigationController *nav=[[BaseNavigationController alloc] initWithRootViewController:returnVC];
+
     UITabBarItem *item=nil;
-    
     item= [[UITabBarItem alloc] initWithTitle:title
                                         image:[[UIImage imageNamed:normalName]
                                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                 selectedImage:[[UIImage imageNamed:selectedName]
                                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    
-    
     item.tag=tag;
-    
-    
     [item setTitlePositionAdjustment:UIOffsetMake(0, -3)];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
     [nav setTabBarItem:item];
+    
     return nav;
 }
 
 
-#pragma mark - UINavigationControllerDelegate
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-      if (navigationController.viewControllers.count == 1) {
-            // 当前导航控制器的子视图控制器个数为1的时候显示标签栏
-            self.tabbarView.hidden = NO;
-      } else if (navigationController.viewControllers.count == 2) {
-            // 当前导航控制器的子视图控制器个数为2的时候隐藏标签栏
-            self.tabbarView.hidden = YES;
-      }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

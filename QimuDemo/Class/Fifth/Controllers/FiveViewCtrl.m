@@ -69,7 +69,7 @@
 
 - (void)leftButtonAction:(UIButton *)button{
     FirstTableViewController *vc = [[FirstTableViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

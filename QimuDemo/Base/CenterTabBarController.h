@@ -7,21 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "UnReadCountService.h"
 
-
-
-@interface CenterTabBarController : UITabBarController<UINavigationControllerDelegate>
-{
+@interface CenterTabBarController : UITabBarController{
       //选中按钮背景图片
-      UIImageView *_selectedImageView;
-      
-      
+//      UIImageView *_selectedImageView;
 }
 
-@property (nonatomic ,strong) UIImageView *tabbarView;//自定义标签栏
+//@property (nonatomic ,strong) UIImageView *tabbarView;//自定义标签栏
 
-@property (nonatomic ,strong) UIImageView *unReadCountView;
+//@property (nonatomic ,strong) UIImageView *unReadCountView;
 
 //@property (nonatomic ,retain) UnReadCountService *unReadCountService;
 

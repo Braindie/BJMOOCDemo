@@ -75,7 +75,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (void)leftButtonAction:(UIButton *)button{
     FirstDetailViewController *vc = [[FirstDetailViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

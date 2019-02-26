@@ -10,5 +10,7 @@
 
 
 @interface FourthModel : NSObject
-
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *price;
+@property (nonatomic, copy) NSString *discount;
 @end

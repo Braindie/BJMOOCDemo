@@ -11,7 +11,6 @@
 #import "LiveListModel.h"
 #import "LiverModel.h"
 
-#import <MBProgressHUD/MBProgressHUD.h>
 
 #import "AFHTTPSessionManager.h"
 
@@ -40,7 +39,7 @@
     self.navigationItem.title = @"网络";
     
     //创建视图
-    self.thirdTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64) style:UITableViewStylePlain];
+    self.thirdTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     self.thirdTableView.delegate = self;
     self.thirdTableView.dataSource = self;
     [self.view addSubview:self.thirdTableView];

@@ -53,6 +53,15 @@
 		E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D420CFB3BD00B79605 /* DingCopyLabel.m */; };
 		E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475D620CFB3BD00B79605 /* HxToastView.m */; };
 		E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */; };
+		E51CFCFD2225196B0050FFAA /* FourthVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFCF12225196B0050FFAA /* FourthVM.m */; };
+		E51CFCFE2225196B0050FFAA /* FourthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFCF42225196B0050FFAA /* FourthModel.m */; };
+		E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFCF62225196B0050FFAA /* FourthCell.m */; };
+		E51CFD002225196B0050FFAA /* FourthViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFCF92225196B0050FFAA /* FourthViewCtrl.m */; };
+		E51CFD0322251A510050FFAA /* PatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD0222251A510050FFAA /* PatternViewController.m */; };
+		E51CFD0B2225229E0050FFAA /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD0A2225229E0050FFAA /* MVPViewController.m */; };
+		E51CFD0E222522B50050FFAA /* MVPPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD0D222522B50050FFAA /* MVPPresenter.m */; };
+		E51CFD11222522C10050FFAA /* MVPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD10222522C10050FFAA /* MVPModel.m */; };
+		E51CFD14222522CE0050FFAA /* MVPView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD13222522CE0050FFAA /* MVPView.m */; };
 		E5229CD121943E94004CC67B /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5229CD021943E94004CC67B /* BookModel.m */; };
 		E5229CD321943EC7004CC67B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD221943EC7004CC67B /* CoreTelephony.framework */; };
 		E5229CD521943ED7004CC67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD421943ED7004CC67B /* Security.framework */; };
@@ -128,11 +137,6 @@
 		E5A9E5611EB19D470072EA61 /* ZLPhotoLib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3E31EB19D470072EA61 /* ZLPhotoLib.bundle */; };
 		E5A9E6FA1EB19D9B0072EA61 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E6B31EB19D9B0072EA61 /* PhotoModel.m */; };
 		E5A9E6FB1EB19D9B0072EA61 /* PhotoSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E6B51EB19D9B0072EA61 /* PhotoSelectView.m */; };
-		E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7301EB1A39D0072EA61 /* FourthModel.m */; };
-		E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7331EB1A39D0072EA61 /* FourthCell.m */; };
-		E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7361EB1A39D0072EA61 /* FourthViewCtrl.m */; };
-		E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7391EB1A39D0072EA61 /* FourthSevice.m */; };
-		E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */; };
 		E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */; };
 		E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B41EB1A3DB0072EA61 /* BaseNavigationController.m */; };
 		E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */; };
@@ -273,6 +277,24 @@
 		E51475D820CFB3BD00B79605 /* HxToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HxToastView.h; sourceTree = "<group>"; };
 		E51475DD20CFB45000B79605 /* UIView+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorner.m"; sourceTree = "<group>"; };
 		E51475DE20CFB45000B79605 /* UIView+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorner.h"; sourceTree = "<group>"; };
+		E51CFCF02225196B0050FFAA /* FourthVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthVM.h; sourceTree = "<group>"; };
+		E51CFCF12225196B0050FFAA /* FourthVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVM.m; sourceTree = "<group>"; };
+		E51CFCF32225196B0050FFAA /* FourthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthModel.h; sourceTree = "<group>"; };
+		E51CFCF42225196B0050FFAA /* FourthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthModel.m; sourceTree = "<group>"; };
+		E51CFCF62225196B0050FFAA /* FourthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthCell.m; sourceTree = "<group>"; };
+		E51CFCF72225196B0050FFAA /* FourthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthCell.h; sourceTree = "<group>"; };
+		E51CFCF92225196B0050FFAA /* FourthViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewCtrl.m; sourceTree = "<group>"; };
+		E51CFCFA2225196B0050FFAA /* FourthViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewCtrl.h; sourceTree = "<group>"; };
+		E51CFD0122251A510050FFAA /* PatternViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatternViewController.h; sourceTree = "<group>"; };
+		E51CFD0222251A510050FFAA /* PatternViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PatternViewController.m; sourceTree = "<group>"; };
+		E51CFD092225229E0050FFAA /* MVPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPViewController.h; sourceTree = "<group>"; };
+		E51CFD0A2225229E0050FFAA /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
+		E51CFD0C222522B50050FFAA /* MVPPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPPresenter.h; sourceTree = "<group>"; };
+		E51CFD0D222522B50050FFAA /* MVPPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPPresenter.m; sourceTree = "<group>"; };
+		E51CFD0F222522C10050FFAA /* MVPModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPModel.h; sourceTree = "<group>"; };
+		E51CFD10222522C10050FFAA /* MVPModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPModel.m; sourceTree = "<group>"; };
+		E51CFD12222522CE0050FFAA /* MVPView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPView.h; sourceTree = "<group>"; };
+		E51CFD13222522CE0050FFAA /* MVPView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPView.m; sourceTree = "<group>"; };
 		E5229CCF21943E94004CC67B /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
 		E5229CD021943E94004CC67B /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
 		E5229CD221943EC7004CC67B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -375,16 +397,6 @@
 		E5A9E6B31EB19D9B0072EA61 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
 		E5A9E6B41EB19D9B0072EA61 /* PhotoSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSelectView.h; sourceTree = "<group>"; };
 		E5A9E6B51EB19D9B0072EA61 /* PhotoSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectView.m; sourceTree = "<group>"; };
-		E5A9E72F1EB1A39D0072EA61 /* FourthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthModel.h; sourceTree = "<group>"; };
-		E5A9E7301EB1A39D0072EA61 /* FourthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthModel.m; sourceTree = "<group>"; };
-		E5A9E7321EB1A39D0072EA61 /* FourthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthCell.h; sourceTree = "<group>"; };
-		E5A9E7331EB1A39D0072EA61 /* FourthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthCell.m; sourceTree = "<group>"; };
-		E5A9E7351EB1A39D0072EA61 /* FourthViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewCtrl.h; sourceTree = "<group>"; };
-		E5A9E7361EB1A39D0072EA61 /* FourthViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewCtrl.m; sourceTree = "<group>"; };
-		E5A9E7381EB1A39D0072EA61 /* FourthSevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthSevice.h; sourceTree = "<group>"; };
-		E5A9E7391EB1A39D0072EA61 /* FourthSevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthSevice.m; sourceTree = "<group>"; };
-		E5A9E73A1EB1A39D0072EA61 /* FourthVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthVM.h; sourceTree = "<group>"; };
-		E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVM.m; sourceTree = "<group>"; };
 		E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewCtroller.h; sourceTree = "<group>"; };
 		E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewCtroller.m; sourceTree = "<group>"; };
 		E5A9E7B31EB1A3DB0072EA61 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -766,6 +778,125 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E51CFCED2225196B0050FFAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFD0122251A510050FFAA /* PatternViewController.h */,
+				E51CFD0222251A510050FFAA /* PatternViewController.m */,
+				E51CFD04222522840050FFAA /* MVP */,
+				E51CFCEE2225196B0050FFAA /* MVVM */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E51CFCEE2225196B0050FFAA /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFCF82225196B0050FFAA /* ViewController */,
+				E51CFCEF2225196B0050FFAA /* ViewModel */,
+				E51CFCF52225196B0050FFAA /* View */,
+				E51CFCF22225196B0050FFAA /* Model */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		E51CFCEF2225196B0050FFAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFCF02225196B0050FFAA /* FourthVM.h */,
+				E51CFCF12225196B0050FFAA /* FourthVM.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E51CFCF22225196B0050FFAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFCF32225196B0050FFAA /* FourthModel.h */,
+				E51CFCF42225196B0050FFAA /* FourthModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E51CFCF52225196B0050FFAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFCF72225196B0050FFAA /* FourthCell.h */,
+				E51CFCF62225196B0050FFAA /* FourthCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E51CFCF82225196B0050FFAA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFCFA2225196B0050FFAA /* FourthViewCtrl.h */,
+				E51CFCF92225196B0050FFAA /* FourthViewCtrl.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E51CFCFB2225196B0050FFAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E51CFCFC2225196B0050FFAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E51CFD04222522840050FFAA /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFD07222522840050FFAA /* Controllers */,
+				E51CFD05222522840050FFAA /* Presenter */,
+				E51CFD08222522840050FFAA /* Views */,
+				E51CFD06222522840050FFAA /* Models */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		E51CFD05222522840050FFAA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFD0C222522B50050FFAA /* MVPPresenter.h */,
+				E51CFD0D222522B50050FFAA /* MVPPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E51CFD06222522840050FFAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFD0F222522C10050FFAA /* MVPModel.h */,
+				E51CFD10222522C10050FFAA /* MVPModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E51CFD07222522840050FFAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFD092225229E0050FFAA /* MVPViewController.h */,
+				E51CFD0A2225229E0050FFAA /* MVPViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E51CFD08222522840050FFAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E51CFD12222522CE0050FFAA /* MVPView.h */,
+				E51CFD13222522CE0050FFAA /* MVPView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E5229CCE21943E94004CC67B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1043,50 +1174,11 @@
 		E5A9E72D1EB1A39D0072EA61 /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9E7341EB1A39D0072EA61 /* ViewController */,
-				E5A9E72E1EB1A39D0072EA61 /* Model */,
-				E5A9E7311EB1A39D0072EA61 /* View */,
-				E5A9E7371EB1A39D0072EA61 /* ViewModel */,
+				E51CFCED2225196B0050FFAA /* Controllers */,
+				E51CFCFB2225196B0050FFAA /* Models */,
+				E51CFCFC2225196B0050FFAA /* Views */,
 			);
 			path = Fourth;
-			sourceTree = "<group>";
-		};
-		E5A9E72E1EB1A39D0072EA61 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E5A9E72F1EB1A39D0072EA61 /* FourthModel.h */,
-				E5A9E7301EB1A39D0072EA61 /* FourthModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E5A9E7311EB1A39D0072EA61 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E5A9E7321EB1A39D0072EA61 /* FourthCell.h */,
-				E5A9E7331EB1A39D0072EA61 /* FourthCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E5A9E7341EB1A39D0072EA61 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E5A9E7351EB1A39D0072EA61 /* FourthViewCtrl.h */,
-				E5A9E7361EB1A39D0072EA61 /* FourthViewCtrl.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		E5A9E7371EB1A39D0072EA61 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E5A9E7381EB1A39D0072EA61 /* FourthSevice.h */,
-				E5A9E7391EB1A39D0072EA61 /* FourthSevice.m */,
-				E5A9E73A1EB1A39D0072EA61 /* FourthVM.h */,
-				E5A9E73B1EB1A39D0072EA61 /* FourthVM.m */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E5A9E74E1EB1A39D0072EA61 /* Second */ = {
@@ -1398,7 +1490,6 @@
 			files = (
 				E5BCAA70215E23DC0020DD7B /* FirstTableViewController.m in Sources */,
 				E505EAE620C548B700851764 /* ZLPhotoPickerGroupViewController.m in Sources */,
-				E5A9E78F1EB1A39D0072EA61 /* FourthViewCtrl.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
 				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
@@ -1407,7 +1498,6 @@
 				E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */,
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,
 				E5F90E882215653A00BD255D /* BJYYLabelView.m in Sources */,
-				E5A9E7901EB1A39D0072EA61 /* FourthSevice.m in Sources */,
 				E57A136320FC7EF3008C375C /* UIScrollView+BJRefresh.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
 				E505EAD820C548B700851764 /* ZLCameraView.m in Sources */,
@@ -1417,6 +1507,7 @@
 				E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */,
 				E57A136920FC7F53008C375C /* BJRefreshHeader.m in Sources */,
 				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
+				E51CFD002225196B0050FFAA /* FourthViewCtrl.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E508F86320FD8C9800C9EF26 /* UIView+BJExtension.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
@@ -1427,19 +1518,20 @@
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
 				E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */,
 				E5229CD121943E94004CC67B /* BookModel.m in Sources */,
-				E5A9E78D1EB1A39D0072EA61 /* FourthModel.m in Sources */,
 				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
+				E51CFD14222522CE0050FFAA /* MVPView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */,
 				E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */,
 				E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */,
 				E505EADC20C548B700851764 /* ZLPhotoPickerBrowserViewController.m in Sources */,
+				E51CFD0E222522B50050FFAA /* MVPPresenter.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
 				E508F86820FDF69100C9EF26 /* BJRefreshStateHeader.m in Sources */,
 				E5BCAA75215E39350020DD7B /* SecondListViewController.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
+				E51CFD11222522C10050FFAA /* MVPModel.m in Sources */,
 				E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */,
-				E5A9E78E1EB1A39D0072EA61 /* FourthCell.m in Sources */,
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,
 				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
 				E5BCAA6A215E1B500020DD7B /* FirstDetailTableViewViewController.m in Sources */,
@@ -1447,6 +1539,7 @@
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
 				E57A136620FC7F34008C375C /* BJRefreshComponent.m in Sources */,
 				E5C30E7620F3651A00690449 /* FirstRightDetailViewController.m in Sources */,
+				E51CFCFD2225196B0050FFAA /* FourthVM.m in Sources */,
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */,
 				E505EAD720C548B700851764 /* ZLCamera.m in Sources */,
@@ -1461,7 +1554,7 @@
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
-				E5A9E7911EB1A39D0072EA61 /* FourthVM.m in Sources */,
+				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
 				E555B27420DBAEA00037805A /* BJKChartView.m in Sources */,
 				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
 				E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */,
@@ -1474,17 +1567,20 @@
 				E505EADD20C548B700851764 /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				E505EAE520C548B700851764 /* ZLPhotoAssets.m in Sources */,
 				E5ABA24B20C0FA4B00A2C172 /* FirstDetailViewController.m in Sources */,
+				E51CFD0B2225229E0050FFAA /* MVPViewController.m in Sources */,
 				E505EADE20C548B700851764 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */,
 				E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */,
 				E57A136020FC7ECF008C375C /* UIScrollView+BJExtension.m in Sources */,
 				E505EAE120C548B700851764 /* UIImage+ZLPhotoLib.m in Sources */,
+				E51CFD0322251A510050FFAA /* PatternViewController.m in Sources */,
 				E5A9E6FB1EB19D9B0072EA61 /* PhotoSelectView.m in Sources */,
 				E5E49C4A2109E38F004ABAD1 /* BJMenuRightView.m in Sources */,
 				E505EAE220C548B700851764 /* UIView+ZLExtension.m in Sources */,
 				E505EAE020C548B700851764 /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				E505EAEB20C548B700851764 /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				E5A9E6FA1EB19D9B0072EA61 /* PhotoModel.m in Sources */,
+				E51CFCFE2225196B0050FFAA /* FourthModel.m in Sources */,
 				E5B0E9701FCD57E700AB3675 /* FiveDetailViewController.m in Sources */,
 				E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */,
 				E505EAE820C548B700851764 /* ZLNavigationController.m in Sources */,
