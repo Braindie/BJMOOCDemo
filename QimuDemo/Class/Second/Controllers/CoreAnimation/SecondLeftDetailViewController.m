@@ -26,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"QuartzCore";
+    self.title = @"CoreAnimation（QuartzCore）";
     self.isCustomBack = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     

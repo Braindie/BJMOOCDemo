@@ -16,6 +16,8 @@
 #import "BJRefresh.h"
 #import "UIColor+BJColor.h"
 #import "SecondListViewController.h"
+#import "BJPropertyAnimationViewController.h"
+#import "BJDynamicsViewController.h"
 
 @implementation SecondViewCtrl
 
@@ -29,10 +31,10 @@
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = YES;
     
-    [self.leftButton setTitle:@"QC" forState:UIControlStateNormal];
-    [self.rightButton setTitle:@"CG" forState:UIControlStateNormal];
+    [self.leftButton setTitle:@"CoreAnimation" forState:UIControlStateNormal];
+    [self.rightButton setTitle:@"CoreGraphics" forState:UIControlStateNormal];
 
-    self.navigationItem.title = @"动画";
+    self.navigationItem.title = @"UIKit动画";
 
 //    //加载数据
     [self loadTopData];
@@ -65,7 +67,12 @@
                          @"透明度动画（改变alpha）",
                          @"Keyframe",
                          @"Spring",
-                         @"Transition", nil];
+                         @"Transition",
+                         @"",
+                         @"UIViewPropertyAnimator",
+                         @"",
+                         @"UIDynamicAnimator",
+                         nil];
 
     NSArray *arr10 = [NSArray arrayWithObjects:@"最新",@"最热",nil];
     NSArray *arr11 = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];
@@ -89,7 +96,7 @@
 
 - (void)creatView{
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49-64) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
     self.tableView.backgroundColor = [UIColor myColor];
@@ -118,23 +125,47 @@
     SecondListViewController *vc = [[SecondListViewController alloc] init];
     if (indexPath.row == 0) {
         vc.animationType = @"大小动画";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 1){
         vc.animationType = @"拉伸动画";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 2){
         vc.animationType = @"转移动画";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 3){
         vc.animationType = @"旋转动画";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 4){
         vc.animationType = @"透明度动画";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 5){
         vc.animationType = @"Keyframe";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 6){
         vc.animationType = @"Spring";
+        [self.navigationController pushViewController:vc animated:YES];
+
     }else if (indexPath.row == 7){
         vc.animationType = @"Transition";
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }else if (indexPath.row == 8){
+
+    }else if (indexPath.row == 9){
+        BJPropertyAnimationViewController *vc = [[BJPropertyAnimationViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 10){
+
+    }else if (indexPath.row == 11){
+        BJDynamicsViewController *vc = [[BJDynamicsViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
-//    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -156,7 +187,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70;
+    return 50;
 }
 
 

@@ -24,7 +24,7 @@
 
 - (void)addView{
 
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, SCREEN_WIDTH-40, 50)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, SCREEN_WIDTH-40, 50)];
 //    self.label.backgroundColor = [UIColor orangeColor];
     [self addSubview:self.label];
 }

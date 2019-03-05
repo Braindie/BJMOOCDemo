@@ -24,7 +24,8 @@
 
 
 ## 二、动画
-#### 属性动画UIViewAnimation
+#### 2.1.1属性动画 UIViewAnimation
+类方法，所以这些动画没有绑定任何视图
 1. 大小动画（改变frame）
 2. 拉伸动画（改变bounds）
 3. 转移动画（改变center）
@@ -35,8 +36,18 @@
 7. Spring
 8. Transition
 
+#### 2.1.2交互动画 UIViewPropertyAnimator
+通过动画绑定视图，该类实现的动画可以在结束前进行暂停、恢复、停止等操作。
 
-#### 核心动画CoreAnimation
+#### 2.1.3力学动画 UIDynamicAnimator
+
+1. UIGravityBehavior：重力行为
+2. UICollisionBehavior：碰撞行为
+3. UISnapBehavior：甩行为
+4. UIAttachmentBehavior：附着行为
+5. UIPushBehavior：推行为
+
+#### 2.2核心动画CoreAnimation
 1. CABasicAnimation：单一动画，可以看做只有头尾的关键帧动画
     *  `Loading`的加载效果，CABasicAnimation+CAShapeLayer实现
 2. CAKeyframeAnimation：关键帧动画，可以指定动画执行过程中每个阶段的动画
@@ -46,21 +57,21 @@
 4. CAAnimationGroup：同时播放多动画
 
 
-##### CALayer
+##### 2.2.1CALayer
 波浪图</br>
 CADisplayLink+CAShapeLayer实现<br/>
 CADisplayLink就像是一个定时器，每隔几毫秒刷新一次屏幕。能让我们以和屏幕刷新频率相同的频率去刷新我们绘制到屏幕上的内容。
 
 
-#### CoreGraphics
+#### 2.3CoreGraphics
 1. 使用CoreGraphics实现柱状图，折线图</br>
 
 
-#### Refresh
+#### 2.4Refresh
 BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
-#### UIColor+BJColor
+#### 2.5UIColor+BJColor
 使用分类（类方法重写get方法）来设置颜色和系统的设置颜色保持了一致，好处可能就是看着舒服，实际的实现原理还是一样的
 ``` objc
 //RGB颜色值
@@ -69,7 +80,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 #define UIColorFromRGBWithAlpha(rgbValue, a) [UIColor \ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 ```
 
-#### MBProgressHUD与SVProgressHUD
+#### 2.6MBProgressHUD与SVProgressHUD
 
 
 
@@ -110,12 +121,16 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 ## 四、架构
+#### MVP
+
 #### MVVM
 ```
 1、FourthSevice：将UITableView的代理对象指给FourthSevice，在控制器中初始化VM，并把VM设置为UITableView的代理对象。
 2、FourthVM：将数据获取和转换（网络请求呢）的逻辑配到另外一个类中。
 ```
 ![MVVM文件结构](https://github.com/Braindie/BJMOOCDemo/blob/master/%E5%9B%BE%E7%89%87/MVVM.png)
+
+
 
 
 
