@@ -101,7 +101,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 #### 4.数据加密
-
+MD5加密
 
 #### 5.UITableView-FDTemplateLayoutCell
 个人理解：提前把数据源放到Cell中计算高度

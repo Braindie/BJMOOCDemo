@@ -9,7 +9,7 @@
 #import "ThirdViewCtroller.h"
 
 #import "BJNetworkViewController.h"
-
+#import "BJDataEncryptionViewController.h"
 
 @interface ThirdViewCtroller ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *thirdTableView;
@@ -50,6 +50,12 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"AFN与NSURLSession";
+    }else if (indexPath.row == 1){
+        cell.textLabel.text = @"数据持久化";
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"数据解析";
+    }else if (indexPath.row == 3){
+        cell.textLabel.text = @"数据加密";
     }
 
     return cell;
@@ -58,6 +64,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         BJNetworkViewController *vc = [[BJNetworkViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1){
+
+    }else if (indexPath.row == 2){
+
+    }else if (indexPath.row == 3){
+        BJDataEncryptionViewController *vc = [[BJDataEncryptionViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
