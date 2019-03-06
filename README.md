@@ -86,22 +86,24 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 ## 三、网络
-#### AFN和NSURLSession
+#### 1.AFN和NSURLSession
 - AFN
 注释在源码中
 - NSURLSession
 注释在代码中
 
-#### YYModel
-使用YYModel把json转换成Model
-
-
-#### FMDB的封装ZDModel
+#### 2.数据持久化——FMDB的封装ZDModel
 1、封装FMDB获取model中的属性；
 获取model的属性作为本地数据库表中的key。
 
+#### 3.数据解析——YYModel
+使用YYModel把json转换成Model
 
-#### UITableView-FDTemplateLayoutCell
+
+#### 4.数据加密
+
+
+#### 5.UITableView-FDTemplateLayoutCell
 个人理解：提前把数据源放到Cell中计算高度
 - A prototype cell of UITableView in storyboard.
 - Use `-registerNib:forCellReuseIdentifier:` 
@@ -135,10 +137,14 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
 ## 五、功能
-#### 图片选择器 
-#### OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
+#### 1.获取通讯录
 
-#### 蓝牙通讯
-左侧按钮有蓝牙通讯的代码，蓝牙中心设备</br>
+#### 2.图片选择器 
 
-#### 获取通讯录
+#### 3.蓝牙通讯
+蓝牙中心设备
+
+#### 4.OCR（光学字符识别）文字识别（由于不支持模拟器，已删除）
+
+
+
