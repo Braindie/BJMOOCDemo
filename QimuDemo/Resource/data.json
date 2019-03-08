@@ -5,10 +5,7 @@
                {
                "Food_Name": "Masonry",
                "Picture":"Picture"
-               },
-               {
-               "Food_Name": "--",
-               },
+               }
                ]
   },
   {
@@ -29,10 +26,10 @@
                ]
   },
   {
-  "Type": "--",
+  "Type": "手势与响应者链",
   "Symptoms": [
                {
-               "Food_Name": "--",
+               "Food_Name": "触摸事件和手势识别",
                },
                {
                "Food_Name": "--",

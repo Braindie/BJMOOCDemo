@@ -24,7 +24,9 @@ Masonry布局UIScrollView
 3. UILabel分类实现Toast</br>
 4. Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
-
+#### 事件响应者链与手势
+1. 事件响应者链
+2. 触摸手势与手势
 
 ## 二、动画
 #### 2.1.1属性动画 UIViewAnimation

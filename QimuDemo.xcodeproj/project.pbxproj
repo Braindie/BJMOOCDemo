@@ -67,6 +67,9 @@
 		E5229CD521943ED7004CC67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD421943ED7004CC67B /* Security.framework */; };
 		E5246AB72232118F00E1656D /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246AB62232118F00E1656D /* FirstDetailViewController.m */; };
 		E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246ABA223211E400E1656D /* BJMasnoryViewController.m */; };
+		E5246ABF22323E0E00E1656D /* BJTouchAndGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246ABE22323E0E00E1656D /* BJTouchAndGestureViewController.m */; };
+		E5246AC22232462B00E1656D /* BJTouchBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246AC12232462B00E1656D /* BJTouchBaseView.m */; };
+		E5246AC52232463E00E1656D /* BJTouchTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246AC42232463E00E1656D /* BJTouchTestView.m */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
 		E5491DEC219AAA66003D9243 /* BJRingtLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */; };
 		E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D907F1EE1313B00AE856B /* LiveListModel.m */; };
@@ -311,6 +314,12 @@
 		E5246AB62232118F00E1656D /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
 		E5246AB9223211E400E1656D /* BJMasnoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJMasnoryViewController.h; sourceTree = "<group>"; };
 		E5246ABA223211E400E1656D /* BJMasnoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMasnoryViewController.m; sourceTree = "<group>"; };
+		E5246ABD22323E0E00E1656D /* BJTouchAndGestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTouchAndGestureViewController.h; sourceTree = "<group>"; };
+		E5246ABE22323E0E00E1656D /* BJTouchAndGestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTouchAndGestureViewController.m; sourceTree = "<group>"; };
+		E5246AC02232462B00E1656D /* BJTouchBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTouchBaseView.h; sourceTree = "<group>"; };
+		E5246AC12232462B00E1656D /* BJTouchBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTouchBaseView.m; sourceTree = "<group>"; };
+		E5246AC32232463E00E1656D /* BJTouchTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTouchTestView.h; sourceTree = "<group>"; };
+		E5246AC42232463E00E1656D /* BJTouchTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTouchTestView.m; sourceTree = "<group>"; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E5491DEA219AAA66003D9243 /* BJRingtLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJRingtLoadingView.h; sourceTree = "<group>"; };
 		E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRingtLoadingView.m; sourceTree = "<group>"; };
@@ -949,6 +958,20 @@
 			path = QimuDemo/Class/FIrst/Controllers/BJMasonry;
 			sourceTree = SOURCE_ROOT;
 		};
+		E5246ABC22323DEE00E1656D /* BJTouchAndGesture */ = {
+			isa = PBXGroup;
+			children = (
+				E5246ABD22323E0E00E1656D /* BJTouchAndGestureViewController.h */,
+				E5246ABE22323E0E00E1656D /* BJTouchAndGestureViewController.m */,
+				E5246AC02232462B00E1656D /* BJTouchBaseView.h */,
+				E5246AC12232462B00E1656D /* BJTouchBaseView.m */,
+				E5246AC32232463E00E1656D /* BJTouchTestView.h */,
+				E5246AC42232463E00E1656D /* BJTouchTestView.m */,
+			);
+			name = BJTouchAndGesture;
+			path = QimuDemo/Class/FIrst/Controllers/BJTouchAndGesture;
+			sourceTree = SOURCE_ROOT;
+		};
 		E555B26320DB5AB00037805A /* BJChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -1331,6 +1354,7 @@
 		E5ABA23820C0FA4A00A2C172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5246ABC22323DEE00E1656D /* BJTouchAndGesture */,
 				E5246AB8223211CC00E1656D /* BJMasonry */,
 				E5246AB42232118F00E1656D /* BJScreening */,
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
@@ -1634,6 +1658,7 @@
 				E5229CD121943E94004CC67B /* BookModel.m in Sources */,
 				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
 				E51CFD14222522CE0050FFAA /* MVPView.m in Sources */,
+				E5246ABF22323E0E00E1656D /* BJTouchAndGestureViewController.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */,
 				E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */,
@@ -1659,6 +1684,7 @@
 				E5E49C542109E57E004ABAD1 /* MenuBTSectionHeaderView.m in Sources */,
 				E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */,
 				E505EADF20C548B700851764 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
+				E5246AC52232463E00E1656D /* BJTouchTestView.m in Sources */,
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
 				E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */,
@@ -1669,6 +1695,7 @@
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
+				E5246AC22232462B00E1656D /* BJTouchBaseView.m in Sources */,
 				E555B27420DBAEA00037805A /* BJKChartView.m in Sources */,
 				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
 				E5CB0816222F9A84003FD486 /* FirstDetailTableViewViewController.m in Sources */,
