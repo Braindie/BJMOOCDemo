@@ -65,6 +65,8 @@
 		E5229CD121943E94004CC67B /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5229CD021943E94004CC67B /* BookModel.m */; };
 		E5229CD321943EC7004CC67B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD221943EC7004CC67B /* CoreTelephony.framework */; };
 		E5229CD521943ED7004CC67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD421943ED7004CC67B /* Security.framework */; };
+		E5246AB72232118F00E1656D /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246AB62232118F00E1656D /* FirstDetailViewController.m */; };
+		E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5246ABA223211E400E1656D /* BJMasnoryViewController.m */; };
 		E533E04E1D6ADE4B000A148D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */; };
 		E5491DEC219AAA66003D9243 /* BJRingtLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */; };
 		E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D907F1EE1313B00AE856B /* LiveListModel.m */; };
@@ -147,7 +149,6 @@
 		E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */; };
 		E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */; };
 		E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */; };
-		E5ABA24B20C0FA4B00A2C172 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */; };
 		E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA24020C0FA4A00A2C172 /* HomeSectionHeaderView.m */; };
 		E5ABA24E20C0FA4B00A2C172 /* MonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA24520C0FA4A00A2C172 /* MonthCollectionViewCell.m */; };
 		E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA24720C0FA4A00A2C172 /* HomeViewCell.m */; };
@@ -306,6 +307,10 @@
 		E5229CD021943E94004CC67B /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
 		E5229CD221943EC7004CC67B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E5229CD421943ED7004CC67B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E5246AB52232118F00E1656D /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
+		E5246AB62232118F00E1656D /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
+		E5246AB9223211E400E1656D /* BJMasnoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJMasnoryViewController.h; sourceTree = "<group>"; };
+		E5246ABA223211E400E1656D /* BJMasnoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMasnoryViewController.m; sourceTree = "<group>"; };
 		E533E04D1D6ADE4B000A148D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E5491DEA219AAA66003D9243 /* BJRingtLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJRingtLoadingView.h; sourceTree = "<group>"; };
 		E5491DEB219AAA66003D9243 /* BJRingtLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRingtLoadingView.m; sourceTree = "<group>"; };
@@ -422,9 +427,7 @@
 		E5A9E7B71EB1A3DB0072EA61 /* CenterTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTabBarController.h; sourceTree = "<group>"; };
 		E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTabBarController.m; sourceTree = "<group>"; };
 		E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
 		E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
 		E5ABA24020C0FA4A00A2C172 /* HomeSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSectionHeaderView.m; sourceTree = "<group>"; };
 		E5ABA24120C0FA4A00A2C172 /* MonthCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthCollectionViewCell.h; sourceTree = "<group>"; };
 		E5ABA24220C0FA4A00A2C172 /* HomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCell.h; sourceTree = "<group>"; };
@@ -926,6 +929,26 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E5246AB42232118F00E1656D /* BJScreening */ = {
+			isa = PBXGroup;
+			children = (
+				E5246AB52232118F00E1656D /* FirstDetailViewController.h */,
+				E5246AB62232118F00E1656D /* FirstDetailViewController.m */,
+			);
+			name = BJScreening;
+			path = QimuDemo/Class/FIrst/Controllers/BJScreening;
+			sourceTree = SOURCE_ROOT;
+		};
+		E5246AB8223211CC00E1656D /* BJMasonry */ = {
+			isa = PBXGroup;
+			children = (
+				E5246AB9223211E400E1656D /* BJMasnoryViewController.h */,
+				E5246ABA223211E400E1656D /* BJMasnoryViewController.m */,
+			);
+			name = BJMasonry;
+			path = QimuDemo/Class/FIrst/Controllers/BJMasonry;
+			sourceTree = SOURCE_ROOT;
+		};
 		E555B26320DB5AB00037805A /* BJChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -1308,10 +1331,10 @@
 		E5ABA23820C0FA4A00A2C172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5246AB8223211CC00E1656D /* BJMasonry */,
+				E5246AB42232118F00E1656D /* BJScreening */,
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
-				E5ABA23A20C0FA4A00A2C172 /* FirstDetailViewController.h */,
-				E5ABA23E20C0FA4A00A2C172 /* FirstDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1601,6 +1624,7 @@
 				E51CFD002225196B0050FFAA /* FourthViewCtrl.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E508F86320FD8C9800C9EF26 /* UIView+BJExtension.m in Sources */,
+				E5246AB72232118F00E1656D /* FirstDetailViewController.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
 				E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */,
@@ -1641,6 +1665,7 @@
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E59451DC222E636F001F71C5 /* BJPropertyAnimationViewController.m in Sources */,
+				E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
@@ -1658,7 +1683,6 @@
 				E5E49C462109CE23004ABAD1 /* BJWaveView.m in Sources */,
 				E505EADD20C548B700851764 /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				E505EAE520C548B700851764 /* ZLPhotoAssets.m in Sources */,
-				E5ABA24B20C0FA4B00A2C172 /* FirstDetailViewController.m in Sources */,
 				E51CFD0B2225229E0050FFAA /* MVPViewController.m in Sources */,
 				E505EADE20C548B700851764 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */,

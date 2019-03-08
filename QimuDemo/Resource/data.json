@@ -1,18 +1,18 @@
  [
   {
-  "Type": "精选",
+  "Type": "布局",
   "Symptoms": [
                {
-               "Food_Name": "炒饭",
+               "Food_Name": "Masonry",
                "Picture":"Picture"
                },
                {
-               "Food_Name": "炒面",
+               "Food_Name": "--",
                },
                ]
   },
   {
-  "Type": "Toast",
+  "Type": "Toast弹框",
   "Symptoms": [
                {
                "Food_Name": "SGWCustomBlockAlertManager.h",
@@ -29,41 +29,41 @@
                ]
   },
   {
-  "Type": "最热",
+  "Type": "--",
   "Symptoms": [
                {
-               "Food_Name": "湘菜",
+               "Food_Name": "--",
                },
                {
-               "Food_Name": "粤菜",
+               "Food_Name": "--",
                },
                {
-               "Food_Name": "鲁菜",
+               "Food_Name": "--",
                "Picture":"Picture"
                },
                {
-               "Food_Name": "东北菜",
+               "Food_Name": "--",
                "Picture":"Picture"
                },
                ]
   },
   {
-  "Type": "专区",
+  "Type": "--",
   "Symptoms": [
                {
-               "Food_Name": "烤箱食谱",
+               "Food_Name": "--",
                "Picture":"Picture"
                },
                {
-               "Food_Name": "面包机食谱",
+               "Food_Name": "--",
                "Picture":"Picture"
                },
                {
-               "Food_Name": "电饭煲美食",
+               "Food_Name": "--",
                "Picture":"Picture"
                },
                {
-               "Food_Name": "豆浆机食谱",
+               "Food_Name": "--",
                "Picture":"Picture"
                }
                ]

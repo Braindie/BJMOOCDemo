@@ -23,7 +23,7 @@
 
 
 - (id)sharedInit {
-    UIView *cureOfLine = [[UIView alloc] initWithFrame:CGRectMake(16, 38 - 1, [UIScreen mainScreen].bounds.size.width - 2*16, 1)];
+    UIView *cureOfLine = [[UIView alloc] initWithFrame:CGRectMake(16, 48 - 1, [UIScreen mainScreen].bounds.size.width - 2*16, 1)];
     cureOfLine.backgroundColor = [UIColor colorWithRed:188.0/255.0 green:188.0/255.0 blue:188.0/255.0 alpha:1.0];
     [self addSubview:cureOfLine];
     self.backgroundColor = [UIColor whiteColor];
@@ -50,7 +50,7 @@
     [self.moreButton setImage:[UIImage imageNamed:@"home_btn_more_selected"] forState:UIControlStateSelected];
     [self.moreButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self.moreButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
-    [self.moreButton setTitle:@"更多" forState:UIControlStateNormal];
+    [self.moreButton setTitle:@"" forState:UIControlStateNormal];
     self.moreButton.titleLabel.font = [UIFont systemFontOfSize:13];
     self.moreButton.titleLabel.textAlignment = NSTextAlignmentRight;
     self.moreButton.hidden = YES;

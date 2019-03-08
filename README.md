@@ -6,14 +6,17 @@
 #### 界面布局
 1. 首页有个UICollectionView基本布局
     * UICollectionViewFlowLayout是系统提供给我们一个封装好的流布局设置类
-2. 左上角的UICollectionViewLeftAlignedLayout左布局
+    
+#### 筛选条
+2. UICollectionViewLeftAlignedLayout左布局
     * 自定义UICollectionViewFlowLayout，重载了UICollectionViewLayout的两个方法，代码中有注释
-3. 左上角的筛选列表
+3. 筛选列表
     * 列表弹框使用了属性transform动画、alpha动画
-4. 左上角的筛选条
+4. 筛选条
     * CALayer的子类了解一下
 
-
+#### Masonry
+Masonry布局UIScrollView
 
 #### Toast
 1. 自定义实现Alert</br>

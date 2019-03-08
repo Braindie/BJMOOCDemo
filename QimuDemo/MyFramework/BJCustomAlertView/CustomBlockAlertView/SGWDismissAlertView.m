@@ -7,6 +7,7 @@
 //
 
 #import "SGWDismissAlertView.h"
+#import "Masonry.h"
 
 @interface SGWDismissAlertView ()
 @property (nonatomic, strong) UILabel *titleLabel;
