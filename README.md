@@ -100,7 +100,7 @@ Masonry布局UIScrollView
 
 ### 2.3、CoreGraphics、CoreText
 
-###### 2.3.1、折线图
+###### 2.3.1、柱状图
 
 
 ###### 2.3.2、折线图
@@ -108,6 +108,10 @@ Masonry布局UIScrollView
 
 ###### 2.3.3、CoreText
 `YYAsyncLayer`绘制
+
+###### 2.3.4、图片绘制
+
+###### 2.3.4、图片切圆角
 
 
 
