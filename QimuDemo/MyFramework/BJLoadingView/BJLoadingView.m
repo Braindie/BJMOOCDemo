@@ -53,12 +53,12 @@ typedef NS_ENUM(NSInteger ,BJWavePathType) {
     
     _waveSinLayer = [CAShapeLayer layer];
     _waveSinLayer.backgroundColor = [UIColor clearColor].CGColor;
-    _waveSinLayer.fillColor = [UIColor greenColor].CGColor;
+//    _waveSinLayer.fillColor = [UIColor greenColor].CGColor;
     _waveSinLayer.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, self.bounds.size.height);
     
     _waveCosLayer = [CAShapeLayer layer];
     _waveCosLayer.backgroundColor = [UIColor clearColor].CGColor;
-    _waveCosLayer.fillColor = [UIColor blueColor].CGColor;
+//    _waveCosLayer.fillColor = [UIColor blueColor].CGColor;
     _waveCosLayer.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, self.bounds.size.height);
     
     
@@ -80,33 +80,37 @@ typedef NS_ENUM(NSInteger ,BJWavePathType) {
     _sineImageView = [[UIImageView alloc] initWithFrame:self.bounds];
     _sineImageView.image = [UIImage imageNamed:@"blue.png"];
     [self addSubview:_sineImageView];
-    
-    _sineImageView.layer.mask = _waveSinLayer;
+
+    //俩ImageView的layer层
     _cosineImageView.layer.mask = _waveCosLayer;
+    _sineImageView.layer.mask = _waveSinLayer;
     
 }
 
 
 - (void)startLoading{
-    [_displayLink invalidate];
-    
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateWaveAction:)];
-    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    
-    
+
     CGPoint position = _waveSinLayer.position;
     position.y = position.y - self.bounds.size.height - 10;
-    
+
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
     animation.fromValue = [NSValue valueWithCGPoint:_waveSinLayer.position];
     animation.toValue = [NSValue valueWithCGPoint:position];
     animation.duration = kWavePositionDuration;
     animation.repeatCount = HUGE_VALF;
     animation.removedOnCompletion = NO;
-    
+
     [_waveSinLayer addAnimation:animation forKey:@"positionWave"];
     [_waveCosLayer addAnimation:animation forKey:@"positionWave"];
-
+    
+    //静态注满
+//    _waveSinLayer.path = [self createWavePathWithType:BJWavePathType_Sin].CGPath;
+//    _waveCosLayer.path = [self createWavePathWithType:BJWavePathType_Cos].CGPath;
+    
+    //动态注满
+    [_displayLink invalidate];
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateWaveAction:)];
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopLoading{
@@ -119,9 +123,10 @@ typedef NS_ENUM(NSInteger ,BJWavePathType) {
 
 
 
+
 - (void)updateWaveAction:(CADisplayLink *)displayLink{
+    NSLog(@"---");
     self.phase += self.phaseShift;
-    
     self.waveSinLayer.path = [self createWavePathWithType:BJWavePathType_Sin].CGPath;
     self.waveCosLayer.path = [self createWavePathWithType:BJWavePathType_Cos].CGPath;
 }
@@ -133,11 +138,6 @@ typedef NS_ENUM(NSInteger ,BJWavePathType) {
     for (CGFloat x = 0; x < self.waveWidth + 1; x++) {
         endX = x;
         CGFloat y = 0;
-//        if (pathType == BJWavePathType_Sin) {
-//            y = _maxAmplitude * sinf(360.0 / _waveWidth * (x * M_PI / 180) * _frequency + _phase * M_PI / 180 ) + _maxAmplitude;
-//        }else{
-//            y = _maxAmplitude * cosf(360.0 / _waveWidth * (x * M_PI / 180) * _frequency + _phase * M_PI / 180) * _maxAmplitude;
-//        }
         if (pathType == BJWavePathType_Sin) {
             y = self.maxAmplitude * sinf(360.0 / _waveWidth * (x  * M_PI / 180) * self.frequency + self.phase * M_PI/ 180) + self.maxAmplitude;
         } else {

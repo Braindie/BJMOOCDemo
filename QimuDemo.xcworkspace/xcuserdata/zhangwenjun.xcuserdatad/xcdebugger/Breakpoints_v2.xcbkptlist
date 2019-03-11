@@ -474,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/Second/Controllers/SecondViewCtrl.m"
-            timestampString = "573475450.965227"
+            timestampString = "573965133.111997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -826,12 +826,12 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-                  timestampString = "573727795.7810121"
+                  timestampString = "573975072.628116"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "271"
                   endingLineNumber = "271"
-                  offsetFromSymbolStart = "140">
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -841,12 +841,12 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-                  timestampString = "573727795.789029"
+                  timestampString = "573975072.633281"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "271"
                   endingLineNumber = "271"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -856,12 +856,12 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-                  timestampString = "573727795.794487"
+                  timestampString = "573975072.637156"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "271"
                   endingLineNumber = "271"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -911,6 +911,22 @@
             startingLineNumber = "167"
             endingLineNumber = "167"
             landmarkName = "-URLSession:task:didCompleteWithError:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QimuDemo/MyFramework/BJLoadingView/BJLoadingView.m"
+            timestampString = "573975213.461931"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "-createWavePathWithType:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

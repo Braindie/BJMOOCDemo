@@ -57,12 +57,13 @@ typedef NS_ENUM(NSInteger, BJWavePathType) {
     self.shapeTwoLayer.strokeColor = [UIColor colorWithRed:174/255.0 green:231/255.0 blue:182/255.0 alpha:1].CGColor;
     [self.layer addSublayer:self.shapeTwoLayer];
     
-    [self startLoading];
 }
 
 
 - (void)startLoading
 {
+//    iOS设备的屏幕刷新频率是固定的，CADisplayLink在正常情况下会在每次刷新结束都被调用，精确度相当高。
+//    NSTimer的精确度就显得低了点，比如NSTimer的触发时间到的时候，runloop如果在阻塞状态，触发时间就会推迟到下一个runloop周期。
     [_displayLink invalidate];
     self.displayLink = [CADisplayLink displayLinkWithTarget:self
                                                    selector:@selector(updateWave:)];
@@ -70,8 +71,15 @@ typedef NS_ENUM(NSInteger, BJWavePathType) {
                        forMode:NSRunLoopCommonModes];
 }
 
+- (void)stopLoading{
+    _displayLink.paused = YES;
+    [_displayLink invalidate];
+    _displayLink = nil;
+}
+
 - (void)updateWave:(CADisplayLink *)displayLink
 {
+    NSLog(@"--");
     self.phase += 3;//逐渐累加初相
     self.shapeOneLayer.path = [self createPath:BJWavePathTypeLineOne].CGPath;
     self.shapeTwoLayer.path = [self createPath:BJWavePathTypeLineTwo].CGPath;
@@ -103,4 +111,6 @@ typedef NS_ENUM(NSInteger, BJWavePathType) {
     
     return wavePath;
 }
+
+
 @end

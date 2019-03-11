@@ -10,4 +10,7 @@
 
 @interface BJWaveView : UIView
 
+- (void)startLoading;
+- (void)stopLoading;
+
 @end

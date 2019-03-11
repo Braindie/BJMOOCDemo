@@ -80,6 +80,10 @@
 		E555B26920DB5B040037805A /* BJChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B26820DB5B040037805A /* BJChartModel.m */; };
 		E555B27420DBAEA00037805A /* BJKChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E555B27320DBAEA00037805A /* BJKChartView.m */; };
 		E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55977F920D3B0D200AE6DBD /* BJLoadingView.m */; };
+		E56882BE22360A3C007CF4E9 /* BJWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882BD22360A3C007CF4E9 /* BJWaveViewController.m */; };
+		E56882C222360C5A007CF4E9 /* BJRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882C122360C5A007CF4E9 /* BJRingViewController.m */; };
+		E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882C522360D7E007CF4E9 /* BJButtonViewController.m */; };
+		E56882CA22360EB4007CF4E9 /* BJLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882C922360EB4007CF4E9 /* BJLabelViewController.m */; };
 		E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */; };
 		E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A135520FC7DCB008C375C /* BunnyCollectionView.m */; };
 		E57A135B20FC7DCB008C375C /* MonthXibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */; };
@@ -338,6 +342,14 @@
 		E555B27320DBAEA00037805A /* BJKChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKChartView.m; sourceTree = "<group>"; };
 		E55977F820D3B0D200AE6DBD /* BJLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLoadingView.h; sourceTree = "<group>"; };
 		E55977F920D3B0D200AE6DBD /* BJLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLoadingView.m; sourceTree = "<group>"; };
+		E56882BC22360A3C007CF4E9 /* BJWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJWaveViewController.h; sourceTree = "<group>"; };
+		E56882BD22360A3C007CF4E9 /* BJWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJWaveViewController.m; sourceTree = "<group>"; };
+		E56882C022360C5A007CF4E9 /* BJRingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJRingViewController.h; sourceTree = "<group>"; };
+		E56882C122360C5A007CF4E9 /* BJRingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRingViewController.m; sourceTree = "<group>"; };
+		E56882C422360D7E007CF4E9 /* BJButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJButtonViewController.h; sourceTree = "<group>"; };
+		E56882C522360D7E007CF4E9 /* BJButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJButtonViewController.m; sourceTree = "<group>"; };
+		E56882C822360EB4007CF4E9 /* BJLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLabelViewController.h; sourceTree = "<group>"; };
+		E56882C922360EB4007CF4E9 /* BJLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLabelViewController.m; sourceTree = "<group>"; };
 		E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJYoukuPlayerButton.m; sourceTree = "<group>"; };
 		E578765C21A2BBB80023F5D2 /* BJYoukuPlayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJYoukuPlayerButton.h; sourceTree = "<group>"; };
 		E57A135520FC7DCB008C375C /* BunnyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BunnyCollectionView.m; sourceTree = "<group>"; };
@@ -996,6 +1008,42 @@
 			path = BJLoadingView;
 			sourceTree = "<group>";
 		};
+		E56882BB22360A29007CF4E9 /* BJWaveView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882BC22360A3C007CF4E9 /* BJWaveViewController.h */,
+				E56882BD22360A3C007CF4E9 /* BJWaveViewController.m */,
+			);
+			path = BJWaveView;
+			sourceTree = "<group>";
+		};
+		E56882BF22360C4F007CF4E9 /* BJRingView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882C022360C5A007CF4E9 /* BJRingViewController.h */,
+				E56882C122360C5A007CF4E9 /* BJRingViewController.m */,
+			);
+			path = BJRingView;
+			sourceTree = "<group>";
+		};
+		E56882C322360D72007CF4E9 /* BJButton */ = {
+			isa = PBXGroup;
+			children = (
+				E56882C422360D7E007CF4E9 /* BJButtonViewController.h */,
+				E56882C522360D7E007CF4E9 /* BJButtonViewController.m */,
+			);
+			path = BJButton;
+			sourceTree = "<group>";
+		};
+		E56882C722360E40007CF4E9 /* BJLabelView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882C822360EB4007CF4E9 /* BJLabelViewController.h */,
+				E56882C922360EB4007CF4E9 /* BJLabelViewController.m */,
+			);
+			path = BJLabelView;
+			sourceTree = "<group>";
+		};
 		E578765A21A2BBB80023F5D2 /* BJYoukuPlayerButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1053,6 +1101,10 @@
 		E59451E1222E8959001F71C5 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E56882BB22360A29007CF4E9 /* BJWaveView */,
+				E56882BF22360C4F007CF4E9 /* BJRingView */,
+				E56882C322360D72007CF4E9 /* BJButton */,
+				E56882C722360E40007CF4E9 /* BJLabelView */,
 				E59451E2222E8959001F71C5 /* SecondLeftDetailViewController.h */,
 				E59451E3222E8959001F71C5 /* SecondLeftDetailViewController.m */,
 			);
@@ -1654,12 +1706,14 @@
 				E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
+				E56882CA22360EB4007CF4E9 /* BJLabelViewController.m in Sources */,
 				E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */,
 				E5229CD121943E94004CC67B /* BookModel.m in Sources */,
 				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
 				E51CFD14222522CE0050FFAA /* MVPView.m in Sources */,
 				E5246ABF22323E0E00E1656D /* BJTouchAndGestureViewController.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
+				E56882C222360C5A007CF4E9 /* BJRingViewController.m in Sources */,
 				E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */,
 				E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */,
 				E54D90871EE1361C00AE856B /* LiveListCell.m in Sources */,
@@ -1672,6 +1726,7 @@
 				E51CFD11222522C10050FFAA /* MVPModel.m in Sources */,
 				E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */,
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,
+				E56882BE22360A3C007CF4E9 /* BJWaveViewController.m in Sources */,
 				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
 				E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
@@ -1693,6 +1748,7 @@
 				E59451DC222E636F001F71C5 /* BJPropertyAnimationViewController.m in Sources */,
 				E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
+				E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
 				E5246AC22232462B00E1656D /* BJTouchBaseView.m in Sources */,

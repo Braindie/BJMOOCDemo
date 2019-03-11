@@ -3,11 +3,11 @@
 
 ## 一、布局
 
-#### 界面布局
+### 界面布局
 1. 首页有个UICollectionView基本布局
     * UICollectionViewFlowLayout是系统提供给我们一个封装好的流布局设置类
     
-#### 筛选条
+### 筛选条
 2. UICollectionViewLeftAlignedLayout左布局
     * 自定义UICollectionViewFlowLayout，重载了UICollectionViewLayout的两个方法，代码中有注释
 3. 筛选列表
@@ -15,22 +15,22 @@
 4. 筛选条
     * CALayer的子类了解一下
 
-#### Masonry
+### Masonry
 Masonry布局UIScrollView
 
-#### Toast
+### Toast
 1. 自定义实现Alert</br>
 2. 系统实现Alert</br>
 3. UILabel分类实现Toast</br>
 4. Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
 
-#### 事件响应者链与手势
+### 事件响应者链与手势
 1. 事件响应者链
 2. 触摸手势与手势
 
 ## 二、动画
-#### 2.1.1属性动画 UIViewAnimation
-类方法，所以这些动画没有绑定任何视图
+### 2.1.1属性动画 UIViewAnimation
+#### 类方法动画，所以这些动画没有绑定任何视图
 1. 大小动画（改变frame）
 2. 拉伸动画（改变bounds）
 3. 转移动画（改变center）
@@ -52,31 +52,45 @@ Masonry布局UIScrollView
 4. UIAttachmentBehavior：附着行为
 5. UIPushBehavior：推行为
 
-#### 2.2核心动画CoreAnimation
+### 2.2核心动画CoreAnimation
 1. CABasicAnimation：单一动画，可以看做只有头尾的关键帧动画
-    *  `Loading`的加载效果，CABasicAnimation+CAShapeLayer实现
 2. CAKeyframeAnimation：关键帧动画，可以指定动画执行过程中每个阶段的动画
-    * 点击按钮的动态效果
-        CAKeyframeAnimation实现
 3. CATransition：视图切换动画，提供了动画渐变效果
 4. CAAnimationGroup：同时播放多动画
 
 
-##### 2.2.1CALayer
-波浪图</br>
-CADisplayLink+CAShapeLayer实现<br/>
-CADisplayLink就像是一个定时器，每隔几毫秒刷新一次屏幕。能让我们以和屏幕刷新频率相同的频率去刷新我们绘制到屏幕上的内容。
+###### 2.2.1 波浪图
+`CADisplayLink+CAShapeLayer`实现
+`CADisplayLink`就像是一个定时器，每隔几毫秒刷新一次屏幕。能让我们以和屏幕刷新频率相同的频率去刷新我们绘制到屏幕上的内容。
+
+###### 2.2.1 波浪图注满动画
+`CADisplayLink+CAShapeLayer`实现波浪动画
+`CABasicAnimation`实现注满动画
+
+###### 2.2.2 旋转Loading
+`CAShapeLayer+CAGradientLayer`实现颜色渐变
+`CABasicAnimation`实现旋转动画
+
+###### 2.2.3 复杂按钮动画
+`CAShapeLayer`实现内容绘制
+`CABasicAnimation`实现旋转动画
+
+###### 2.2.3 膨胀按钮动画
+`CAKeyframeAnimation`实现膨胀效果`transform.scale`
 
 
-#### 2.3CoreGraphics
+
+#### 2.3 CoreGraphics
 1. 使用CoreGraphics实现柱状图，折线图</br>
 
+`YYAsyncLayer`绘制
 
-#### 2.4Refresh
+
+#### 2.4 Refresh
 BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 
 
-#### 2.5UIColor+BJColor
+#### 2.5 UIColor+BJColor
 使用分类（类方法重写get方法）来设置颜色和系统的设置颜色保持了一致，好处可能就是看着舒服，实际的实现原理还是一样的
 ``` objc
 //RGB颜色值
@@ -85,7 +99,7 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 #define UIColorFromRGBWithAlpha(rgbValue, a) [UIColor \ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 ```
 
-#### 2.6MBProgressHUD与SVProgressHUD
+#### 2.6 MBProgressHUD与SVProgressHUD
 
 
 

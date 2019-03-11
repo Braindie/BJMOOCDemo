@@ -26,7 +26,6 @@
 
     self.isNavCtrlSetLeft = NO;
     self.isNavCtrlSetRight = NO;
-    self.isCustomBack = YES;
     self.navigationItem.title = @"网络与数据";
 
     //创建视图
