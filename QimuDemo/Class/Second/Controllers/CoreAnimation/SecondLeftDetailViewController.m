@@ -10,7 +10,8 @@
 #import "BJWaveViewController.h"
 #import "BJRingViewController.h"
 #import "BJButtonViewController.h"
-#import "BJLabelViewController.h"
+#import "BJBrokenLineViewController.h"
+#import "BJSmoothLineViewController.h"
 
 @interface SecondLeftDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -57,7 +58,9 @@
     }else if (indexPath.row == 2){
         cell.textLabel.text = @"按钮";
     }else if (indexPath.row == 3){
-        cell.textLabel.text = @"label";
+        cell.textLabel.text = @"折线图";
+    }else if (indexPath.row == 4){
+        cell.textLabel.text = @"光滑折线图";
     }
     
     return cell;
@@ -85,7 +88,11 @@
         
     }else if (indexPath.row == 3){
         
-        BJLabelViewController *vc = [[BJLabelViewController alloc] init];
+        BJBrokenLineViewController *vc = [[BJBrokenLineViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 4){
+        
+        BJSmoothLineViewController *vc = [[BJSmoothLineViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

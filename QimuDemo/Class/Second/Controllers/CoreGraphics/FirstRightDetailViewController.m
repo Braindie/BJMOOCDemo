@@ -7,11 +7,13 @@
 //
 
 #import "FirstRightDetailViewController.h"
-#import "BJBarChartView.h"
-//#import "BJChartModel.h"
-#import "BJKChartView.h"
+#import "BJBarChartViewController.h"
+#import "BJLineChartViewController.h"
+#import "BJLabelViewController.h"
 
-@interface FirstRightDetailViewController ()
+@interface FirstRightDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -24,31 +26,58 @@
     self.isCustomBack = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
-    BJBarChartView *view = [[BJBarChartView alloc] initWithFrame:CGRectMake(20, 64+30, SCREEN_WIDTH-20*2, 200)];
-    view.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:view];
-    
-    
-    BJKChartView *kview = [[BJKChartView alloc] initWithFrame:CGRectMake(20, 350, SCREEN_WIDTH-20*2, 200)];
-    kview.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:kview];
-    
+    //创建视图
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"柱状图";
+    }else if (indexPath.row == 1){
+        cell.textLabel.text = @"折线图";
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"CoreText & YYAsyncLayer";
+    }else if (indexPath.row == 3){
+        
+    }
+    
+    return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        
+        BJBarChartViewController *vc = [[BJBarChartViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else if (indexPath.row == 1){
+        
+        BJLineChartViewController *vc = [[BJLineChartViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else if (indexPath.row == 2){
+        
+        BJLabelViewController *vc = [[BJLabelViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else if (indexPath.row == 3){
+        
+    }
+}
+
 
 @end

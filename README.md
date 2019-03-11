@@ -28,9 +28,13 @@ Masonry布局UIScrollView
 1. 事件响应者链
 2. 触摸手势与手势
 
+
+
 ## 二、动画
-### 2.1.1属性动画 UIViewAnimation
-#### 类方法动画，所以这些动画没有绑定任何视图
+
+### 2.1、属性动画 UIViewAnimation
+
+#### 2.1.1、类方法动画，所以这些动画没有绑定任何视图
 1. 大小动画（改变frame）
 2. 拉伸动画（改变bounds）
 3. 转移动画（改变center）
@@ -41,10 +45,10 @@ Masonry布局UIScrollView
 7. Spring
 8. Transition
 
-#### 2.1.2交互动画 UIViewPropertyAnimator
+#### 2.1.2、交互动画 UIViewPropertyAnimator
 通过动画绑定视图，该类实现的动画可以在结束前进行暂停、恢复、停止等操作。
 
-#### 2.1.3力学动画 UIDynamicAnimator
+#### 2.1.3、力学动画 UIDynamicAnimator
 
 1. UIGravityBehavior：重力行为
 2. UICollisionBehavior：碰撞行为
@@ -52,38 +56,59 @@ Masonry布局UIScrollView
 4. UIAttachmentBehavior：附着行为
 5. UIPushBehavior：推行为
 
-### 2.2核心动画CoreAnimation
+
+
+### 2.2、核心动画CoreAnimation
+
 1. CABasicAnimation：单一动画，可以看做只有头尾的关键帧动画
 2. CAKeyframeAnimation：关键帧动画，可以指定动画执行过程中每个阶段的动画
 3. CATransition：视图切换动画，提供了动画渐变效果
 4. CAAnimationGroup：同时播放多动画
 
-
-###### 2.2.1 波浪图
-`CADisplayLink+CAShapeLayer`实现
+###### 2.2.1、波浪图
+`CAShapeLayer`
 `CADisplayLink`就像是一个定时器，每隔几毫秒刷新一次屏幕。能让我们以和屏幕刷新频率相同的频率去刷新我们绘制到屏幕上的内容。
 
-###### 2.2.1 波浪图注满动画
-`CADisplayLink+CAShapeLayer`实现波浪动画
+###### 2.2.1、波浪图注满动画
+`CAShapeLayer`实现波浪动画
+`CADisplayLink`定时器
 `CABasicAnimation`实现注满动画
 
-###### 2.2.2 旋转Loading
-`CAShapeLayer+CAGradientLayer`实现颜色渐变
+###### 2.2.2、旋转Loading
+`CAShapeLayer`
+`CAGradientLayer`实现颜色渐变
 `CABasicAnimation`实现旋转动画
 
-###### 2.2.3 复杂按钮动画
+###### 2.2.3、复杂按钮动画
 `CAShapeLayer`实现内容绘制
 `CABasicAnimation`实现旋转动画
 
-###### 2.2.3 膨胀按钮动画
+###### 2.2.3、膨胀按钮动画
 `CAKeyframeAnimation`实现膨胀效果`transform.scale`
 
+###### 2.2.4、折线图
+`CAShapeLayer`
+`CATextLayer`
+`CABasicAnimation`实现进度效果
+
+###### 2.2.5、平滑折线图
+`CAShapeLayer`
+`CATextLayer`
+`CAGradientLayer`颜色渐变
+`CABasicAnimation`实现进度效果
+`UIBezierPath`分类实现平滑效果
+
+### 2.3、CoreGraphics、CoreText
+
+###### 2.3.1、折线图
 
 
-#### 2.3 CoreGraphics
-1. 使用CoreGraphics实现柱状图，折线图</br>
+###### 2.3.2、折线图
 
+
+###### 2.3.3、CoreText
 `YYAsyncLayer`绘制
+
 
 
 #### 2.4 Refresh

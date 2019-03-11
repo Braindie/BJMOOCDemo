@@ -83,7 +83,14 @@
 		E56882BE22360A3C007CF4E9 /* BJWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882BD22360A3C007CF4E9 /* BJWaveViewController.m */; };
 		E56882C222360C5A007CF4E9 /* BJRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882C122360C5A007CF4E9 /* BJRingViewController.m */; };
 		E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882C522360D7E007CF4E9 /* BJButtonViewController.m */; };
-		E56882CA22360EB4007CF4E9 /* BJLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882C922360EB4007CF4E9 /* BJLabelViewController.m */; };
+		E56882D0223635DB007CF4E9 /* BJLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882CC223635DB007CF4E9 /* BJLabelViewController.m */; };
+		E56882D3223635FA007CF4E9 /* BJBarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882D2223635FA007CF4E9 /* BJBarChartViewController.m */; };
+		E56882D622363609007CF4E9 /* BJLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882D522363609007CF4E9 /* BJLineChartViewController.m */; };
+		E56882DB22364007007CF4E9 /* BJBrokenLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882DA22364007007CF4E9 /* BJBrokenLineViewController.m */; };
+		E56882DE22364042007CF4E9 /* BJSmoothLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882DD22364042007CF4E9 /* BJSmoothLineViewController.m */; };
+		E56882E122364053007CF4E9 /* BJBrokenLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882E022364053007CF4E9 /* BJBrokenLineView.m */; };
+		E56882E422364B37007CF4E9 /* BJSmoothLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882E322364B37007CF4E9 /* BJSmoothLineView.m */; };
+		E56882E722364C40007CF4E9 /* UIBezierPath+curved.m in Sources */ = {isa = PBXBuildFile; fileRef = E56882E522364C3F007CF4E9 /* UIBezierPath+curved.m */; };
 		E578765D21A2BBB80023F5D2 /* BJYoukuPlayerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */; };
 		E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A135520FC7DCB008C375C /* BunnyCollectionView.m */; };
 		E57A135B20FC7DCB008C375C /* MonthXibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57A135720FC7DCB008C375C /* MonthXibCollectionViewCell.xib */; };
@@ -348,8 +355,22 @@
 		E56882C122360C5A007CF4E9 /* BJRingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJRingViewController.m; sourceTree = "<group>"; };
 		E56882C422360D7E007CF4E9 /* BJButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJButtonViewController.h; sourceTree = "<group>"; };
 		E56882C522360D7E007CF4E9 /* BJButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJButtonViewController.m; sourceTree = "<group>"; };
-		E56882C822360EB4007CF4E9 /* BJLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLabelViewController.h; sourceTree = "<group>"; };
-		E56882C922360EB4007CF4E9 /* BJLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLabelViewController.m; sourceTree = "<group>"; };
+		E56882CC223635DB007CF4E9 /* BJLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJLabelViewController.m; sourceTree = "<group>"; };
+		E56882CD223635DB007CF4E9 /* BJLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJLabelViewController.h; sourceTree = "<group>"; };
+		E56882D1223635FA007CF4E9 /* BJBarChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBarChartViewController.h; sourceTree = "<group>"; };
+		E56882D2223635FA007CF4E9 /* BJBarChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBarChartViewController.m; sourceTree = "<group>"; };
+		E56882D422363609007CF4E9 /* BJLineChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLineChartViewController.h; sourceTree = "<group>"; };
+		E56882D522363609007CF4E9 /* BJLineChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLineChartViewController.m; sourceTree = "<group>"; };
+		E56882D922364007007CF4E9 /* BJBrokenLineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBrokenLineViewController.h; sourceTree = "<group>"; };
+		E56882DA22364007007CF4E9 /* BJBrokenLineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBrokenLineViewController.m; sourceTree = "<group>"; };
+		E56882DC22364042007CF4E9 /* BJSmoothLineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSmoothLineViewController.h; sourceTree = "<group>"; };
+		E56882DD22364042007CF4E9 /* BJSmoothLineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSmoothLineViewController.m; sourceTree = "<group>"; };
+		E56882DF22364053007CF4E9 /* BJBrokenLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBrokenLineView.h; sourceTree = "<group>"; };
+		E56882E022364053007CF4E9 /* BJBrokenLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBrokenLineView.m; sourceTree = "<group>"; };
+		E56882E222364B37007CF4E9 /* BJSmoothLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSmoothLineView.h; sourceTree = "<group>"; };
+		E56882E322364B37007CF4E9 /* BJSmoothLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSmoothLineView.m; sourceTree = "<group>"; };
+		E56882E522364C3F007CF4E9 /* UIBezierPath+curved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+curved.m"; sourceTree = "<group>"; };
+		E56882E622364C40007CF4E9 /* UIBezierPath+curved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+curved.h"; sourceTree = "<group>"; };
 		E578765B21A2BBB80023F5D2 /* BJYoukuPlayerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJYoukuPlayerButton.m; sourceTree = "<group>"; };
 		E578765C21A2BBB80023F5D2 /* BJYoukuPlayerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJYoukuPlayerButton.h; sourceTree = "<group>"; };
 		E57A135520FC7DCB008C375C /* BunnyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BunnyCollectionView.m; sourceTree = "<group>"; };
@@ -1035,13 +1056,55 @@
 			path = BJButton;
 			sourceTree = "<group>";
 		};
-		E56882C722360E40007CF4E9 /* BJLabelView */ = {
+		E56882CB223635DB007CF4E9 /* BJLabelView */ = {
 			isa = PBXGroup;
 			children = (
-				E56882C822360EB4007CF4E9 /* BJLabelViewController.h */,
-				E56882C922360EB4007CF4E9 /* BJLabelViewController.m */,
+				E56882CD223635DB007CF4E9 /* BJLabelViewController.h */,
+				E56882CC223635DB007CF4E9 /* BJLabelViewController.m */,
 			);
 			path = BJLabelView;
+			sourceTree = "<group>";
+		};
+		E56882CE223635DB007CF4E9 /* BJBarChartView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882D1223635FA007CF4E9 /* BJBarChartViewController.h */,
+				E56882D2223635FA007CF4E9 /* BJBarChartViewController.m */,
+			);
+			path = BJBarChartView;
+			sourceTree = "<group>";
+		};
+		E56882CF223635DB007CF4E9 /* BJLineChartView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882D422363609007CF4E9 /* BJLineChartViewController.h */,
+				E56882D522363609007CF4E9 /* BJLineChartViewController.m */,
+			);
+			path = BJLineChartView;
+			sourceTree = "<group>";
+		};
+		E56882D722363FF2007CF4E9 /* BJBrokenLineView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882D922364007007CF4E9 /* BJBrokenLineViewController.h */,
+				E56882DA22364007007CF4E9 /* BJBrokenLineViewController.m */,
+				E56882DF22364053007CF4E9 /* BJBrokenLineView.h */,
+				E56882E022364053007CF4E9 /* BJBrokenLineView.m */,
+			);
+			path = BJBrokenLineView;
+			sourceTree = "<group>";
+		};
+		E56882D822363FF2007CF4E9 /* BJSmoothLineView */ = {
+			isa = PBXGroup;
+			children = (
+				E56882DC22364042007CF4E9 /* BJSmoothLineViewController.h */,
+				E56882DD22364042007CF4E9 /* BJSmoothLineViewController.m */,
+				E56882E222364B37007CF4E9 /* BJSmoothLineView.h */,
+				E56882E322364B37007CF4E9 /* BJSmoothLineView.m */,
+				E56882E622364C40007CF4E9 /* UIBezierPath+curved.h */,
+				E56882E522364C3F007CF4E9 /* UIBezierPath+curved.m */,
+			);
+			path = BJSmoothLineView;
 			sourceTree = "<group>";
 		};
 		E578765A21A2BBB80023F5D2 /* BJYoukuPlayerButton */ = {
@@ -1101,10 +1164,11 @@
 		E59451E1222E8959001F71C5 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E56882D722363FF2007CF4E9 /* BJBrokenLineView */,
+				E56882D822363FF2007CF4E9 /* BJSmoothLineView */,
 				E56882BB22360A29007CF4E9 /* BJWaveView */,
 				E56882BF22360C4F007CF4E9 /* BJRingView */,
 				E56882C322360D72007CF4E9 /* BJButton */,
-				E56882C722360E40007CF4E9 /* BJLabelView */,
 				E59451E2222E8959001F71C5 /* SecondLeftDetailViewController.h */,
 				E59451E3222E8959001F71C5 /* SecondLeftDetailViewController.m */,
 			);
@@ -1114,8 +1178,11 @@
 		E59451E4222E895A001F71C5 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
-				E59451E5222E895A001F71C5 /* FirstRightDetailViewController.m */,
+				E56882CE223635DB007CF4E9 /* BJBarChartView */,
+				E56882CF223635DB007CF4E9 /* BJLineChartView */,
+				E56882CB223635DB007CF4E9 /* BJLabelView */,
 				E59451E6222E895A001F71C5 /* FirstRightDetailViewController.h */,
+				E59451E5222E895A001F71C5 /* FirstRightDetailViewController.m */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -1697,21 +1764,24 @@
 				E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */,
 				E57A136920FC7F53008C375C /* BJRefreshHeader.m in Sources */,
 				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
+				E56882DE22364042007CF4E9 /* BJSmoothLineViewController.m in Sources */,
 				E51CFD002225196B0050FFAA /* FourthViewCtrl.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E508F86320FD8C9800C9EF26 /* UIView+BJExtension.m in Sources */,
 				E5246AB72232118F00E1656D /* FirstDetailViewController.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
+				E56882DB22364007007CF4E9 /* BJBrokenLineViewController.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
 				E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
-				E56882CA22360EB4007CF4E9 /* BJLabelViewController.m in Sources */,
+				E56882D0223635DB007CF4E9 /* BJLabelViewController.m in Sources */,
 				E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */,
 				E5229CD121943E94004CC67B /* BookModel.m in Sources */,
 				E51475C120CF97CD00B79605 /* SGWMultiSelectionAlertView.m in Sources */,
 				E51CFD14222522CE0050FFAA /* MVPView.m in Sources */,
 				E5246ABF22323E0E00E1656D /* BJTouchAndGestureViewController.m in Sources */,
+				E56882E122364053007CF4E9 /* BJBrokenLineView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E56882C222360C5A007CF4E9 /* BJRingViewController.m in Sources */,
 				E51475C820CF97CD00B79605 /* SGWCancelAlertView.m in Sources */,
@@ -1720,7 +1790,9 @@
 				E505EADC20C548B700851764 /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				E51CFD0E222522B50050FFAA /* MVPPresenter.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
+				E56882D3223635FA007CF4E9 /* BJBarChartViewController.m in Sources */,
 				E508F86820FDF69100C9EF26 /* BJRefreshStateHeader.m in Sources */,
+				E56882E722364C40007CF4E9 /* UIBezierPath+curved.m in Sources */,
 				E5BCAA75215E39350020DD7B /* SecondListViewController.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
 				E51CFD11222522C10050FFAA /* MVPModel.m in Sources */,
@@ -1752,6 +1824,7 @@
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
 				E5246AC22232462B00E1656D /* BJTouchBaseView.m in Sources */,
+				E56882E422364B37007CF4E9 /* BJSmoothLineView.m in Sources */,
 				E555B27420DBAEA00037805A /* BJKChartView.m in Sources */,
 				E5B7CC4C1EB2E62E005378E1 /* MyTableViewCell.m in Sources */,
 				E5CB0816222F9A84003FD486 /* FirstDetailTableViewViewController.m in Sources */,
@@ -1785,6 +1858,7 @@
 				E51CFCFE2225196B0050FFAA /* FourthModel.m in Sources */,
 				E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */,
 				E5CB0825222FAC14003FD486 /* BJDataEncryptionViewController.m in Sources */,
+				E56882D622363609007CF4E9 /* BJLineChartViewController.m in Sources */,
 				E505EAE820C548B700851764 /* ZLNavigationController.m in Sources */,
 				E505EAEC20C548B700851764 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				E505EADB20C548B700851764 /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
