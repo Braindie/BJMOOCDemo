@@ -27,6 +27,13 @@
     self.animationView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.animationView];
     
+    if ([self.animationType isEqualToString:@"旋转动画"]) {
+        self.animationView.layer.anchorPoint = CGPointMake(0, 1);
+        self.animationView.frame = CGRectMake(0, 100, 200, 150);
+        NSLog(@"%f %f",self.animationView.layer.position.x,self.animationView.layer.position.y);
+        NSLog(@"%f %f",self.animationView.layer.anchorPoint.x,self.animationView.layer.anchorPoint.y);
+    }
+    
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
     [self.view addGestureRecognizer:tap];
@@ -69,11 +76,13 @@
         
         CGAffineTransform originTransform = self.animationView.transform;
         [UIView animateWithDuration:2 animations:^{
-            self.animationView.transform = CGAffineTransformMakeRotation(5.0f);
+            self.animationView.transform = CGAffineTransformMakeRotation(-5.0f);
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:2 animations:^{
-                self.animationView.transform = originTransform;
-            }];
+//            [UIView animateWithDuration:2 animations:^{
+//                self.animationView.transform = originTransform;
+//            }];
+            NSLog(@"%f %f",self.animationView.layer.position.x,self.animationView.layer.position.y);
+            NSLog(@"%f %f",self.animationView.layer.anchorPoint.x,self.animationView.layer.anchorPoint.y);
         }];
         
     }else if ([self.animationType isEqualToString:@"透明度动画"]){

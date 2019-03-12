@@ -63,7 +63,7 @@
                          @"大小动画（改变frame）",
                          @"拉伸动画（改变bounds）",
                          @"转移动画（改变center）",
-                         @"旋转动画（改变transform）",
+                         @"旋转动画（改变transform）,(anchorPoint和position）",
                          @"透明度动画（改变alpha）",
                          @"Keyframe",
                          @"Spring",

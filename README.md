@@ -40,6 +40,7 @@ Masonry布局UIScrollView
 3. 转移动画（改变center）
 4. 平移、旋转、缩放动画（改变transform）
         * UIView有CGAffineTransform类型的属性transform，它是定义在二维空间上完成View的平移，旋转，缩放等效果的实现。
+        * frame、bounds、position、anchorPoint
 5. 透明度动画（改变alpha）
 6. Keyframe
 7. Spring
