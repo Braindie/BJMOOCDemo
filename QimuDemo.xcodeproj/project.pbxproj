@@ -104,6 +104,7 @@
 		E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A136B20FC8BC1008C375C /* BJRefreshConst.m */; };
 		E57D81252237A1A9008F07F4 /* BJFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D81242237A1A9008F07F4 /* BJFMDBViewController.m */; };
 		E57D81282237A235008F07F4 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D81262237A235008F07F4 /* UserModel.m */; };
+		E57D812B2237D466008F07F4 /* BJKSmoothChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D812A2237D466008F07F4 /* BJKSmoothChartView.m */; };
 		E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E584B5C12105BBBC008674CB /* UIColor+BJColor.m */; };
 		E59451DC222E636F001F71C5 /* BJPropertyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59451DA222E636F001F71C5 /* BJPropertyAnimationViewController.m */; };
 		E59451DD222E636F001F71C5 /* BJPropertyAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59451DB222E636F001F71C5 /* BJPropertyAnimationViewController.xib */; };
@@ -399,6 +400,8 @@
 		E57D81242237A1A9008F07F4 /* BJFMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJFMDBViewController.m; sourceTree = "<group>"; };
 		E57D81262237A235008F07F4 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		E57D81272237A235008F07F4 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		E57D81292237D466008F07F4 /* BJKSmoothChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJKSmoothChartView.h; sourceTree = "<group>"; };
+		E57D812A2237D466008F07F4 /* BJKSmoothChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKSmoothChartView.m; sourceTree = "<group>"; };
 		E584B5C02105BBBC008674CB /* UIColor+BJColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+BJColor.h"; sourceTree = "<group>"; };
 		E584B5C12105BBBC008674CB /* UIColor+BJColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BJColor.m"; sourceTree = "<group>"; };
 		E59451D9222E636F001F71C5 /* BJPropertyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJPropertyAnimationViewController.h; sourceTree = "<group>"; };
@@ -1023,6 +1026,8 @@
 				E555B26820DB5B040037805A /* BJChartModel.m */,
 				E555B27220DBAEA00037805A /* BJKChartView.h */,
 				E555B27320DBAEA00037805A /* BJKChartView.m */,
+				E57D81292237D466008F07F4 /* BJKSmoothChartView.h */,
+				E57D812A2237D466008F07F4 /* BJKSmoothChartView.m */,
 			);
 			path = BJChart;
 			sourceTree = "<group>";
@@ -1899,6 +1904,7 @@
 				E505EADB20C548B700851764 /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
 				E5CB0818222F9A84003FD486 /* FirstTableViewController.m in Sources */,
 				E505EAEA20C548B700851764 /* ZLPhotoPickerCollectionView.m in Sources */,
+				E57D812B2237D466008F07F4 /* BJKSmoothChartView.m in Sources */,
 				E505EAE720C548B700851764 /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				E505EAEE20C548B700851764 /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 			);

@@ -105,7 +105,7 @@ Masonry布局UIScrollView
 
 
 ###### 2.3.2、折线图
-
+折线图、平滑折线图
 
 ###### 2.3.3、CoreText
 `YYAsyncLayer`绘制

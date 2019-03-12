@@ -8,6 +8,7 @@
 
 #import "BJLineChartViewController.h"
 #import "BJKChartView.h"
+#import "BJKSmoothChartView.h"
 
 @interface BJLineChartViewController ()
 
@@ -18,14 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"折线图";
+    self.navigationItem.title = @"折线图/平滑折线图";
     self.isCustomBack = YES;
     
 
-    BJKChartView *kview = [[BJKChartView alloc] initWithFrame:CGRectMake(20, 350, SCREEN_WIDTH-20*2, 200)];
+    BJKChartView *kview = [[BJKChartView alloc] initWithFrame:CGRectMake(20, 50, SCREEN_WIDTH-20*2, 200)];
     kview.backgroundColor = [UIColor blackColor];
-    kview.center = self.view.center;
     [self.view addSubview:kview];
+    
+    BJKSmoothChartView *ksview = [[BJKSmoothChartView alloc] initWithFrame:CGRectMake(20, 300, SCREEN_WIDTH-20*2, 200)];
+    ksview.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:ksview];
     
 }
 
