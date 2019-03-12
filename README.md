@@ -140,9 +140,9 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 - NSURLSession
 注释在代码中
 
-#### 2.数据持久化——FMDB的封装ZDModel
-1、封装FMDB获取model中的属性；
-获取model的属性作为本地数据库表中的key。
+#### 2.数据持久化——FMDB的二次封装`ZDBModel`
+1. 封装FMDB获取model中的属性；获取model的属性作为本地数据库表中的key。
+2. 增删改查
 
 #### 3.数据解析——YYModel
 使用YYModel把json转换成Model

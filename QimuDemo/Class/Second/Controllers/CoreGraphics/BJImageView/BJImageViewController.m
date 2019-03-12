@@ -27,9 +27,16 @@
     
     
     
+//    官方对离屏渲染产生性能问题也进行了优化：
+    
+//    iOS 9.0 之前UIimageView跟UIButton设置圆角都会触发离屏渲染。
+    
+//    iOS 9.0 之后UIButton设置圆角会触发离屏渲染，而UIImageView里png图片设置圆角不会触发离屏渲染了，如果设置其他阴影效果之类的还是会触发离屏渲染的。
     
     
+//    圆角方案二：CAShapeLayer动画渲染直接提交到手机的GPU当中，相较于view的drawRect方法使用CPU渲染而言，其效率极高，能大大优化内存使用情况。
     
+
     
     
     UIImage *anotherImage = [UIImage imageNamed:@"headerView"];

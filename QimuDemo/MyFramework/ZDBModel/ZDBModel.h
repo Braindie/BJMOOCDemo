@@ -23,9 +23,9 @@
 /** 主键 id */
 @property (nonatomic, assign)   int        pk;
 /** 列名 */
-@property (retain, readonly, nonatomic) NSMutableArray         *columeNames;
+@property (strong, readonly, nonatomic) NSMutableArray         *columeNames;
 /** 列类型 */
-@property (retain, readonly, nonatomic) NSMutableArray         *columeTypes;
+@property (strong, readonly, nonatomic) NSMutableArray         *columeTypes;
 
 
 

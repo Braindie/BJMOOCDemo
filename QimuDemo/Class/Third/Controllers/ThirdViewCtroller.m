@@ -10,6 +10,7 @@
 
 #import "BJNetworkViewController.h"
 #import "BJDataEncryptionViewController.h"
+#import "BJFMDBViewController.h"
 
 @interface ThirdViewCtroller ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *thirdTableView;
@@ -50,7 +51,7 @@
     if (indexPath.row == 0) {
         cell.textLabel.text = @"AFN与NSURLSession";
     }else if (indexPath.row == 1){
-        cell.textLabel.text = @"数据持久化";
+        cell.textLabel.text = @"数据持久化（FMDB）";
     }else if (indexPath.row == 2){
         cell.textLabel.text = @"数据解析";
     }else if (indexPath.row == 3){
@@ -65,7 +66,8 @@
         BJNetworkViewController *vc = [[BJNetworkViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 1){
-
+        BJFMDBViewController *vc = [[BJFMDBViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 2){
 
     }else if (indexPath.row == 3){
