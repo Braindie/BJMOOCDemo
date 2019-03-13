@@ -88,11 +88,12 @@ Masonry布局UIScrollView
 `CAKeyframeAnimation`实现膨胀效果`transform.scale`
 
 ###### 2.2.4、折线图
+折线图：
 `CAShapeLayer`
 `CATextLayer`
 `CABasicAnimation`实现进度效果
 
-###### 2.2.5、平滑折线图
+平滑折线图：
 `CAShapeLayer`
 `CATextLayer`
 `CAGradientLayer`颜色渐变
@@ -110,9 +111,8 @@ Masonry布局UIScrollView
 ###### 2.3.3、CoreText
 `YYAsyncLayer`绘制
 
-###### 2.3.4、图片绘制
+###### 2.3.4、图片绘制、图片切圆角
 
-###### 2.3.4、图片切圆角
 
 
 
