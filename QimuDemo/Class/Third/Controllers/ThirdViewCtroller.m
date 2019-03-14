@@ -11,6 +11,7 @@
 #import "BJNetworkViewController.h"
 #import "BJDataEncryptionViewController.h"
 #import "BJFMDBViewController.h"
+#import "BJImageLoadViewController.h"
 
 @interface ThirdViewCtroller ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *thirdTableView;
@@ -56,6 +57,8 @@
         cell.textLabel.text = @"数据解析";
     }else if (indexPath.row == 3){
         cell.textLabel.text = @"数据加密";
+    }else if (indexPath.row == 4){
+        cell.textLabel.text = @"图片加载";
     }
 
     return cell;
@@ -72,6 +75,10 @@
 
     }else if (indexPath.row == 3){
         BJDataEncryptionViewController *vc = [[BJDataEncryptionViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 4){
+        
+        BJImageLoadViewController *vc = [[BJImageLoadViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

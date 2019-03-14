@@ -141,7 +141,7 @@
     NSString *key = [self cacheKeyForURL:url];
 
     operation.cacheOperation = [self.imageCache queryCacheOperationForKey:key done:^(UIImage *cachedImage, NSData *cachedData, SDImageCacheType cacheType) {
-        //必经之路
+        //缓存和磁盘中没找到
         if (operation.isCancelled) {
             [self safelyRemoveOperationFromRunning:operation];
             return;
