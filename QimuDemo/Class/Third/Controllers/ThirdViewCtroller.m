@@ -12,6 +12,7 @@
 #import "BJDataEncryptionViewController.h"
 #import "BJFMDBViewController.h"
 #import "BJImageLoadViewController.h"
+#import "BJTableViewHeightViewController.h"
 
 @interface ThirdViewCtroller ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *thirdTableView;
@@ -59,6 +60,8 @@
         cell.textLabel.text = @"数据加密";
     }else if (indexPath.row == 4){
         cell.textLabel.text = @"图片加载";
+    }else if (indexPath.row == 5){
+        cell.textLabel.text = @"UITableView 缓存高度";
     }
 
     return cell;
@@ -79,6 +82,10 @@
     }else if (indexPath.row == 4){
         
         BJImageLoadViewController *vc = [[BJImageLoadViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 5){
+        
+        BJTableViewHeightViewController *vc = [[BJTableViewHeightViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

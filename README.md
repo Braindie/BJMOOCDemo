@@ -152,25 +152,15 @@ BJRefresh仿照MJRefresh实现动画的刷新效果</br>
 #### 4.数据加密
 MD5加密
 
-#### 5.优化——图片加载
+#### 5.优化——图片加载问题
 图片问题是个大问题
 
-#### 6.优化——UITableView-FDTemplateLayoutCell
-个人理解：提前把数据源放到Cell中计算高度
-- A prototype cell of UITableView in storyboard.
+#### 6.优化——UITableView中Cell的高度缓存问题
+`UITableView-FDTemplateLayoutCell`
+
 - Use `-registerNib:forCellReuseIdentifier:` 
 - Use `-registerClass:forCellReuseIdentifier:`
 
-``` objc
-#import "UITableView+FDTemplateLayoutCell.h"
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [tableView fd_heightForCellWithIdentifier:@"reuse identifer" configuration:^(id cell) {
-        // Configure this cell with data, same as what you've done in "-tableView:cellForRowAtIndexPath:"
-        // Like:
-        //    cell.entity = self.feedEntities[indexPath.row];
-    }];
-}
-```
 
 
 

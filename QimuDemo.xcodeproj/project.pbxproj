@@ -194,7 +194,12 @@
 		E5E55238223A20E20093EE41 /* headerView.png in Resources */ = {isa = PBXBuildFile; fileRef = E5E55237223A20E20093EE41 /* headerView.png */; };
 		E5E5523B223A616D0093EE41 /* IMG_0923.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E5E5523A223A616D0093EE41 /* IMG_0923.JPG */; };
 		E5E5523D223A6DA40093EE41 /* large_leaves_70mp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5E5523C223A6DA40093EE41 /* large_leaves_70mp.jpg */; };
+		E5E5A8222240ECFF00E8B20B /* BJTableViewHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E5A8212240ECFF00E8B20B /* BJTableViewHeightViewController.m */; };
+		E5E5A8262240F36800E8B20B /* BJTableViewHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E5A8242240F36800E8B20B /* BJTableViewHeightCell.m */; };
+		E5E5A8272240F36800E8B20B /* BJTableViewHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E5A8252240F36800E8B20B /* BJTableViewHeightCell.xib */; };
 		E5F90E882215653A00BD255D /* BJYYLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F90E872215653A00BD255D /* BJYYLabelView.m */; };
+		E5FEDB732240F74300099A6E /* BJTableViewHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FEDB722240F74300099A6E /* BJTableViewHeightModel.m */; };
+		E5FEDB752240F98500099A6E /* datalist.json in Resources */ = {isa = PBXBuildFile; fileRef = E5FEDB742240F98400099A6E /* datalist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -530,8 +535,16 @@
 		E5E55237223A20E20093EE41 /* headerView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerView.png; sourceTree = "<group>"; };
 		E5E5523A223A616D0093EE41 /* IMG_0923.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0923.JPG; sourceTree = "<group>"; };
 		E5E5523C223A6DA40093EE41 /* large_leaves_70mp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = large_leaves_70mp.jpg; sourceTree = "<group>"; };
+		E5E5A8202240ECFF00E8B20B /* BJTableViewHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTableViewHeightViewController.h; sourceTree = "<group>"; };
+		E5E5A8212240ECFF00E8B20B /* BJTableViewHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTableViewHeightViewController.m; sourceTree = "<group>"; };
+		E5E5A8232240F36800E8B20B /* BJTableViewHeightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTableViewHeightCell.h; sourceTree = "<group>"; };
+		E5E5A8242240F36800E8B20B /* BJTableViewHeightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTableViewHeightCell.m; sourceTree = "<group>"; };
+		E5E5A8252240F36800E8B20B /* BJTableViewHeightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BJTableViewHeightCell.xib; sourceTree = "<group>"; };
 		E5F90E862215653A00BD255D /* BJYYLabelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJYYLabelView.h; sourceTree = "<group>"; };
 		E5F90E872215653A00BD255D /* BJYYLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJYYLabelView.m; sourceTree = "<group>"; };
+		E5FEDB712240F74300099A6E /* BJTableViewHeightModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTableViewHeightModel.h; sourceTree = "<group>"; };
+		E5FEDB722240F74300099A6E /* BJTableViewHeightModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTableViewHeightModel.m; sourceTree = "<group>"; };
+		E5FEDB742240F98400099A6E /* datalist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datalist.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1290,6 +1303,7 @@
 		E5A9E3A51EB19D0B0072EA61 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E5FEDB742240F98400099A6E /* datalist.json */,
 				E5E5523C223A6DA40093EE41 /* large_leaves_70mp.jpg */,
 				E5E5523A223A616D0093EE41 /* IMG_0923.JPG */,
 				E5E55237223A20E20093EE41 /* headerView.png */,
@@ -1461,6 +1475,7 @@
 		E5A9E7681EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5E5A81F2240ECE300E8B20B /* BJTableViewHeight */,
 				E5E55230223A05C50093EE41 /* BJImage */,
 				E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */,
 				E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */,
@@ -1619,6 +1634,20 @@
 			path = BJImage;
 			sourceTree = "<group>";
 		};
+		E5E5A81F2240ECE300E8B20B /* BJTableViewHeight */ = {
+			isa = PBXGroup;
+			children = (
+				E5E5A8202240ECFF00E8B20B /* BJTableViewHeightViewController.h */,
+				E5E5A8212240ECFF00E8B20B /* BJTableViewHeightViewController.m */,
+				E5E5A8232240F36800E8B20B /* BJTableViewHeightCell.h */,
+				E5E5A8242240F36800E8B20B /* BJTableViewHeightCell.m */,
+				E5E5A8252240F36800E8B20B /* BJTableViewHeightCell.xib */,
+				E5FEDB712240F74300099A6E /* BJTableViewHeightModel.h */,
+				E5FEDB722240F74300099A6E /* BJTableViewHeightModel.m */,
+			);
+			path = BJTableViewHeight;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1695,6 +1724,7 @@
 				E5A9E3B61EB19D0B0072EA61 /* data.json in Resources */,
 				E51475C520CF97CD00B79605 /* SGWMultiSelectionAlertView.xib in Resources */,
 				E5A9E3B51EB19D0B0072EA61 /* collectioBtn.png in Resources */,
+				E5E5A8272240F36800E8B20B /* BJTableViewHeightCell.xib in Resources */,
 				E5A9E3BC1EB19D0B0072EA61 /* pic1.jpg in Resources */,
 				E5A9E5571EB19D470072EA61 /* icon_normal@2x.png in Resources */,
 				E5A9E3BB1EB19D0B0072EA61 /* jiantou.png in Resources */,
@@ -1736,6 +1766,7 @@
 				E5A9E55F1EB19D470072EA61 /* zl_X@2x.png in Resources */,
 				E5A9E55E1EB19D470072EA61 /* zl_X.png in Resources */,
 				E5CB0817222F9A84003FD486 /* FirstDetailTableViewViewController.xib in Resources */,
+				E5FEDB752240F98500099A6E /* datalist.json in Resources */,
 				E5A9E5421EB19D470072EA61 /* APNumberPad.bundle in Resources */,
 				E5A9E5481EB19D470072EA61 /* default_header@2x.png in Resources */,
 				E5E5523B223A616D0093EE41 /* IMG_0923.JPG in Resources */,
@@ -1815,6 +1846,7 @@
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E508F86320FD8C9800C9EF26 /* UIView+BJExtension.m in Sources */,
 				E5246AB72232118F00E1656D /* FirstDetailViewController.m in Sources */,
+				E5E5A8262240F36800E8B20B /* BJTableViewHeightCell.m in Sources */,
 				E505EAE320C548B700851764 /* ZLPhotoPickerDatas.m in Sources */,
 				E56882DB22364007007CF4E9 /* BJBrokenLineViewController.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
@@ -1861,6 +1893,7 @@
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
 				E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */,
+				E5E5A8222240ECFF00E8B20B /* BJTableViewHeightViewController.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E59451DC222E636F001F71C5 /* BJPropertyAnimationViewController.m in Sources */,
@@ -1913,6 +1946,7 @@
 				E5CB0818222F9A84003FD486 /* FirstTableViewController.m in Sources */,
 				E505EAEA20C548B700851764 /* ZLPhotoPickerCollectionView.m in Sources */,
 				E57D812B2237D466008F07F4 /* BJKSmoothChartView.m in Sources */,
+				E5FEDB732240F74300099A6E /* BJTableViewHeightModel.m in Sources */,
 				E505EAE720C548B700851764 /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				E505EAEE20C548B700851764 /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 			);

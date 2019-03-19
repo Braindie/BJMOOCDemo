@@ -190,10 +190,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [tableView fd_heightForCellWithIdentifier:@"LiveListCell" configuration:^(id cell) {
+    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"LiveListCell" configuration:^(id cell) {
         LiveListCell *listCell = (LiveListCell *)cell;
         listCell.model = self.myDataArr[indexPath.row];
     }];
+    NSLog(@"%f",height);
+    return height;
 }
 
 
