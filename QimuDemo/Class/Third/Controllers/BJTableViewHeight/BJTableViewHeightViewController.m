@@ -15,6 +15,7 @@
 
 @interface BJTableViewHeightViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *jsonArray;
 @property (nonatomic, strong) NSMutableArray *myDataArray;
 @end
 
@@ -23,6 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"TableView缓存高度";
+    self.isCustomBack = YES;
+    
+    self.isNavCtrlSetRight = YES;
+    [self.rightButton setTitle:@"Action" forState:UIControlStateNormal];
+    
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -48,7 +56,9 @@
             [arr addObject:[[BJTableViewHeightModel alloc] initWithDictionary:obj]];
         }];
         
-        self.myDataArray = arr;
+        self.jsonArray = arr;
+        
+        self.myDataArray = [self.jsonArray mutableCopy];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
@@ -71,28 +81,28 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+//    NSLog(@"heightForRowAtIndexPath");
     /**
-     *   通过key
+     *   通过key作为Dic的key来缓存
      */
-//    BJTableViewHeightModel *model = self.myDataArray[indexPath.row];
-//    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"cell" cacheByKey:model.identifier configuration:^(id cell) {
-//        BJTableViewHeightCell *ce = cell;
-//        ce.fd_enforceFrameLayout = NO;//手动布局还是自动布局，手动布局需要重写sizeThatFits
-//        ce.model = self.myDataArray[indexPath.row];
-//    }];
-    
-    /**
-     *   没有缓存
-     */
-    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"cell" configuration:^(id cell) {
+    BJTableViewHeightModel *model = self.myDataArray[indexPath.row];
+    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"cell" cacheByKey:model.identifier configuration:^(id cell) {
         BJTableViewHeightCell *ce = cell;
         ce.fd_enforceFrameLayout = NO;//手动布局还是自动布局，手动布局需要重写sizeThatFits
         ce.model = self.myDataArray[indexPath.row];
     }];
     
     /**
-     *   通过indexPath
+     *   没有缓存
+     */
+//    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"cell" configuration:^(id cell) {
+//        BJTableViewHeightCell *ce = cell;
+//        ce.fd_enforceFrameLayout = NO;//手动布局还是自动布局，手动布局需要重写sizeThatFits
+//        ce.model = self.myDataArray[indexPath.row];
+//    }];
+    
+    /**
+     *   通过indexPath做为Dic的key来缓存
      */
 //    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"cell" cacheByIndexPath:indexPath configuration:^(id cell) {
 //        BJTableViewHeightCell *ce = cell;
@@ -104,6 +114,41 @@
     return height;
 }
 
+- (void)rightButtonAction:(UIButton *)button{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Action" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"插入一个" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSInteger randomNumber = arc4random_uniform((int32_t)self.jsonArray.count);
+        BJTableViewHeightModel *model = self.jsonArray[randomNumber];
+        
+        [self.myDataArray insertObject:model atIndex:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }];
+    [alert addAction:action1];
+    
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"删除一个" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        if (self.myDataArray.count > 0) {
+            [self.myDataArray removeObjectAtIndex:0];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }];
+    [alert addAction:action2];
+    
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:action3];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
+- (void)dealloc
+{
+    NSLog(@"销毁了");
+}
 
 @end
