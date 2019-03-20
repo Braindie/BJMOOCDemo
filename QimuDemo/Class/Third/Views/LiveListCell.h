@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *titleImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleUrl;
+@property (weak, nonatomic) IBOutlet UIButton *btn;
 
 @end

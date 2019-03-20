@@ -161,7 +161,8 @@ MD5加密
 - Use `-registerNib:forCellReuseIdentifier:` 
 - Use `-registerClass:forCellReuseIdentifier:`
 
-
+#### 7.优化——离屏渲染问题
+代码在1中
 
 
 ## 四、架构

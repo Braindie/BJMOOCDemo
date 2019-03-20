@@ -8,7 +8,6 @@
 
 #import "BJNetworkViewController.h"
 #import "LiveListCell.h"
-#import "UITableView+FDTemplateLayoutCell.h"
 
 #import "LiveListModel.h"
 #import "LiverModel.h"
@@ -43,6 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.isCustomBack = YES;
     self.isNavCtrlSetLeft = NO;
     self.isNavCtrlSetRight = NO;
     self.navigationItem.title = @"网络";
@@ -54,11 +54,8 @@
     [self.view addSubview:self.tableView];
     self.tableView.hidden = YES;
     
-    self.tableView.fd_debugLogEnabled = YES;
 
-    //使用FDTemplateLayoutCell必须要注册
-    UINib *nib = [UINib nibWithNibName:@"LiveListCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"LiveListCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LiveListCell" bundle:nil] forCellReuseIdentifier:@"LiveListCell"];
 }
 
 
@@ -190,13 +187,46 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"LiveListCell" configuration:^(id cell) {
-        LiveListCell *listCell = (LiveListCell *)cell;
-        listCell.model = self.myDataArr[indexPath.row];
-    }];
-    NSLog(@"%f",height);
+    CGFloat height = 220;
     return height;
 }
+
+- (void)dealloc
+{
+    NSLog(@"销毁了");
+}
+
+/**
+ *   延迟加载方法一：ScrollView
+ */
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    if (!decelerate) {
+//        [self loadImagesForOnscreenRows];
+//    }
+//}
+//
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+//    [self loadImagesForOnscreenRows];
+//}
+//
+//- (void)loadImagesForOnscreenRows
+//{
+//    //获取tableview正在window上显示的cell，加载这些cell上图像。通过indexPath可以获取该行上需要展示的cell对象
+//    NSArray * visibleCells = [self.tableView indexPathsForVisibleRows];
+//    for (NSIndexPath * indexPath in visibleCells) {
+//
+//        LiverModel *model = [self.myDataArr objectAtIndex:indexPath.row];
+//
+//        LiveListCell * cell = (LiveListCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+//
+//        cell.model = model;
+//
+//    }
+//}
+
+/**
+ *   延迟加载方法二：Runloop
+ */
 
 
 @end
