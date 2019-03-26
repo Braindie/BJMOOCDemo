@@ -59,52 +59,57 @@
     
     self.titleLabel.text = _model.playerName;
     
-
+    [self performSelector:@selector(imageSetAction) withObject:nil afterDelay:0 inModes:@[NSDefaultRunLoopMode]];
     
-    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:_model.PlayerBigImg]];
+    [self.titleImage setImage:[UIImage imageNamed:@"headerView"]];
     
-    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:_model.PlayerBigImg] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        
-        /**
-         *   椭圆
-         */
-//        //开始对imageView进行画图
-//        UIGraphicsBeginImageContextWithOptions(self.titleImage.bounds.size, NO, 1.0);
-//        // 获得图形上下文
-//        CGContextRef ctx = UIGraphicsGetCurrentContext();
-//        // 设置一个范围
-//        CGRect rect = CGRectMake(0, 0, self.titleImage.frame.size.width, self.titleImage.frame.size.height);
-//        // 根据一个rect创建一个椭圆
-//        CGContextAddEllipseInRect(ctx, rect);
-//        // 裁剪
-//        CGContextClip(ctx);
-//        // 将原照片画到图形上下文
-//        [image drawInRect:rect];
-//        // 从上下文上获取剪裁后的照片
-//        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-//        // 关闭上下文
-//        UIGraphicsEndImageContext();
-        
-        
-        /**
-         *   椭圆
-         */
-//        //开始对imageView进行画图
-//        UIGraphicsBeginImageContextWithOptions(self.titleImage.bounds.size, NO, 0.0);
-//        //使用贝塞尔曲线画出一个圆形图(椭圆）
-//        [[UIBezierPath bezierPathWithRoundedRect:self.titleImage.bounds cornerRadius:30] addClip];
-//        [image drawInRect:self.titleImage.bounds];
-//        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-//        //结束画图
-//        UIGraphicsEndImageContext();
+//    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:_model.PlayerBigImg]];
+    
+//    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:_model.PlayerBigImg] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 //
-//        self.titleImage.image = newImage;
-
-    }];
+//        /**
+//         *   椭圆
+//         */
+////        //开始对imageView进行画图
+////        UIGraphicsBeginImageContextWithOptions(self.titleImage.bounds.size, NO, 1.0);
+////        // 获得图形上下文
+////        CGContextRef ctx = UIGraphicsGetCurrentContext();
+////        // 设置一个范围
+////        CGRect rect = CGRectMake(0, 0, self.titleImage.frame.size.width, self.titleImage.frame.size.height);
+////        // 根据一个rect创建一个椭圆
+////        CGContextAddEllipseInRect(ctx, rect);
+////        // 裁剪
+////        CGContextClip(ctx);
+////        // 将原照片画到图形上下文
+////        [image drawInRect:rect];
+////        // 从上下文上获取剪裁后的照片
+////        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+////        // 关闭上下文
+////        UIGraphicsEndImageContext();
+//
+//
+//        /**
+//         *   椭圆
+//         */
+////        //开始对imageView进行画图
+////        UIGraphicsBeginImageContextWithOptions(self.titleImage.bounds.size, NO, 0.0);
+////        //使用贝塞尔曲线画出一个圆形图(椭圆）
+////        [[UIBezierPath bezierPathWithRoundedRect:self.titleImage.bounds cornerRadius:30] addClip];
+////        [image drawInRect:self.titleImage.bounds];
+////        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+////        //结束画图
+////        UIGraphicsEndImageContext();
+////
+////        self.titleImage.image = newImage;
+//
+//    }];
     
     self.titleUrl.text = _model.countryDetailsUrl;
 }
 
+- (void)imageSetAction{
+    [self.titleImage sd_setImageWithURL:[NSURL URLWithString:self.model.PlayerBigImg]];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
