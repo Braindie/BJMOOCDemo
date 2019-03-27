@@ -18,4 +18,6 @@ target "QimuDemo" do
     pod 'lottie-ios'
     
     pod 'YYAsyncLayer'
+    
+    pod 'TYCyclePagerView'
 end

@@ -4,29 +4,44 @@
 ## 一、布局
 
 ### 界面布局
+
 1. 首页有个UICollectionView基本布局
-    * UICollectionViewFlowLayout是系统提供给我们一个封装好的流布局设置类
+    * `UICollectionViewFlowLayout`是系统提供给我们一个封装好的流布局设置类
+    
     
 ### 筛选条
-2. UICollectionViewLeftAlignedLayout左布局
-    * 自定义UICollectionViewFlowLayout，重载了UICollectionViewLayout的两个方法，代码中有注释
+
+1. 左对齐布局
+`UICollectionViewLeftAlignedLayout`
+    * 自定义`UICollectionViewFlowLayout`，重载了UICollectionViewLayout的两个方法，代码中有注释
+
+2. banner
+* 自定义`UICollectionViewFlowLayout`，实现特殊效果
+
 3. 筛选列表
-    * 列表弹框使用了属性transform动画、alpha动画
+    * 列表弹框使用了属性`transform`动画、`alpha`动画
+    
 4. 筛选条
-    * CALayer的子类了解一下
+    * `CALayer`的子类了解一下
+
 
 ### Masonry
-Masonry布局UIScrollView
+
+Masonry布局`UIScrollView`
+
 
 ### Toast
-1. 自定义实现Alert</br>
-2. 系统实现Alert</br>
-3. UILabel分类实现Toast</br>
-4. Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）</br>
+
+1. 自定义实现Alert
+2. 系统实现Alert
+3. UILabel分类实现Toast
+4. Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）
+
 
 ### 事件响应者链与手势
+
 1. 事件响应者链
-2. 触摸手势与手势
+2. 触摸事件与手势
 
 
 

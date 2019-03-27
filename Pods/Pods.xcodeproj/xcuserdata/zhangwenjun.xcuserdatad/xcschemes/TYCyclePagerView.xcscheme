@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1022513FB9143B301605A9FFBC6848CB"
-               BlueprintName = "YYAsyncLayer"
+               BlueprintIdentifier = "1988305062F4FA2E453F72C8A2CB7F84"
+               BlueprintName = "TYCyclePagerView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libYYAsyncLayer.a">
+               BuildableName = "libTYCyclePagerView.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

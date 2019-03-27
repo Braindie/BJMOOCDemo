@@ -20,9 +20,7 @@
 
 #import "UICollectionViewLeftAlignedLayout.h"
 
-//UICollectionViewLayoutAttributes的实例中包含了诸如边框，中心点，大小，形状，透明度，层次关系和是否隐藏等信息。
-//1.一个cell对应一个UICollectionViewLayoutAttributes对象
-//2.UICollectionViewLayoutAttributes对象决定了cell的摆设位置（frame）
+
 
 @interface UICollectionViewLayoutAttributes (LeftAligned)
 
@@ -66,6 +64,11 @@
 
 //返回对应于indexPath的位置的cell的布局属性
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //UICollectionViewLayoutAttributes的实例中包含了诸如边框，中心点，大小，形状，透明度，层次关系和是否隐藏等信息。
+    //1.一个cell对应一个UICollectionViewLayoutAttributes对象
+    //2.UICollectionViewLayoutAttributes对象决定了cell的摆设位置（frame）
+    
     UICollectionViewLayoutAttributes* currentItemAttributes = [super layoutAttributesForItemAtIndexPath:indexPath];
     UIEdgeInsets sectionInset = [self evaluatedSectionInsetForItemAtIndex:indexPath.section];
 

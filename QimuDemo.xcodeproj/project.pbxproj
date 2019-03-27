@@ -185,6 +185,8 @@
 		E5CB0822222FA561003FD486 /* BJNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0821222FA561003FD486 /* BJNetworkViewController.m */; };
 		E5CB0825222FAC14003FD486 /* BJDataEncryptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0824222FAC14003FD486 /* BJDataEncryptionViewController.m */; };
 		E5CB0828222FAE6E003FD486 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0827222FAE6E003FD486 /* NSString+MD5.m */; };
+		E5E254E1224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */; };
+		E5E254E2224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */; };
 		E5E49C462109CE23004ABAD1 /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C442109CE23004ABAD1 /* BJWaveView.m */; };
 		E5E49C4A2109E38F004ABAD1 /* BJMenuRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C492109E38F004ABAD1 /* BJMenuRightView.m */; };
 		E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C4D2109E4EF004ABAD1 /* BJMenuBarView.m */; };
@@ -520,6 +522,9 @@
 		E5CB0824222FAC14003FD486 /* BJDataEncryptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJDataEncryptionViewController.m; sourceTree = "<group>"; };
 		E5CB0826222FAE6E003FD486 /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		E5CB0827222FAE6E003FD486 /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		E5E254DE224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerCollectionViewCell.h; sourceTree = "<group>"; };
+		E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerCollectionViewCell.m; sourceTree = "<group>"; };
+		E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYCyclePagerCollectionViewCell.xib; sourceTree = "<group>"; };
 		E5E49C432109CE23004ABAD1 /* BJWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWaveView.h; sourceTree = "<group>"; };
 		E5E49C442109CE23004ABAD1 /* BJWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWaveView.m; sourceTree = "<group>"; };
 		E5E49C482109E38F004ABAD1 /* BJMenuRightView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJMenuRightView.h; sourceTree = "<group>"; };
@@ -1005,6 +1010,9 @@
 			children = (
 				E5246AB52232118F00E1656D /* FirstDetailViewController.h */,
 				E5246AB62232118F00E1656D /* FirstDetailViewController.m */,
+				E5E254DE224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.h */,
+				E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */,
+				E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */,
 			);
 			name = BJScreening;
 			path = QimuDemo/Class/FIrst/Controllers/BJScreening;
@@ -1752,6 +1760,7 @@
 				E5A9E5431EB19D470072EA61 /* btn_clear_input_normal.png in Resources */,
 				E5E55238223A20E20093EE41 /* headerView.png in Resources */,
 				E5A9E5591EB19D470072EA61 /* login.png in Resources */,
+				E5E254E2224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib in Resources */,
 				E5A9E5521EB19D470072EA61 /* icon_current@3x.png in Resources */,
 				E5A9E3B41EB19D0B0072EA61 /* 5.31.03.png in Resources */,
 				E5A9E54C1EB19D470072EA61 /* ic_checkbox_pressed@2x.png in Resources */,
@@ -1900,6 +1909,7 @@
 				E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
 				E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */,
+				E5E254E1224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
 				E5246AC22232462B00E1656D /* BJTouchBaseView.m in Sources */,
