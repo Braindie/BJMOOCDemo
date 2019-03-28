@@ -38,9 +38,9 @@ Masonry布局`UIScrollView`
 4. Layer层实现Toast（switch case中初始化对象要用放入大括号里面，否则会报错）
 
 
-### 事件响应者链与手势
-
+### 事件响应者链
 1. 事件响应者链
+
 2. 触摸事件与手势
 
 

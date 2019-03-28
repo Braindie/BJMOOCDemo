@@ -64,6 +64,7 @@
 		E51CFD0E222522B50050FFAA /* MVPPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD0D222522B50050FFAA /* MVPPresenter.m */; };
 		E51CFD11222522C10050FFAA /* MVPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD10222522C10050FFAA /* MVPModel.m */; };
 		E51CFD14222522CE0050FFAA /* MVPView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51CFD13222522CE0050FFAA /* MVPView.m */; };
+		E5213E3B224CB2B400754414 /* BJTouchSupperpassView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5213E3A224CB2B400754414 /* BJTouchSupperpassView.m */; };
 		E5229CD121943E94004CC67B /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5229CD021943E94004CC67B /* BookModel.m */; };
 		E5229CD321943EC7004CC67B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD221943EC7004CC67B /* CoreTelephony.framework */; };
 		E5229CD521943ED7004CC67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5229CD421943ED7004CC67B /* Security.framework */; };
@@ -334,6 +335,8 @@
 		E51CFD10222522C10050FFAA /* MVPModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPModel.m; sourceTree = "<group>"; };
 		E51CFD12222522CE0050FFAA /* MVPView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPView.h; sourceTree = "<group>"; };
 		E51CFD13222522CE0050FFAA /* MVPView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPView.m; sourceTree = "<group>"; };
+		E5213E39224CB2B400754414 /* BJTouchSupperpassView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTouchSupperpassView.h; sourceTree = "<group>"; };
+		E5213E3A224CB2B400754414 /* BJTouchSupperpassView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTouchSupperpassView.m; sourceTree = "<group>"; };
 		E5229CCF21943E94004CC67B /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
 		E5229CD021943E94004CC67B /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
 		E5229CD221943EC7004CC67B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -1037,6 +1040,8 @@
 				E5246AC12232462B00E1656D /* BJTouchBaseView.m */,
 				E5246AC32232463E00E1656D /* BJTouchTestView.h */,
 				E5246AC42232463E00E1656D /* BJTouchTestView.m */,
+				E5213E39224CB2B400754414 /* BJTouchSupperpassView.h */,
+				E5213E3A224CB2B400754414 /* BJTouchSupperpassView.m */,
 			);
 			name = BJTouchAndGesture;
 			path = QimuDemo/Class/FIrst/Controllers/BJTouchAndGesture;
@@ -1886,6 +1891,7 @@
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,
 				E56882BE22360A3C007CF4E9 /* BJWaveViewController.m in Sources */,
 				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
+				E5213E3B224CB2B400754414 /* BJTouchSupperpassView.m in Sources */,
 				E5E55236223A07290093EE41 /* BJImageLoadViewController.m in Sources */,
 				E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
