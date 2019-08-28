@@ -186,6 +186,7 @@
 		E5CB0822222FA561003FD486 /* BJNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0821222FA561003FD486 /* BJNetworkViewController.m */; };
 		E5CB0825222FAC14003FD486 /* BJDataEncryptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0824222FAC14003FD486 /* BJDataEncryptionViewController.m */; };
 		E5CB0828222FAE6E003FD486 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0827222FAE6E003FD486 /* NSString+MD5.m */; };
+		E5D82552224DFA63000FB18A /* BJTouchTestButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D82551224DFA63000FB18A /* BJTouchTestButton.m */; };
 		E5E254E1224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */; };
 		E5E254E2224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */; };
 		E5E49C462109CE23004ABAD1 /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C442109CE23004ABAD1 /* BJWaveView.m */; };
@@ -525,6 +526,8 @@
 		E5CB0824222FAC14003FD486 /* BJDataEncryptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJDataEncryptionViewController.m; sourceTree = "<group>"; };
 		E5CB0826222FAE6E003FD486 /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		E5CB0827222FAE6E003FD486 /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		E5D82550224DFA63000FB18A /* BJTouchTestButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTouchTestButton.h; sourceTree = "<group>"; };
+		E5D82551224DFA63000FB18A /* BJTouchTestButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTouchTestButton.m; sourceTree = "<group>"; };
 		E5E254DE224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerCollectionViewCell.h; sourceTree = "<group>"; };
 		E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerCollectionViewCell.m; sourceTree = "<group>"; };
 		E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYCyclePagerCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1042,6 +1045,8 @@
 				E5246AC42232463E00E1656D /* BJTouchTestView.m */,
 				E5213E39224CB2B400754414 /* BJTouchSupperpassView.h */,
 				E5213E3A224CB2B400754414 /* BJTouchSupperpassView.m */,
+				E5D82550224DFA63000FB18A /* BJTouchTestButton.h */,
+				E5D82551224DFA63000FB18A /* BJTouchTestButton.m */,
 			);
 			name = BJTouchAndGesture;
 			path = QimuDemo/Class/FIrst/Controllers/BJTouchAndGesture;
@@ -1883,6 +1888,7 @@
 				E51CFD0E222522B50050FFAA /* MVPPresenter.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
 				E56882D3223635FA007CF4E9 /* BJBarChartViewController.m in Sources */,
+				E5D82552224DFA63000FB18A /* BJTouchTestButton.m in Sources */,
 				E508F86820FDF69100C9EF26 /* BJRefreshStateHeader.m in Sources */,
 				E5BCAA75215E39350020DD7B /* SecondListViewController.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
