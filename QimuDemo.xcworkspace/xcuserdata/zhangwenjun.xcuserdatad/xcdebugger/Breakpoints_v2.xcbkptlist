@@ -650,7 +650,7 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "590497586.581292"
+                  timestampString = "590570949.698723"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "273"
@@ -665,7 +665,7 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "590497586.5831259"
+                  timestampString = "590570949.7011631"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "273"
@@ -746,7 +746,7 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "590497586.652855"
+                  timestampString = "590570949.719542"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "225"
@@ -761,7 +761,7 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "590497586.654806"
+                  timestampString = "590570949.7217391"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "225"
@@ -825,149 +825,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "574254640.422891"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "-loadImageWithURL:options:progress:completed:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "574254640.423003"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "-loadImageWithURL:options:progress:completed:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "574254640.423115"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "-loadImageWithURL:options:progress:completed:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[SDWebImageManager loadImageWithURL:options:progress:completed:]_block_invoke"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "590497586.6833709"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "1134">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[SDWebImageManager loadImageWithURL:options:progress:completed:]_block_invoke_2"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "590497586.685346"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_e8_32s40s48s56s64s72w"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "590497586.687322"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-            timestampString = "574243190.130887"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "-downloadImageWithURL:options:progress:completed:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-            timestampString = "574254640.423623"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "-loadImageWithURL:options:progress:completed:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-            timestampString = "574243190.1316971"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
-            landmarkName = "-URLSession:task:didCompleteWithError:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
             timestampString = "574243190.132055"
             startingColumnNumber = "9223372036854775807"
@@ -1000,22 +857,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-            timestampString = "574243190.132751"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
-            landmarkName = "-URLSession:dataTask:willCacheResponse:completionHandler:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m"
             timestampString = "574242386.870384"
             startingColumnNumber = "9223372036854775807"
@@ -1039,70 +880,6 @@
             startingLineNumber = "389"
             endingLineNumber = "389"
             landmarkName = "-URLSession:task:didCompleteWithError:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-            timestampString = "574243190.133178"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "-addProgressCallback:completedBlock:forURL:createCallback:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SDWebImageDownloader addProgressCallback:completedBlock:forURL:createCallback:]"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-                  timestampString = "590497586.730912"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
-                  offsetFromSymbolStart = "300">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__81-[SDWebImageDownloader addProgressCallback:completedBlock:forURL:createCallback:]_block_invoke"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-                  timestampString = "590497586.732971"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
-                  offsetFromSymbolStart = "15">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-            timestampString = "574243190.133682"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "-addProgressCallback:completedBlock:forURL:createCallback:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1273,7 +1050,7 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "590497586.8195651"
+                  timestampString = "590570949.8596849"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "221"
@@ -1288,7 +1065,7 @@
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "590497586.8218679"
+                  timestampString = "590570949.862239"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "211"

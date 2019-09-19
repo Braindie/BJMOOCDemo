@@ -22,7 +22,7 @@
     
     self.navigationItem.title = @"图片加载";
     
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 300)];
 //    _imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:_imageView];
     
@@ -42,9 +42,9 @@
 //    _imageView.image = image;
     
     //方法二：数据不缓存，节省内存
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"large_leaves_70mp" ofType:@"jpg"];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    _imageView.image = image;
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"large_leaves_70mp" ofType:@"jpg"];
+//    UIImage *image = [UIImage imageWithContentsOfFile:path];
+//    _imageView.image = image;
     
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"headerView" ofType:@"png"];
 //    UIImage *image = [[UIImage alloc] initWithContentsOfFile:path];

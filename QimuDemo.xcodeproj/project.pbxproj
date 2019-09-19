@@ -1206,10 +1206,10 @@
 		E57D81222237A196008F07F4 /* BJFMDB */ = {
 			isa = PBXGroup;
 			children = (
-				E57D81272237A235008F07F4 /* UserModel.h */,
-				E57D81262237A235008F07F4 /* UserModel.m */,
 				E57D81232237A1A9008F07F4 /* BJFMDBViewController.h */,
 				E57D81242237A1A9008F07F4 /* BJFMDBViewController.m */,
+				E57D81272237A235008F07F4 /* UserModel.h */,
+				E57D81262237A235008F07F4 /* UserModel.m */,
 			);
 			path = BJFMDB;
 			sourceTree = "<group>";
@@ -1493,13 +1493,13 @@
 		E5A9E7681EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5E5A81F2240ECE300E8B20B /* BJTableViewHeight */,
-				E5E55230223A05C50093EE41 /* BJImage */,
 				E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */,
 				E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */,
-				E57D81222237A196008F07F4 /* BJFMDB */,
 				E5CB081E222FA54A003FD486 /* Network */,
+				E5E55230223A05C50093EE41 /* BJImage */,
 				E5CB081F222FA54A003FD486 /* DataEncryption */,
+				E57D81222237A196008F07F4 /* BJFMDB */,
+				E5E5A81F2240ECE300E8B20B /* BJTableViewHeight */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
