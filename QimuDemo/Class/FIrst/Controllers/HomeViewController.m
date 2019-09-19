@@ -231,11 +231,17 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
                 [SGWBlockAlertManager alertWithTitle:@"" message:@"我是提示框" cancelButtonTitle:@"取消"];
             }
                 break;
-            case 2:{
+                
+            default:
+                break;
+        }
+    }else if (indexPath.section == 2){
+        switch (indexPath.row) {
+            case 0:{
                 [UILabel showErrorProgressLabelWithString:@"我就是个提示框，我就是个提示框"];
             }
                 break;
-            case 3:{
+            case 1:{
                 CGSize toastSize = [HxToastView sizeForText:@"我就是个提示框，我就是个提示框"];
                 HxToastView *toastView = [[HxToastView alloc] initWithFrame:CGRectZero];
                 toastView.frame = CGRectMake((self.view.bounds.size.width - toastSize.width) / 2, (SCREEN_HEIGHT-toastSize.height-10)/2 - 20, toastSize.width, toastSize.height+10);
@@ -244,11 +250,11 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
                 [toastView setToastText:@"我就是个提示框，我就是个提示框"];
                 [toastView show:YES];
             }
-                break;
+                
             default:
                 break;
         }
-    }else if (indexPath.section == 2){
+    }else if (indexPath.section == 3) {
         switch (indexPath.row) {
             case 0:{
                 BJTouchAndGestureViewController *vc = [[BJTouchAndGestureViewController alloc] init];

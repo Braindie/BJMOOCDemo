@@ -22,11 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
     self.isCustomBack = YES;
     
-    self.baseView = [[BJTouchBaseView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    
+    self.baseView = [[BJTouchBaseView alloc] initWithFrame:CGRectMake(0, 100, 300, 300)];
     self.baseView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.baseView];
     
@@ -35,17 +34,27 @@
     self.testView.backgroundColor = [UIColor grayColor];
     [self.baseView addSubview:self.testView];
     
+
+    
+    // UIControl的addTarget事件
+//    [self testUIControl];
+    
+}
+
+- (void)testUIControl {
     
     self.testBtn = [BJTouchTestButton buttonWithType:UIButtonTypeCustom];
-    self.testBtn.frame = CGRectMake(100, 200, 100, 100);
+    self.testBtn.frame = CGRectMake(100, 200, 100, 50);
     self.testBtn.backgroundColor = [UIColor redColor];
     [self.testBtn setTitle:@"测试按钮" forState:UIControlStateNormal];
     [self.baseView addSubview:self.testBtn];
+    
     
 //    self.testBtn.userInteractionEnabled = NO;//1
 //    self.testBtn.hidden = YES;//2
 //    self.testBtn.alpha = 0.01;//3
     
+    // 可添加多个selecter
     [self.testBtn addTarget:self action:@selector(btnAction1:) forControlEvents:UIControlEventTouchUpInside];
     [self.testBtn addTarget:self action:@selector(btnAction2:) forControlEvents:UIControlEventTouchUpInside];
 

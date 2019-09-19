@@ -393,54 +393,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QimuDemo/MyFramework/BJCustomAlertView/CustomUIAlertView/SGWBlockAlertManager.m"
-            timestampString = "550483369.2095309"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "+initWithTitle:message:cancelButtonTitle:cancelBlock:confirmButtonTitle:confirmBlock:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QimuDemo/MyFramework/BJCustomAlertView/CustomUIAlertView/SGWBlockAlertManager.m"
-            timestampString = "550483369.209644"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "+initWithTitle:message:cancelButtonTitle:cancelBlock:confirmButtonTitle:confirmBlock:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QimuDemo/MyFramework/BJCustomAlertView/CustomUIAlertView/SGWBlockAlertManager.m"
-            timestampString = "550483369.20972"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "+initWithTitle:message:cancelButtonTitle:cancelBlock:confirmButtonTitle:confirmBlock:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/First/Controllers/FirstDetailTableViewViewController.m"
             timestampString = "551169224.544138"
             startingColumnNumber = "9223372036854775807"
@@ -697,13 +649,13 @@
                   symbolName = "+[ZDBModel updateObjects:]"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "575536736.759041"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
+                  timestampString = "590497586.581292"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "273"
                   endingLineNumber = "273"
-                  offsetFromSymbolStart = "576">
+                  offsetFromSymbolStart = "697">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -712,28 +664,13 @@
                   symbolName = "__26+[ZDBModel updateObjects:]_block_invoke"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "575536736.761575"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
+                  timestampString = "590497586.5831259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "273"
                   endingLineNumber = "273"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.169"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "575536736.76597"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "273"
-                  endingLineNumber = "273"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -808,13 +745,13 @@
                   symbolName = "+[ZDBModel deleteObjects:]"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "575536736.798458"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
+                  timestampString = "590497586.652855"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "225"
                   endingLineNumber = "225"
-                  offsetFromSymbolStart = "576">
+                  offsetFromSymbolStart = "697">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -823,28 +760,13 @@
                   symbolName = "__26+[ZDBModel deleteObjects:]_block_invoke"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "575536736.802255"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
+                  timestampString = "590497586.654806"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "225"
                   endingLineNumber = "225"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.145"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/QimuDemo/MyFramework/ZDBModel/ZDBModel.m"
-                  timestampString = "575536736.804888"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "225"
-                  endingLineNumber = "225"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -951,13 +873,13 @@
                   symbolName = "__65-[SDWebImageManager loadImageWithURL:options:progress:completed:]_block_invoke"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "575536736.832481"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
+                  timestampString = "590497586.6833709"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "177"
                   endingLineNumber = "177"
-                  offsetFromSymbolStart = "912">
+                  offsetFromSymbolStart = "1134">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -966,28 +888,28 @@
                   symbolName = "__65-[SDWebImageManager loadImageWithURL:options:progress:completed:]_block_invoke_2"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "575536736.834704"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
+                  timestampString = "590497586.685346"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "178"
                   endingLineNumber = "178"
-                  offsetFromSymbolStart = "128">
+                  offsetFromSymbolStart = "152">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.102"
+                  symbolName = "__destroy_helper_block_e8_32s40s48s56s64s72w"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "575536736.836684"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
+                  timestampString = "590497586.687322"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "177"
                   endingLineNumber = "177"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1142,13 +1064,13 @@
                   symbolName = "-[SDWebImageDownloader addProgressCallback:completedBlock:forURL:createCallback:]"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-                  timestampString = "575536736.876719"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
+                  timestampString = "590497586.730912"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "234"
                   endingLineNumber = "234"
-                  offsetFromSymbolStart = "336">
+                  offsetFromSymbolStart = "300">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1157,28 +1079,13 @@
                   symbolName = "__81-[SDWebImageDownloader addProgressCallback:completedBlock:forURL:createCallback:]_block_invoke"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-                  timestampString = "575536736.878747"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
+                  timestampString = "590497586.732971"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "234"
                   endingLineNumber = "234"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.226"
-                  moduleName = "QimuDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m"
-                  timestampString = "575536736.8813421"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "15">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1365,28 +1272,28 @@
                   symbolName = "__65-[SDWebImageManager loadImageWithURL:options:progress:completed:]_block_invoke_3"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "575536736.9302779"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
+                  timestampString = "590497586.8195651"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "221"
                   endingLineNumber = "221"
-                  offsetFromSymbolStart = "432">
+                  offsetFromSymbolStart = "463">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.98"
+                  symbolName = "__copy_helper_block_e8_32s40s48s56s64s72s80b"
                   moduleName = "QimuDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zcgt_ios_01/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
-                  timestampString = "575536736.932065"
+                  urlString = "file:///Users/zhangwenjun/GitHub/BJMoocDemo/Pods/SDWebImage/SDWebImage/SDWebImageManager.m"
+                  timestampString = "590497586.8218679"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "211"
                   endingLineNumber = "211"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1420,22 +1327,6 @@
             startingLineNumber = "254"
             endingLineNumber = "254"
             landmarkName = "-storeImageDataToDisk:forKey:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QimuDemo/Class/FIrst/Controllers/BJTouchAndGesture/BJTouchAndGestureViewController.m"
-            timestampString = "575536797.123548"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "-btnAction1:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

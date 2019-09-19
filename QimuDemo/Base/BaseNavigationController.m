@@ -42,7 +42,7 @@
 //      self.navigationBar.translucent = NO;
     
       //设置导航栏背景图片
-      [self themeNameChanged:nil];
+//      [self themeNameChanged:nil];
     
 }
 

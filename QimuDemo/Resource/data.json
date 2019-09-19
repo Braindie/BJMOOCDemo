@@ -9,59 +9,32 @@
                ]
   },
   {
-  "Type": "Toast弹框",
+  "Type": "Alert弹框",
   "Symptoms": [
                {
                "Food_Name": "SGWCustomBlockAlertManager.h",
                },
                {
                "Food_Name": "SGWBlockAlertManager.h",
-               },
-               {
-               "Food_Name": "UILabel+StringFrame.h",
-               },
-               {
-               "Food_Name": "HxToastView.h",
                }
                ]
+  },
+  {
+      "Type": "Toast弹框",
+      "Symptoms": [
+          {
+              "Food_Name": "UILabel+StringFrame.h",
+          },
+          {
+              "Food_Name": "HxToastView.h",
+          }
+      ]
   },
   {
   "Type": "手势与响应者链",
   "Symptoms": [
                {
                "Food_Name": "触摸事件和手势识别",
-               },
-               {
-               "Food_Name": "--",
-               },
-               {
-               "Food_Name": "--",
-               "Picture":"Picture"
-               },
-               {
-               "Food_Name": "--",
-               "Picture":"Picture"
-               },
-               ]
-  },
-  {
-  "Type": "--",
-  "Symptoms": [
-               {
-               "Food_Name": "--",
-               "Picture":"Picture"
-               },
-               {
-               "Food_Name": "--",
-               "Picture":"Picture"
-               },
-               {
-               "Food_Name": "--",
-               "Picture":"Picture"
-               },
-               {
-               "Food_Name": "--",
-               "Picture":"Picture"
                }
                ]
   }

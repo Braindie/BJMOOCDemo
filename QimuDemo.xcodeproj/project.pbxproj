@@ -1039,10 +1039,10 @@
 			children = (
 				E5246ABD22323E0E00E1656D /* BJTouchAndGestureViewController.h */,
 				E5246ABE22323E0E00E1656D /* BJTouchAndGestureViewController.m */,
-				E5246AC02232462B00E1656D /* BJTouchBaseView.h */,
-				E5246AC12232462B00E1656D /* BJTouchBaseView.m */,
 				E5246AC32232463E00E1656D /* BJTouchTestView.h */,
 				E5246AC42232463E00E1656D /* BJTouchTestView.m */,
+				E5246AC02232462B00E1656D /* BJTouchBaseView.h */,
+				E5246AC12232462B00E1656D /* BJTouchBaseView.m */,
 				E5213E39224CB2B400754414 /* BJTouchSupperpassView.h */,
 				E5213E3A224CB2B400754414 /* BJTouchSupperpassView.m */,
 				E5D82550224DFA63000FB18A /* BJTouchTestButton.h */,
@@ -1700,7 +1700,7 @@
 				TargetAttributes = {
 					787D84461C0EC08100DC473D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = F79H2LLK8B;
+						DevelopmentTeam = 3KN87CF8LK;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1715,6 +1715,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2066,7 +2067,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F79H2LLK8B;
+				DEVELOPMENT_TEAM = 3KN87CF8LK;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2084,10 +2085,10 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 				);
 				INFOPLIST_FILE = QimuDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = China.QimuDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.China.QimuDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2103,7 +2104,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F79H2LLK8B;
+				DEVELOPMENT_TEAM = 3KN87CF8LK;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2121,10 +2122,10 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 				);
 				INFOPLIST_FILE = QimuDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = China.QimuDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.China.QimuDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -24,35 +24,36 @@
         self.supperpassView.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:self.supperpassView];
         
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-//        [self addGestureRecognizer:tap];
+        // 手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+        [self addGestureRecognizer:tap];
         
         //设置为NO后，手势就不会影响触摸了
-//        tap.cancelsTouchesInView = NO;
+        tap.cancelsTouchesInView = NO;
     }
     return self;
 }
 
-//- (void)tapAction{
-//    NSLog(@"===> testTap");
+- (void)tapAction{
+    NSLog(@"===> testTap");
+}
+
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s",__func__);
 //}
-
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%s",__func__);
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%s",__func__);
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%s",__func__);
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%s",__func__);
-}
+//
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s",__func__);
+//}
+//
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s",__func__);
+//}
+//
+//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s",__func__);
+//}
 
 
 
