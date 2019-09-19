@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"UIViewPropertyAnimator";
+    self.navigationItem.title = @"UIViewPropertyAnimator交互动画";
     self.isCustomBack = YES;
 
     

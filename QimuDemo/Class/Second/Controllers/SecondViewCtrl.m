@@ -19,22 +19,56 @@
 #import "BJPropertyAnimationViewController.h"
 #import "BJDynamicsViewController.h"
 
+#import "BJViewAnimationViewController.h"
+
+#import "BJLabelViewController.h"
+
+
+@interface SecondViewCtrl ()<UITableViewDataSource,UITableViewDelegate>
+{
+    int PositionY;
+    float proportion;
+    int OffsetY;
+    CGPoint lastOffsetYaxis;
+    
+    
+}
+
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic ,strong) NSMutableArray *dataArr0;
+@property (nonatomic ,strong) NSMutableArray *dataArr2;
+@property (nonatomic ,strong) NSMutableArray *dataArr3;
+@property (nonatomic ,strong) NSMutableArray *dataArr4;
+
+@property (nonatomic ,strong) NSString *string1;
+@property (nonatomic ,strong) NSString *string2;
+@property (nonatomic ,strong) NSString *string3;
+@property (nonatomic ,strong) NSString *string4;
+
+
+@property (nonatomic ,assign) BOOL *ISBar;
+
+@property (nonatomic ,assign) CGFloat lastOffSet;
+
+@end
+
 @implementation SecondViewCtrl
 
 
 
 - (void)viewDidLoad{
-
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"动画、绘制";
+
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.isNavCtrlSetLeft = YES;
-    self.isNavCtrlSetRight = YES;
-    
-    [self.leftButton setTitle:@"CoreAnimation" forState:UIControlStateNormal];
-    [self.rightButton setTitle:@"CoreGraphics" forState:UIControlStateNormal];
+//    self.isNavCtrlSetLeft = YES;
+//    self.isNavCtrlSetRight = YES;
+//    [self.leftButton setTitle:@"CoreAnimation" forState:UIControlStateNormal];
+//    [self.rightButton setTitle:@"CoreGraphics" forState:UIControlStateNormal];
 
-    self.navigationItem.title = @"UIKit动画";
 
 //    //加载数据
     [self loadTopData];
@@ -44,35 +78,7 @@
 
 }
 
-- (void)leftButtonAction:(UIButton *)button{
-    SecondLeftDetailViewController *vc = [[SecondLeftDetailViewController alloc] init];
-//    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (void)rightButtonAction:(UIButton *)button{
-    FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
-//    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-
 - (void)loadTopData{
-
-    NSArray *dataArr1 = [NSArray arrayWithObjects:
-                         @"大小动画（改变frame）",
-                         @"拉伸动画（改变bounds）",
-                         @"转移动画（改变center）",
-                         @"旋转动画（改变transform）,(anchorPoint和position）",
-                         @"透明度动画（改变alpha）",
-                         @"Keyframe",
-                         @"Spring",
-                         @"Transition",
-                         @"",
-                         @"UIViewPropertyAnimator",
-                         @"",
-                         @"UIDynamicAnimator",
-                         nil];
 
     NSArray *arr10 = [NSArray arrayWithObjects:@"最新",@"最热",nil];
     NSArray *arr11 = [NSArray arrayWithObjects:@"全部",@"河南",@"河北",@"湖南",@"湖北",@"北京",@"天津",@"上海",@"广州",@"深圳", nil];
@@ -82,24 +88,19 @@
     NSArray *arr13 = [NSArray arrayWithObjects:@"全部",@"琅琊榜",@"伪装者",@"夏洛特烦恼",@"钛",@"子弹",@"灭绝",@"蚁人", nil];
     NSArray *arr14 = [NSArray arrayWithObjects:@"全部",@"电影1",@"电影2",@"电影3",@"电影4",@"电影5",@"电影6",@"电影7", nil];
 
-
-    self.dataArr1 = [NSMutableArray arrayWithArray:dataArr1];
-
     self.dataArr0 = [NSMutableArray arrayWithArray:arr10];
     self.dataArr2 = [NSMutableArray arrayWithArray:arr11];
     self.dataArr3 = [NSMutableArray arrayWithArray:arr12];
     self.dataArr4 = [NSMutableArray arrayWithObjects:arr13,arr14, nil];
-
-
 }
 
 
 - (void)creatView{
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49-64) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49-64) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
-    self.tableView.backgroundColor = [UIColor myColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
     self.tableView.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{
@@ -120,74 +121,90 @@
 
 
 #pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SecondListViewController *vc = [[SecondListViewController alloc] init];
-    if (indexPath.row == 0) {
-        vc.animationType = @"大小动画";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 1){
-        vc.animationType = @"拉伸动画";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 2){
-        vc.animationType = @"转移动画";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 3){
-        vc.animationType = @"旋转动画";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 4){
-        vc.animationType = @"透明度动画";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 5){
-        vc.animationType = @"Keyframe";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 6){
-        vc.animationType = @"Spring";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 7){
-        vc.animationType = @"Transition";
-        [self.navigationController pushViewController:vc animated:YES];
-
-    }else if (indexPath.row == 8){
-
-    }else if (indexPath.row == 9){
-        BJPropertyAnimationViewController *vc = [[BJPropertyAnimationViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 10){
-
-    }else if (indexPath.row == 11){
-        BJDynamicsViewController *vc = [[BJDynamicsViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArr1.count;
+    if (section == 0) {
+        return 3;
+    } else if (section == 1) {
+        return 1;
+    } else if (section == 2) {
+        return 1;
+    } else {
+        return 1;
+    }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *cellIdentifer = @"cellIdentefer";
     MyTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifer];
     if (cell == nil) {
         cell = [[MyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
     }
-    cell.label.text = self.dataArr1[indexPath.row];
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.label.text = @"UIAnimation";
+        } else if (indexPath.row == 1) {
+            cell.label.text = @"UIViewPropertyAnimator";
+        } else {
+            cell.label.text = @"UIDynamicAnimator";
+        }
+        
+    } else if (indexPath.section == 1) {
+        cell.label.text = @"CoreAnimation";
+    } else if (indexPath.section == 2) {
+        cell.label.text = @"CoreGraphics";
+    } else {
+        cell.label.text = @"CoreText";
+    }
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            BJViewAnimationViewController *vc = [[BJViewAnimationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        } else if (indexPath.row == 1) {
+            BJPropertyAnimationViewController *vc = [[BJPropertyAnimationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        } else {
+            BJDynamicsViewController *vc = [[BJDynamicsViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+
+        }
+
+    } else if (indexPath.section == 1) {
+        SecondLeftDetailViewController *vc = [[SecondLeftDetailViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } else if (indexPath.section == 2) {
+        FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    } else {
+        BJLabelViewController *vc = [[BJLabelViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 44;
 }
 
 

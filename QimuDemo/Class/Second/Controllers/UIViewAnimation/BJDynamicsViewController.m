@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"UIDynamicAnimator";
+    self.navigationItem.title = @"UIDynamicAnimator力学动画";
     self.view.backgroundColor = [UIColor whiteColor];
     self.isCustomBack = YES;
 
@@ -56,7 +56,7 @@
     
     
     //重力行为
-//    [self testGravity];
+    [self testGravity];
     
     //碰撞行为（配合重力行为使用）
 //    [self testCollision];
@@ -68,7 +68,7 @@
 //    [self testSnap];
     
     //吸附行为
-    [self testAttachment];
+//    [self testAttachment];
 }
 
 

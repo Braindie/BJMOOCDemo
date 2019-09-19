@@ -9,7 +9,6 @@
 #import "FirstRightDetailViewController.h"
 #import "BJBarChartViewController.h"
 #import "BJLineChartViewController.h"
-#import "BJLabelViewController.h"
 #import "BJImageViewController.h"
 
 @interface FirstRightDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -47,8 +46,6 @@
     }else if (indexPath.row == 1){
         cell.textLabel.text = @"折线图/平滑折线图";
     }else if (indexPath.row == 2){
-        cell.textLabel.text = @"CoreText & YYAsyncLayer";
-    }else if (indexPath.row == 3){
         cell.textLabel.text = @"绘制圆角";
     }
     
@@ -71,11 +68,6 @@
         [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 2){
-        
-        BJLabelViewController *vc = [[BJLabelViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-        
-    }else if (indexPath.row == 3){
         
         BJImageViewController *vc = [[BJImageViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];

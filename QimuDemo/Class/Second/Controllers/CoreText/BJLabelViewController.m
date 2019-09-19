@@ -18,11 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"CoreText";
+    self.navigationItem.title = @"CoreText & YYAsyncLayer";
     self.isCustomBack = YES;
     
     
-    BJYYLabelView *yyLabelView = [[BJYYLabelView alloc] initWithFrame:CGRectMake(50, 500, 100, 100)];
+    BJYYLabelView *yyLabelView = [[BJYYLabelView alloc] initWithFrame:CGRectMake(50, 200, 300, 100)];
     yyLabelView.backgroundColor = [UIColor orangeColor];
     yyLabelView.textStr = [NSString stringWithFormat:@"http://www.baidu.com ✺◟(∗❛ัᴗ❛ั∗)◞✺ ✺◟(∗❛ัᴗ❛ั∗)◞✺ 😀😖😐😣😡🚖🚌🚋🎊💖💗💛💙🏨🏦🏫 [微笑] ✺◟(∗❛ัᴗ❛ั)◞✺ 😀😖😐😣😡🚖🚌🚋🎊💖💗💛💙🏨🏦🏫"];
     yyLabelView.font = [UIFont systemFontOfSize:36];

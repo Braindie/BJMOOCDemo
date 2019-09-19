@@ -36,9 +36,6 @@
     
 //    圆角方案二：CAShapeLayer动画渲染直接提交到手机的GPU当中，相较于view的drawRect方法使用CPU渲染而言，其效率极高，能大大优化内存使用情况。
     
-
-    
-    
     UIImage *anotherImage = [UIImage imageNamed:@"headerView"];
 
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 370, 210)];
