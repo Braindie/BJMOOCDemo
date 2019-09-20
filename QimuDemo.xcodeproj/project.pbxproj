@@ -1443,8 +1443,8 @@
 			children = (
 				E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */,
 				E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */,
-				E5CB081A222F9D67003FD486 /* PictureSelected */,
 				E5CB0812222F9A83003FD486 /* AddressBook */,
+				E5CB081A222F9D67003FD486 /* PictureSelected */,
 				E5CB080B222F9A83003FD486 /* Bluetooth */,
 			);
 			path = Controllers;

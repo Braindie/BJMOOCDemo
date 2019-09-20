@@ -27,11 +27,11 @@
 
     self.navigationItem.title = @"MVVM";
     
-    //创建视图
+    // 创建视图
     [self.view addSubview:self.fourthTableView];
 
     
-
+    // 请求数据
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
     [self.viewModel requestDataComplete:^(BOOL success) {
@@ -61,10 +61,10 @@
     return _fourthTableView;
 }
 
-//在VM中处理数据，数据处理后给View
+
 - (FourthVM *)viewModel{
     if (!_viewModel) {
-        _viewModel = [[FourthVM alloc] init];
+        _viewModel = [[FourthVM alloc] init];// 在VM中处理数据，数据处理后给View
     }
     return _viewModel;
 }

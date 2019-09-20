@@ -13,6 +13,7 @@
 
 @implementation FourthVM
 
+// 请求数据
 - (void)requestDataComplete:(void (^)(BOOL))completeBlock{
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.model = [[FourthModel alloc] init];
@@ -23,8 +24,7 @@
     });
 }
 
-
-#pragma mark - UITableViewDelegate
+// 传递数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 3;
 }
