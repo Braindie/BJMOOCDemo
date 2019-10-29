@@ -20,6 +20,7 @@ PODS:
   - lottie-ios (2.5.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.17)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - lottie-ios
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
+  - MJExtension (~> 3.0.17)
   - SDWebImage (~> 4.2.2)
   - SVProgressHUD (~> 2.0.4)
   - TYCyclePagerView
@@ -46,7 +48,7 @@ DEPENDENCIES:
   - YYModel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FMDB
     - lottie-ios
@@ -59,6 +61,8 @@ SPEC REPOS:
     - YTKNetwork
     - YYAsyncLayer
     - YYModel
+  trunk:
+    - MJExtension
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -66,6 +70,7 @@ SPEC CHECKSUMS:
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   TYCyclePagerView: 0f67b0986995fd614843e819bc974cadd7f98008
@@ -74,6 +79,6 @@ SPEC CHECKSUMS:
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: e37b3d34109f9d2ec26845f16e1f728668e58c27
+PODFILE CHECKSUM: 243b3d78f10b3752694bdf4d5a8f1590cc0e2c70
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

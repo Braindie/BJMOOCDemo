@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1988305062F4FA2E453F72C8A2CB7F84"
+               BlueprintIdentifier = "416BCB647D16D0ED89A6729B14DD54D2"
+               BuildableName = "libTYCyclePagerView.a"
                BlueprintName = "TYCyclePagerView"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libTYCyclePagerView.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -11,6 +11,7 @@ target "QimuDemo" do
     
     pod 'FMDB'
     pod 'YYModel'
+    pod 'MJExtension', '~> 3.0.17'
     
     pod 'Masonry','~>1.1.0'
     pod 'UITableView+FDTemplateLayoutCell','~>1.6'

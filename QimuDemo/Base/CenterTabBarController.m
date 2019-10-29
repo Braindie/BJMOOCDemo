@@ -72,7 +72,7 @@
                                                          class:[FiveViewCtrl class]
                                                  normalImgName:@"wode1_1"
                                                selectedImgName:@"AccountYes"
-                                                           tag:1004];
+                                                           tag:1005];
     
     self.viewControllers=@[mainPage,licai,community,wode,zhan];
     

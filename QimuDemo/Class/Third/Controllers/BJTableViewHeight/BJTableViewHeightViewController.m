@@ -50,6 +50,7 @@
         NSData *data = [NSData dataWithContentsOfFile:dataPath];
         NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         NSArray *feedArr = rootDic[@"feed"];//找不到key会崩
+//        NSArray *feedArray = [rootDic]
         
         NSMutableArray *arr = @[].mutableCopy;
         [feedArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

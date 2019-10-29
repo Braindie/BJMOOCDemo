@@ -79,14 +79,14 @@
     // 1. 添加scrollView
     [self.view addSubview:self.scrollView];
     // 2. 添加参照视图
-    [self.scrollView addSubview:self.contentView];
-    
-    // 3. 添加第一个测试view
-    [self.contentView addSubview:self.oneView];
-    // 4. 添加第二个测试view
-    [self.contentView addSubview:self.twoView];
-    // 5. 添加第三个测试view
-    [self.contentView addSubview:self.threeView];
+//    [self.scrollView addSubview:self.contentView];
+//
+//    // 3. 添加第一个测试view
+//    [self.contentView addSubview:self.oneView];
+//    // 4. 添加第二个测试view
+//    [self.contentView addSubview:self.twoView];
+//    // 5. 添加第三个测试view
+//    [self.contentView addSubview:self.threeView];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -97,37 +97,37 @@
     }];
     
     //设置参照视图约束
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.scrollView);
-        make.width.equalTo(self.scrollView);
-    }];
-    
-    [self.oneView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView).offset(30);
-        make.left.equalTo(self.contentView).offset(30);
-        make.right.equalTo(self.contentView).offset(-30);
-        make.height.mas_equalTo(100);
-    }];
-    
-    [self.twoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.oneView.mas_bottom).offset(30);
-        make.left.equalTo(self.contentView).offset(30);
-        make.right.equalTo(self.contentView).offset(-30);
-        make.height.mas_equalTo(200);
-    }];
-    
-    [self.threeView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.twoView.mas_bottom).offset(30);
-        make.left.equalTo(self.contentView).offset(30);
-        make.right.equalTo(self.contentView).offset(-30);
-        make.height.mas_equalTo(300);
-    }];
-    
-    
-    //*********设置参照视图与最后一个view的约束***********子视图撑开父视图
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.threeView.mas_bottom).offset(30);
-    }];
+//    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.scrollView);
+//        make.width.equalTo(self.scrollView);
+//    }];
+//    
+//    [self.oneView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.contentView).offset(30);
+//        make.left.equalTo(self.contentView).offset(30);
+//        make.right.equalTo(self.contentView).offset(-30);
+//        make.height.mas_equalTo(100);
+//    }];
+//    
+//    [self.twoView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.oneView.mas_bottom).offset(30);
+//        make.left.equalTo(self.contentView).offset(30);
+//        make.right.equalTo(self.contentView).offset(-30);
+//        make.height.mas_equalTo(200);
+//    }];
+//    
+//    [self.threeView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.twoView.mas_bottom).offset(30);
+//        make.left.equalTo(self.contentView).offset(30);
+//        make.right.equalTo(self.contentView).offset(-30);
+//        make.height.mas_equalTo(300);
+//    }];
+//    
+//    
+//    //*********设置参照视图与最后一个view的约束***********子视图撑开父视图
+//    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.equalTo(self.threeView.mas_bottom).offset(30);
+//    }];
     
 //    1. 想要保证能够使用一个View的布局我们需要满足上下左右四个约束, 或者说是位置和大小
 //    2. 我们需要一个参照View, 用来作容器视图, scrollView添加这个容器视图, 之后所有的view都要参照这个容器视图作约束

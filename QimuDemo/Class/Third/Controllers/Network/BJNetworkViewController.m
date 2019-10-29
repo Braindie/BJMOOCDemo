@@ -14,6 +14,7 @@
 
 #import "AFHTTPSessionManager.h"
 #import <YYModel/YYModel.h>
+#import "MJExtension.h"
 
 //    NSString *url = @"http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8";
 
@@ -73,7 +74,7 @@
     
     NSString *urlString = @"http://cbox.cntv.cn/json2015/fenleierjiye/tiyuyexinban/sports2017/2018wordcup/renwuguojia/index.json";
     
-    //    NSString *urlString = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2";
+//    NSString *urlString = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=2";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"application/json", nil];
     
@@ -87,10 +88,13 @@
         
         [hud hideAnimated:YES];
         NSDictionary *dic = (NSDictionary *)responseObject;
-        //        NSLog(@"JSON: %@", responseObject);
+        // YYModel
         LiveListModel *model = [LiveListModel yy_modelWithJSON:dic[@"data"]];
-        //        NSLog(@"%@",model);
         self.myDataArr = [NSMutableArray arrayWithArray:model.itemList];
+        
+        // MJExtension
+//        self.myDataArr = [LiverModel mj_objectArrayWithKeyValuesArray:dic[@"data"][@"itemList"]];
+        
         if (self.myDataArr.count == 0) {
             self.tableView.hidden = YES;
         }else{
