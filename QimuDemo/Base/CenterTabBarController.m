@@ -48,7 +48,7 @@
                                               selectedImgName:@"AccountYes"
                                                           tag:1001];
     
-    UINavigationController *licai= [self controllerWithBarTitle: @"动画"
+    UINavigationController *licai= [self controllerWithBarTitle: @"渲染"
                                                           class:[SecondViewCtrl class]
                                                   normalImgName:@"wode1_1"
                                                 selectedImgName:@"AccountYes"

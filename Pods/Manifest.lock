@@ -30,7 +30,14 @@ PODS:
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - YYAsyncLayer (1.0)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
   - YYModel (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -45,7 +52,10 @@ DEPENDENCIES:
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YTKNetwork
   - YYAsyncLayer
+  - YYCache (~> 1.0.4)
+  - YYImage (~> 1.0.4)
   - YYModel
+  - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -63,6 +73,9 @@ SPEC REPOS:
     - YYModel
   trunk:
     - MJExtension
+    - YYCache
+    - YYImage
+    - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -77,8 +90,11 @@ SPEC CHECKSUMS:
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 243b3d78f10b3752694bdf4d5a8f1590cc0e2c70
+PODFILE CHECKSUM: 132823147f35f4a2cdcb26f1b0b6c95fcbaffd5e
 
 COCOAPODS: 1.8.4

@@ -1119,6 +1119,7 @@ static void ModelSetWithDictionaryFunction(const void *_key, const void *_value,
     __unsafe_unretained id model = (__bridge id)(context->model);
     while (propertyMeta) {
         if (propertyMeta->_setter) {
+            // 赋值
             ModelSetValueForProperty(model, (__bridge __unsafe_unretained id)_value, propertyMeta);
         }
         propertyMeta = propertyMeta->_next;
@@ -1460,12 +1461,14 @@ static NSString *ModelDescription(NSObject *model) {
     if (![dictionary isKindOfClass:[NSDictionary class]]) return nil;
     
     Class cls = [self class];
+    // _YYModelMeta完成Model属性、方法、实例变量的解析，并生成与数据源相对应的字典映射；
     _YYModelMeta *modelMeta = [_YYModelMeta metaWithClass:cls];
     if (modelMeta->_hasCustomClassFromDictionary) {
         cls = [cls modelCustomClassForDictionary:dictionary] ?: cls;
     }
     
     NSObject *one = [cls new];
+    //完成属性值的设置
     if ([one yy_modelSetWithDictionary:dictionary]) return one;
     return nil;
 }

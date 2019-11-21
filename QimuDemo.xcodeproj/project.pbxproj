@@ -104,7 +104,10 @@
 		E57D81252237A1A9008F07F4 /* BJFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D81242237A1A9008F07F4 /* BJFMDBViewController.m */; };
 		E57D81282237A235008F07F4 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D81262237A235008F07F4 /* UserModel.m */; };
 		E57D812B2237D466008F07F4 /* BJKSmoothChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E57D812A2237D466008F07F4 /* BJKSmoothChartView.m */; };
+		E57EA3312385286200BBFFFA /* BJDataAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E57EA3302385286200BBFFFA /* BJDataAnalysisViewController.m */; };
+		E57EA3342385296300BBFFFA /* BJPersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E57EA3332385296300BBFFFA /* BJPersionModel.m */; };
 		E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E584B5C12105BBBC008674CB /* UIColor+BJColor.m */; };
+		E58C7389238558B8004EFBB0 /* BJImageLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E55235223A07290093EE41 /* BJImageLoadViewController.m */; };
 		E59451E7222E895A001F71C5 /* SecondLeftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59451E3222E8959001F71C5 /* SecondLeftDetailViewController.m */; };
 		E59451E8222E895A001F71C5 /* FirstRightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59451E5222E895A001F71C5 /* FirstRightDetailViewController.m */; };
 		E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A061B41EC1AE7900B23589 /* CYLDBManager.m */; };
@@ -195,7 +198,6 @@
 		E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C4D2109E4EF004ABAD1 /* BJMenuBarView.m */; };
 		E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C512109E57D004ABAD1 /* MenuBTCollectionViewCell.m */; };
 		E5E49C542109E57E004ABAD1 /* MenuBTSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C522109E57E004ABAD1 /* MenuBTSectionHeaderView.m */; };
-		E5E55236223A07290093EE41 /* BJImageLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E55235223A07290093EE41 /* BJImageLoadViewController.m */; };
 		E5E55238223A20E20093EE41 /* headerView.png in Resources */ = {isa = PBXBuildFile; fileRef = E5E55237223A20E20093EE41 /* headerView.png */; };
 		E5E5523B223A616D0093EE41 /* IMG_0923.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E5E5523A223A616D0093EE41 /* IMG_0923.JPG */; };
 		E5E5523D223A6DA40093EE41 /* large_leaves_70mp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5E5523C223A6DA40093EE41 /* large_leaves_70mp.jpg */; };
@@ -412,6 +414,10 @@
 		E57D81272237A235008F07F4 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		E57D81292237D466008F07F4 /* BJKSmoothChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJKSmoothChartView.h; sourceTree = "<group>"; };
 		E57D812A2237D466008F07F4 /* BJKSmoothChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJKSmoothChartView.m; sourceTree = "<group>"; };
+		E57EA32F2385286200BBFFFA /* BJDataAnalysisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJDataAnalysisViewController.h; sourceTree = "<group>"; };
+		E57EA3302385286200BBFFFA /* BJDataAnalysisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJDataAnalysisViewController.m; sourceTree = "<group>"; };
+		E57EA3322385296300BBFFFA /* BJPersionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJPersionModel.h; sourceTree = "<group>"; };
+		E57EA3332385296300BBFFFA /* BJPersionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPersionModel.m; sourceTree = "<group>"; };
 		E584B5C02105BBBC008674CB /* UIColor+BJColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+BJColor.h"; sourceTree = "<group>"; };
 		E584B5C12105BBBC008674CB /* UIColor+BJColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BJColor.m"; sourceTree = "<group>"; };
 		E59451E2222E8959001F71C5 /* SecondLeftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondLeftDetailViewController.h; sourceTree = "<group>"; };
@@ -1208,6 +1214,17 @@
 			path = BJFMDB;
 			sourceTree = "<group>";
 		};
+		E57EA32E2385284800BBFFFA /* BJDataAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				E57EA32F2385286200BBFFFA /* BJDataAnalysisViewController.h */,
+				E57EA3302385286200BBFFFA /* BJDataAnalysisViewController.m */,
+				E57EA3322385296300BBFFFA /* BJPersionModel.h */,
+				E57EA3332385296300BBFFFA /* BJPersionModel.m */,
+			);
+			path = BJDataAnalysis;
+			sourceTree = "<group>";
+		};
 		E584B5BF2105BB94008674CB /* BJColor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1508,6 +1525,7 @@
 			children = (
 				E5A9E76B1EB1A39D0072EA61 /* ThirdViewCtroller.h */,
 				E5A9E76C1EB1A39D0072EA61 /* ThirdViewCtroller.m */,
+				E57EA32E2385284800BBFFFA /* BJDataAnalysis */,
 				E5CB081E222FA54A003FD486 /* Network */,
 				E5E55230223A05C50093EE41 /* BJImage */,
 				E5CB081F222FA54A003FD486 /* DataEncryption */,
@@ -1883,6 +1901,7 @@
 				E56882DB22364007007CF4E9 /* BJBrokenLineViewController.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
 				E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */,
+				E57EA3342385296300BBFFFA /* BJPersionModel.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
 				E5E49C532109E57E004ABAD1 /* MenuBTCollectionViewCell.m in Sources */,
@@ -1910,7 +1929,6 @@
 				E56882BE22360A3C007CF4E9 /* BJWaveViewController.m in Sources */,
 				E51475C320CF97CD00B79605 /* SGWCustomBlockAlertManager.m in Sources */,
 				E5213E3B224CB2B400754414 /* BJTouchSupperpassView.m in Sources */,
-				E5E55236223A07290093EE41 /* BJImageLoadViewController.m in Sources */,
 				E51475CF20CFB18300B79605 /* UILabel+StringFrame.m in Sources */,
 				E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */,
 				E57A136620FC7F34008C375C /* BJRefreshComponent.m in Sources */,
@@ -1958,7 +1976,9 @@
 				E505EADE20C548B700851764 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */,
 				E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */,
+				E58C7389238558B8004EFBB0 /* BJImageLoadViewController.m in Sources */,
 				E57D81282237A235008F07F4 /* UserModel.m in Sources */,
+				E57EA3312385286200BBFFFA /* BJDataAnalysisViewController.m in Sources */,
 				E57A136020FC7ECF008C375C /* UIScrollView+BJExtension.m in Sources */,
 				E505EAE120C548B700851764 /* UIImage+ZLPhotoLib.m in Sources */,
 				E51CFD0322251A510050FFAA /* PatternViewController.m in Sources */,

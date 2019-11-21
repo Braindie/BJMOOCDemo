@@ -7,7 +7,9 @@
 //
 
 #import "BJImageLoadViewController.h"
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
+#import <YYWebImage/YYWebImage.h>
+#import <YYImage/YYImage.h>
 
 @interface BJImageLoadViewController ()
 @property (nonatomic, strong) UIImageView *imageView;
@@ -21,30 +23,32 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = @"图片加载";
+
+    self.clearButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.clearButton.frame = CGRectMake(0, 0, 100, 30);
+    self.clearButton.center = self.view.center;
+    [self.clearButton setTitle:@"清理缓存" forState:UIControlStateNormal];
+    [self.clearButton addTarget:self action:@selector(clearCache) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.clearButton];
     
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 300)];
-//    _imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:_imageView];
+//    [self loadLocalImage];
     
-    _clearButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _clearButton.frame = CGRectMake(0, 0, 100, 30);
-    _clearButton.center = self.view.center;
-    [_clearButton setTitle:@"清理缓存" forState:UIControlStateNormal];
-    [_clearButton addTarget:self action:@selector(clearCache) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_clearButton];
+    [self loadNetImage];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+- (void)loadLocalImage {
     
+//    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 300)];
+//    [self.view addSubview:_imageView];
+        
     //方法一：有缓存，不会销毁
-//    UIImage *image = [UIImage imageNamed:@"large_leaves_70mp.jpg"];
+//    UIImage *image = [UIImage imageNamed:@"large"];
 //    _imageView.image = image;
     
     //方法二：数据不缓存，节省内存
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"large_leaves_70mp" ofType:@"jpg"];
-//    UIImage *image = [UIImage imageWithContentsOfFile:path];
-//    _imageView.image = image;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"large_leaves_70mp" ofType:@"jpg"];
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    self.imageView.image = image;
     
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"headerView" ofType:@"png"];
 //    UIImage *image = [[UIImage alloc] initWithContentsOfFile:path];
@@ -55,14 +59,28 @@
 //    UIImage *image = [UIImage imageWithData:data];
 //    _imageView.image = image;
     
+
+        
 }
 
-- (void)clearCache{
+- (void)loadNetImage {
+    
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 300)];
+    [self.view addSubview:_imageView];
+    
 //    NSString *imageUrl = @"http://img1.xcarimg.com/exp/2872/2875/2937/20101220130509576539.jpg";
     NSString *imageUrl = @"http://img.kongzhong.com/wot/news/2013/02/06/0dcc5e3eb61360119273.jpg";
 
+//    _imageView.yy_imageURL = [NSURL URLWithString:imageUrl];
+    [_imageView yy_setImageWithURL:[NSURL URLWithString:imageUrl] options:YYWebImageOptionProgressive];//渐进式：边下载边显示
+
+//    [_imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:SDWebImageScaleDownLargeImages];
+        
+}
+
+- (void)clearCache{
+
     
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:SDWebImageScaleDownLargeImages];
 }
 
 @end
