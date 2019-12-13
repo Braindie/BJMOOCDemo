@@ -11,6 +11,18 @@
 		787D844C1C0EC08100DC473D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844B1C0EC08100DC473D /* main.m */; };
 		787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844E1C0EC08100DC473D /* AppDelegate.m */; };
 		787D84571C0EC08100DC473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787D84561C0EC08100DC473D /* Assets.xcassets */; };
+		A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */; };
+		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
+		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
+		A4442AB923A3894400D4AB34 /* BJSVGAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AB823A3894400D4AB34 /* BJSVGAPlayerViewController.m */; };
+		A4442ABE23A38DFB00D4AB34 /* xb_svga_college_study.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABD23A38DFB00D4AB34 /* xb_svga_college_study.svga */; };
+		A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */; };
+		A4E9A07D23A3797000ED3BBE /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07823A3797000ED3BBE /* pic1.jpg */; };
+		A4E9A07E23A3797000ED3BBE /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07923A3797000ED3BBE /* pic3.jpg */; };
+		A4E9A07F23A3797000ED3BBE /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07A23A3797000ED3BBE /* pic2.jpg */; };
+		A4E9A08023A3797000ED3BBE /* pic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07B23A3797000ED3BBE /* pic5.jpg */; };
+		A4E9A08123A3797000ED3BBE /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07C23A3797000ED3BBE /* pic4.jpg */; };
+		A4E9A09823A37F6D00ED3BBE /* BJLottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9A09723A37F6D00ED3BBE /* BJLottieViewController.m */; };
 		E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E505EA9320C548B700851764 /* ZLCameraViewController.m */; };
 		E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E505EA9620C548B700851764 /* ZLCameraImageView.m */; };
 		E505EAD720C548B700851764 /* ZLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E505EA9720C548B700851764 /* ZLCamera.m */; };
@@ -122,16 +134,7 @@
 		E5A9E2CE1EB19B520072EA61 /* ZDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2CB1EB19B520072EA61 /* ZDBModel.m */; };
 		E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2D21EB19B850072EA61 /* DACircularProgressView.m */; };
 		E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E2D41EB19B850072EA61 /* DALabeledCircularProgressView.m */; };
-		E5A9E3B41EB19D0B0072EA61 /* 5.31.03.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3A61EB19D0B0072EA61 /* 5.31.03.png */; };
-		E5A9E3B51EB19D0B0072EA61 /* collectioBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3A71EB19D0B0072EA61 /* collectioBtn.png */; };
 		E5A9E3B61EB19D0B0072EA61 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3A81EB19D0B0072EA61 /* data.json */; };
-		E5A9E3B71EB19D0B0072EA61 /* downBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3A91EB19D0B0072EA61 /* downBtn.png */; };
-		E5A9E3BB1EB19D0B0072EA61 /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3AD1EB19D0B0072EA61 /* jiantou.png */; };
-		E5A9E3BC1EB19D0B0072EA61 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3AE1EB19D0B0072EA61 /* pic1.jpg */; };
-		E5A9E3BD1EB19D0B0072EA61 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3AF1EB19D0B0072EA61 /* pic2.jpg */; };
-		E5A9E3BE1EB19D0B0072EA61 /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3B01EB19D0B0072EA61 /* pic3.jpg */; };
-		E5A9E3BF1EB19D0B0072EA61 /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3B11EB19D0B0072EA61 /* pic4.jpg */; };
-		E5A9E3C01EB19D0B0072EA61 /* pic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3B21EB19D0B0072EA61 /* pic5.jpg */; };
 		E5A9E5421EB19D470072EA61 /* APNumberPad.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3C31EB19D470072EA61 /* APNumberPad.bundle */; };
 		E5A9E5431EB19D470072EA61 /* btn_clear_input_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3C41EB19D470072EA61 /* btn_clear_input_normal.png */; };
 		E5A9E5441EB19D470072EA61 /* btn_clear_input_normal_hui.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A9E3C51EB19D470072EA61 /* btn_clear_input_normal_hui.png */; };
@@ -232,6 +235,20 @@
 		787D84561C0EC08100DC473D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787D845B1C0EC08100DC473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
+		A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
+		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
+		A4442AB723A3894400D4AB34 /* BJSVGAPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSVGAPlayerViewController.h; sourceTree = "<group>"; };
+		A4442AB823A3894400D4AB34 /* BJSVGAPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSVGAPlayerViewController.m; sourceTree = "<group>"; };
+		A4442ABD23A38DFB00D4AB34 /* xb_svga_college_study.svga */ = {isa = PBXFileReference; lastKnownFileType = file; name = xb_svga_college_study.svga; path = ../../../../../../Desktop/gitlib/xiaobu_ios/XB/Resource/Image/xb_svga_college_study.svga; sourceTree = "<group>"; };
+		A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = xb_svga_college_stem.svga; sourceTree = "<group>"; };
+		A4E9A07823A3797000ED3BBE /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
+		A4E9A07923A3797000ED3BBE /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
+		A4E9A07A23A3797000ED3BBE /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
+		A4E9A07B23A3797000ED3BBE /* pic5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic5.jpg; sourceTree = "<group>"; };
+		A4E9A07C23A3797000ED3BBE /* pic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic4.jpg; sourceTree = "<group>"; };
+		A4E9A09623A37F6D00ED3BBE /* BJLottieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLottieViewController.h; sourceTree = "<group>"; };
+		A4E9A09723A37F6D00ED3BBE /* BJLottieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLottieViewController.m; sourceTree = "<group>"; };
 		E505EA9320C548B700851764 /* ZLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCameraViewController.m; sourceTree = "<group>"; };
 		E505EA9420C548B700851764 /* ZLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCamera.h; sourceTree = "<group>"; };
 		E505EA9520C548B700851764 /* ZLCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCameraView.h; sourceTree = "<group>"; };
@@ -447,16 +464,7 @@
 		E5A9E2D21EB19B850072EA61 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
 		E5A9E2D31EB19B850072EA61 /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
 		E5A9E2D41EB19B850072EA61 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
-		E5A9E3A61EB19D0B0072EA61 /* 5.31.03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.31.03.png; sourceTree = "<group>"; };
-		E5A9E3A71EB19D0B0072EA61 /* collectioBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collectioBtn.png; sourceTree = "<group>"; };
 		E5A9E3A81EB19D0B0072EA61 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		E5A9E3A91EB19D0B0072EA61 /* downBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downBtn.png; sourceTree = "<group>"; };
-		E5A9E3AD1EB19D0B0072EA61 /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou.png; sourceTree = "<group>"; };
-		E5A9E3AE1EB19D0B0072EA61 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
-		E5A9E3AF1EB19D0B0072EA61 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
-		E5A9E3B01EB19D0B0072EA61 /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
-		E5A9E3B11EB19D0B0072EA61 /* pic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic4.jpg; sourceTree = "<group>"; };
-		E5A9E3B21EB19D0B0072EA61 /* pic5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic5.jpg; sourceTree = "<group>"; };
 		E5A9E3C31EB19D470072EA61 /* APNumberPad.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = APNumberPad.bundle; sourceTree = "<group>"; };
 		E5A9E3C41EB19D470072EA61 /* btn_clear_input_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_clear_input_normal.png; sourceTree = "<group>"; };
 		E5A9E3C51EB19D470072EA61 /* btn_clear_input_normal_hui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_clear_input_normal_hui.png; sourceTree = "<group>"; };
@@ -652,6 +660,55 @@
 				15E917B695E9727DF7CCAAC7 /* Pods-QimuDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A4442AB723A3894400D4AB34 /* BJSVGAPlayerViewController.h */,
+				A4442AB823A3894400D4AB34 /* BJSVGAPlayerViewController.m */,
+			);
+			path = BJSVGAPlayer;
+			sourceTree = "<group>";
+		};
+		A4442ABA23A38AB500D4AB34 /* ImageSVGA */ = {
+			isa = PBXGroup;
+			children = (
+				A4442ABD23A38DFB00D4AB34 /* xb_svga_college_study.svga */,
+				A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */,
+			);
+			path = ImageSVGA;
+			sourceTree = "<group>";
+		};
+		A4E9A07623A3797000ED3BBE /* ImageJson */ = {
+			isa = PBXGroup;
+			children = (
+				A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */,
+				A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */,
+				A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */,
+			);
+			path = ImageJson;
+			sourceTree = "<group>";
+		};
+		A4E9A07723A3797000ED3BBE /* launchImage */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9A07823A3797000ED3BBE /* pic1.jpg */,
+				A4E9A07923A3797000ED3BBE /* pic3.jpg */,
+				A4E9A07A23A3797000ED3BBE /* pic2.jpg */,
+				A4E9A07B23A3797000ED3BBE /* pic5.jpg */,
+				A4E9A07C23A3797000ED3BBE /* pic4.jpg */,
+			);
+			path = launchImage;
+			sourceTree = "<group>";
+		};
+		A4E9A09223A37F4100ED3BBE /* BJLottie */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9A09623A37F6D00ED3BBE /* BJLottieViewController.h */,
+				A4E9A09723A37F6D00ED3BBE /* BJLottieViewController.m */,
+			);
+			path = BJLottie;
 			sourceTree = "<group>";
 		};
 		E505EA9120C548B700851764 /* ZLPhotoLib */ = {
@@ -1356,21 +1413,15 @@
 		E5A9E3A51EB19D0B0072EA61 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A4442ABA23A38AB500D4AB34 /* ImageSVGA */,
+				A4E9A07623A3797000ED3BBE /* ImageJson */,
+				A4E9A07723A3797000ED3BBE /* launchImage */,
+				E5A9E3C21EB19D470072EA61 /* Page */,
 				E5FEDB742240F98400099A6E /* datalist.json */,
 				E5E5523C223A6DA40093EE41 /* large_leaves_70mp.jpg */,
 				E5E5523A223A616D0093EE41 /* IMG_0923.JPG */,
 				E5E55237223A20E20093EE41 /* headerView.png */,
-				E5A9E3C21EB19D470072EA61 /* Page */,
-				E5A9E3A61EB19D0B0072EA61 /* 5.31.03.png */,
-				E5A9E3A71EB19D0B0072EA61 /* collectioBtn.png */,
 				E5A9E3A81EB19D0B0072EA61 /* data.json */,
-				E5A9E3A91EB19D0B0072EA61 /* downBtn.png */,
-				E5A9E3AD1EB19D0B0072EA61 /* jiantou.png */,
-				E5A9E3AE1EB19D0B0072EA61 /* pic1.jpg */,
-				E5A9E3AF1EB19D0B0072EA61 /* pic2.jpg */,
-				E5A9E3B01EB19D0B0072EA61 /* pic3.jpg */,
-				E5A9E3B11EB19D0B0072EA61 /* pic4.jpg */,
-				E5A9E3B21EB19D0B0072EA61 /* pic5.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1489,12 +1540,14 @@
 		E5A9E74F1EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */,
+				A4E9A09223A37F4100ED3BBE /* BJLottie */,
+				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
+				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
 				E5A91F1E233389A800690D2A /* UIViewAnimation */,
 				E59451E1222E8959001F71C5 /* CoreAnimation */,
 				E59451E4222E895A001F71C5 /* CoreGraphics */,
 				E5A91F2D2333918C00690D2A /* CoreText */,
-				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
-				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1766,34 +1819,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A9E5491EB19D470072EA61 /* default_header@3x.png in Resources */,
-				E5A9E3BF1EB19D0B0072EA61 /* pic4.jpg in Resources */,
 				E5A9E55D1EB19D470072EA61 /* visit_step_y_save.png in Resources */,
 				E5A9E5441EB19D470072EA61 /* btn_clear_input_normal_hui.png in Resources */,
-				E5A9E3B71EB19D0B0072EA61 /* downBtn.png in Resources */,
 				E5A9E5611EB19D470072EA61 /* ZLPhotoLib.bundle in Resources */,
 				E5A9E3B61EB19D0B0072EA61 /* data.json in Resources */,
+				A4E9A07D23A3797000ED3BBE /* pic1.jpg in Resources */,
+				A4E9A07E23A3797000ED3BBE /* pic3.jpg in Resources */,
 				E51475C520CF97CD00B79605 /* SGWMultiSelectionAlertView.xib in Resources */,
+				A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */,
 				E5A91F27233389A800690D2A /* BJPropertyAnimationViewController.xib in Resources */,
-				E5A9E3B51EB19D0B0072EA61 /* collectioBtn.png in Resources */,
 				E5E5A8272240F36800E8B20B /* BJTableViewHeightCell.xib in Resources */,
-				E5A9E3BC1EB19D0B0072EA61 /* pic1.jpg in Resources */,
 				E5A9E5571EB19D470072EA61 /* icon_normal@2x.png in Resources */,
-				E5A9E3BB1EB19D0B0072EA61 /* jiantou.png in Resources */,
 				E51475C920CF97CD00B79605 /* SGWDismissAlertView.xib in Resources */,
 				E5A9E54F1EB19D470072EA61 /* icon_addpic_unfocused.png in Resources */,
-				E5A9E3BE1EB19D0B0072EA61 /* pic3.jpg in Resources */,
 				E5A9E54D1EB19D470072EA61 /* ic_picture_loading.png in Resources */,
-				E5A9E3C01EB19D0B0072EA61 /* pic5.jpg in Resources */,
 				E5A9E5501EB19D470072EA61 /* icon_current.png in Resources */,
 				787D84571C0EC08100DC473D /* Assets.xcassets in Resources */,
 				E5A9E55A1EB19D470072EA61 /* sign_dingw.png in Resources */,
+				A4E9A08123A3797000ED3BBE /* pic4.jpg in Resources */,
 				E54D90881EE1361C00AE856B /* LiveListCell.xib in Resources */,
-				E5A9E3BD1EB19D0B0072EA61 /* pic2.jpg in Resources */,
+				A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */,
 				E5A9E5601EB19D470072EA61 /* zl_X@3x.png in Resources */,
 				E5A9E54B1EB19D470072EA61 /* ic_checkbox_normal@2x.png in Resources */,
 				E5A9E55C1EB19D470072EA61 /* unchecked@2x.png in Resources */,
 				E5A9E5541EB19D470072EA61 /* icon_my_retailer@2x.png in Resources */,
+				A4E9A07F23A3797000ED3BBE /* pic2.jpg in Resources */,
 				E5E5523D223A6DA40093EE41 /* large_leaves_70mp.jpg in Resources */,
+				A4E9A08023A3797000ED3BBE /* pic5.jpg in Resources */,
+				A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */,
 				E5A9E55B1EB19D470072EA61 /* unchecked.png in Resources */,
 				E5A9E54E1EB19D470072EA61 /* ic_spinner_white.png in Resources */,
 				E5A9E5461EB19D470072EA61 /* checked@2x.png in Resources */,
@@ -1803,8 +1856,8 @@
 				E5E55238223A20E20093EE41 /* headerView.png in Resources */,
 				E5A9E5591EB19D470072EA61 /* login.png in Resources */,
 				E5E254E2224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib in Resources */,
+				A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */,
 				E5A9E5521EB19D470072EA61 /* icon_current@3x.png in Resources */,
-				E5A9E3B41EB19D0B0072EA61 /* 5.31.03.png in Resources */,
 				E5A9E54C1EB19D470072EA61 /* ic_checkbox_pressed@2x.png in Resources */,
 				E5A9E5551EB19D470072EA61 /* icon_my_retailer@3x.png in Resources */,
 				E5A9E5451EB19D470072EA61 /* checked.png in Resources */,
@@ -1814,6 +1867,7 @@
 				E5A9E5471EB19D470072EA61 /* default_header.png in Resources */,
 				E51475C720CF97CD00B79605 /* SGWCancelAlertView.xib in Resources */,
 				E5A9E5531EB19D470072EA61 /* icon_my_retailer.png in Resources */,
+				A4442ABE23A38DFB00D4AB34 /* xb_svga_college_study.svga in Resources */,
 				E5A9E55F1EB19D470072EA61 /* zl_X@2x.png in Resources */,
 				E5A9E55E1EB19D470072EA61 /* zl_X.png in Resources */,
 				E5CB0817222F9A84003FD486 /* FirstDetailTableViewViewController.xib in Resources */,
@@ -1923,6 +1977,7 @@
 				E5D82552224DFA63000FB18A /* BJTouchTestButton.m in Sources */,
 				E508F86820FDF69100C9EF26 /* BJRefreshStateHeader.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
+				A4442AB923A3894400D4AB34 /* BJSVGAPlayerViewController.m in Sources */,
 				E51CFD11222522C10050FFAA /* MVPModel.m in Sources */,
 				E55977FA20D3B0D300AE6DBD /* BJLoadingView.m in Sources */,
 				E505EAED20C548B700851764 /* ZLPhotoPickerImageView.m in Sources */,
@@ -1966,6 +2021,7 @@
 				E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */,
 				E508F86B20FDF6A500C9EF26 /* BJRefreshGifStateHeader.m in Sources */,
 				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				A4E9A09823A37F6D00ED3BBE /* BJLottieViewController.m in Sources */,
 				E56882EC2236680C007CF4E9 /* BJImageViewController.m in Sources */,
 				E5B7CC571EB30FBA005378E1 /* FiveViewCtrl.m in Sources */,
 				E5CB081D222F9D7A003FD486 /* BJPictureSelectedViewController.m in Sources */,

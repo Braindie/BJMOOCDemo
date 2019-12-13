@@ -11,19 +11,26 @@ target "QimuDemo" do
     pod 'YYImage', '~> 1.0.4'
     pod 'YYCache', '~> 1.0.4'
     
-    pod 'YTKNetwork'
-    
-    pod 'FMDB'
-    
-    pod 'YYModel'
+    pod 'YYAsyncLayer', '~> 1.0'
+
+    pod 'YYModel', '~> 1.0.4'
     pod 'MJExtension', '~> 3.0.17'
+    
+    pod 'YTKNetwork', '~> 2.0.4'
+
+    pod 'FMDB', '~> 2.6.2'
+    
+
+
     
     pod 'Masonry','~> 1.1.0'
     pod 'UITableView+FDTemplateLayoutCell','~> 1.6'
     
-    pod 'lottie-ios'
+    pod 'lottie-ios', '~> 2.5.0'
+    pod 'SVGAPlayer', '~> 2.3.5' #依赖了SSZipArchive、Protobuf
+
+    pod 'MGJRouter', '~> 0.10.0'
+
     
-    pod 'YYAsyncLayer'
-    
-    pod 'TYCyclePagerView'
+    pod 'TYCyclePagerView', '~> 1.1.2'
 end

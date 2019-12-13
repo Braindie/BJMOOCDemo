@@ -23,6 +23,9 @@
 
 #import "BJLabelViewController.h"
 
+#import "BJLottieViewController.h"
+#import "BJSVGAPlayerViewController.h"
+
 
 @interface SecondViewCtrl ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -132,9 +135,11 @@
     } else if (section == 1) {
         return 1;
     } else if (section == 2) {
-        return 1;
+        return 2;
+    } else if (section == 3) {
+        return 2;
     } else {
-        return 1;
+        return 0;
     }
 }
 
@@ -158,10 +163,22 @@
         
     } else if (indexPath.section == 1) {
         cell.label.text = @"CoreAnimation";
+        
     } else if (indexPath.section == 2) {
-        cell.label.text = @"CoreGraphics";
+        if (indexPath.row == 0) {
+            cell.label.text = @"CoreGraphics";
+        } else if (indexPath.row == 1) {
+            cell.label.text = @"CoreText";
+        }
+        
+    } else if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            cell.label.text = @"lottie-ios";
+        } else if (indexPath.row == 1) {
+            cell.label.text = @"SVGAPlayer";
+        }
     } else {
-        cell.label.text = @"CoreText";
+        return cell;
     }
     
     return cell;
@@ -189,18 +206,42 @@
         [self.navigationController pushViewController:vc animated:YES];
         
     } else if (indexPath.section == 2) {
-        FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-        
-    } else {
-        BJLabelViewController *vc = [[BJLabelViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        if (indexPath.row == 0) {
+            FirstRightDetailViewController *vc = [[FirstRightDetailViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        } else if (indexPath.row == 1) {
+            BJLabelViewController *vc = [[BJLabelViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+
+    } else if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            BJLottieViewController *vc = [[BJLottieViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        } else if (indexPath.row == 1) {
+            BJSVGAPlayerViewController *vc = [[BJSVGAPlayerViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
 
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 50;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.0001;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

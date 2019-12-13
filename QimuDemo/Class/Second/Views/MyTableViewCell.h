@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTableViewCell : UITableViewCell
-
-
 @property (nonatomic, strong) UILabel *label;
 @end
