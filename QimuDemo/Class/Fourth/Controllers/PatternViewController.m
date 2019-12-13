@@ -9,6 +9,7 @@
 #import "PatternViewController.h"
 #import "FourthViewCtrl.h"
 #import "MVPViewController.h"
+#import "BJMGJRouterViewController.h"
 
 @interface PatternViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -40,7 +41,7 @@
 
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -48,8 +49,12 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"MVP";
-    }else{
+    } else if (indexPath.row == 1){
         cell.textLabel.text = @"MVVM";
+    } else if (indexPath.row == 2) {
+        cell.textLabel.text = @"MGJRouter";
+    } else {
+        
     }
     
     return cell;
@@ -59,11 +64,11 @@
     if (indexPath.row == 0) {
         MVPViewController *vc = [[MVPViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
-    }if (indexPath.row == 1) {
+    } else if (indexPath.row == 1) {
         FourthViewCtrl *vc = [[FourthViewCtrl alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
-    } else {
-        
+    } else if (indexPath.row == 2) {
+        [MGJRouter openURL:@"bj://router"];
     }
 }
 
