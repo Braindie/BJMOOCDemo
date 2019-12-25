@@ -11,6 +11,7 @@
 		787D844C1C0EC08100DC473D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844B1C0EC08100DC473D /* main.m */; };
 		787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844E1C0EC08100DC473D /* AppDelegate.m */; };
 		787D84571C0EC08100DC473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787D84561C0EC08100DC473D /* Assets.xcassets */; };
+		A40349EB23B378A1005F72D4 /* BJTestMemoryLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */; };
 		A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */; };
 		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
 		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
@@ -237,6 +238,8 @@
 		787D84561C0EC08100DC473D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787D845B1C0EC08100DC473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A40349E923B378A1005F72D4 /* BJTestMemoryLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTestMemoryLeakViewController.h; sourceTree = "<group>"; };
+		A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTestMemoryLeakViewController.m; sourceTree = "<group>"; };
 		A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
 		A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
 		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
@@ -666,6 +669,15 @@
 				15E917B695E9727DF7CCAAC7 /* Pods-QimuDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A40349E823B37884005F72D4 /* TestMemoryLeak */ = {
+			isa = PBXGroup;
+			children = (
+				A40349E923B378A1005F72D4 /* BJTestMemoryLeakViewController.h */,
+				A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */,
+			);
+			path = TestMemoryLeak;
 			sourceTree = "<group>";
 		};
 		A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */ = {
@@ -1513,6 +1525,7 @@
 		E5A9E71E1EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A40349E823B37884005F72D4 /* TestMemoryLeak */,
 				E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */,
 				E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */,
 				E5CB0812222F9A83003FD486 /* AddressBook */,
@@ -1927,6 +1940,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40349EB23B378A1005F72D4 /* BJTestMemoryLeakViewController.m in Sources */,
 				E505EAE620C548B700851764 /* ZLPhotoPickerGroupViewController.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
 				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,

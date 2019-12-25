@@ -18,10 +18,10 @@ target "QimuDemo" do
     
     pod 'YTKNetwork', '~> 2.0.4'
 
-    pod 'FMDB', '~> 2.6.2' #依赖FBRetainCycleDetector
+    pod 'FMDB', '~> 2.6.2'
     
     
-    pod 'MLeaksFinder', '~> 1.0.0'
+    pod 'MLeaksFinder', '~> 1.0.0' #依赖FBRetainCycleDetector
 
     
     pod 'Masonry','~> 1.1.0'

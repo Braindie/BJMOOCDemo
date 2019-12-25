@@ -11,6 +11,7 @@
 #import "FiveDetailViewController.h"
 #import "FirstTableViewController.h"
 #import "BJPictureSelectedViewController.h"
+#import "BJTestMemoryLeakViewController.h"
 
 
 @interface FiveViewCtrl ()<UITableViewDataSource,UITableViewDelegate>
@@ -53,6 +54,8 @@
         cell.textLabel.text = @"图片选择器";
     }else if (indexPath.row == 2){
         cell.textLabel.text = @"蓝牙";
+    }else if (indexPath.row == 3) {
+        cell.textLabel.text = @"检测内存泄漏";
     }
     
     return cell;
@@ -68,6 +71,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 2){
         FirstTableViewController *vc = [[FirstTableViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 3) {
+        BJTestMemoryLeakViewController *vc = [[BJTestMemoryLeakViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
