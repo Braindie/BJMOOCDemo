@@ -82,11 +82,11 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat width = kScreenWidth - 20;
-    CGFloat height = 50;
+    CGFloat height = 30;
     layout.itemSize = CGSizeMake(width, height);
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-49-64) collectionViewLayout:layout];
-    self.collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
@@ -100,7 +100,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     [self.collectionView registerClass:[HomeSectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeaderViewCellIdentifier];
 
     layout.sectionInset = UIEdgeInsetsMake(100,0,0,0);
-    layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 60);//必填
+    layout.headerReferenceSize = CGSizeMake(self.view.frame.size.width, 50);//必填
 
     [self.view addSubview:self.collectionView];
 }
@@ -123,7 +123,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     HomeViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.backgroundColor = [UIColor whiteColor];
 
     NSMutableArray *symptoms = [NSMutableArray arrayWithArray:[self.dataArr2[indexPath.section]
                                                                objectForKey:kDataSourceSectionKey]];

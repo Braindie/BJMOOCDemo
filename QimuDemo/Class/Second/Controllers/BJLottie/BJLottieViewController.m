@@ -19,9 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        
-    LOTAnimationView *view = [LOTAnimationView animationNamed:@"LottieLogo1"];
-    view.frame = CGRectMake(0, 0, 300, 300);
+    
+    // 本地加载
+//    LOTAnimationView *view = [LOTAnimationView animationNamed:@"LottieLogo1"];
+    
+    // 网络加载
+    LOTAnimationView *view = [[LOTAnimationView alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://gitee.com/Braindie/BJ-Resource/raw/master/LottieLogo1.json"]];
+    view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH);
     view.center = self.view.center;
     [self.view addSubview:view];
     [view play];

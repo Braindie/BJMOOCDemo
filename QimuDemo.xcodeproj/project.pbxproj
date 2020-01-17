@@ -16,7 +16,6 @@
 		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
 		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
 		A4442AB923A3894400D4AB34 /* BJSVGAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AB823A3894400D4AB34 /* BJSVGAPlayerViewController.m */; };
-		A4442ABE23A38DFB00D4AB34 /* xb_svga_college_study.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABD23A38DFB00D4AB34 /* xb_svga_college_study.svga */; };
 		A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */; };
 		A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */; };
 		A4442AC723A3966F00D4AB34 /* BJSelectVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */; };
@@ -245,7 +244,6 @@
 		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
 		A4442AB723A3894400D4AB34 /* BJSVGAPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSVGAPlayerViewController.h; sourceTree = "<group>"; };
 		A4442AB823A3894400D4AB34 /* BJSVGAPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSVGAPlayerViewController.m; sourceTree = "<group>"; };
-		A4442ABD23A38DFB00D4AB34 /* xb_svga_college_study.svga */ = {isa = PBXFileReference; lastKnownFileType = file; name = xb_svga_college_study.svga; path = ../../../../../../Desktop/gitlib/xiaobu_ios/XB/Resource/Image/xb_svga_college_study.svga; sourceTree = "<group>"; };
 		A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = xb_svga_college_stem.svga; sourceTree = "<group>"; };
 		A4442AC223A3937000D4AB34 /* BJMGJRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJMGJRouterViewController.h; sourceTree = "<group>"; };
 		A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMGJRouterViewController.m; sourceTree = "<group>"; };
@@ -692,7 +690,6 @@
 		A4442ABA23A38AB500D4AB34 /* ImageSVGA */ = {
 			isa = PBXGroup;
 			children = (
-				A4442ABD23A38DFB00D4AB34 /* xb_svga_college_study.svga */,
 				A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */,
 			);
 			path = ImageSVGA;
@@ -1555,14 +1552,14 @@
 		E5A9E74F1EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */,
-				A4E9A09223A37F4100ED3BBE /* BJLottie */,
 				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
 				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
 				E5A91F1E233389A800690D2A /* UIViewAnimation */,
 				E59451E1222E8959001F71C5 /* CoreAnimation */,
 				E59451E4222E895A001F71C5 /* CoreGraphics */,
 				E5A91F2D2333918C00690D2A /* CoreText */,
+				A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */,
+				A4E9A09223A37F4100ED3BBE /* BJLottie */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1882,7 +1879,6 @@
 				E5A9E5471EB19D470072EA61 /* default_header.png in Resources */,
 				E51475C720CF97CD00B79605 /* SGWCancelAlertView.xib in Resources */,
 				E5A9E5531EB19D470072EA61 /* icon_my_retailer.png in Resources */,
-				A4442ABE23A38DFB00D4AB34 /* xb_svga_college_study.svga in Resources */,
 				E5A9E55F1EB19D470072EA61 /* zl_X@2x.png in Resources */,
 				E5A9E55E1EB19D470072EA61 /* zl_X.png in Resources */,
 				E5CB0817222F9A84003FD486 /* FirstDetailTableViewViewController.xib in Resources */,

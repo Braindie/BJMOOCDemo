@@ -69,8 +69,10 @@
     [self.view addSubview:_imageView];
     
 //    NSString *imageUrl = @"http://img1.xcarimg.com/exp/2872/2875/2937/20101220130509576539.jpg";
-    NSString *imageUrl = @"http://img.kongzhong.com/wot/news/2013/02/06/0dcc5e3eb61360119273.jpg";
+//    NSString *imageUrl = @"http://img.kongzhong.com/wot/news/2013/02/06/0dcc5e3eb61360119273.jpg";
+    NSString *imageUrl = @"https://gitee.com/Braindie/BJ-Resource/raw/master/heart.png";
 
+    
 //    _imageView.yy_imageURL = [NSURL URLWithString:imageUrl];
     [_imageView yy_setImageWithURL:[NSURL URLWithString:imageUrl] options:YYWebImageOptionProgressive];//渐进式：边下载边显示
 

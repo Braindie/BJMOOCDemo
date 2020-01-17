@@ -23,10 +23,10 @@
 
 
 - (id)sharedInit {
-    UIView *cureOfLine = [[UIView alloc] initWithFrame:CGRectMake(16, 48 - 1, [UIScreen mainScreen].bounds.size.width - 2*16, 1)];
-    cureOfLine.backgroundColor = [UIColor colorWithRed:188.0/255.0 green:188.0/255.0 blue:188.0/255.0 alpha:1.0];
-    [self addSubview:cureOfLine];
-    self.backgroundColor = [UIColor whiteColor];
+//    UIView *cureOfLine = [[UIView alloc] initWithFrame:CGRectMake(16, 48 - 1, [UIScreen mainScreen].bounds.size.width - 2*16, 1)];
+//    cureOfLine.backgroundColor = [UIColor colorWithRed:188.0/255.0 green:188.0/255.0 blue:188.0/255.0 alpha:1.0];
+//    [self addSubview:cureOfLine];
+    self.backgroundColor = [UIColor groupTableViewBackgroundColor];
 
 
     //仅修改self.titleButton的宽度,xyh值不变
@@ -34,7 +34,7 @@
     self.titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 16, 0, 0);
     self.titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     self.titleButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    self.titleButton.frame = CGRectMake(16, 0, 200,  self.frame.size.height - 10);
+    self.titleButton.frame = CGRectMake(16, 0, 200,  self.frame.size.height);
     self.titleButton.titleLabel.textAlignment = NSTextAlignmentLeft;
     [self.titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
