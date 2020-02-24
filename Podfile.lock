@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CYLTabBarController (1.28.4):
+    - CYLTabBarController/Core (= 1.28.4)
+  - CYLTabBarController/Core (1.28.4)
   - FBRetainCycleDetector (0.1.4)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
@@ -55,6 +58,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - CYLTabBarController (~> 1.28.4)
   - FMDB (~> 2.6.2)
   - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
@@ -77,6 +81,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - CYLTabBarController
     - FBRetainCycleDetector
     - FMDB
     - lottie-ios
@@ -101,6 +106,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CYLTabBarController: d7160abd77b3a94626cff123fdfaa4f3badde20d
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
@@ -123,6 +129,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 1e2612938023f49f335b4a192820dd0b914d3aa5
+PODFILE CHECKSUM: 157bb4399e8685697045aaa8f66974bd15f73bf9
 
 COCOAPODS: 1.7.5

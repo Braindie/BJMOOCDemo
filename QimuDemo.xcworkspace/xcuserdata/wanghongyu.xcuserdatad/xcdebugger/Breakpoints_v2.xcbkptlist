@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/Third/Controllers/BJImage/BJImageLoadViewController.m"
-            timestampString = "600943402.779227"
+            timestampString = "601207704.936893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QimuDemo/Class/Third/Controllers/BJImage/BJImageLoadViewController.m"
-            timestampString = "600943402.77953"
+            timestampString = "601207704.937197"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-clearCache"
             landmarkType = "7">
          </BreakpointContent>

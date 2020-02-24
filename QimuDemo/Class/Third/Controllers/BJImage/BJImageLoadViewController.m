@@ -33,7 +33,7 @@
     
 //    [self loadLocalImage];
     
-    [self loadNetImage];
+    [self loadGifImage];
 }
 
 - (void)loadLocalImage {
@@ -78,6 +78,17 @@
 
 //    [_imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil options:SDWebImageScaleDownLargeImages];
         
+}
+
+- (void)loadGifImage {
+    
+    YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 300)];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:imageView];
+    
+    //2.加载网络GIF图片
+    [imageView yy_setImageWithURL:[NSURL URLWithString:@"https://gitee.com/Braindie/BJ-Resource/raw/master/heart.png"] placeholder:[UIImage imageNamed:@"default"]];
+
 }
 
 - (void)clearCache{
