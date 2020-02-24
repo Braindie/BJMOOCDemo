@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "CenterTabBarController.h"
+//#import "CenterTabBarController.h"
+#import "QMTabBarController.h"
 //#import "GuideViewController.h"
 
 #define kname @"12345"
@@ -34,7 +35,7 @@
       NSDictionary *isFirstdic = [NSDictionary dictionaryWithContentsOfFile:filePath];
       BOOL isFirst = [[isFirstdic objectForKey:@"isFirst"] boolValue];
     
-    self.window.rootViewController = [[CenterTabBarController alloc] init];
+    self.window.rootViewController = [[QMTabBarController alloc] init];
 
 //      if (!isFirst) {
 //

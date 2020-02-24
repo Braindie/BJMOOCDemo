@@ -19,6 +19,7 @@
 		A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */; };
 		A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */; };
 		A4442AC723A3966F00D4AB34 /* BJSelectVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */; };
+		A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CA962403D13800A92510 /* QMTabBarController.m */; };
 		A4E9A07D23A3797000ED3BBE /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07823A3797000ED3BBE /* pic1.jpg */; };
 		A4E9A07E23A3797000ED3BBE /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07923A3797000ED3BBE /* pic3.jpg */; };
 		A4E9A07F23A3797000ED3BBE /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07A23A3797000ED3BBE /* pic2.jpg */; };
@@ -249,6 +250,8 @@
 		A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMGJRouterViewController.m; sourceTree = "<group>"; };
 		A4442AC523A3966F00D4AB34 /* BJSelectVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSelectVCManager.h; sourceTree = "<group>"; };
 		A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSelectVCManager.m; sourceTree = "<group>"; };
+		A4A9CA952403D13800A92510 /* QMTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMTabBarController.h; sourceTree = "<group>"; };
+		A4A9CA962403D13800A92510 /* QMTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMTabBarController.m; sourceTree = "<group>"; };
 		A4E9A07823A3797000ED3BBE /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
 		A4E9A07923A3797000ED3BBE /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
 		A4E9A07A23A3797000ED3BBE /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
@@ -1619,6 +1622,8 @@
 				E5A9E7B61EB1A3DB0072EA61 /* BaseViewController.m */,
 				E5A9E7B71EB1A3DB0072EA61 /* CenterTabBarController.h */,
 				E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */,
+				A4A9CA952403D13800A92510 /* QMTabBarController.h */,
+				A4A9CA962403D13800A92510 /* QMTabBarController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -2013,6 +2018,7 @@
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
 				E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */,
 				E5E5A8222240ECFF00E8B20B /* BJTableViewHeightViewController.m in Sources */,
+				A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */,
