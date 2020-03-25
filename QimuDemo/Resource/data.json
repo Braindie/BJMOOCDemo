@@ -37,5 +37,13 @@
                "Food_Name": "触摸事件和手势识别",
                }
                ]
+  },
+  {
+  "Type": "Texture",
+  "Symptoms": [
+               {
+               "Food_Name": "Texture",
+               }
+               ]
   }
   ]

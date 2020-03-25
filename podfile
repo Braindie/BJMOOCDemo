@@ -36,4 +36,6 @@ target "QimuDemo" do
     pod 'TYCyclePagerView', '~> 1.1.2'
     
     pod 'CYLTabBarController', '~> 1.28.4'
+    
+    pod 'Texture', '~> 2.8.1'
 end

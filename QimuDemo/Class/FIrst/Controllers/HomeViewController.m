@@ -20,6 +20,8 @@
 #import "FirstDetailViewController.h"
 #import "BJMasnoryViewController.h"
 #import "BJTouchAndGestureViewController.h"
+//#import "BJTextrueControllerViewController.h"
+#import "BJTextureASViewController.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -258,6 +260,17 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
         switch (indexPath.row) {
             case 0:{
                 BJTouchAndGestureViewController *vc = [[BJTouchAndGestureViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 4) {
+        switch (indexPath.row) {
+            case 0: {
+                BJTextureASViewController *vc = [[BJTextureASViewController alloc] init];
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
