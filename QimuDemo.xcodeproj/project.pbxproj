@@ -12,6 +12,13 @@
 		787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844E1C0EC08100DC473D /* AppDelegate.m */; };
 		787D84571C0EC08100DC473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787D84561C0EC08100DC473D /* Assets.xcassets */; };
 		A40349EB23B378A1005F72D4 /* BJTestMemoryLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */; };
+		A4354FD2242CADED0092F472 /* XBPageASController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD1242CADED0092F472 /* XBPageASController.m */; };
+		A4354FD5242CAF490092F472 /* XBSegmentedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD4242CAF490092F472 /* XBSegmentedNode.m */; };
+		A4354FD8242CB19C0092F472 /* XBASNotificationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD7242CB19C0092F472 /* XBASNotificationConstants.m */; };
+		A4354FDB242CB76C0092F472 /* BJPageASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */; };
+		A4354FDE242CB7880092F472 /* BJBannerASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */; };
+		A4354FE1242CBEE20092F472 /* XBSinglePageASController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FE0242CBEE20092F472 /* XBSinglePageASController.m */; };
+		A4354FE4242CC03F0092F472 /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FE3242CC03F0092F472 /* PageCell.m */; };
 		A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */; };
 		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
 		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
@@ -243,6 +250,20 @@
 		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A40349E923B378A1005F72D4 /* BJTestMemoryLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTestMemoryLeakViewController.h; sourceTree = "<group>"; };
 		A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTestMemoryLeakViewController.m; sourceTree = "<group>"; };
+		A4354FD0242CADED0092F472 /* XBPageASController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBPageASController.h; sourceTree = "<group>"; };
+		A4354FD1242CADED0092F472 /* XBPageASController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBPageASController.m; sourceTree = "<group>"; };
+		A4354FD3242CAF490092F472 /* XBSegmentedNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBSegmentedNode.h; sourceTree = "<group>"; };
+		A4354FD4242CAF490092F472 /* XBSegmentedNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBSegmentedNode.m; sourceTree = "<group>"; };
+		A4354FD6242CB15B0092F472 /* XBASNotificationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBASNotificationConstants.h; sourceTree = "<group>"; };
+		A4354FD7242CB19C0092F472 /* XBASNotificationConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBASNotificationConstants.m; sourceTree = "<group>"; };
+		A4354FD9242CB76C0092F472 /* BJPageASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJPageASCellNode.h; sourceTree = "<group>"; };
+		A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPageASCellNode.m; sourceTree = "<group>"; };
+		A4354FDC242CB7880092F472 /* BJBannerASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBannerASCellNode.h; sourceTree = "<group>"; };
+		A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBannerASCellNode.m; sourceTree = "<group>"; };
+		A4354FDF242CBEE20092F472 /* XBSinglePageASController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBSinglePageASController.h; sourceTree = "<group>"; };
+		A4354FE0242CBEE20092F472 /* XBSinglePageASController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBSinglePageASController.m; sourceTree = "<group>"; };
+		A4354FE2242CC03F0092F472 /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
+		A4354FE3242CC03F0092F472 /* PageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCell.m; sourceTree = "<group>"; };
 		A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
 		A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
 		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
@@ -690,6 +711,19 @@
 			path = TestMemoryLeak;
 			sourceTree = "<group>";
 		};
+		A4354FCF242CACA50092F472 /* XBPageController */ = {
+			isa = PBXGroup;
+			children = (
+				A4354FD0242CADED0092F472 /* XBPageASController.h */,
+				A4354FD1242CADED0092F472 /* XBPageASController.m */,
+				A4354FD3242CAF490092F472 /* XBSegmentedNode.h */,
+				A4354FD4242CAF490092F472 /* XBSegmentedNode.m */,
+				A4354FD6242CB15B0092F472 /* XBASNotificationConstants.h */,
+				A4354FD7242CB19C0092F472 /* XBASNotificationConstants.m */,
+			);
+			path = XBPageController;
+			sourceTree = "<group>";
+		};
 		A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +757,15 @@
 			children = (
 				A48CFFF32429E9F70086A6FD /* BJTextureASViewController.h */,
 				A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */,
+				A4354FDC242CB7880092F472 /* BJBannerASCellNode.h */,
+				A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */,
+				A4354FD9242CB76C0092F472 /* BJPageASCellNode.h */,
+				A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */,
+				A4354FCF242CACA50092F472 /* XBPageController */,
+				A4354FDF242CBEE20092F472 /* XBSinglePageASController.h */,
+				A4354FE0242CBEE20092F472 /* XBSinglePageASController.m */,
+				A4354FE2242CC03F0092F472 /* PageCell.h */,
+				A4354FE3242CC03F0092F472 /* PageCell.m */,
 				A48CFFF9242A22910086A6FD /* BJTextureASCellNode.h */,
 				A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */,
 			);
@@ -1981,6 +2024,7 @@
 				E505EAD820C548B700851764 /* ZLCameraView.m in Sources */,
 				E56882EF22366A6E007CF4E9 /* BJImageDeView.m in Sources */,
 				E505EAE920C548B700851764 /* ZLPhotoPickerViewController.m in Sources */,
+				A4354FDB242CB76C0092F472 /* BJPageASCellNode.m in Sources */,
 				E51475CA20CF97CD00B79605 /* SGWBlockAlertManager.m in Sources */,
 				A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */,
 				E513D7652238DEDC00C3737F /* UIBezierPath+curved.m in Sources */,
@@ -1997,6 +2041,7 @@
 				E56882DB22364007007CF4E9 /* BJBrokenLineViewController.m in Sources */,
 				787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */,
 				E57A135C20FC7DCB008C375C /* MonthXibCollectionViewCell.m in Sources */,
+				A4354FD8242CB19C0092F472 /* XBASNotificationConstants.m in Sources */,
 				E57EA3342385296300BBFFFA /* BJPersionModel.m in Sources */,
 				E5A9E7A61EB1A39D0072EA61 /* ThirdViewCtroller.m in Sources */,
 				E5A9E2CD1EB19B520072EA61 /* ZDBHelper.m in Sources */,
@@ -2006,6 +2051,8 @@
 				E5A91F26233389A800690D2A /* BJPropertyAnimationViewController.m in Sources */,
 				E51CFD14222522CE0050FFAA /* MVPView.m in Sources */,
 				E5246ABF22323E0E00E1656D /* BJTouchAndGestureViewController.m in Sources */,
+				A4354FDE242CB7880092F472 /* BJBannerASCellNode.m in Sources */,
+				A4354FE1242CBEE20092F472 /* XBSinglePageASController.m in Sources */,
 				E56882E122364053007CF4E9 /* BJBrokenLineView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E56882C222360C5A007CF4E9 /* BJRingViewController.m in Sources */,
@@ -2033,6 +2080,7 @@
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */,
 				E505EAD720C548B700851764 /* ZLCamera.m in Sources */,
+				A4354FD2242CADED0092F472 /* XBPageASController.m in Sources */,
 				E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */,
 				E5E49C542109E57E004ABAD1 /* MenuBTSectionHeaderView.m in Sources */,
 				E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */,
@@ -2042,6 +2090,7 @@
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
 				E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */,
+				A4354FD5242CAF490092F472 /* XBSegmentedNode.m in Sources */,
 				E5E5A8222240ECFF00E8B20B /* BJTableViewHeightViewController.m in Sources */,
 				A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */,
 				E505EAD920C548B700851764 /* ZLPhotoPickerBrowserPhoto.m in Sources */,
@@ -2065,6 +2114,7 @@
 				E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */,
 				E59451E7222E895A001F71C5 /* SecondLeftDetailViewController.m in Sources */,
 				E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */,
+				A4354FE4242CC03F0092F472 /* PageCell.m in Sources */,
 				E508F86B20FDF6A500C9EF26 /* BJRefreshGifStateHeader.m in Sources */,
 				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				A4E9A09823A37F6D00ED3BBE /* BJLottieViewController.m in Sources */,

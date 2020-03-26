@@ -7,12 +7,14 @@
 //
 
 #import "BJTextureASViewController.h"
-#import "BJTextureASCellNode.h"
+#import "BJBannerASCellNode.h"
+#import "BJPageASCellNode.h"
 #import "BJRefresh.h"
 
 @interface BJTextureASViewController ()<ASTableDelegate, ASTableDataSource>
 
 //@property (nonatomic, strong, readonly) UITableView *tableView;
+@property (nonatomic, copy) NSString *contentStr;
 
 @property (nonatomic, strong) ASTableNode *tableNode;
 @end
@@ -37,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.isCustomBack = YES;
+    self.contentStr = @"你好";
     
     @weakify(self)
     self.tableNode.view.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{
@@ -71,16 +74,37 @@
 #pragma mark - ASTableDataSource methods
 
 - (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
-    return 15;
+    return 10;
 }
 
 - (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ASCellNode *(^ASCellNodeBlock)() = ^ASCellNode *() {
-      BJTextureASCellNode *cellNode = [[BJTextureASCellNode alloc] initWithObject:@"你好好好好好好啊"];
-      return cellNode;
-    };
     
-    return ASCellNodeBlock;
+    if (indexPath.row == 9) {
+        ASCellNode *(^ASPageCellNodeBlock)() = ^ASCellNode *() {
+            BJPageASCellNode *cellNode = [[BJPageASCellNode alloc] init];
+            return cellNode;
+        };
+        return ASPageCellNodeBlock;
+        
+    } else {
+        ASCellNode *(^ASBannerCellNodeBlock)() = ^ASCellNode *() {
+            BJBannerASCellNode *cellNode = [[BJBannerASCellNode alloc] init];
+            return cellNode;
+        };
+        return ASBannerCellNodeBlock;
+    }
+    
+//    ASCellNode *(^ASCellNodeBlock)() = ^ASCellNode *() {
+//        @weakify(self)
+//        BJTextureASCellNode *cellNode = [[BJTextureASCellNode alloc] initWithObject:self.contentStr];
+//        cellNode.addBlock = ^{
+//            @strongify(self)
+//            self.contentStr = @"你要呀呀呀呀呀呀呀呀呀呀呀呀呀";
+//            [self.tableNode reloadData];
+//            NSLog(@"添加好友");
+//        };
+//        return cellNode;
+//    };
 }
 
 @end

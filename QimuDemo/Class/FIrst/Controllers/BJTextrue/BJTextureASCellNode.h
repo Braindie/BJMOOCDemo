@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithObject:(NSString *)string;
 
+@property (nonatomic, copy) void (^addBlock) (void);
+
+@property (nonatomic, copy) void (^goodBlock) (void);
+
+@property (nonatomic, copy) void (^eyesBlock) (void);
+
 @end
 
 NS_ASSUME_NONNULL_END
