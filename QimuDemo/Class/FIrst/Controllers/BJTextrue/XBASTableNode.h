@@ -1,8 +1,8 @@
 //
-//  XBPageASController.h
+//  XBASTableNode.h
 //  QimuDemo
 //
-//  Created by 张文军 on 2020/3/26.
+//  Created by 张文军 on 2020/3/27.
 //  Copyright © 2020 ll. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XBPageASController : ASViewController
+@interface XBASTableNode : ASTableNode<UIGestureRecognizerDelegate>
 
 @end
 

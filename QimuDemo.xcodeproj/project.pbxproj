@@ -12,13 +12,10 @@
 		787D844F1C0EC08100DC473D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787D844E1C0EC08100DC473D /* AppDelegate.m */; };
 		787D84571C0EC08100DC473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787D84561C0EC08100DC473D /* Assets.xcassets */; };
 		A40349EB23B378A1005F72D4 /* BJTestMemoryLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */; };
-		A4354FD2242CADED0092F472 /* XBPageASController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD1242CADED0092F472 /* XBPageASController.m */; };
 		A4354FD5242CAF490092F472 /* XBSegmentedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD4242CAF490092F472 /* XBSegmentedNode.m */; };
 		A4354FD8242CB19C0092F472 /* XBASNotificationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD7242CB19C0092F472 /* XBASNotificationConstants.m */; };
 		A4354FDB242CB76C0092F472 /* BJPageASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */; };
 		A4354FDE242CB7880092F472 /* BJBannerASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */; };
-		A4354FE1242CBEE20092F472 /* XBSinglePageASController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FE0242CBEE20092F472 /* XBSinglePageASController.m */; };
-		A4354FE4242CC03F0092F472 /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FE3242CC03F0092F472 /* PageCell.m */; };
 		A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */; };
 		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
 		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
@@ -29,6 +26,10 @@
 		A48CFFF52429E9F70086A6FD /* BJTextureASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */; };
 		A48CFFFB242A22910086A6FD /* BJTextureASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */; };
 		A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CA962403D13800A92510 /* QMTabBarController.m */; };
+		A4ABA825242D915700F0607C /* XBPagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA824242D915700F0607C /* XBPagerNode.m */; };
+		A4ABA82B242DCF1500F0607C /* XBPageASNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA82A242DCF1500F0607C /* XBPageASNode.m */; };
+		A4ABA82E242DDD7900F0607C /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA82C242DDD7900F0607C /* PageCell.m */; };
+		A4ABA831242E020900F0607C /* XBASTableNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA830242E020900F0607C /* XBASTableNode.m */; };
 		A4E9A07D23A3797000ED3BBE /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07823A3797000ED3BBE /* pic1.jpg */; };
 		A4E9A07E23A3797000ED3BBE /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07923A3797000ED3BBE /* pic3.jpg */; };
 		A4E9A07F23A3797000ED3BBE /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07A23A3797000ED3BBE /* pic2.jpg */; };
@@ -250,8 +251,6 @@
 		8B716A975F0651F646AF7E79 /* Pods-QimuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QimuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QimuDemo/Pods-QimuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A40349E923B378A1005F72D4 /* BJTestMemoryLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTestMemoryLeakViewController.h; sourceTree = "<group>"; };
 		A40349EA23B378A1005F72D4 /* BJTestMemoryLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTestMemoryLeakViewController.m; sourceTree = "<group>"; };
-		A4354FD0242CADED0092F472 /* XBPageASController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBPageASController.h; sourceTree = "<group>"; };
-		A4354FD1242CADED0092F472 /* XBPageASController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBPageASController.m; sourceTree = "<group>"; };
 		A4354FD3242CAF490092F472 /* XBSegmentedNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBSegmentedNode.h; sourceTree = "<group>"; };
 		A4354FD4242CAF490092F472 /* XBSegmentedNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBSegmentedNode.m; sourceTree = "<group>"; };
 		A4354FD6242CB15B0092F472 /* XBASNotificationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBASNotificationConstants.h; sourceTree = "<group>"; };
@@ -260,10 +259,6 @@
 		A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPageASCellNode.m; sourceTree = "<group>"; };
 		A4354FDC242CB7880092F472 /* BJBannerASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBannerASCellNode.h; sourceTree = "<group>"; };
 		A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBannerASCellNode.m; sourceTree = "<group>"; };
-		A4354FDF242CBEE20092F472 /* XBSinglePageASController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBSinglePageASController.h; sourceTree = "<group>"; };
-		A4354FE0242CBEE20092F472 /* XBSinglePageASController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBSinglePageASController.m; sourceTree = "<group>"; };
-		A4354FE2242CC03F0092F472 /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
-		A4354FE3242CC03F0092F472 /* PageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCell.m; sourceTree = "<group>"; };
 		A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
 		A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
 		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
@@ -280,6 +275,14 @@
 		A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTextureASCellNode.m; sourceTree = "<group>"; };
 		A4A9CA952403D13800A92510 /* QMTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMTabBarController.h; sourceTree = "<group>"; };
 		A4A9CA962403D13800A92510 /* QMTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMTabBarController.m; sourceTree = "<group>"; };
+		A4ABA823242D915700F0607C /* XBPagerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBPagerNode.h; sourceTree = "<group>"; };
+		A4ABA824242D915700F0607C /* XBPagerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBPagerNode.m; sourceTree = "<group>"; };
+		A4ABA829242DCF1500F0607C /* XBPageASNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBPageASNode.h; sourceTree = "<group>"; };
+		A4ABA82A242DCF1500F0607C /* XBPageASNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBPageASNode.m; sourceTree = "<group>"; };
+		A4ABA82C242DDD7900F0607C /* PageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageCell.m; sourceTree = "<group>"; };
+		A4ABA82D242DDD7900F0607C /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
+		A4ABA82F242E020900F0607C /* XBASTableNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBASTableNode.h; sourceTree = "<group>"; };
+		A4ABA830242E020900F0607C /* XBASTableNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBASTableNode.m; sourceTree = "<group>"; };
 		A4E9A07823A3797000ED3BBE /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
 		A4E9A07923A3797000ED3BBE /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
 		A4E9A07A23A3797000ED3BBE /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
@@ -714,10 +717,14 @@
 		A4354FCF242CACA50092F472 /* XBPageController */ = {
 			isa = PBXGroup;
 			children = (
-				A4354FD0242CADED0092F472 /* XBPageASController.h */,
-				A4354FD1242CADED0092F472 /* XBPageASController.m */,
+				A4ABA829242DCF1500F0607C /* XBPageASNode.h */,
+				A4ABA82A242DCF1500F0607C /* XBPageASNode.m */,
 				A4354FD3242CAF490092F472 /* XBSegmentedNode.h */,
 				A4354FD4242CAF490092F472 /* XBSegmentedNode.m */,
+				A4ABA823242D915700F0607C /* XBPagerNode.h */,
+				A4ABA824242D915700F0607C /* XBPagerNode.m */,
+				A4ABA82D242DDD7900F0607C /* PageCell.h */,
+				A4ABA82C242DDD7900F0607C /* PageCell.m */,
 				A4354FD6242CB15B0092F472 /* XBASNotificationConstants.h */,
 				A4354FD7242CB19C0092F472 /* XBASNotificationConstants.m */,
 			);
@@ -761,11 +768,9 @@
 				A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */,
 				A4354FD9242CB76C0092F472 /* BJPageASCellNode.h */,
 				A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */,
+				A4ABA82F242E020900F0607C /* XBASTableNode.h */,
+				A4ABA830242E020900F0607C /* XBASTableNode.m */,
 				A4354FCF242CACA50092F472 /* XBPageController */,
-				A4354FDF242CBEE20092F472 /* XBSinglePageASController.h */,
-				A4354FE0242CBEE20092F472 /* XBSinglePageASController.m */,
-				A4354FE2242CC03F0092F472 /* PageCell.h */,
-				A4354FE3242CC03F0092F472 /* PageCell.m */,
 				A48CFFF9242A22910086A6FD /* BJTextureASCellNode.h */,
 				A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */,
 			);
@@ -1706,12 +1711,12 @@
 		E5ABA23820C0FA4A00A2C172 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
+				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
 				A48CFFEF2429E5180086A6FD /* BJTextrue */,
 				E5246ABC22323DEE00E1656D /* BJTouchAndGesture */,
 				E5246AB8223211CC00E1656D /* BJMasonry */,
 				E5246AB42232118F00E1656D /* BJScreening */,
-				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
-				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2010,15 +2015,18 @@
 			files = (
 				A40349EB23B378A1005F72D4 /* BJTestMemoryLeakViewController.m in Sources */,
 				E505EAE620C548B700851764 /* ZLPhotoPickerGroupViewController.m in Sources */,
+				A4ABA82B242DCF1500F0607C /* XBPageASNode.m in Sources */,
 				E5A9E3671EB19B850072EA61 /* DACircularProgressView.m in Sources */,
 				E5A061B51EC1AE7900B23589 /* CYLDBManager.m in Sources */,
 				E5A9E7BB1EB1A3DB0072EA61 /* BaseNavigationController.m in Sources */,
 				E5491DEC219AAA66003D9243 /* BJRingtLoadingView.m in Sources */,
 				E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */,
+				A4ABA825242D915700F0607C /* XBPagerNode.m in Sources */,
 				E51475DA20CFB3BE00B79605 /* DingCopyLabel.m in Sources */,
 				E505EAE420C548B700851764 /* ZLPhotoPickerGroup.m in Sources */,
 				E5F90E882215653A00BD255D /* BJYYLabelView.m in Sources */,
 				E5CB0819222F9A84003FD486 /* FiveDetailViewController.m in Sources */,
+				A4ABA831242E020900F0607C /* XBASTableNode.m in Sources */,
 				E57A136320FC7EF3008C375C /* UIScrollView+BJRefresh.m in Sources */,
 				E505EADA20C548B700851764 /* ZLPhotoRect.m in Sources */,
 				E505EAD820C548B700851764 /* ZLCameraView.m in Sources */,
@@ -2052,7 +2060,6 @@
 				E51CFD14222522CE0050FFAA /* MVPView.m in Sources */,
 				E5246ABF22323E0E00E1656D /* BJTouchAndGestureViewController.m in Sources */,
 				A4354FDE242CB7880092F472 /* BJBannerASCellNode.m in Sources */,
-				A4354FE1242CBEE20092F472 /* XBSinglePageASController.m in Sources */,
 				E56882E122364053007CF4E9 /* BJBrokenLineView.m in Sources */,
 				E54D90801EE1313B00AE856B /* LiveListModel.m in Sources */,
 				E56882C222360C5A007CF4E9 /* BJRingViewController.m in Sources */,
@@ -2080,7 +2087,6 @@
 				787D844C1C0EC08100DC473D /* main.m in Sources */,
 				E505EAD520C548B700851764 /* ZLCameraViewController.m in Sources */,
 				E505EAD720C548B700851764 /* ZLCamera.m in Sources */,
-				A4354FD2242CADED0092F472 /* XBPageASController.m in Sources */,
 				E584B5C22105BBBC008674CB /* UIColor+BJColor.m in Sources */,
 				E5E49C542109E57E004ABAD1 /* MenuBTSectionHeaderView.m in Sources */,
 				E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */,
@@ -2097,6 +2103,7 @@
 				E555B26920DB5B040037805A /* BJChartModel.m in Sources */,
 				E5246ABB223211E400E1656D /* BJMasnoryViewController.m in Sources */,
 				E505EAD620C548B700851764 /* ZLCameraImageView.m in Sources */,
+				A4ABA82E242DDD7900F0607C /* PageCell.m in Sources */,
 				E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */,
 				E5A91F2C23338AA100690D2A /* BJViewAnimationViewController.m in Sources */,
 				A4FB0B0A242B637E009CF6E5 /* BJBaseASViewController.m in Sources */,
@@ -2114,7 +2121,6 @@
 				E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */,
 				E59451E7222E895A001F71C5 /* SecondLeftDetailViewController.m in Sources */,
 				E51475D220CFB1CF00B79605 /* UIView+Extension.m in Sources */,
-				A4354FE4242CC03F0092F472 /* PageCell.m in Sources */,
 				E508F86B20FDF6A500C9EF26 /* BJRefreshGifStateHeader.m in Sources */,
 				E5A061BD1EC1AF5B00B23589 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				A4E9A09823A37F6D00ED3BBE /* BJLottieViewController.m in Sources */,

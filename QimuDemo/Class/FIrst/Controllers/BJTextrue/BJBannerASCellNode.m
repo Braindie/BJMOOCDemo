@@ -28,7 +28,10 @@
 }
 
 - (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize {
+    _titleTextNode.style.height = ASDimensionMake(20);
     return [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(20, 20, 20, 20) child:_titleTextNode];
 }
+
+
 
 @end

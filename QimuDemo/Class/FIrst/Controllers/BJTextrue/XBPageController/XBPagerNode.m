@@ -1,66 +1,59 @@
 //
-//  XBSinglePageASController.m
+//  XBPagerNode.m
 //  QimuDemo
 //
-//  Created by 张文军 on 2020/3/26.
+//  Created by 张文军 on 2020/3/27.
 //  Copyright © 2020 ll. All rights reserved.
 //
 
-#import "XBSinglePageASController.h"
+#import "XBPagerNode.h"
 #import "XBASNotificationConstants.h"
-#import "PageCell.h"
 
-@interface XBSinglePageASController () <ASPagerNodeDataSource, ASPagerDelegate>
+@interface XBPagerNode ()<ASPagerDataSource, ASPagerDelegate>
+
+@property (nonatomic, strong) PageCell *leftCellNode;
+@property (nonatomic, strong) PageCell *rightCellNode;
 
 @end
 
-@implementation XBSinglePageASController {
+@implementation XBPagerNode {
     NSArray<NSString *>       *_segmentedItems;
     ASPagerNode *_pagerNode;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame segmentedItems:(NSArray<NSString *> *)segmentedItems {
-    
-    self = [super initWithNode:[[ASPagerNode alloc] init]];
-    if (self == nil) {
-      return self;
+- (instancetype)initWithSegmentedItems:(NSArray<NSString *> *)segmentedItems {
+    if (!(self = [super init])) {
+        return nil;
     }
-    _segmentedItems = segmentedItems;
-
-//    _pagerNode = [[ASPagerNode alloc] init];
-//    self = [super initWithNode:_pagerNode];
-//
-//    if (self) {
-//        _segmentedItems = segmentedItems;
-//    }
-
-
-    return self;
     
-//    self.node.dataSource = self;
-//    self.node.delegate = self;
-//    self.node.allowsSelection = YES;
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-//    self.view.frame = frame;
-//    self.node.backgroundColor = [UIColor whiteColor];
+    _segmentedItems = segmentedItems;
+    
+    _pagerNode = [[ASPagerNode alloc] init];
+    _pagerNode.dataSource = self;
+    _pagerNode.delegate = self;
+    
+    
+    self.automaticallyManagesSubnodes = YES;
+    return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupNotifications];
+- (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize {
+    
+    ASInsetLayoutSpec *layout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) child:_pagerNode];
+    
+    return layout;
 }
 
-- (void)setupNotifications {
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToSelectedPageNotification:) name:PagerNodeScrollToSelectedPageNotification object:nil];
+
+- (void)setIsCanScroll:(BOOL)isCanScroll {
+    _isCanScroll = isCanScroll;
+    _leftCellNode.isCanScroll = isCanScroll;
+    _rightCellNode.isCanScroll = isCanScroll;
 }
 
-- (void)scrollToSelectedPageNotification:(NSNotification *)notification {
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSDictionary *userInfo = notification.userInfo;
-        NSUInteger selectedPage = [[userInfo objectForKey:@"selectedPage"] unsignedIntegerValue];
-        [weakSelf.node scrollToPageAtIndex:selectedPage animated:YES];
-    });
+- (void)resetContentOffset {
+    _leftCellNode.tableNode.contentOffset = CGPointZero;
+    _rightCellNode.tableNode.contentOffset = CGPointZero;
 }
 
 #pragma mark - ASPagerDelegate
@@ -73,8 +66,28 @@
 }
 
 - (ASCellNode *)pagerNode:(ASPagerNode *)pagerNode nodeAtIndex:(NSInteger)index {
-    PageCell *cellNode = [[PageCell alloc] initWithText:_segmentedItems[index]];
-    return cellNode;
+    if (index == 0) {
+        _leftCellNode = [[PageCell alloc] initWithText:_segmentedItems[index]];
+        @weakify(self)
+        _leftCellNode.outTableCanScrollBlock = ^{
+            @strongify(self)
+            if (self.outTableCanScrollBlock) {
+                self.outTableCanScrollBlock();
+            }
+        };
+        return _leftCellNode;
+    } else {
+        _rightCellNode = [[PageCell alloc] initWithText:_segmentedItems[index]];
+        @weakify(self)
+        _rightCellNode.outTableCanScrollBlock = ^{
+            @strongify(self)
+            if (self.outTableCanScrollBlock) {
+                self.outTableCanScrollBlock();
+            }
+        };
+        return _rightCellNode;
+    }
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -98,4 +111,6 @@
     NSDictionary *splitUserInfo = @{@"frameX": [NSNumber numberWithInteger:scrollView.contentOffset.x / _segmentedItems.count]};
     [[NSNotificationCenter defaultCenter] postNotificationName:SegmentedNodeRedrawBottomSplitNodeNotification object:nil userInfo:splitUserInfo];
 }
+
+
 @end

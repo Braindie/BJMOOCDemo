@@ -11,18 +11,31 @@
 #import "BJPageASCellNode.h"
 #import "BJRefresh.h"
 
+#import "XBASTableNode.h"
+
 @interface BJTextureASViewController ()<ASTableDelegate, ASTableDataSource>
 
-//@property (nonatomic, strong, readonly) UITableView *tableView;
 @property (nonatomic, copy) NSString *contentStr;
 
-@property (nonatomic, strong) ASTableNode *tableNode;
+@property (nonatomic, strong) XBASTableNode *tableNode;
+
+///// tableView在历史列表顶部是否可以滑动
+//@property (nonatomic, assign) BOOL isTopIsCanNotMoveTabView;
+///// 上次的状态
+//@property (nonatomic, assign) BOOL isTopIsCanNotMoveTabViewPre;
+
+/// 外层table是否可以滑动
+@property (nonatomic, assign) BOOL canScroll;
+
+@property (nonatomic, strong) BJPageASCellNode *pageCellNode;
+
+
 @end
 
 @implementation BJTextureASViewController
 
 - (instancetype)init {
-    _tableNode = [[ASTableNode alloc] initWithStyle:UITableViewStylePlain];
+    _tableNode = [[XBASTableNode alloc] init];
     self = [super initWithNode:_tableNode];
 
     if (self) {
@@ -31,6 +44,9 @@
         
         _tableNode.dataSource = self;
         _tableNode.delegate = self;
+        
+        self.canScroll = YES;
+    
     }
 
     return self;
@@ -71,18 +87,27 @@
   [context completeBatchFetching:YES];
 }
 
+
 #pragma mark - ASTableDataSource methods
+- (NSInteger)numberOfSectionsInTableNode:(ASTableNode *)tableNode {
+    return 6;
+}
 
 - (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 1;
 }
 
 - (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 9) {
+    if (indexPath.section == 5) {
         ASCellNode *(^ASPageCellNodeBlock)() = ^ASCellNode *() {
-            BJPageASCellNode *cellNode = [[BJPageASCellNode alloc] init];
-            return cellNode;
+            self.pageCellNode = [[BJPageASCellNode alloc] init];
+            @weakify(self)
+            self.pageCellNode.outTableCanScrollBlock = ^{
+                @strongify(self);
+                self.canScroll = YES;
+            };
+            return self.pageCellNode;
         };
         return ASPageCellNodeBlock;
         
@@ -93,18 +118,47 @@
         };
         return ASBannerCellNodeBlock;
     }
-    
-//    ASCellNode *(^ASCellNodeBlock)() = ^ASCellNode *() {
-//        @weakify(self)
-//        BJTextureASCellNode *cellNode = [[BJTextureASCellNode alloc] initWithObject:self.contentStr];
-//        cellNode.addBlock = ^{
-//            @strongify(self)
-//            self.contentStr = @"你要呀呀呀呀呀呀呀呀呀呀呀呀呀";
-//            [self.tableNode reloadData];
-//            NSLog(@"添加好友");
-//        };
-//        return cellNode;
-//    };
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSInteger historySection = [self.tableNode numberOfSections] - 1;
+    if (historySection >= 0) {
+        // 菜单顶部偏移量
+        NSInteger menuTop = 300-84;
+        NSInteger offsetY = scrollView.contentOffset.y;
+        NSLog(@"--------->>>%ld", offsetY);
+
+        if (offsetY >= menuTop) {
+            scrollView.contentOffset = CGPointMake(0.f, menuTop);
+            
+            if (self.canScroll) {
+                self.canScroll = NO;
+                self.pageCellNode.pagerNode.isCanScroll = YES;            }
+        } else {
+            if (!self.canScroll) {
+                scrollView.contentOffset = CGPointMake(0, menuTop);
+            }
+        }
+//        if (self.isTopIsCanNotMoveTabView != self.isTopIsCanNotMoveTabViewPre) {
+//            if (!self.isTopIsCanNotMoveTabViewPre && self.isTopIsCanNotMoveTabView) {
+//                self.pageCellNode.pagerNode.isCanScroll = YES;
+//                self.canScroll = NO;
+//            }
+//            if(self.isTopIsCanNotMoveTabViewPre && !self.isTopIsCanNotMoveTabView) {
+//                if (!self.canScroll) {
+//                    scrollView.contentOffset = CGPointMake(0.f, menuTop);
+//                } else {
+//                    [self.pageCellNode.pagerNode resetContentOffset];
+//                }
+//            }
+//        }
+    }
+}
+
+- (void)setCanScroll:(BOOL)canScroll {
+    _canScroll = canScroll;
+    self.tableNode.view.showsVerticalScrollIndicator = canScroll;
 }
 
 @end

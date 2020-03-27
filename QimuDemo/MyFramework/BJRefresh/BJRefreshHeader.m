@@ -91,16 +91,16 @@
     
     //当前的contentOffset
     CGFloat offsetY = self.scrollView.bj_offsetY;
-    NSLog(@"offsetY = %f",offsetY);
+//    NSLog(@"offsetY = %f",offsetY);
     //头部控件刚好出现的offsetY
     CGFloat happenOffsetY = - self.scrollViewOriginalInset.top;
-    NSLog(@"happenOffsetY = %f",happenOffsetY);
+//    NSLog(@"happenOffsetY = %f",happenOffsetY);
 
     //普通 和 即将刷新 的临界点
     CGFloat normal2pullingOffsetY = happenOffsetY - self.bj_h;
     CGFloat pullingPercent = (happenOffsetY - offsetY) / self.bj_h;
-    NSLog(@"normal2pullingOffsetY = %f",normal2pullingOffsetY);
-    NSLog(@"pullingPercent = %f",pullingPercent);
+//    NSLog(@"normal2pullingOffsetY = %f",normal2pullingOffsetY);
+//    NSLog(@"pullingPercent = %f",pullingPercent);
 
     
     NSLog(@"%ld",self.refreshState);
