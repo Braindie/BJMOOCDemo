@@ -23,6 +23,7 @@
 
 - (void)addView{
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, SCREEN_WIDTH-30, 44)];
+    self.label.font = [UIFont systemFontOfSize:13];
     [self addSubview:self.label];
 }
 

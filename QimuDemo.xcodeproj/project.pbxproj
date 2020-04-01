@@ -30,6 +30,10 @@
 		A4ABA82B242DCF1500F0607C /* XBPageASNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA82A242DCF1500F0607C /* XBPageASNode.m */; };
 		A4ABA82E242DDD7900F0607C /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA82C242DDD7900F0607C /* PageCell.m */; };
 		A4ABA831242E020900F0607C /* XBASTableNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA830242E020900F0607C /* XBASTableNode.m */; };
+		A4C8FE8B24349C6200E63BE5 /* BJCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C8FE8A24349C6200E63BE5 /* BJCarouselViewController.m */; };
+		A4C8FE8E24349C7300E63BE5 /* BJLeftAlignedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C8FE8D24349C7300E63BE5 /* BJLeftAlignedViewController.m */; };
+		A4C8FE9224349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C8FE8F24349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib */; };
+		A4C8FE9324349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C8FE9124349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.m */; };
 		A4E9A07D23A3797000ED3BBE /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07823A3797000ED3BBE /* pic1.jpg */; };
 		A4E9A07E23A3797000ED3BBE /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07923A3797000ED3BBE /* pic3.jpg */; };
 		A4E9A07F23A3797000ED3BBE /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4E9A07A23A3797000ED3BBE /* pic2.jpg */; };
@@ -189,7 +193,6 @@
 		E5A9E7BD1EB1A3DB0072EA61 /* CenterTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9E7B81EB1A3DB0072EA61 /* CenterTabBarController.m */; };
 		E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */; };
 		E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA24020C0FA4A00A2C172 /* HomeSectionHeaderView.m */; };
-		E5ABA24E20C0FA4B00A2C172 /* MonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA24520C0FA4A00A2C172 /* MonthCollectionViewCell.m */; };
 		E5ABA24F20C0FA4B00A2C172 /* HomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ABA24720C0FA4A00A2C172 /* HomeViewCell.m */; };
 		E5B6D6DA1EB3302F00B19FF3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6D6D91EB3302F00B19FF3 /* libz.tbd */; };
 		E5B6D6DC1EB3303800B19FF3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B6D6DB1EB3303800B19FF3 /* libbz2.tbd */; };
@@ -208,8 +211,6 @@
 		E5CB0825222FAC14003FD486 /* BJDataEncryptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0824222FAC14003FD486 /* BJDataEncryptionViewController.m */; };
 		E5CB0828222FAE6E003FD486 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB0827222FAE6E003FD486 /* NSString+MD5.m */; };
 		E5D82552224DFA63000FB18A /* BJTouchTestButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D82551224DFA63000FB18A /* BJTouchTestButton.m */; };
-		E5E254E1224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */; };
-		E5E254E2224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */; };
 		E5E49C462109CE23004ABAD1 /* BJWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C442109CE23004ABAD1 /* BJWaveView.m */; };
 		E5E49C4A2109E38F004ABAD1 /* BJMenuRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C492109E38F004ABAD1 /* BJMenuRightView.m */; };
 		E5E49C4E2109E4EF004ABAD1 /* BJMenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E49C4D2109E4EF004ABAD1 /* BJMenuBarView.m */; };
@@ -283,6 +284,13 @@
 		A4ABA82D242DDD7900F0607C /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
 		A4ABA82F242E020900F0607C /* XBASTableNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBASTableNode.h; sourceTree = "<group>"; };
 		A4ABA830242E020900F0607C /* XBASTableNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBASTableNode.m; sourceTree = "<group>"; };
+		A4C8FE8924349C6200E63BE5 /* BJCarouselViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJCarouselViewController.h; sourceTree = "<group>"; };
+		A4C8FE8A24349C6200E63BE5 /* BJCarouselViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJCarouselViewController.m; sourceTree = "<group>"; };
+		A4C8FE8C24349C7300E63BE5 /* BJLeftAlignedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLeftAlignedViewController.h; sourceTree = "<group>"; };
+		A4C8FE8D24349C7300E63BE5 /* BJLeftAlignedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJLeftAlignedViewController.m; sourceTree = "<group>"; };
+		A4C8FE8F24349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYCyclePagerCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4C8FE9024349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerCollectionViewCell.h; sourceTree = "<group>"; };
+		A4C8FE9124349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerCollectionViewCell.m; sourceTree = "<group>"; };
 		A4E9A07823A3797000ED3BBE /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
 		A4E9A07923A3797000ED3BBE /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
 		A4E9A07A23A3797000ED3BBE /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
@@ -555,9 +563,7 @@
 		E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		E5ABA24020C0FA4A00A2C172 /* HomeSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSectionHeaderView.m; sourceTree = "<group>"; };
-		E5ABA24120C0FA4A00A2C172 /* MonthCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthCollectionViewCell.h; sourceTree = "<group>"; };
 		E5ABA24220C0FA4A00A2C172 /* HomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCell.h; sourceTree = "<group>"; };
-		E5ABA24520C0FA4A00A2C172 /* MonthCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthCollectionViewCell.m; sourceTree = "<group>"; };
 		E5ABA24620C0FA4A00A2C172 /* HomeSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSectionHeaderView.h; sourceTree = "<group>"; };
 		E5ABA24720C0FA4A00A2C172 /* HomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCell.m; sourceTree = "<group>"; };
 		E5B6D6D91EB3302F00B19FF3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -588,9 +594,6 @@
 		E5CB0827222FAE6E003FD486 /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		E5D82550224DFA63000FB18A /* BJTouchTestButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTouchTestButton.h; sourceTree = "<group>"; };
 		E5D82551224DFA63000FB18A /* BJTouchTestButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTouchTestButton.m; sourceTree = "<group>"; };
-		E5E254DE224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerCollectionViewCell.h; sourceTree = "<group>"; };
-		E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerCollectionViewCell.m; sourceTree = "<group>"; };
-		E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYCyclePagerCollectionViewCell.xib; sourceTree = "<group>"; };
 		E5E49C432109CE23004ABAD1 /* BJWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWaveView.h; sourceTree = "<group>"; };
 		E5E49C442109CE23004ABAD1 /* BJWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWaveView.m; sourceTree = "<group>"; };
 		E5E49C482109E38F004ABAD1 /* BJMenuRightView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJMenuRightView.h; sourceTree = "<group>"; };
@@ -775,7 +778,30 @@
 				A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */,
 			);
 			name = BJTextrue;
-			path = QimuDemo/Class/FIrst/Controllers/BJTextrue;
+			path = QimuDemo/Class/First/Controllers/BJTextrue;
+			sourceTree = SOURCE_ROOT;
+		};
+		A4C8FE8724349C4A00E63BE5 /* BJLeftAligned */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8FE8C24349C7300E63BE5 /* BJLeftAlignedViewController.h */,
+				A4C8FE8D24349C7300E63BE5 /* BJLeftAlignedViewController.m */,
+			);
+			name = BJLeftAligned;
+			path = QimuDemo/Class/FIrst/Controllers/BJLeftAligned;
+			sourceTree = SOURCE_ROOT;
+		};
+		A4C8FE8824349C4A00E63BE5 /* BJCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8FE8924349C6200E63BE5 /* BJCarouselViewController.h */,
+				A4C8FE8A24349C6200E63BE5 /* BJCarouselViewController.m */,
+				A4C8FE9024349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.h */,
+				A4C8FE9124349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.m */,
+				A4C8FE8F24349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib */,
+			);
+			name = BJCarousel;
+			path = QimuDemo/Class/FIrst/Controllers/BJCarousel;
 			sourceTree = SOURCE_ROOT;
 		};
 		A4E9A07623A3797000ED3BBE /* ImageJson */ = {
@@ -1167,9 +1193,6 @@
 			children = (
 				E5246AB52232118F00E1656D /* FirstDetailViewController.h */,
 				E5246AB62232118F00E1656D /* FirstDetailViewController.m */,
-				E5E254DE224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.h */,
-				E5E254DF224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m */,
-				E5E254E0224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib */,
 			);
 			name = BJScreening;
 			path = QimuDemo/Class/FIrst/Controllers/BJScreening;
@@ -1713,10 +1736,12 @@
 			children = (
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
-				A48CFFEF2429E5180086A6FD /* BJTextrue */,
-				E5246ABC22323DEE00E1656D /* BJTouchAndGesture */,
 				E5246AB8223211CC00E1656D /* BJMasonry */,
 				E5246AB42232118F00E1656D /* BJScreening */,
+				A4C8FE8724349C4A00E63BE5 /* BJLeftAligned */,
+				A4C8FE8824349C4A00E63BE5 /* BJCarousel */,
+				E5246ABC22323DEE00E1656D /* BJTouchAndGesture */,
+				A48CFFEF2429E5180086A6FD /* BJTextrue */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1726,8 +1751,6 @@
 			children = (
 				E5ABA24620C0FA4A00A2C172 /* HomeSectionHeaderView.h */,
 				E5ABA24020C0FA4A00A2C172 /* HomeSectionHeaderView.m */,
-				E5ABA24120C0FA4A00A2C172 /* MonthCollectionViewCell.h */,
-				E5ABA24520C0FA4A00A2C172 /* MonthCollectionViewCell.m */,
 				E5ABA24220C0FA4A00A2C172 /* HomeViewCell.h */,
 				E5ABA24720C0FA4A00A2C172 /* HomeViewCell.m */,
 			);
@@ -1944,7 +1967,7 @@
 				E5A9E5431EB19D470072EA61 /* btn_clear_input_normal.png in Resources */,
 				E5E55238223A20E20093EE41 /* headerView.png in Resources */,
 				E5A9E5591EB19D470072EA61 /* login.png in Resources */,
-				E5E254E2224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.xib in Resources */,
+				A4C8FE9224349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib in Resources */,
 				A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */,
 				E5A9E5521EB19D470072EA61 /* icon_current@3x.png in Resources */,
 				E5A9E54C1EB19D470072EA61 /* ic_checkbox_pressed@2x.png in Resources */,
@@ -2036,7 +2059,6 @@
 				E51475CA20CF97CD00B79605 /* SGWBlockAlertManager.m in Sources */,
 				A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */,
 				E513D7652238DEDC00C3737F /* UIBezierPath+curved.m in Sources */,
-				E5ABA24E20C0FA4B00A2C172 /* MonthCollectionViewCell.m in Sources */,
 				E555B26620DB5AE00037805A /* BJBarChartView.m in Sources */,
 				E57A136920FC7F53008C375C /* BJRefreshHeader.m in Sources */,
 				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
@@ -2070,6 +2092,7 @@
 				E51CFD0E222522B50050FFAA /* MVPPresenter.m in Sources */,
 				E5ABA24C20C0FA4B00A2C172 /* HomeSectionHeaderView.m in Sources */,
 				E56882D3223635FA007CF4E9 /* BJBarChartViewController.m in Sources */,
+				A4C8FE9324349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.m in Sources */,
 				E5D82552224DFA63000FB18A /* BJTouchTestButton.m in Sources */,
 				E508F86820FDF69100C9EF26 /* BJRefreshStateHeader.m in Sources */,
 				E51475C620CF97CD00B79605 /* SGWDismissAlertView.m in Sources */,
@@ -2107,7 +2130,6 @@
 				E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */,
 				E5A91F2C23338AA100690D2A /* BJViewAnimationViewController.m in Sources */,
 				A4FB0B0A242B637E009CF6E5 /* BJBaseASViewController.m in Sources */,
-				E5E254E1224B86FE005F2EEF /* TYCyclePagerCollectionViewCell.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
 				E5246AC22232462B00E1656D /* BJTouchBaseView.m in Sources */,
@@ -2132,10 +2154,12 @@
 				E505EAE520C548B700851764 /* ZLPhotoAssets.m in Sources */,
 				E51CFD0B2225229E0050FFAA /* MVPViewController.m in Sources */,
 				E505EADE20C548B700851764 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
+				A4C8FE8B24349C6200E63BE5 /* BJCarouselViewController.m in Sources */,
 				E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */,
 				E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */,
 				E58C7389238558B8004EFBB0 /* BJImageLoadViewController.m in Sources */,
 				E57D81282237A235008F07F4 /* UserModel.m in Sources */,
+				A4C8FE8E24349C7300E63BE5 /* BJLeftAlignedViewController.m in Sources */,
 				E57EA3312385286200BBFFFA /* BJDataAnalysisViewController.m in Sources */,
 				E57A136020FC7ECF008C375C /* UIScrollView+BJExtension.m in Sources */,
 				E505EAE120C548B700851764 /* UIImage+ZLPhotoLib.m in Sources */,

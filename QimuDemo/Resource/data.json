@@ -1,37 +1,45 @@
  [
   {
-  "Type": "布局",
+  "Type": "Masonry",
   "Symptoms": [
                {
-               "Food_Name": "Masonry",
-               "Picture":"Picture"
-               }
-               ]
-  },
-  {
-  "Type": "Alert弹框",
-  "Symptoms": [
-               {
-               "Food_Name": "SGWCustomBlockAlertManager.h",
+               "Food_Name": "Masonry"
                },
                {
-               "Food_Name": "SGWBlockAlertManager.h",
+               "Food_Name": "筛选"
+               },
+               {
+               "Food_Name": "左对齐"
+               },
+               {
+               "Food_Name": "轮播"
                }
                ]
   },
   {
-      "Type": "Toast弹框",
+  "Type": "Alert",
+  "Symptoms": [
+               {
+               "Food_Name": "SGWCustomBlockAlertManager",
+               },
+               {
+               "Food_Name": "SGWBlockAlertManager",
+               }
+               ]
+  },
+  {
+      "Type": "Toast",
       "Symptoms": [
           {
-              "Food_Name": "UILabel+StringFrame.h",
+              "Food_Name": "UILabel+StringFrame",
           },
           {
-              "Food_Name": "HxToastView.h",
+              "Food_Name": "HxToastView",
           }
       ]
   },
   {
-  "Type": "手势与响应者链",
+  "Type": "手势",
   "Symptoms": [
                {
                "Food_Name": "触摸事件和手势识别",

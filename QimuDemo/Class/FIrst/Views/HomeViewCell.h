@@ -10,8 +10,9 @@
 
 @interface HomeViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UIButton *button;
-@property (nonatomic,assign ) NSUInteger         section;
-@property (nonatomic,assign ) NSUInteger         row;
+@property (nonatomic, strong) UILabel *label;
+//@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, assign) NSUInteger section;
+@property (nonatomic, assign) NSUInteger row;
 
 @end

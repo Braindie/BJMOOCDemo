@@ -63,7 +63,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    self.navigationItem.title = @"动画、绘制";
+    self.navigationItem.title = @"渲染";
 
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -233,6 +233,17 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 50)];
+    [view addSubview:label];
+    if (section == 0) {
+        label.text = @"UIKit";
+    } else if (section == 1) {
+        label.text = @"Core Animation";
+    } else if (section == 2) {
+        label.text = @"Core Graphics";
+    } else if (section == 3) {
+        label.text = @"矢量图";
+    }
     return view;
 }
 

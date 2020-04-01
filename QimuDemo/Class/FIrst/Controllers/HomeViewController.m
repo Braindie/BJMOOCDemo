@@ -8,20 +8,33 @@
 
 #import "HomeViewController.h"
 
-#import "CYLDBManager.h"//json文件解析
 #import "HomeViewCell.h"
 #import "HomeSectionHeaderView.h"
 
+/// json文件解析
+#import "CYLDBManager.h"
+
+/// 弹框
 #import "SGWCustomBlockAlertManager.h"
 #import "SGWBlockAlertManager.h"
 #import "UILabel+StringFrame.h"
 #import "HxToastView.h"
 
-#import "FirstDetailViewController.h"
+/// masnory
 #import "BJMasnoryViewController.h"
+/// 筛选
+#import "FirstDetailViewController.h"
+/// 左对齐
+#import "BJLeftAlignedViewController.h"
+/// 跑马灯
+#import "BJCarouselViewController.h"
+
+/// 手势
 #import "BJTouchAndGestureViewController.h"
-//#import "BJTextrueControllerViewController.h"
+
+/// Texture
 #import "BJTextureASViewController.h"
+//#import "BJTextrueControllerViewController.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -32,6 +45,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic ,strong) NSArray *dataArr2;
@@ -41,9 +55,6 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 @implementation HomeViewController
 
-
-
-
 - (void)viewDidLoad{
     [super viewDidLoad];
 
@@ -51,8 +62,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.isNavCtrlSetLeft = NO;
-    self.isNavCtrlSetRight = YES;
-    [self.rightButton setTitle:@"筛选" forState:UIControlStateNormal];
+    self.isNavCtrlSetRight = NO;
 
     //加载数据
     [self loadTopData];
@@ -71,8 +81,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 }
 
 - (void)rightButtonAction:(UIButton *)button{
-    FirstDetailViewController *vc = [[FirstDetailViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 - (void)loadTopData{
@@ -108,9 +117,8 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 }
 
 
-#pragma mark -UICollectionViewDataSource
+#pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-
     return self.dataArr2.count;
 }
 
@@ -122,27 +130,17 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-
     HomeViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-
     cell.backgroundColor = [UIColor whiteColor];
-
-    NSMutableArray *symptoms = [NSMutableArray arrayWithArray:[self.dataArr2[indexPath.section]
-                                                               objectForKey:kDataSourceSectionKey]];
+    NSMutableArray *symptoms = [NSMutableArray arrayWithArray:[self.dataArr2[indexPath.section] objectForKey:kDataSourceSectionKey]];
     NSString *text = [symptoms[indexPath.row] objectForKey:kDataSourceCellTextKey];
-
-    [cell.button setTitle:text forState:UIControlStateNormal];
-    [cell.button setTitle:text forState:UIControlStateSelected];
-    [cell.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    cell.label.text = text;
     cell.section = indexPath.section;
     cell.row = indexPath.row;
-
     return cell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-
-
     if ([kind isEqual:UICollectionElementKindSectionHeader]) {
         HomeSectionHeaderView *filterHeaderView =
         [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
@@ -150,33 +148,11 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
                                                   forIndexPath:indexPath];
         NSString *sectionTitle = [self.dataArr2[indexPath.section] objectForKey:@"Type"];
         filterHeaderView.titleButton.tag = indexPath.section;
-        
         filterHeaderView.moreButton.hidden = NO;
         filterHeaderView.moreButton.tag = indexPath.section;
         filterHeaderView.moreButton.selected = NO;
         [filterHeaderView.titleButton setTitle:sectionTitle forState:UIControlStateNormal];
         [filterHeaderView.titleButton setTitle:sectionTitle forState:UIControlStateSelected];
-        switch (indexPath.section) {
-            case 0:
-                [filterHeaderView.titleButton setImage:[UIImage imageNamed:@"home_icon_list@2x"]
-                                              forState:UIControlStateNormal];
-                break;
-            case 1:
-                [filterHeaderView.titleButton setImage:[UIImage imageNamed:@"home_icon_list@2x"]
-                                              forState:UIControlStateNormal];
-                break;
-            case 2:
-                [filterHeaderView.titleButton setImage:[UIImage imageNamed:@"home_icon_list@2x"]
-                                              forState:UIControlStateNormal];
-                break;
-            case 3:
-                [filterHeaderView.titleButton setImage:[UIImage imageNamed:@"home_icon_list@2x"]
-                                              forState:UIControlStateNormal];
-                break;
-            default:
-                break;
-        }
-
         return (UICollectionReusableView *)filterHeaderView;
     }
     return nil;
@@ -185,36 +161,30 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 //调整单元格距离父视图边缘的位置
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    /*
-    //二级菜单数组
-    NSArray *symptoms = [NSArray arrayWithArray:[self.dataArr2[indexPath.section] objectForKey:kDataSourceSectionKey]];
-    NSString *sectionTitle = [self.dataArr2[indexPath.section] objectForKey:@"Type"];
-    BOOL shouldShowPic = YES;
-    NSString *cellTitle = [symptoms[indexPath.row] objectForKey:kDataSourceCellTextKey];
-    NSString *message = shouldShowPic?[NSString stringWithFormat:@"%@",cellTitle]:cellTitle;
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:sectionTitle
-                                                    message:message
-                                                   delegate:self
-                                          cancelButtonTitle:nil
-                                          otherButtonTitles:nil];
-    [alert show];
-    NSUInteger delaySeconds = 1;
-    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySeconds * NSEC_PER_SEC));
-    dispatch_after(when, dispatch_get_main_queue(), ^{
-        [alert dismissWithClickedButtonIndex:0 animated:YES];
-    });
-    */
-    
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:{
                 BJMasnoryViewController *vc = [[BJMasnoryViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 1:{
+                FirstDetailViewController *vc = [[FirstDetailViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 2:{
+                BJLeftAlignedViewController *vc = [[BJLeftAlignedViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 3:{
+                BJCarouselViewController *vc = [[BJCarouselViewController alloc] init];
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;

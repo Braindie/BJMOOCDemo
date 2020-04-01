@@ -33,14 +33,18 @@
 }
 
 - (void)setup {
-    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.button.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-    [self.contentView addSubview:self.button];
-    self.button.userInteractionEnabled = NO;
-    self.button.titleLabel.font = [UIFont systemFontOfSize:14];
-//    [self.button generalStyle];
-//    [self.button homeStyle];
-//    [self.button redStyle];
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 200, 30)];
+    self.label.font = [UIFont systemFontOfSize:13];
+    [self.contentView addSubview:self.label];
+    
+//    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    self.button.frame = CGRectMake(0, 15, self.bounds.size.width, self.bounds.size.height);
+//    self.button.titleLabel.textAlignment = NSTextAlignmentLeft;
+//    [self.contentView addSubview:self.button];
+//    self.button.userInteractionEnabled = NO;
+//    self.button.titleLabel.font = [UIFont systemFontOfSize:13];
+    
 }
 
 @end
