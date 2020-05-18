@@ -2,14 +2,20 @@
 //  ASTextKitRenderer.mm
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <AsyncDisplayKit/ASTextKitRenderer.h>
-
-#if AS_ENABLE_TEXTNODE
 
 #import <AsyncDisplayKit/ASAssert.h>
 
@@ -113,13 +119,11 @@ static NSCharacterSet *_defaultAvoidTruncationCharacterSet()
     _currentScaleFactor = [[self fontSizeAdjuster] scaleFactor];
   }
 
-  const CGRect constrainedRect = {CGPointZero, _constrainedSize};
-
   // If we do not scale, do exclusion, or do custom truncation, we should just use NSAttributedString drawing for a fast-path.
   if (self.canUseFastPath) {
     CGRect rect = [_attributes.attributedString boundingRectWithSize:_constrainedSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine context:self.stringDrawingContext];
     // Intersect with constrained rect, in case text kit goes out-of-bounds.
-    rect = CGRectIntersection(rect, constrainedRect);
+    rect = CGRectIntersection(rect, {CGPointZero, _constrainedSize});
     _calculatedSize = [self.shadower outsetSizeWithInsetSize:rect.size];
     return;
   }
@@ -130,7 +134,7 @@ static NSCharacterSet *_defaultAvoidTruncationCharacterSet()
     // apply the string scale before truncating or else we may truncate the string after we've done the work to shrink it.
     [[self context] performBlockWithLockedTextKitComponents:^(NSLayoutManager *layoutManager, NSTextStorage *textStorage, NSTextContainer *textContainer) {
       NSMutableAttributedString *scaledString = [[NSMutableAttributedString alloc] initWithAttributedString:textStorage];
-      [ASTextKitFontSizeAdjuster adjustFontSizeForAttributeString:scaledString withScaleFactor:self->_currentScaleFactor];
+      [ASTextKitFontSizeAdjuster adjustFontSizeForAttributeString:scaledString withScaleFactor:_currentScaleFactor];
       scaledTextStorage = [[NSTextStorage alloc] initWithAttributedString:scaledString];
       
       [textStorage removeLayoutManager:layoutManager];
@@ -140,6 +144,7 @@ static NSCharacterSet *_defaultAvoidTruncationCharacterSet()
   
   [[self truncater] truncate];
   
+  CGRect constrainedRect = {CGPointZero, _constrainedSize};
   __block CGRect boundingRect;
 
   // Force glyph generation and layout, which may not have happened yet (and isn't triggered by
@@ -156,7 +161,7 @@ static NSCharacterSet *_defaultAvoidTruncationCharacterSet()
   
   // TextKit often returns incorrect glyph bounding rects in the horizontal direction, so we clip to our bounding rect
   // to make sure our width calculations aren't being offset by glyphs going beyond the constrained rect.
-  boundingRect = CGRectIntersection(boundingRect, constrainedRect);
+  boundingRect = CGRectIntersection(boundingRect, {.size = constrainedRect.size});
   _calculatedSize = [_shadower outsetSizeWithInsetSize:boundingRect.size];
 }
 
@@ -219,7 +224,7 @@ static NSCharacterSet *_defaultAvoidTruncationCharacterSet()
       if (isScaled) {
         // if we are going to scale the text, swap out the non-scaled text for the scaled version.
         NSMutableAttributedString *scaledString = [[NSMutableAttributedString alloc] initWithAttributedString:textStorage];
-        [ASTextKitFontSizeAdjuster adjustFontSizeForAttributeString:scaledString withScaleFactor:self->_currentScaleFactor];
+        [ASTextKitFontSizeAdjuster adjustFontSizeForAttributeString:scaledString withScaleFactor:_currentScaleFactor];
         scaledTextStorage = [[NSTextStorage alloc] initWithAttributedString:scaledString];
         
         [textStorage removeLayoutManager:layoutManager];
@@ -291,5 +296,3 @@ static NSCharacterSet *_defaultAvoidTruncationCharacterSet()
 }
 
 @end
-
-#endif

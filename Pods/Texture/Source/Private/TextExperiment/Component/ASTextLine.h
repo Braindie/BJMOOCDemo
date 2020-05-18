@@ -1,10 +1,12 @@
 //
 //  ASTextLine.h
-//  Texture
+//  Modified from YYText <https://github.com/ibireme/YYText>
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Created by ibireme on 15/3/10.
+//  Copyright (c) 2015 ibireme.
+//
+//  This source code is licensed under the MIT-style license found in the
+//  LICENSE file in the root directory of this source tree.
 //
 
 #import <UIKit/UIKit.h>
@@ -20,11 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface ASTextLine : NSObject
 
-+ (instancetype)lineWithCTLine:(CTLineRef)CTLine position:(CGPoint)position vertical:(BOOL)isVertical NS_RETURNS_RETAINED;
++ (instancetype)lineWithCTLine:(CTLineRef)CTLine position:(CGPoint)position vertical:(BOOL)isVertical;
 
 @property (nonatomic) NSUInteger index;     ///< line index
 @property (nonatomic) NSUInteger row;       ///< line row
-@property (nullable, nonatomic) NSArray<NSArray<ASTextRunGlyphRange *> *> *verticalRotateRange; ///< Run rotate range
+@property (nullable, nonatomic, strong) NSArray<NSArray<ASTextRunGlyphRange *> *> *verticalRotateRange; ///< Run rotate range
 
 @property (nonatomic, readonly) CTLineRef CTLine;   ///< CoreText line
 @property (nonatomic, readonly) NSRange range;      ///< string range
@@ -71,7 +73,7 @@ typedef NS_ENUM(NSUInteger, ASTextRunGlyphDrawMode) {
 @interface ASTextRunGlyphRange : NSObject
 @property (nonatomic) NSRange glyphRangeInRun;
 @property (nonatomic) ASTextRunGlyphDrawMode drawMode;
-+ (instancetype)rangeWithRange:(NSRange)range drawMode:(ASTextRunGlyphDrawMode)mode NS_RETURNS_RETAINED;
++ (instancetype)rangeWithRange:(NSRange)range drawMode:(ASTextRunGlyphDrawMode)mode;
 @end
 
 NS_ASSUME_NONNULL_END

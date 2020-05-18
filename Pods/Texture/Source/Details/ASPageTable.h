@@ -2,8 +2,12 @@
 //  ASPageTable.h
 //  Texture
 //
-//  Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2017-present, Pinterest, Inc.  All rights reserved.
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <Foundation/Foundation.h>
@@ -15,6 +19,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+ASDISPLAYNODE_EXTERN_C_BEGIN
+
 /**
  * Represents x and y coordinates of a page.
  */
@@ -23,7 +29,7 @@ typedef uintptr_t ASPageCoordinate;
 /**
  * Returns a page coordinate with the given x and y values. Both of them must be less than 65,535.
  */
-AS_EXTERN ASPageCoordinate ASPageCoordinateMake(uint16_t x, uint16_t y) AS_WARN_UNUSED_RESULT;
+extern ASPageCoordinate ASPageCoordinateMake(uint16_t x, uint16_t y) AS_WARN_UNUSED_RESULT;
 
 /**
  * Returns coordinate of the page that contains the specified point.
@@ -33,13 +39,13 @@ AS_EXTERN ASPageCoordinate ASPageCoordinateMake(uint16_t x, uint16_t y) AS_WARN_
  *
  * @param pageSize The size of each page.
  */
-AS_EXTERN ASPageCoordinate ASPageCoordinateForPageThatContainsPoint(CGPoint point, CGSize pageSize) AS_WARN_UNUSED_RESULT;
+extern ASPageCoordinate ASPageCoordinateForPageThatContainsPoint(CGPoint point, CGSize pageSize) AS_WARN_UNUSED_RESULT;
 
-AS_EXTERN uint16_t ASPageCoordinateGetX(ASPageCoordinate pageCoordinate) AS_WARN_UNUSED_RESULT;
+extern uint16_t ASPageCoordinateGetX(ASPageCoordinate pageCoordinate) AS_WARN_UNUSED_RESULT;
 
-AS_EXTERN uint16_t ASPageCoordinateGetY(ASPageCoordinate pageCoordinate) AS_WARN_UNUSED_RESULT;
+extern uint16_t ASPageCoordinateGetY(ASPageCoordinate pageCoordinate) AS_WARN_UNUSED_RESULT;
 
-AS_EXTERN CGRect ASPageCoordinateGetPageRect(ASPageCoordinate pageCoordinate, CGSize pageSize) AS_WARN_UNUSED_RESULT;
+extern CGRect ASPageCoordinateGetPageRect(ASPageCoordinate pageCoordinate, CGSize pageSize) AS_WARN_UNUSED_RESULT;
 
 /**
  * Returns coordinate pointers for pages that intersect the specified rect. For each pointer, use ASPageCoordinateFromPointer() to get the original coordinate.
@@ -51,7 +57,9 @@ AS_EXTERN CGRect ASPageCoordinateGetPageRect(ASPageCoordinate pageCoordinate, CG
  *
  * @param pageSize The size of each page.
  */
-AS_EXTERN NSPointerArray * _Nullable ASPageCoordinatesForPagesThatIntersectRect(CGRect rect, CGSize contentSize, CGSize pageSize) AS_WARN_UNUSED_RESULT;
+extern NSPointerArray * _Nullable ASPageCoordinatesForPagesThatIntersectRect(CGRect rect, CGSize contentSize, CGSize pageSize) AS_WARN_UNUSED_RESULT;
+
+ASDISPLAYNODE_EXTERN_C_END
 
 /**
  * An alias for an NSMapTable created to store objects using ASPageCoordinates as keys.
@@ -74,12 +82,12 @@ typedef ASPageTable<id, NSMutableArray<UICollectionViewLayoutAttributes *> *> AS
 /**
  * Creates a new page table with (NSMapTableStrongMemory | NSMapTableObjectPointerPersonality) for values.
  */
-+ (ASPageTable *)pageTableForStrongObjectPointers NS_RETURNS_RETAINED;
++ (ASPageTable *)pageTableForStrongObjectPointers;
 
 /**
  * Creates a new page table with (NSMapTableWeakMemory | NSMapTableObjectPointerPersonality) for values.
  */
-+ (ASPageTable *)pageTableForWeakObjectPointers NS_RETURNS_RETAINED;
++ (ASPageTable *)pageTableForWeakObjectPointers;
 
 /**
  * Builds a new page to layout attributes from the given layout attributes.
@@ -90,7 +98,7 @@ typedef ASPageTable<id, NSMutableArray<UICollectionViewLayoutAttributes *> *> AS
  *
  * @param pageSize The size of each page.
  */
-+ (ASPageToLayoutAttributesTable *)pageTableWithLayoutAttributes:(id<NSFastEnumeration>)layoutAttributesEnumerator contentSize:(CGSize)contentSize pageSize:(CGSize)pageSize NS_RETURNS_RETAINED;
++ (ASPageToLayoutAttributesTable *)pageTableWithLayoutAttributes:(id<NSFastEnumeration>)layoutAttributesEnumerator contentSize:(CGSize)contentSize pageSize:(CGSize)pageSize;
 
 /**
  * Retrieves the object for a given page, or nil if the page is not found.

@@ -10,6 +10,7 @@ target "QimuDemo" do
     pod 'YYWebImage', '~> 1.0.5'#依赖YYImage和YYCache
     pod 'YYImage', '~> 1.0.4'
     pod 'YYCache', '~> 1.0.4'
+    pod 'YYText', '~> 1.0.7'
     
     pod 'YYAsyncLayer', '~> 1.0'
 
@@ -37,5 +38,5 @@ target "QimuDemo" do
     
     pod 'CYLTabBarController', '~> 1.28.4'
     
-    pod 'Texture', '~> 2.8.1'
+    pod 'Texture', '2.6'
 end

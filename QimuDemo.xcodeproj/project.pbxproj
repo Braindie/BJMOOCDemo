@@ -23,6 +23,7 @@
 		A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */; };
 		A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */; };
 		A4442AC723A3966F00D4AB34 /* BJSelectVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */; };
+		A44E3F0524567A3700A3253A /* BJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44E3F0424567A3700A3253A /* BJTableView.m */; };
 		A48CFFF52429E9F70086A6FD /* BJTextureASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */; };
 		A48CFFFB242A22910086A6FD /* BJTextureASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */; };
 		A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CA962403D13800A92510 /* QMTabBarController.m */; };
@@ -30,6 +31,8 @@
 		A4ABA82B242DCF1500F0607C /* XBPageASNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA82A242DCF1500F0607C /* XBPageASNode.m */; };
 		A4ABA82E242DDD7900F0607C /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA82C242DDD7900F0607C /* PageCell.m */; };
 		A4ABA831242E020900F0607C /* XBASTableNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ABA830242E020900F0607C /* XBASTableNode.m */; };
+		A4ADF8AD246FD39C00AFC41B /* JSNetworkImageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ADF8A9246FD39B00AFC41B /* JSNetworkImageNode.m */; };
+		A4ADF8AE246FD39C00AFC41B /* JSWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ADF8AB246FD39C00AFC41B /* JSWebImageManager.m */; };
 		A4C8FE8B24349C6200E63BE5 /* BJCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C8FE8A24349C6200E63BE5 /* BJCarouselViewController.m */; };
 		A4C8FE8E24349C7300E63BE5 /* BJLeftAlignedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C8FE8D24349C7300E63BE5 /* BJLeftAlignedViewController.m */; };
 		A4C8FE9224349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C8FE8F24349E2F00E63BE5 /* TYCyclePagerCollectionViewCell.xib */; };
@@ -270,6 +273,8 @@
 		A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMGJRouterViewController.m; sourceTree = "<group>"; };
 		A4442AC523A3966F00D4AB34 /* BJSelectVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSelectVCManager.h; sourceTree = "<group>"; };
 		A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSelectVCManager.m; sourceTree = "<group>"; };
+		A44E3F0324567A3700A3253A /* BJTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTableView.h; sourceTree = "<group>"; };
+		A44E3F0424567A3700A3253A /* BJTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTableView.m; sourceTree = "<group>"; };
 		A48CFFF32429E9F70086A6FD /* BJTextureASViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTextureASViewController.h; sourceTree = "<group>"; };
 		A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTextureASViewController.m; sourceTree = "<group>"; };
 		A48CFFF9242A22910086A6FD /* BJTextureASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTextureASCellNode.h; sourceTree = "<group>"; };
@@ -284,6 +289,10 @@
 		A4ABA82D242DDD7900F0607C /* PageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageCell.h; sourceTree = "<group>"; };
 		A4ABA82F242E020900F0607C /* XBASTableNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBASTableNode.h; sourceTree = "<group>"; };
 		A4ABA830242E020900F0607C /* XBASTableNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBASTableNode.m; sourceTree = "<group>"; };
+		A4ADF8A9246FD39B00AFC41B /* JSNetworkImageNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNetworkImageNode.m; sourceTree = "<group>"; };
+		A4ADF8AA246FD39B00AFC41B /* JSNetworkImageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNetworkImageNode.h; sourceTree = "<group>"; };
+		A4ADF8AB246FD39C00AFC41B /* JSWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebImageManager.m; sourceTree = "<group>"; };
+		A4ADF8AC246FD39C00AFC41B /* JSWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebImageManager.h; sourceTree = "<group>"; };
 		A4C8FE8924349C6200E63BE5 /* BJCarouselViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJCarouselViewController.h; sourceTree = "<group>"; };
 		A4C8FE8A24349C6200E63BE5 /* BJCarouselViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJCarouselViewController.m; sourceTree = "<group>"; };
 		A4C8FE8C24349C7300E63BE5 /* BJLeftAlignedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJLeftAlignedViewController.h; sourceTree = "<group>"; };
@@ -776,6 +785,10 @@
 				A4354FCF242CACA50092F472 /* XBPageController */,
 				A48CFFF9242A22910086A6FD /* BJTextureASCellNode.h */,
 				A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */,
+				A4ADF8AA246FD39B00AFC41B /* JSNetworkImageNode.h */,
+				A4ADF8A9246FD39B00AFC41B /* JSNetworkImageNode.m */,
+				A4ADF8AC246FD39C00AFC41B /* JSWebImageManager.h */,
+				A4ADF8AB246FD39C00AFC41B /* JSWebImageManager.m */,
 			);
 			name = BJTextrue;
 			path = QimuDemo/Class/First/Controllers/BJTextrue;
@@ -1649,6 +1662,8 @@
 			children = (
 				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
 				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
+				A44E3F0324567A3700A3253A /* BJTableView.h */,
+				A44E3F0424567A3700A3253A /* BJTableView.m */,
 				E5A91F1E233389A800690D2A /* UIViewAnimation */,
 				E59451E1222E8959001F71C5 /* CoreAnimation */,
 				E59451E4222E895A001F71C5 /* CoreGraphics */,
@@ -2115,6 +2130,7 @@
 				E57A136C20FC8BC1008C375C /* BJRefreshConst.m in Sources */,
 				A48CFFFB242A22910086A6FD /* BJTextureASCellNode.m in Sources */,
 				E505EADF20C548B700851764 /* ZLPhotoPickerCustomToolBarView.m in Sources */,
+				A4ADF8AE246FD39C00AFC41B /* JSWebImageManager.m in Sources */,
 				E5246AC52232463E00E1656D /* BJTouchTestView.m in Sources */,
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
@@ -2129,6 +2145,7 @@
 				A4ABA82E242DDD7900F0607C /* PageCell.m in Sources */,
 				E56882C622360D7E007CF4E9 /* BJButtonViewController.m in Sources */,
 				E5A91F2C23338AA100690D2A /* BJViewAnimationViewController.m in Sources */,
+				A4ADF8AD246FD39C00AFC41B /* JSNetworkImageNode.m in Sources */,
 				A4FB0B0A242B637E009CF6E5 /* BJBaseASViewController.m in Sources */,
 				E5A9E7BC1EB1A3DB0072EA61 /* BaseViewController.m in Sources */,
 				E51CFCFF2225196B0050FFAA /* FourthCell.m in Sources */,
@@ -2155,6 +2172,7 @@
 				E51CFD0B2225229E0050FFAA /* MVPViewController.m in Sources */,
 				E505EADE20C548B700851764 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				A4C8FE8B24349C6200E63BE5 /* BJCarouselViewController.m in Sources */,
+				A44E3F0524567A3700A3253A /* BJTableView.m in Sources */,
 				E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */,
 				E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */,
 				E58C7389238558B8004EFBB0 /* BJImageLoadViewController.m in Sources */,
@@ -2302,7 +2320,7 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 				);
 				INFOPLIST_FILE = QimuDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.China.QimuDemo;
@@ -2339,7 +2357,7 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 				);
 				INFOPLIST_FILE = QimuDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.China.QimuDemo;

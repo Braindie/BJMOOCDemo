@@ -2,21 +2,27 @@
 //  ASTextKitCoreTextAdditions.h
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-#import <AsyncDisplayKit/ASAvailability.h>
-
-#if AS_ENABLE_TEXTNODE
 
 #import <AsyncDisplayKit/ASBaseDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
+ASDISPLAYNODE_EXTERN_C_BEGIN
 /**
  @abstract Returns whether a given attribute is an unsupported Core Text attribute.
  @param attributeName The name of the attribute
@@ -34,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
               - kCTUnderlineColorAttributeName
  @result Whether attributeName is an unsupported Core Text attribute.
  */
-AS_EXTERN BOOL ASAttributeWithNameIsUnsupportedCoreTextAttribute(NSString *attributeName);
+BOOL ASAttributeWithNameIsUnsupportedCoreTextAttribute(NSString *attributeName);
 
 
 /**
@@ -54,14 +60,16 @@ AS_EXTERN BOOL ASAttributeWithNameIsUnsupportedCoreTextAttribute(NSString *attri
               - kCTUnderlineColorAttributeName
  @result An NSDictionary of attributes for use by NSAttributedString.
  */
-AS_EXTERN NSDictionary *NSAttributedStringAttributesForCoreTextAttributes(NSDictionary *coreTextAttributes);
+extern NSDictionary *NSAttributedStringAttributesForCoreTextAttributes(NSDictionary *coreTextAttributes);
 
 /**
   @abstract Returns an NSAttributedString whose Core Text attributes have been converted, where possible, to NSAttributedString attributes.
   @param dirtyAttributedString An NSAttributedString that may contain Core Text attributes.
   @result An NSAttributedString that's preserved as many CFAttributedString attributes as possible.
  */
-AS_EXTERN NSAttributedString *ASCleanseAttributedStringOfCoreTextAttributes(NSAttributedString *dirtyAttributedString);
+extern NSAttributedString *ASCleanseAttributedStringOfCoreTextAttributes(NSAttributedString *dirtyAttributedString);
+
+ASDISPLAYNODE_EXTERN_C_END
 
 #pragma mark -
 #pragma mark -
@@ -80,10 +88,8 @@ AS_EXTERN NSAttributedString *ASCleanseAttributedStringOfCoreTextAttributes(NSAt
   @result An NSParagraphStyle initialized with as many of the paragraph specifiers from `coreTextParagraphStyle` as possible.
 
  */
-+ (NSParagraphStyle *)paragraphStyleWithCTParagraphStyle:(CTParagraphStyleRef)coreTextParagraphStyle NS_RETURNS_RETAINED;
++ (instancetype)paragraphStyleWithCTParagraphStyle:(CTParagraphStyleRef)coreTextParagraphStyle;
 
 @end
 
 NS_ASSUME_NONNULL_END
-
-#endif

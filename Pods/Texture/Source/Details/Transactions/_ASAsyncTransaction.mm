@@ -2,11 +2,21 @@
 //  _ASAsyncTransaction.mm
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
+// We need this import for UITrackingRunLoopMode
+#import <UIKit/UIApplication.h>
 
 #import <AsyncDisplayKit/_ASAsyncTransaction.h>
 #import <AsyncDisplayKit/_ASAsyncTransactionGroup.h>
@@ -16,18 +26,14 @@
 #import <map>
 #import <mutex>
 
-#ifndef __STRICT_ANSI__
-  #warning "Texture must be compiled with std=c++11 to prevent layout issues. gnu++ is not supported. This is hopefully temporary."
-#endif
-
-AS_EXTERN NSRunLoopMode const UITrackingRunLoopMode;
+#define ASAsyncTransactionAssertMainThread() NSAssert(0 != pthread_main_np(), @"This method must be called on the main thread");
 
 NSInteger const ASDefaultTransactionPriority = 0;
 
 @interface ASAsyncTransactionOperation : NSObject
 - (instancetype)initWithOperationCompletionBlock:(asyncdisplaykit_async_transaction_operation_completion_block_t)operationCompletionBlock;
-@property (nonatomic) asyncdisplaykit_async_transaction_operation_completion_block_t operationCompletionBlock;
-@property id value; // set on bg queue by the operation block
+@property (nonatomic, copy) asyncdisplaykit_async_transaction_operation_completion_block_t operationCompletionBlock;
+@property (atomic, strong) id value; // set on bg queue by the operation block
 @end
 
 @implementation ASAsyncTransactionOperation
@@ -227,7 +233,7 @@ void ASAsyncTransactionQueue::GroupImpl::schedule(NSInteger priority, dispatch_q
 #else 
   NSUInteger maxThreads = [NSProcessInfo processInfo].activeProcessorCount * 2;
 
-  // Bit questionable maybe - we can give main thread more CPU time during tracking.
+  // Bit questionable maybe - we can give main thread more CPU time during tracking;
   if ([[NSRunLoop mainRunLoop].currentMode isEqualToString:UITrackingRunLoopMode])
     --maxThreads;
 #endif
@@ -320,7 +326,7 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
 }
 
 @interface _ASAsyncTransaction ()
-@property ASAsyncTransactionState state;
+@property (atomic) ASAsyncTransactionState state;
 @end
 
 
@@ -330,7 +336,8 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
   NSMutableArray<ASAsyncTransactionOperation *> *_operations;
 }
 
-#pragma mark - Lifecycle
+#pragma mark -
+#pragma mark Lifecycle
 
 - (instancetype)initWithCompletionBlock:(void(^)(_ASAsyncTransaction *, BOOL))completionBlock
 {
@@ -352,12 +359,57 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
 
 #pragma mark - Transaction Management
 
+- (void)addAsyncOperationWithBlock:(asyncdisplaykit_async_transaction_async_operation_block_t)block
+                             queue:(dispatch_queue_t)queue
+                        completion:(asyncdisplaykit_async_transaction_operation_completion_block_t)completion
+{
+  [self addAsyncOperationWithBlock:block
+                          priority:ASDefaultTransactionPriority
+                             queue:queue
+                        completion:completion];
+}
+
+- (void)addAsyncOperationWithBlock:(asyncdisplaykit_async_transaction_async_operation_block_t)block
+                          priority:(NSInteger)priority
+                             queue:(dispatch_queue_t)queue
+                        completion:(asyncdisplaykit_async_transaction_operation_completion_block_t)completion
+{
+  ASAsyncTransactionAssertMainThread();
+  NSAssert(self.state == ASAsyncTransactionStateOpen, @"You can only add operations to open transactions");
+
+  [self _ensureTransactionData];
+
+  ASAsyncTransactionOperation *operation = [[ASAsyncTransactionOperation alloc] initWithOperationCompletionBlock:completion];
+  [_operations addObject:operation];
+  _group->schedule(priority, queue, ^{
+    @autoreleasepool {
+      if (self.state != ASAsyncTransactionStateCanceled) {
+        _group->enter();
+        block(^(id value){
+          operation.value = value;
+          _group->leave();
+        });
+      }
+    }
+  });
+}
+
+- (void)addOperationWithBlock:(asyncdisplaykit_async_transaction_operation_block_t)block
+                        queue:(dispatch_queue_t)queue
+                   completion:(asyncdisplaykit_async_transaction_operation_completion_block_t)completion
+{
+    [self addOperationWithBlock:block
+                       priority:ASDefaultTransactionPriority
+                          queue:queue
+                     completion:completion];
+}
+
 - (void)addOperationWithBlock:(asyncdisplaykit_async_transaction_operation_block_t)block
                      priority:(NSInteger)priority
                         queue:(dispatch_queue_t)queue
                    completion:(asyncdisplaykit_async_transaction_operation_completion_block_t)completion
 {
-  ASDisplayNodeAssertMainThread();
+  ASAsyncTransactionAssertMainThread();
   NSAssert(self.state == ASAsyncTransactionStateOpen, @"You can only add operations to open transactions");
 
   [self _ensureTransactionData];
@@ -373,16 +425,26 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
   });
 }
 
+- (void)addCompletionBlock:(asyncdisplaykit_async_transaction_completion_block_t)completion
+{
+  __weak __typeof__(self) weakSelf = self;
+  dispatch_queue_t bsQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+  [self addOperationWithBlock:^(){return (id)nil;} queue:bsQueue completion:^(id value, BOOL canceled) {
+    __typeof__(self) strongSelf = weakSelf;
+    completion(strongSelf, canceled);
+  }];
+}
+
 - (void)cancel
 {
-  ASDisplayNodeAssertMainThread();
+  ASAsyncTransactionAssertMainThread();
   NSAssert(self.state != ASAsyncTransactionStateOpen, @"You can only cancel a committed or already-canceled transaction");
   self.state = ASAsyncTransactionStateCanceled;
 }
 
 - (void)commit
 {
-  ASDisplayNodeAssertMainThread();
+  ASAsyncTransactionAssertMainThread();
   NSAssert(self.state == ASAsyncTransactionStateOpen, @"You cannot double-commit a transaction");
   self.state = ASAsyncTransactionStateCommitted;
   
@@ -402,7 +464,7 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
 
 - (void)completeTransaction
 {
-  ASDisplayNodeAssertMainThread();
+  ASAsyncTransactionAssertMainThread();
   ASAsyncTransactionState state = self.state;
   if (state != ASAsyncTransactionStateComplete) {
     BOOL isCanceled = (state == ASAsyncTransactionStateCanceled);
@@ -423,7 +485,7 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
 
 - (void)waitUntilComplete
 {
-  ASDisplayNodeAssertMainThread();
+  ASAsyncTransactionAssertMainThread();
   if (self.state != ASAsyncTransactionStateComplete) {
     if (_group) {
       _group->wait();
@@ -434,7 +496,7 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
       // This is only necessary when forcing display work to complete before allowing the runloop
       // to continue, e.g. in the implementation of -[ASDisplayNode recursivelyEnsureDisplay].
       if (self.state == ASAsyncTransactionStateOpen) {
-        [_ASAsyncTransactionGroup.mainTransactionGroup commit];
+        [_ASAsyncTransactionGroup commit];
         NSAssert(self.state != ASAsyncTransactionStateOpen, @"Transaction should not be open after committing group");
       }
       // If we needed to commit the group above, -completeTransaction may have already been run.
@@ -444,7 +506,8 @@ ASAsyncTransactionQueue & ASAsyncTransactionQueue::instance()
   }
 }
 
-#pragma mark - Helper Methods
+#pragma mark -
+#pragma mark Helper Methods
 
 - (void)_ensureTransactionData
 {

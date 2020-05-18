@@ -66,8 +66,9 @@
 }
 
 - (void)requestData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableNode.view.bj_header endRefreshing];
+        [self.tableNode reloadData];
     });
 }
 
@@ -89,72 +90,74 @@
 
 
 #pragma mark - ASTableDataSource methods
-- (NSInteger)numberOfSectionsInTableNode:(ASTableNode *)tableNode {
-    return 6;
-}
+//- (NSInteger)numberOfSectionsInTableNode:(ASTableNode *)tableNode {
+//    return 6;
+//}
 
 - (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 6;
 }
 
 - (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 5) {
-        ASCellNode *(^ASPageCellNodeBlock)() = ^ASCellNode *() {
-            self.pageCellNode = [[BJPageASCellNode alloc] init];
-            @weakify(self)
-            self.pageCellNode.outTableCanScrollBlock = ^{
-                @strongify(self);
-                self.canScroll = YES;
-            };
-            return self.pageCellNode;
-        };
-        return ASPageCellNodeBlock;
-        
-    } else {
-        ASCellNode *(^ASBannerCellNodeBlock)() = ^ASCellNode *() {
-            BJBannerASCellNode *cellNode = [[BJBannerASCellNode alloc] init];
-            return cellNode;
-        };
-        return ASBannerCellNodeBlock;
-    }
+//    if (indexPath.section == 5) {
+//        ASCellNode *(^ASPageCellNodeBlock)() = ^ASCellNode *() {
+//            self.pageCellNode = [[BJPageASCellNode alloc] init];
+//            @weakify(self)
+//            self.pageCellNode.outTableCanScrollBlock = ^{
+//                @strongify(self);
+//                self.canScroll = YES;
+//            };
+//            return self.pageCellNode;
+//        };
+//        return ASPageCellNodeBlock;
+//
+//    } else {
+//
+//    }
+    ASCellNode *(^ASBannerCellNodeBlock)() = ^ASCellNode *() {
+        BJBannerASCellNode *cellNode = [[BJBannerASCellNode alloc] init];
+        cellNode.neverShowPlaceholders = YES;
+        return cellNode;
+    };
+    return ASBannerCellNodeBlock;
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSInteger historySection = [self.tableNode numberOfSections] - 1;
-    if (historySection >= 0) {
-        // 菜单顶部偏移量
-        NSInteger menuTop = 300-84;
-        NSInteger offsetY = scrollView.contentOffset.y;
-        NSLog(@"--------->>>%ld", offsetY);
-
-        if (offsetY >= menuTop) {
-            scrollView.contentOffset = CGPointMake(0.f, menuTop);
-            
-            if (self.canScroll) {
-                self.canScroll = NO;
-                self.pageCellNode.pagerNode.isCanScroll = YES;            }
-        } else {
-            if (!self.canScroll) {
-                scrollView.contentOffset = CGPointMake(0, menuTop);
-            }
-        }
-//        if (self.isTopIsCanNotMoveTabView != self.isTopIsCanNotMoveTabViewPre) {
-//            if (!self.isTopIsCanNotMoveTabViewPre && self.isTopIsCanNotMoveTabView) {
-//                self.pageCellNode.pagerNode.isCanScroll = YES;
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    NSInteger historySection = [self.tableNode numberOfSections] - 1;
+//    if (historySection >= 0) {
+//        // 菜单顶部偏移量
+//        NSInteger menuTop = 300-84;
+//        NSInteger offsetY = scrollView.contentOffset.y;
+//        NSLog(@"--------->>>%ld", offsetY);
+//
+//        if (offsetY >= menuTop) {
+//            scrollView.contentOffset = CGPointMake(0.f, menuTop);
+//            
+//            if (self.canScroll) {
 //                self.canScroll = NO;
-//            }
-//            if(self.isTopIsCanNotMoveTabViewPre && !self.isTopIsCanNotMoveTabView) {
-//                if (!self.canScroll) {
-//                    scrollView.contentOffset = CGPointMake(0.f, menuTop);
-//                } else {
-//                    [self.pageCellNode.pagerNode resetContentOffset];
-//                }
+//                self.pageCellNode.pagerNode.isCanScroll = YES;            }
+//        } else {
+//            if (!self.canScroll) {
+//                scrollView.contentOffset = CGPointMake(0, menuTop);
 //            }
 //        }
-    }
-}
+////        if (self.isTopIsCanNotMoveTabView != self.isTopIsCanNotMoveTabViewPre) {
+////            if (!self.isTopIsCanNotMoveTabViewPre && self.isTopIsCanNotMoveTabView) {
+////                self.pageCellNode.pagerNode.isCanScroll = YES;
+////                self.canScroll = NO;
+////            }
+////            if(self.isTopIsCanNotMoveTabViewPre && !self.isTopIsCanNotMoveTabView) {
+////                if (!self.canScroll) {
+////                    scrollView.contentOffset = CGPointMake(0.f, menuTop);
+////                } else {
+////                    [self.pageCellNode.pagerNode resetContentOffset];
+////                }
+////            }
+////        }
+//    }
+//}
 
 - (void)setCanScroll:(BOOL)canScroll {
     _canScroll = canScroll;

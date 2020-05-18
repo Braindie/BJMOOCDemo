@@ -2,14 +2,21 @@
 //  ASTraitCollection.h
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 
 #import <UIKit/UIKit.h>
-
 #import <AsyncDisplayKit/ASBaseDefines.h>
 
 @class ASTraitCollection;
@@ -18,65 +25,48 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+ASDISPLAYNODE_EXTERN_C_BEGIN
+
 #pragma mark - ASPrimitiveTraitCollection
 
-/**
- * @abstract This is an internal struct-representation of ASTraitCollection.
- *
- * @discussion This struct is for internal use only. Framework users should always use ASTraitCollection.
- *
- * If you use ASPrimitiveTraitCollection, please do make sure to initialize it with ASPrimitiveTraitCollectionMakeDefault()
- * or ASPrimitiveTraitCollectionFromUITraitCollection(UITraitCollection*).
- */
-#pragma clang diagnostic push
-#pragma clang diagnostic warning "-Wpadded"
-typedef struct {
-  UIUserInterfaceSizeClass horizontalSizeClass;
-  UIUserInterfaceSizeClass verticalSizeClass;
-
+typedef struct ASPrimitiveTraitCollection {
   CGFloat displayScale;
-  UIDisplayGamut displayGamut API_AVAILABLE(ios(10.0));
-
+  UIUserInterfaceSizeClass horizontalSizeClass;
   UIUserInterfaceIdiom userInterfaceIdiom;
+  UIUserInterfaceSizeClass verticalSizeClass;
   UIForceTouchCapability forceTouchCapability;
-  UITraitEnvironmentLayoutDirection layoutDirection API_AVAILABLE(ios(10.0));
-#if AS_BUILD_UIUSERINTERFACESTYLE
-  UIUserInterfaceStyle userInterfaceStyle API_AVAILABLE(tvos(10.0), ios(12.0));
-#endif
-
-  // NOTE: This must be a constant. We will assert.
-  unowned UIContentSizeCategory preferredContentSizeCategory API_AVAILABLE(ios(10.0));
 
   CGSize containerSize;
 } ASPrimitiveTraitCollection;
-#pragma clang diagnostic pop
 
 /**
  * Creates ASPrimitiveTraitCollection with default values.
  */
-AS_EXTERN ASPrimitiveTraitCollection ASPrimitiveTraitCollectionMakeDefault(void);
+extern ASPrimitiveTraitCollection ASPrimitiveTraitCollectionMakeDefault(void);
 
 /**
  * Creates a ASPrimitiveTraitCollection from a given UITraitCollection.
  */
-AS_EXTERN ASPrimitiveTraitCollection ASPrimitiveTraitCollectionFromUITraitCollection(UITraitCollection *traitCollection);
+extern ASPrimitiveTraitCollection ASPrimitiveTraitCollectionFromUITraitCollection(UITraitCollection *traitCollection);
 
 
 /**
  * Compares two ASPrimitiveTraitCollection to determine if they are the same.
  */
-AS_EXTERN BOOL ASPrimitiveTraitCollectionIsEqualToASPrimitiveTraitCollection(ASPrimitiveTraitCollection lhs, ASPrimitiveTraitCollection rhs);
+extern BOOL ASPrimitiveTraitCollectionIsEqualToASPrimitiveTraitCollection(ASPrimitiveTraitCollection lhs, ASPrimitiveTraitCollection rhs);
 
 /**
  * Returns a string representation of a ASPrimitiveTraitCollection.
  */
-AS_EXTERN NSString *NSStringFromASPrimitiveTraitCollection(ASPrimitiveTraitCollection traits);
+extern NSString *NSStringFromASPrimitiveTraitCollection(ASPrimitiveTraitCollection traits);
 
 /**
  * This function will walk the layout element hierarchy and updates the layout element trait collection for every
  * layout element within the hierarchy.
  */
-AS_EXTERN void ASTraitCollectionPropagateDown(id<ASLayoutElement> element, ASPrimitiveTraitCollection traitCollection);
+extern void ASTraitCollectionPropagateDown(id<ASLayoutElement> element, ASPrimitiveTraitCollection traitCollection);
+
+ASDISPLAYNODE_EXTERN_C_END
 
 /**
  * Abstraction on top of UITraitCollection for propagation within AsyncDisplayKit-Layout
@@ -84,23 +74,17 @@ AS_EXTERN void ASTraitCollectionPropagateDown(id<ASLayoutElement> element, ASPri
 @protocol ASTraitEnvironment <NSObject>
 
 /**
- * @abstract Returns a struct-representation of the environment's ASEnvironmentDisplayTraits.
- *
- * @discussion This only exists as an internal convenience method. Users should access the trait collections through
- * the NSObject based asyncTraitCollection API
+ * Returns a struct-representation of the environment's ASEnvironmentDisplayTraits. This only exists as a internal
+ * convenience method. Users should access the trait collections through the NSObject based asyncTraitCollection API
  */
 - (ASPrimitiveTraitCollection)primitiveTraitCollection;
 
 /**
- * @abstract Sets a trait collection on this environment state.
- *
- * @discussion This only exists as an internal convenience method. Users should not override trait collection using it.
- * Use [ASViewController overrideDisplayTraitsWithTraitCollection] block instead.
+ * Sets a trait collection on this environment state.
  */
 - (void)setPrimitiveTraitCollection:(ASPrimitiveTraitCollection)traitCollection;
 
 /**
- * @abstract Returns the thread-safe UITraitCollection equivalent.
  */
 - (ASTraitCollection *)asyncTraitCollection;
 
@@ -140,34 +124,29 @@ AS_EXTERN void ASTraitCollectionPropagateDown(id<ASLayoutElement> element, ASPri
 AS_SUBCLASSING_RESTRICTED
 @interface ASTraitCollection : NSObject
 
-@property (readonly) UIUserInterfaceSizeClass horizontalSizeClass;
-@property (readonly) UIUserInterfaceSizeClass verticalSizeClass;
+@property (nonatomic, assign, readonly) CGFloat displayScale;
+@property (nonatomic, assign, readonly) UIUserInterfaceSizeClass horizontalSizeClass;
+@property (nonatomic, assign, readonly) UIUserInterfaceIdiom userInterfaceIdiom;
+@property (nonatomic, assign, readonly) UIUserInterfaceSizeClass verticalSizeClass;
+@property (nonatomic, assign, readonly) UIForceTouchCapability forceTouchCapability;
+@property (nonatomic, assign, readonly) CGSize containerSize;
 
-@property (readonly) CGFloat displayScale;
-@property (readonly) UIDisplayGamut displayGamut API_AVAILABLE(ios(10.0));
++ (ASTraitCollection *)traitCollectionWithASPrimitiveTraitCollection:(ASPrimitiveTraitCollection)traits;
 
-@property (readonly) UIUserInterfaceIdiom userInterfaceIdiom;
-@property (readonly) UIForceTouchCapability forceTouchCapability;
-@property (readonly) UITraitEnvironmentLayoutDirection layoutDirection API_AVAILABLE(ios(10.0));
-#if AS_BUILD_UIUSERINTERFACESTYLE
-@property (readonly) UIUserInterfaceStyle userInterfaceStyle API_AVAILABLE(tvos(10.0), ios(12.0));
-#endif
-@property (readonly) UIContentSizeCategory preferredContentSizeCategory  API_AVAILABLE(ios(10.0));
++ (ASTraitCollection *)traitCollectionWithUITraitCollection:(UITraitCollection *)traitCollection
+                                              containerSize:(CGSize)windowSize;
 
-@property (readonly) CGSize containerSize;
 
-- (BOOL)isEqualToTraitCollection:(ASTraitCollection *)traitCollection;
++ (ASTraitCollection *)traitCollectionWithDisplayScale:(CGFloat)displayScale
+                                    userInterfaceIdiom:(UIUserInterfaceIdiom)userInterfaceIdiom
+                                   horizontalSizeClass:(UIUserInterfaceSizeClass)horizontalSizeClass
+                                     verticalSizeClass:(UIUserInterfaceSizeClass)verticalSizeClass
+                                  forceTouchCapability:(UIForceTouchCapability)forceTouchCapability
+                                         containerSize:(CGSize)windowSize;
 
-@end
-
-/**
- * These are internal helper methods. Should never be called by the framework users.
- */
-@interface ASTraitCollection (PrimitiveTraits)
-
-+ (ASTraitCollection *)traitCollectionWithASPrimitiveTraitCollection:(ASPrimitiveTraitCollection)traits NS_RETURNS_RETAINED;
 
 - (ASPrimitiveTraitCollection)primitiveTraitCollection;
+- (BOOL)isEqualToTraitCollection:(ASTraitCollection *)traitCollection;
 
 @end
 

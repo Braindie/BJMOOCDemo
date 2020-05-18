@@ -1,9 +1,12 @@
 //
 //  ASTextRunDelegate.h
-//  Texture
+//  ASText <https://github.com/ibireme/ASText>
 //
-//  Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Created by ibireme on 14/10/14.
+//  Copyright (c) 2015 ibireme.
+//
+//  This source code is licensed under the MIT-style license found in the
+//  LICENSE file in the root directory of this source tree.
 //
 
 #import <UIKit/UIKit.h>
@@ -43,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Additional information about the the run delegate.
  */
-@property (nullable, nonatomic) NSDictionary *userInfo;
+@property (nullable, nonatomic, strong) NSDictionary *userInfo;
 
 /**
  The typographic ascent of glyphs in the run.

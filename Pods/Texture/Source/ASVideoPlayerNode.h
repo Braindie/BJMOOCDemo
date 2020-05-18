@@ -2,14 +2,18 @@
 //  ASVideoPlayerNode.h
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
 //
-
-#import <AsyncDisplayKit/ASAvailability.h>
-
-#if AS_USE_VIDEO
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
 
 #if TARGET_OS_IOS
 #import <CoreMedia/CoreMedia.h>
@@ -36,35 +40,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, weak) id<ASVideoPlayerNodeDelegate> delegate;
 
-@property (nonatomic, readonly) CMTime duration;
+@property (nonatomic, assign, readonly) CMTime duration;
 
-@property (nonatomic) BOOL controlsDisabled;
+@property (nonatomic, assign) BOOL controlsDisabled;
 
 #pragma mark - ASVideoNode property proxy
 /**
  * When shouldAutoplay is set to true, a video node will play when it has both loaded and entered the "visible" interfaceState.
  * If it leaves the visible interfaceState it will pause but will resume once it has returned.
  */
-@property (nonatomic) BOOL shouldAutoPlay;
-@property (nonatomic) BOOL shouldAutoRepeat;
-@property (nonatomic) BOOL muted;
-@property (nonatomic, readonly) ASVideoNodePlayerState playerState;
-@property (nonatomic) BOOL shouldAggressivelyRecoverFromStall;
-@property (nullable, nonatomic) NSURL *placeholderImageURL;
+@property (nonatomic, assign, readwrite) BOOL shouldAutoPlay;
+@property (nonatomic, assign, readwrite) BOOL shouldAutoRepeat;
+@property (nonatomic, assign, readwrite) BOOL muted;
+@property (nonatomic, assign, readonly) ASVideoNodePlayerState playerState;
+@property (nonatomic, assign, readwrite) BOOL shouldAggressivelyRecoverFromStall;
+@property (nullable, nonatomic, strong, readwrite) NSURL *placeholderImageURL;
 
-@property (nullable, nonatomic) AVAsset *asset;
+@property (nullable, nonatomic, strong, readwrite) AVAsset *asset;
 /**
  ** @abstract The URL with which the asset was initialized.
  ** @discussion Setting the URL will override the current asset with a newly created AVURLAsset created from the given URL, and AVAsset *asset will point to that newly created AVURLAsset.  Please don't set both assetURL and asset.
  ** @return Current URL the asset was initialized or nil if no URL was given.
  **/
-@property (nullable, nonatomic) NSURL *assetURL;
+@property (nullable, nonatomic, strong, readwrite) NSURL *assetURL;
 
 /// You should never set any value on the backing video node. Use exclusivively the video player node to set properties
-@property (nonatomic, readonly) ASVideoNode *videoNode;
+@property (nonatomic, strong, readonly) ASVideoNode *videoNode;
 
 //! Defaults to 100
-@property (nonatomic) int32_t periodicTimeObserverTimescale;
+@property (nonatomic, assign) int32_t periodicTimeObserverTimescale;
 //! Defaults to AVLayerVideoGravityResizeAspect
 @property (nonatomic, copy) NSString *gravity;
 
@@ -220,6 +224,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 NS_ASSUME_NONNULL_END
-#endif  // TARGET_OS_IOS
-
 #endif

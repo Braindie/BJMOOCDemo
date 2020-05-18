@@ -26,6 +26,8 @@
 #import "BJLottieViewController.h"
 #import "BJSVGAPlayerViewController.h"
 
+#import "BJTableView.h"
+
 
 @interface SecondViewCtrl ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -37,7 +39,7 @@
     
 }
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) BJTableView *tableView;
 
 @property (nonatomic ,strong) NSMutableArray *dataArr0;
 @property (nonatomic ,strong) NSMutableArray *dataArr2;
@@ -100,16 +102,16 @@
 
 - (void)creatView{
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49-64) style:UITableViewStyleGrouped];
+    self.tableView = [[BJTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49-64) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource =self;
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
-    self.tableView.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{
-        NSLog(@"开始刷新");
-        [self requestData];
-    }];
+//    self.tableView.bj_header = [BJRefreshGifStateHeader headerWithRefreshingBlock:^{
+//        NSLog(@"开始刷新");
+//        [self requestData];
+//    }];
 
 }
 
@@ -291,6 +293,10 @@
 //////        [self updateTopView:NO];
 ////    }
 //}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"方法");
+}
 
 
 @end

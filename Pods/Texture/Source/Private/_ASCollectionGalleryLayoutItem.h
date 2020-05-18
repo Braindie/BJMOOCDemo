@@ -2,8 +2,12 @@
 //  _ASCollectionGalleryLayoutItem.h
 //  Texture
 //
-//  Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2017-present, Pinterest, Inc.  All rights reserved.
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <UIKit/UIKit.h>
@@ -23,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 AS_SUBCLASSING_RESTRICTED
 @interface _ASGalleryLayoutItem : NSObject <ASLayoutElement>
 
-@property (nonatomic, readonly) CGSize itemSize;
+@property (nonatomic, assign, readonly) CGSize itemSize;
 @property (nonatomic, weak, readonly) ASCollectionElement *collectionElement;
 
 - (instancetype)initWithItemSize:(CGSize)itemSize collectionElement:(ASCollectionElement *)collectionElement;

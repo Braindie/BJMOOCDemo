@@ -32,40 +32,24 @@
 
 #pragma mark - banner
 - (void)addPagerView {
-    TYCyclePagerView *pagerView = [[TYCyclePagerView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    TYCyclePagerView *pagerView = [[TYCyclePagerView alloc] initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 200)];
 //    pagerView.layer.borderWidth = 1;
     pagerView.isInfiniteLoop = YES;
-    pagerView.autoScrollInterval = 3.0;
+//    pagerView.autoScrollInterval = 3.0;
     pagerView.dataSource = self;
     pagerView.delegate = self;
     [pagerView registerNib:[UINib nibWithNibName:@"TYCyclePagerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellId"];
     [self.view addSubview:pagerView];
     _pagerView = pagerView;
     
-    [self loadData];
-}
-
-//- (void)addPageControl {
-//    TYPageControl *pageControl = [[TYPageControl alloc]init];
-//    //pageControl.numberOfPages = _datas.count;
-//    pageControl.currentPageIndicatorSize = CGSizeMake(8, 8);
-//    //    pageControl.pageIndicatorImage = [UIImage imageNamed:@"Dot"];
-//    //    pageControl.currentPageIndicatorImage = [UIImage imageNamed:@"DotSelected"];
-//    //    [pageControl addTarget:self action:@selector(pageControlValueChangeAction:) forControlEvents:UIControlEventValueChanged];
-//    [_pagerView addSubview:pageControl];
-//    _pageControl = pageControl;
-//}
-
-- (void)loadData {
-    // load data to _datas
-//    _pageControl.numberOfPages = _datas.count;
+    
     [_pagerView reloadData];
 }
 
 
 #pragma mark TYCyclePagerViewDataSource & TYCyclePagerViewDelegate
 - (NSInteger)numberOfItemsInPagerView:(TYCyclePagerView *)pageView{
-    return 3;
+    return 5;
 }
 
 - (__kindof UICollectionViewCell *)pagerView:(TYCyclePagerView *)pagerView cellForItemAtIndex:(NSInteger)index{
@@ -75,9 +59,10 @@
 
 - (TYCyclePagerViewLayout *)layoutForPagerView:(TYCyclePagerView *)pageView {
     TYCyclePagerViewLayout *layout = [[TYCyclePagerViewLayout alloc] init];
-    layout.itemSize = CGSizeMake(SCREEN_WIDTH - 80, 130);
-    layout.layoutType =  TYCyclePagerTransformLayoutLinear;
-    layout.itemHorizontalCenter = YES;
+    layout.itemSize = CGSizeMake(SCREEN_WIDTH - 100, 130);
+    layout.itemSpacing = 30;
+    layout.layoutType =  TYCyclePagerTransformLayoutNormal;
+    layout.itemHorizontalCenter = NO;
     return layout;
 }
 

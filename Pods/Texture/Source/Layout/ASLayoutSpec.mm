@@ -2,9 +2,17 @@
 //  ASLayoutSpec.mm
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <AsyncDisplayKit/ASLayoutSpec.h>
@@ -12,7 +20,6 @@
 
 #import <AsyncDisplayKit/ASLayoutSpec+Subclasses.h>
 
-#import <AsyncDisplayKit/ASCollections.h>
 #import <AsyncDisplayKit/ASLayoutElementStylePrivate.h>
 #import <AsyncDisplayKit/ASTraitCollection.h>
 #import <AsyncDisplayKit/ASEqualityHelpers.h>
@@ -113,12 +120,14 @@ ASLayoutElementLayoutCalculationDefaults
 {
   ASDisplayNodeAssert(self.isMutable, @"Cannot set properties when layout spec is not mutable");
 
-#if ASDISPLAYNODE_ASSERTIONS_ENABLED
+  [_childrenArray removeAllObjects];
+  
+  NSUInteger i = 0;
   for (id<ASLayoutElement> child in children) {
     ASDisplayNodeAssert([child conformsToProtocol:NSProtocolFromString(@"ASLayoutElement")], @"Child %@ of spec %@ is not an ASLayoutElement!", child, self);
+    _childrenArray[i] = child;
+    i += 1;
   }
-#endif
-  [_childrenArray setArray:children];
 }
 
 - (nullable NSArray<id<ASLayoutElement>> *)children
@@ -156,10 +165,10 @@ ASLayoutElementStyleExtensibilityForwarding
 
 - (NSMutableArray<NSDictionary *> *)propertiesForDescription
 {
-  const auto result = [NSMutableArray<NSDictionary *> array];
+  auto result = [NSMutableArray<NSDictionary *> array];
   if (NSArray *children = self.children) {
     // Use tiny descriptions because these trees can get nested very deep.
-    const auto tinyDescriptions = ASArrayByFlatMapping(children, id object, ASObjectDescriptionMakeTiny(object));
+    auto tinyDescriptions = ASArrayByFlatMapping(children, id object, ASObjectDescriptionMakeTiny(object));
     [result addObject:@{ @"children": tinyDescriptions }];
   }
   return result;
@@ -250,15 +259,13 @@ ASLayoutElementStyleExtensibilityForwarding
   return result;
 }
 
-ASSynthesizeLockingMethodsWithMutex(__instanceLock__)
-
 @end
 
 #pragma mark - ASWrapperLayoutSpec
 
 @implementation ASWrapperLayoutSpec
 
-+ (instancetype)wrapperWithLayoutElement:(id<ASLayoutElement>)layoutElement NS_RETURNS_RETAINED
++ (instancetype)wrapperWithLayoutElement:(id<ASLayoutElement>)layoutElement
 {
   return [[self alloc] initWithLayoutElement:layoutElement];
 }
@@ -272,7 +279,7 @@ ASSynthesizeLockingMethodsWithMutex(__instanceLock__)
   return self;
 }
 
-+ (instancetype)wrapperWithLayoutElements:(NSArray<id<ASLayoutElement>> *)layoutElements NS_RETURNS_RETAINED
++ (instancetype)wrapperWithLayoutElements:(NSArray<id<ASLayoutElement>> *)layoutElements
 {
   return [[self alloc] initWithLayoutElements:layoutElements];
 }
@@ -289,9 +296,7 @@ ASSynthesizeLockingMethodsWithMutex(__instanceLock__)
 - (ASLayout *)calculateLayoutThatFits:(ASSizeRange)constrainedSize
 {
   NSArray *children = self.children;
-  const auto count = children.count;
-  ASLayout *rawSublayouts[count];
-  int i = 0;
+  NSMutableArray *sublayouts = [NSMutableArray arrayWithCapacity:children.count];
   
   CGSize size = constrainedSize.min;
   for (id<ASLayoutElement> child in children) {
@@ -301,9 +306,9 @@ ASSynthesizeLockingMethodsWithMutex(__instanceLock__)
     size.width = MAX(size.width,  sublayout.size.width);
     size.height = MAX(size.height, sublayout.size.height);
     
-    rawSublayouts[i++] = sublayout;
+    [sublayouts addObject:sublayout];
   }
-  const auto sublayouts = [NSArray<ASLayout *> arrayByTransferring:rawSublayouts count:i];
+  
   return [ASLayout layoutWithLayoutElement:self size:size sublayouts:sublayouts];
 }
 

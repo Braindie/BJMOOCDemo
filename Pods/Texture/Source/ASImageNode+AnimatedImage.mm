@@ -2,9 +2,17 @@
 //  ASImageNode+AnimatedImage.mm
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <AsyncDisplayKit/ASImageNode.h>
@@ -12,15 +20,14 @@
 #import <AsyncDisplayKit/ASAssert.h>
 #import <AsyncDisplayKit/ASBaseDefines.h>
 #import <AsyncDisplayKit/ASDisplayNode+Subclasses.h>
+#import <AsyncDisplayKit/ASDisplayNode+FrameworkSubclasses.h>
 #import <AsyncDisplayKit/ASDisplayNodeExtras.h>
-#import <AsyncDisplayKit/ASDisplayNodeInternal.h>
 #import <AsyncDisplayKit/ASEqualityHelpers.h>
 #import <AsyncDisplayKit/ASImageNode+Private.h>
 #import <AsyncDisplayKit/ASImageNode+AnimatedImagePrivate.h>
 #import <AsyncDisplayKit/ASImageProtocols.h>
 #import <AsyncDisplayKit/ASInternalHelpers.h>
 #import <AsyncDisplayKit/ASNetworkImageNode.h>
-#import <AsyncDisplayKit/ASThread.h>
 #import <AsyncDisplayKit/ASWeakProxy.h>
 
 #define ASAnimatedImageDebug  0
@@ -29,6 +36,7 @@
 - (void)_locked_setDefaultImage:(UIImage *)image;
 @end
 
+NSString *const ASAnimatedImageDefaultRunLoopMode = NSRunLoopCommonModes;
 
 @implementation ASImageNode (AnimatedImage)
 
@@ -36,20 +44,17 @@
 
 - (void)setAnimatedImage:(id <ASAnimatedImageProtocol>)animatedImage
 {
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   [self _locked_setAnimatedImage:animatedImage];
 }
 
 - (void)_locked_setAnimatedImage:(id <ASAnimatedImageProtocol>)animatedImage
 {
-  DISABLED_ASAssertLocked(__instanceLock__);
-
-  if (ASObjectIsEqual(_animatedImage, animatedImage) && (animatedImage == nil || animatedImage.playbackReady)) {
+  if (ASObjectIsEqual(_animatedImage, animatedImage)) {
     return;
   }
   
-  __block id <ASAnimatedImageProtocol> previousAnimatedImage = _animatedImage;
-  
+  id <ASAnimatedImageProtocol> previousAnimatedImage = _animatedImage;
   _animatedImage = animatedImage;
   
   if (animatedImage != nil) {
@@ -69,46 +74,28 @@
       [self _locked_setShouldAnimate:YES];
     }
   } else {
-    // Clean up after ourselves.
-    
-    // Don't bother using a `_locked` version for setting contnst as it should be pretty safe calling it with
-    // reaquire the lock and would add overhead to introduce this version
-    self.contents = nil;
-    [self _locked_setCoverImage:nil];
+      // Clean up after ourselves.
+      self.contents = nil;
+      [self setCoverImage:nil];
   }
-
-  // Push calling subclass to the next runloop cycle
-  // We have to schedule the block on the common modes otherwise the tracking mode will not be included and it will
-  // not fire e.g. while scrolling down
-  CFRunLoopPerformBlock(CFRunLoopGetCurrent(), kCFRunLoopCommonModes, ^(void) {
-    [self animatedImageSet:animatedImage previousAnimatedImage:previousAnimatedImage];
-
-    // Animated image can take while to dealloc, do it off the main queue
-    if (previousAnimatedImage != nil) {
-      ASPerformBackgroundDeallocation(&previousAnimatedImage);
-    }
-  });
-  // Don't need to wakeup the runloop as the current is already running
-  // CFRunLoopWakeUp(runLoop); // Should not be necessary
+  
+  [self animatedImageSet:_animatedImage previousAnimatedImage:previousAnimatedImage];
 }
 
 - (void)animatedImageSet:(id <ASAnimatedImageProtocol>)newAnimatedImage previousAnimatedImage:(id <ASAnimatedImageProtocol>)previousAnimatedImage
 {
-  // Subclass hook should not be called with the lock held
-  DISABLED_ASAssertUnlocked(__instanceLock__);
-  
-  // Subclasses may override
+  //Subclasses may override
 }
 
 - (id <ASAnimatedImageProtocol>)animatedImage
 {
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   return _animatedImage;
 }
 
 - (void)setAnimatedImagePaused:(BOOL)animatedImagePaused
 {
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
 
   _animatedImagePaused = animatedImagePaused;
 
@@ -117,22 +104,20 @@
 
 - (BOOL)animatedImagePaused
 {
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   return _animatedImagePaused;
 }
 
 - (void)setCoverImageCompleted:(UIImage *)coverImage
 {
   if (ASInterfaceStateIncludesDisplay(self.interfaceState)) {
-    ASLockScopeSelf();
+    ASDN::MutexLocker l(__instanceLock__);
     [self _locked_setCoverImageCompleted:coverImage];
   }
 }
 
 - (void)_locked_setCoverImageCompleted:(UIImage *)coverImage
 {
-  DISABLED_ASAssertLocked(__instanceLock__);
-  
   _displayLinkLock.lock();
   BOOL setCoverImage = (_displayLink == nil) || _displayLink.paused;
   _displayLinkLock.unlock();
@@ -144,14 +129,12 @@
 
 - (void)setCoverImage:(UIImage *)coverImage
 {
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   [self _locked_setCoverImage:coverImage];
 }
 
 - (void)_locked_setCoverImage:(UIImage *)coverImage
 {
-  DISABLED_ASAssertLocked(__instanceLock__);
-  
   //If we're a network image node, we want to set the default image so
   //that it will correctly be restored if it exits the range.
 #if ASAnimatedImageDebug
@@ -182,19 +165,17 @@
     [_displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:_animatedImageRunLoopMode];
     [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:runLoopMode];
   }
-  _animatedImageRunLoopMode = [runLoopMode copy];
+  _animatedImageRunLoopMode = runLoopMode;
 }
 
 - (void)setShouldAnimate:(BOOL)shouldAnimate
 {
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   [self _locked_setShouldAnimate:shouldAnimate];
 }
 
 - (void)_locked_setShouldAnimate:(BOOL)shouldAnimate
 {
-  DISABLED_ASAssertLocked(__instanceLock__);
-  
   // This test is explicitly done and not ASPerformBlockOnMainThread as this would perform the block immediately
   // on main if called on main thread and we have to call methods locked or unlocked based on which thread we are on
   if (ASDisplayNodeThreadIsMain()) {
@@ -222,14 +203,12 @@
 {
   ASDisplayNodeAssertMainThread();
 
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   [self _locked_startAnimating];
 }
 
 - (void)_locked_startAnimating
 {
-  DISABLED_ASAssertLocked(__instanceLock__);
-  
   // It should be safe to call self.interfaceState in this case as it will only grab the lock of the superclass
   if (!ASInterfaceStateIncludesVisible(self.interfaceState)) {
     return;
@@ -266,14 +245,13 @@
 {
   ASDisplayNodeAssertMainThread();
   
-  ASLockScopeSelf();
+  ASDN::MutexLocker l(__instanceLock__);
   [self _locked_stopAnimating];
 }
 
 - (void)_locked_stopAnimating
 {
   ASDisplayNodeAssertMainThread();
-  DISABLED_ASAssertLocked(__instanceLock__);
   
 #if ASAnimatedImageDebug
   NSLog(@"stopping animation: %p", self);
@@ -338,7 +316,7 @@
   CFTimeInterval timeBetweenLastFire;
   if (self.lastDisplayLinkFire == 0) {
     timeBetweenLastFire = 0;
-  } else if (AS_AVAILABLE_IOS_TVOS(10, 10)) {
+  } else if (AS_AT_LEAST_IOS10){
     timeBetweenLastFire = displayLink.targetTimestamp - displayLink.timestamp;
   } else {
     timeBetweenLastFire = CACurrentMediaTime() - self.lastDisplayLinkFire;

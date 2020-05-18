@@ -2,9 +2,17 @@
 //  ASDisplayNode+AsyncDisplay.mm
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <AsyncDisplayKit/_ASCoreAnimationExtras.h>
@@ -12,8 +20,7 @@
 #import <AsyncDisplayKit/_ASDisplayLayer.h>
 #import <AsyncDisplayKit/ASAssert.h>
 #import <AsyncDisplayKit/ASDisplayNodeInternal.h>
-#import <AsyncDisplayKit/ASDisplayNode+FrameworkPrivate.h>
-#import <AsyncDisplayKit/ASGraphicsContext.h>
+#import <AsyncDisplayKit/ASDisplayNode+FrameworkSubclasses.h>
 #import <AsyncDisplayKit/ASInternalHelpers.h>
 #import <AsyncDisplayKit/ASSignpost.h>
 #import <AsyncDisplayKit/ASDisplayNodeExtras.h>
@@ -200,7 +207,7 @@
 
   if (shouldBeginRasterizing) {
     // Collect displayBlocks for all descendants.
-    NSMutableArray *displayBlocks = [[NSMutableArray alloc] init];
+    NSMutableArray *displayBlocks = [NSMutableArray array];
     [self _recursivelyRasterizeSelfAndSublayersWithIsCancelledBlock:isCancelledBlock displayBlocks:displayBlocks];
     CHECK_CANCELLED_AND_RETURN_NIL();
     
@@ -211,14 +218,15 @@
     displayBlock = ^id{
       CHECK_CANCELLED_AND_RETURN_NIL();
       
-      ASGraphicsBeginImageContextWithOptions(bounds.size, opaque, contentsScaleForDisplay);
+      UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, contentsScaleForDisplay);
 
       for (dispatch_block_t block in displayBlocks) {
-        CHECK_CANCELLED_AND_RETURN_NIL(ASGraphicsEndImageContext());
+        CHECK_CANCELLED_AND_RETURN_NIL(UIGraphicsEndImageContext());
         block();
       }
       
-      UIImage *image = ASGraphicsGetImageAndEndCurrentContext();
+      UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+      UIGraphicsEndImageContext();
 
       ASDN_DELAY_FOR_DISPLAY();
       return image;
@@ -228,8 +236,8 @@
       CHECK_CANCELLED_AND_RETURN_NIL();
 
       if (shouldCreateGraphicsContext) {
-        ASGraphicsBeginImageContextWithOptions(bounds.size, opaque, contentsScaleForDisplay);
-        CHECK_CANCELLED_AND_RETURN_NIL( ASGraphicsEndImageContext(); );
+        UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, contentsScaleForDisplay);
+        CHECK_CANCELLED_AND_RETURN_NIL( UIGraphicsEndImageContext(); );
       }
 
       CGContextRef currentContext = UIGraphicsGetCurrentContext();
@@ -248,8 +256,9 @@
       [self __didDisplayNodeContentWithRenderingContext:currentContext image:&image drawParameters:drawParameters backgroundColor:backgroundColor borderWidth:borderWidth borderColor:borderColor];
       
       if (shouldCreateGraphicsContext) {
-        CHECK_CANCELLED_AND_RETURN_NIL( ASGraphicsEndImageContext(); );
-        image = ASGraphicsGetImageAndEndCurrentContext();
+        CHECK_CANCELLED_AND_RETURN_NIL( UIGraphicsEndImageContext(); );
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
       }
 
       ASDN_DELAY_FOR_DISPLAY();
@@ -323,7 +332,7 @@
       bounds.size.height *= contentsScale;
       CGFloat white = 0.0f, alpha = 0.0f;
       [backgroundColor getWhite:&white alpha:&alpha];
-      ASGraphicsBeginImageContextWithOptions(bounds.size, (alpha == 1.0f), contentsScale);
+      UIGraphicsBeginImageContextWithOptions(bounds.size, (alpha == 1.0f), contentsScale);
       [*image drawInRect:bounds];
     } else {
       bounds = CGContextGetClipBoundingBox(context);
@@ -353,7 +362,8 @@
     [roundedPath stroke];  // Won't do anything if borderWidth is 0 and roundedPath is nil.
     
     if (*image) {
-      *image = ASGraphicsGetImageAndEndCurrentContext();
+      *image = UIGraphicsGetImageFromCurrentImageContext();
+      UIGraphicsEndImageContext();
     }
   }
 }

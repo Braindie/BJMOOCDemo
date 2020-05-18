@@ -1138,10 +1138,16 @@ SOFTWARE.
 
 ## Texture
 
-The Texture project was created by Pinterest as a continuation, under a different
-name and license, of the AsyncDisplayKit codebase originally developed by Facebook.
+The Texture project was created by Pinterest as a continuation, under a 
+different name and license, of the AsyncDisplayKit codebase originally developed
+by Facebook.  AsyncDisplayKit was originally released by Facebook under a BSD
+license and additional patent grant.  Those BSD and patent licenses govern use
+of code in Texture contributed prior to 4/13/2017 (the original AsyncDisplayKit 
+code), and copies of the licenses are included in the /ASDK-Licenses directory 
+of this source tree for reference.
 
-All code in Texture is covered by the Apache License, Version 2.0.
+All code contributed to Texture after 4/13/2017 is released by Pinterest under
+the Apache License, Version 2.0.
 
 Apache License
                            Version 2.0, January 2004
@@ -1320,7 +1326,6 @@ Apache License
 
    END OF TERMS AND CONDITIONS
 
-
 ## UITableView+FDTemplateLayoutCell
 
 The MIT License (MIT)
@@ -1450,6 +1455,32 @@ SOFTWARE.
 
 
 ## YYModel
+
+The MIT License (MIT)
+
+Copyright (c) 2015 ibireme <ibireme@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+## YYText
 
 The MIT License (MIT)
 

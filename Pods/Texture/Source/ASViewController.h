@@ -2,9 +2,17 @@
 //  ASViewController.h
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <UIKit/UIKit.h>
@@ -36,14 +44,14 @@ typedef ASTraitCollection * _Nonnull (^ASDisplayTraitsForTraitWindowSizeBlock)(C
  *
  * @see ASVisibilityDepth
  */
-- (instancetype)initWithNode:(DisplayNodeType)node NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithNode:(DisplayNodeType)node;
 
 NS_ASSUME_NONNULL_END
 
 /**
  * @return node Returns the ASDisplayNode which provides the backing view to the view controller.
  */
-@property (nonatomic, readonly, null_unspecified) DisplayNodeType node;
+@property (nonatomic, strong, readonly, null_unspecified) DisplayNodeType node;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -55,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Set this block to customize the ASDisplayTraits returned when the VC transitions to the given window size.
  */
-@property (nonatomic, copy) ASDisplayTraitsForTraitWindowSizeBlock overrideDisplayTraitsWithWindowSize ASDISPLAYNODE_DEPRECATED_MSG("This property is actually never accessed inside the framework");
+@property (nonatomic, copy) ASDisplayTraitsForTraitWindowSizeBlock overrideDisplayTraitsWithWindowSize;
 
 /**
  * @abstract Passthrough property to the the .interfaceState of the node.
@@ -68,12 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 // AsyncDisplayKit 2.0 BETA: This property is still being tested, but it allows
 // blocking as a view controller becomes visible to ensure no placeholders flash onscreen.
 // Refer to examples/SynchronousConcurrency, AsyncViewController.m
-@property (nonatomic) BOOL neverShowPlaceholders;
-
-/* Custom container UIViewController subclasses can use this property to add to the overlay
- that UIViewController calculates for the safeAreaInsets for contained view controllers.
- */
-@property(nonatomic) UIEdgeInsets additionalSafeAreaInsets;
+@property (nonatomic, assign) BOOL neverShowPlaceholders;
 
 @end
 
@@ -85,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Default value is YES *if* node or view controller conform to ASRangeControllerUpdateRangeProtocol otherwise it is NO.
  */
-@property (nonatomic) BOOL automaticallyAdjustRangeModeBasedOnViewEvents;
+@property (nonatomic, assign) BOOL automaticallyAdjustRangeModeBasedOnViewEvents;
 
 @end
 

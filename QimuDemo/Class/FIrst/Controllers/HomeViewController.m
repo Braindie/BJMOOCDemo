@@ -36,6 +36,8 @@
 #import "BJTextureASViewController.h"
 //#import "BJTextrueControllerViewController.h"
 
+
+
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -63,12 +65,13 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
     self.isNavCtrlSetLeft = NO;
     self.isNavCtrlSetRight = NO;
-
+    
     //加载数据
     [self loadTopData];
 
     //创建视图
     [self creatView];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

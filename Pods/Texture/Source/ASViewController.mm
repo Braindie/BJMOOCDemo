@@ -2,9 +2,17 @@
 //  ASViewController.mm
 //  Texture
 //
-//  Copyright (c) Facebook, Inc. and its affiliates.  All rights reserved.
-//  Changes after 4/13/2017 are: Copyright (c) Pinterest, Inc.  All rights reserved.
-//  Licensed under Apache 2.0: http://www.apache.org/licenses/LICENSE-2.0
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the /ASDK-Licenses directory of this source tree. An additional
+//  grant of patent rights can be found in the PATENTS file in the same directory.
+//
+//  Modifications to this file made after 4/13/2017 are: Copyright (c) 2017-present,
+//  Pinterest, Inc.  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 
 #import <AsyncDisplayKit/ASViewController.h>
@@ -24,11 +32,7 @@
   NSInteger _visibilityDepth;
   BOOL _selfConformsToRangeModeProtocol;
   BOOL _nodeConformsToRangeModeProtocol;
-  UIEdgeInsets _fallbackAdditionalSafeAreaInsets;
 }
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,8 +56,6 @@
   return self;
 }
 
-#pragma clang diagnostic pop
-
 - (instancetype)initWithNode:(ASDisplayNode *)node
 {
   if (!(self = [super initWithNibName:nil bundle:nil])) {
@@ -71,14 +73,10 @@
   if (_node == nil) {
     return;
   }
-
-  _node.viewControllerRoot = YES;
   
   _selfConformsToRangeModeProtocol = [self conformsToProtocol:@protocol(ASRangeControllerUpdateRangeProtocol)];
   _nodeConformsToRangeModeProtocol = [_node conformsToProtocol:@protocol(ASRangeControllerUpdateRangeProtocol)];
   _automaticallyAdjustRangeModeBasedOnViewEvents = _selfConformsToRangeModeProtocol || _nodeConformsToRangeModeProtocol;
-
-  _fallbackAdditionalSafeAreaInsets = UIEdgeInsetsZero;
   
   // In case the node will get loaded
   if (_node.nodeLoaded) {
@@ -161,20 +159,6 @@
     [_node recursivelyEnsureDisplaySynchronously:YES];
   }
   [super viewDidLayoutSubviews];
-
-  if (!AS_AT_LEAST_IOS11) {
-    [self _updateNodeFallbackSafeArea];
-  }
-}
-
-- (void)_updateNodeFallbackSafeArea
-{
-  UIEdgeInsets safeArea = UIEdgeInsetsMake(self.topLayoutGuide.length, 0, self.bottomLayoutGuide.length, 0);
-  UIEdgeInsets additionalInsets = self.additionalSafeAreaInsets;
-
-  safeArea = ASConcatInsets(safeArea, additionalInsets);
-
-  _node.fallbackSafeAreaInsets = safeArea;
 }
 
 ASVisibilityDidMoveToParentViewController;
@@ -280,25 +264,6 @@ ASVisibilityDepthImplementation;
   return _node.interfaceState;
 }
 
-- (UIEdgeInsets)additionalSafeAreaInsets
-{
-  if (AS_AVAILABLE_IOS(11.0)) {
-    return super.additionalSafeAreaInsets;
-  }
-
-  return _fallbackAdditionalSafeAreaInsets;
-}
-
-- (void)setAdditionalSafeAreaInsets:(UIEdgeInsets)additionalSafeAreaInsets
-{
-  if (AS_AVAILABLE_IOS(11.0)) {
-    [super setAdditionalSafeAreaInsets:additionalSafeAreaInsets];
-  } else {
-    _fallbackAdditionalSafeAreaInsets = additionalSafeAreaInsets;
-    [self _updateNodeFallbackSafeArea];
-  }
-}
-
 #pragma mark - ASTraitEnvironment
 
 - (ASPrimitiveTraitCollection)primitiveTraitCollectionForUITraitCollection:(UITraitCollection *)traitCollection
@@ -344,8 +309,6 @@ ASVisibilityDepthImplementation;
   [self propagateNewTraitCollection:traitCollection];
 }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
   [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
@@ -354,6 +317,5 @@ ASVisibilityDepthImplementation;
   traitCollection.containerSize = self.view.bounds.size;
   [self propagateNewTraitCollection:traitCollection];
 }
-#pragma clang diagnostic pop
 
 @end
