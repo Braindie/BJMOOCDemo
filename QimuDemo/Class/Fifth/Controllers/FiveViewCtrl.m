@@ -28,7 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.isNavCtrlSetLeft = YES;
     self.isNavCtrlSetRight = NO;
-    self.navigationItem.title = @"功能";
+    self.navigationItem.title = @"Func";
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-49-64) style:UITableViewStylePlain];
     self.tableView.delegate = self;

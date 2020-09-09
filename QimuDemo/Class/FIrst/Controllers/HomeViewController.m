@@ -60,7 +60,7 @@ static NSString * HeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 - (void)viewDidLoad{
     [super viewDidLoad];
 
-    self.navigationItem.title = @"布局";
+    self.navigationItem.title = @"Layout";
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.isNavCtrlSetLeft = NO;

@@ -16,6 +16,7 @@
 		A4354FD8242CB19C0092F472 /* XBASNotificationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FD7242CB19C0092F472 /* XBASNotificationConstants.m */; };
 		A4354FDB242CB76C0092F472 /* BJPageASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */; };
 		A4354FDE242CB7880092F472 /* BJBannerASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */; };
+		A44357662508BBE000DE9F63 /* BJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44357652508BBE000DE9F63 /* BJTableView.m */; };
 		A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */; };
 		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
 		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
@@ -23,7 +24,6 @@
 		A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */; };
 		A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */; };
 		A4442AC723A3966F00D4AB34 /* BJSelectVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */; };
-		A44E3F0524567A3700A3253A /* BJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44E3F0424567A3700A3253A /* BJTableView.m */; };
 		A48CFFF52429E9F70086A6FD /* BJTextureASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */; };
 		A48CFFFB242A22910086A6FD /* BJTextureASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */; };
 		A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CA962403D13800A92510 /* QMTabBarController.m */; };
@@ -263,6 +263,8 @@
 		A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJPageASCellNode.m; sourceTree = "<group>"; };
 		A4354FDC242CB7880092F472 /* BJBannerASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJBannerASCellNode.h; sourceTree = "<group>"; };
 		A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBannerASCellNode.m; sourceTree = "<group>"; };
+		A44357642508BBE000DE9F63 /* BJTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJTableView.h; sourceTree = "<group>"; };
+		A44357652508BBE000DE9F63 /* BJTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJTableView.m; sourceTree = "<group>"; };
 		A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
 		A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
 		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
@@ -273,8 +275,6 @@
 		A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMGJRouterViewController.m; sourceTree = "<group>"; };
 		A4442AC523A3966F00D4AB34 /* BJSelectVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSelectVCManager.h; sourceTree = "<group>"; };
 		A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSelectVCManager.m; sourceTree = "<group>"; };
-		A44E3F0324567A3700A3253A /* BJTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTableView.h; sourceTree = "<group>"; };
-		A44E3F0424567A3700A3253A /* BJTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTableView.m; sourceTree = "<group>"; };
 		A48CFFF32429E9F70086A6FD /* BJTextureASViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTextureASViewController.h; sourceTree = "<group>"; };
 		A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTextureASViewController.m; sourceTree = "<group>"; };
 		A48CFFF9242A22910086A6FD /* BJTextureASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTextureASCellNode.h; sourceTree = "<group>"; };
@@ -1089,9 +1089,9 @@
 		E51CFCED2225196B0050FFAA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A4442AC123A3935C00D4AB34 /* BJMGJRouter */,
 				E51CFD0122251A510050FFAA /* PatternViewController.h */,
 				E51CFD0222251A510050FFAA /* PatternViewController.m */,
+				A4442AC123A3935C00D4AB34 /* BJMGJRouter */,
 				E51CFD04222522840050FFAA /* MVP */,
 				E51CFCEE2225196B0050FFAA /* MVVM */,
 			);
@@ -1630,9 +1630,9 @@
 		E5A9E71E1EB1A39D0072EA61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A40349E823B37884005F72D4 /* TestMemoryLeak */,
 				E5B7CC551EB30FBA005378E1 /* FiveViewCtrl.h */,
 				E5B7CC561EB30FBA005378E1 /* FiveViewCtrl.m */,
+				A40349E823B37884005F72D4 /* TestMemoryLeak */,
 				E5CB0812222F9A83003FD486 /* AddressBook */,
 				E5CB081A222F9D67003FD486 /* PictureSelected */,
 				E5CB080B222F9A83003FD486 /* Bluetooth */,
@@ -1662,8 +1662,6 @@
 			children = (
 				E5B7CC431EB2E626005378E1 /* SecondViewCtrl.h */,
 				E5B7CC441EB2E626005378E1 /* SecondViewCtrl.m */,
-				A44E3F0324567A3700A3253A /* BJTableView.h */,
-				A44E3F0424567A3700A3253A /* BJTableView.m */,
 				E5A91F1E233389A800690D2A /* UIViewAnimation */,
 				E59451E1222E8959001F71C5 /* CoreAnimation */,
 				E59451E4222E895A001F71C5 /* CoreGraphics */,
@@ -1677,6 +1675,8 @@
 		E5A9E7661EB1A39D0072EA61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A44357642508BBE000DE9F63 /* BJTableView.h */,
+				A44357652508BBE000DE9F63 /* BJTableView.m */,
 				E5B7CC461EB2E62E005378E1 /* MyTableViewCell.h */,
 				E5B7CC471EB2E62E005378E1 /* MyTableViewCell.m */,
 				E5F90E862215653A00BD255D /* BJYYLabelView.h */,
@@ -2078,6 +2078,7 @@
 				E57A136920FC7F53008C375C /* BJRefreshHeader.m in Sources */,
 				E51475DF20CFB45000B79605 /* UIView+RoundedCorner.m in Sources */,
 				E51CFD002225196B0050FFAA /* FourthViewCtrl.m in Sources */,
+				A44357662508BBE000DE9F63 /* BJTableView.m in Sources */,
 				E5B7CC451EB2E626005378E1 /* SecondViewCtrl.m in Sources */,
 				E508F86320FD8C9800C9EF26 /* UIView+BJExtension.m in Sources */,
 				E5246AB72232118F00E1656D /* FirstDetailViewController.m in Sources */,
@@ -2172,7 +2173,6 @@
 				E51CFD0B2225229E0050FFAA /* MVPViewController.m in Sources */,
 				E505EADE20C548B700851764 /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				A4C8FE8B24349C6200E63BE5 /* BJCarouselViewController.m in Sources */,
-				A44E3F0524567A3700A3253A /* BJTableView.m in Sources */,
 				E5ABA24920C0FA4B00A2C172 /* HomeViewController.m in Sources */,
 				E5A9E3681EB19B850072EA61 /* DALabeledCircularProgressView.m in Sources */,
 				E58C7389238558B8004EFBB0 /* BJImageLoadViewController.m in Sources */,

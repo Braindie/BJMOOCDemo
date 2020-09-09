@@ -65,7 +65,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    self.navigationItem.title = @"渲染";
+    self.navigationItem.title = @"Draw";
 
     self.view.backgroundColor = [UIColor whiteColor];
 

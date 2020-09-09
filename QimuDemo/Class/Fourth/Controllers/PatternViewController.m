@@ -27,7 +27,7 @@
     
     self.isNavCtrlSetLeft = NO;
     self.isNavCtrlSetRight = NO;
-    self.navigationItem.title = @"架构";
+    self.navigationItem.title = @"Frame";
     
     //创建视图
     self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];

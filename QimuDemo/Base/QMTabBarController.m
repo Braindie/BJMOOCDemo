@@ -66,31 +66,31 @@
 
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *itemDic1 = @{
-                               CYLTabBarItemTitle : @"布局",
+                               CYLTabBarItemTitle : @"Layout",
                                CYLTabBarItemImage : @"accountNormal",
                                CYLTabBarItemSelectedImage : @"accountSelect"
                                };
     
     NSDictionary *itemDic2 = @{
-                               CYLTabBarItemTitle : @"渲染",
+                               CYLTabBarItemTitle : @"Draw",
                                CYLTabBarItemImage : @"accountNormal",
                                CYLTabBarItemSelectedImage : @"accountSelect"
                                };
     
     NSDictionary *itemDic3 = @{
-                               CYLTabBarItemTitle : @"数据",
+                               CYLTabBarItemTitle : @"Data",
                                CYLTabBarItemImage : @"accountNormal",
                                CYLTabBarItemSelectedImage : @"accountSelect"
                                };
     
     NSDictionary *itemDic4 = @{
-                               CYLTabBarItemTitle : @"架构",
+                               CYLTabBarItemTitle : @"Frame",
                                CYLTabBarItemImage : @"accountNormal",
                                CYLTabBarItemSelectedImage : @"accountSelect"
                                };
     
     NSDictionary *itemDic5 = @{
-                               CYLTabBarItemTitle : @"功能",
+                               CYLTabBarItemTitle : @"Func",
                                CYLTabBarItemImage : @"accountNormal",
                                CYLTabBarItemSelectedImage : @"accountSelect"
                                };
