@@ -17,6 +17,7 @@
 		A4354FDB242CB76C0092F472 /* BJPageASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDA242CB76C0092F472 /* BJPageASCellNode.m */; };
 		A4354FDE242CB7880092F472 /* BJBannerASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */; };
 		A44357662508BBE000DE9F63 /* BJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44357652508BBE000DE9F63 /* BJTableView.m */; };
+		A443576A2508E50100DE9F63 /* BJUIStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44357692508E50100DE9F63 /* BJUIStackViewController.m */; };
 		A4442AB023A388BD00D4AB34 /* LottieLogo1_masked.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */; };
 		A4442AB123A388BD00D4AB34 /* LottieLogo1.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */; };
 		A4442AB223A388BD00D4AB34 /* LottieLogo2.json in Resources */ = {isa = PBXBuildFile; fileRef = A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */; };
@@ -265,6 +266,8 @@
 		A4354FDD242CB7880092F472 /* BJBannerASCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJBannerASCellNode.m; sourceTree = "<group>"; };
 		A44357642508BBE000DE9F63 /* BJTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJTableView.h; sourceTree = "<group>"; };
 		A44357652508BBE000DE9F63 /* BJTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJTableView.m; sourceTree = "<group>"; };
+		A44357682508E50100DE9F63 /* BJUIStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJUIStackViewController.h; sourceTree = "<group>"; };
+		A44357692508E50100DE9F63 /* BJUIStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJUIStackViewController.m; sourceTree = "<group>"; };
 		A4442AAD23A388BC00D4AB34 /* LottieLogo1_masked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1_masked.json; sourceTree = "<group>"; };
 		A4442AAE23A388BD00D4AB34 /* LottieLogo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo1.json; sourceTree = "<group>"; };
 		A4442AAF23A388BD00D4AB34 /* LottieLogo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLogo2.json; sourceTree = "<group>"; };
@@ -742,6 +745,16 @@
 			);
 			path = XBPageController;
 			sourceTree = "<group>";
+		};
+		A44357672508E4C800DE9F63 /* BJUIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				A44357682508E50100DE9F63 /* BJUIStackViewController.h */,
+				A44357692508E50100DE9F63 /* BJUIStackViewController.m */,
+			);
+			name = BJUIStackView;
+			path = QimuDemo/Class/FIrst/Controllers/BJUIStackView;
+			sourceTree = SOURCE_ROOT;
 		};
 		A4442AB323A3892C00D4AB34 /* BJSVGAPlayer */ = {
 			isa = PBXGroup;
@@ -1751,11 +1764,12 @@
 			children = (
 				E5ABA23C20C0FA4A00A2C172 /* HomeViewController.h */,
 				E5ABA23920C0FA4A00A2C172 /* HomeViewController.m */,
-				E5246AB8223211CC00E1656D /* BJMasonry */,
 				E5246AB42232118F00E1656D /* BJScreening */,
 				A4C8FE8724349C4A00E63BE5 /* BJLeftAligned */,
 				A4C8FE8824349C4A00E63BE5 /* BJCarousel */,
 				E5246ABC22323DEE00E1656D /* BJTouchAndGesture */,
+				E5246AB8223211CC00E1656D /* BJMasonry */,
+				A44357672508E4C800DE9F63 /* BJUIStackView */,
 				A48CFFEF2429E5180086A6FD /* BJTextrue */,
 			);
 			path = Controllers;
@@ -2202,6 +2216,7 @@
 				E505EAEC20C548B700851764 /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				E505EADB20C548B700851764 /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
 				E5CB0818222F9A84003FD486 /* FirstTableViewController.m in Sources */,
+				A443576A2508E50100DE9F63 /* BJUIStackViewController.m in Sources */,
 				E505EAEA20C548B700851764 /* ZLPhotoPickerCollectionView.m in Sources */,
 				E57D812B2237D466008F07F4 /* BJKSmoothChartView.m in Sources */,
 				E5FEDB732240F74300099A6E /* BJTableViewHeightModel.m in Sources */,

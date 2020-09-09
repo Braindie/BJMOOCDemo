@@ -1,48 +1,54 @@
- [
+[
   {
-  "Type": "Masonry",
+  "Type": "Widget",
   "Symptoms": [
                {
-               "Food_Name": "Masonry"
+               "Food_Name": "Menu"
                },
                {
-               "Food_Name": "筛选"
+               "Food_Name": "UICollectionViewLeftAlignedLayout"
                },
                {
-               "Food_Name": "左对齐"
+               "Food_Name": "TYCyclePagerView"
                },
                {
-               "Food_Name": "轮播"
+               "Food_Name": "SGWCustomBlockAlertManager"
+               },
+               {
+               "Food_Name": "SGWBlockAlertManager"
+               },
+               {
+               "Food_Name": "UILabel+StringFrame"
+               },
+               {
+               "Food_Name": "HxToastView"
                }
                ]
   },
   {
-  "Type": "Alert",
+  "Type": "Gesture",
   "Symptoms": [
                {
-               "Food_Name": "SGWCustomBlockAlertManager",
-               },
-               {
-               "Food_Name": "SGWBlockAlertManager",
+               "Food_Name": "Touch、Gesture",
                }
                ]
   },
   {
-      "Type": "Toast",
-      "Symptoms": [
-          {
-              "Food_Name": "UILabel+StringFrame",
-          },
-          {
-              "Food_Name": "HxToastView",
-          }
-      ]
-  },
-  {
-  "Type": "手势",
+  "Type": "Auto Layout",
   "Symptoms": [
                {
-               "Food_Name": "触摸事件和手势识别",
+               "Food_Name": "Masonry",
+               },
+               {
+               "Food_Name": "xib",
+               }
+               ]
+  },
+  {
+  "Type": "FlexBox",
+  "Symptoms": [
+               {
+               "Food_Name": "UIStackView",
                }
                ]
   },
@@ -54,4 +60,4 @@
                }
                ]
   }
-  ]
+]
