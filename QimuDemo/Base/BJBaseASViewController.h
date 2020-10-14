@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BJBaseASViewController : ASViewController
+@interface BJBaseASViewController : ASDKViewController
 
 @property (nonatomic ,assign) BOOL isCustomBack;
 

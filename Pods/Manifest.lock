@@ -28,20 +28,20 @@ PODS:
   - MJExtension (3.0.17)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
-  - PINCache (3.0.1-beta.6):
-    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
-    - PINCache/Core (= 3.0.1-beta.6)
-  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+  - PINCache (3.0.1):
+    - PINCache/Arc-exception-safe (= 3.0.1)
+    - PINCache/Core (= 3.0.1)
+  - PINCache/Arc-exception-safe (3.0.1):
     - PINCache/Core
-  - PINCache/Core (3.0.1-beta.6):
-    - PINOperation (~> 1.1.0)
-  - PINOperation (1.1.2)
-  - PINRemoteImage/Core (3.0.0-beta.13):
+  - PINCache/Core (3.0.1):
+    - PINOperation (~> 1.2.0)
+  - PINOperation (1.2)
+  - PINRemoteImage/Core (3.0.1):
     - PINOperation
-  - PINRemoteImage/iOS (3.0.0-beta.13):
+  - PINRemoteImage/iOS (3.0.1):
     - PINRemoteImage/Core
-  - PINRemoteImage/PINCache (3.0.0-beta.13):
-    - PINCache (= 3.0.1-beta.6)
+  - PINRemoteImage/PINCache (3.0.1):
+    - PINCache (~> 3.0.1)
     - PINRemoteImage/Core
   - Protobuf (3.11.1)
   - SDWebImage (4.2.2):
@@ -57,12 +57,25 @@ PODS:
   - SVGAPlayer/ProtoFiles (2.3.5):
     - Protobuf (~> 3.4)
   - SVProgressHUD (2.0.4)
-  - Texture (2.6):
-    - Texture/PINRemoteImage (= 2.6)
-  - Texture/Core (2.6)
-  - Texture/PINRemoteImage (2.6):
-    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+  - Texture (3.0.0):
+    - Texture/AssetsLibrary (= 3.0.0)
+    - Texture/Core (= 3.0.0)
+    - Texture/MapKit (= 3.0.0)
+    - Texture/Photos (= 3.0.0)
+    - Texture/PINRemoteImage (= 3.0.0)
+    - Texture/Video (= 3.0.0)
+  - Texture/AssetsLibrary (3.0.0):
+    - Texture/Core
+  - Texture/Core (3.0.0)
+  - Texture/MapKit (3.0.0):
+    - Texture/Core
+  - Texture/Photos (3.0.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.0.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
     - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.0.0):
     - Texture/Core
   - TYCyclePagerView (1.1.2)
   - "UITableView+FDTemplateLayoutCell (1.6)"
@@ -89,10 +102,11 @@ DEPENDENCIES:
   - MGJRouter (~> 0.10.0)
   - MJExtension (~> 3.0.17)
   - MLeaksFinder (~> 1.0.0)
+  - PINCache (= 3.0.1)
   - SDWebImage (~> 4.2.2)
   - SVGAPlayer (~> 2.3.5)
   - SVProgressHUD (~> 2.0.4)
-  - Texture (= 2.6)
+  - Texture (= 3.0.0)
   - TYCyclePagerView (~> 1.1.2)
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YTKNetwork (~> 2.0.4)
@@ -104,7 +118,7 @@ DEPENDENCIES:
   - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - CYLTabBarController
     - FBRetainCycleDetector
@@ -115,15 +129,11 @@ SPEC REPOS:
     - MGJRouter
     - MJExtension
     - MLeaksFinder
-    - PINCache
-    - PINOperation
-    - PINRemoteImage
     - Protobuf
     - SDWebImage
     - SSZipArchive
     - SVGAPlayer
     - SVProgressHUD
-    - Texture
     - TYCyclePagerView
     - "UITableView+FDTemplateLayoutCell"
     - YTKNetwork
@@ -133,6 +143,11 @@ SPEC REPOS:
     - YYModel
     - YYText
     - YYWebImage
+  trunk:
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - Texture
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -145,15 +160,15 @@ SPEC CHECKSUMS:
   MGJRouter: 15d94541eb2cc81eff7d577337288feb7ae9575f
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
-  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
-  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
-  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  PINCache: ee3c4abadd09970a61cdda0cfc345e69a3d75b26
+  PINOperation: 3a967a927e7867e61976c6cc23e5770416449fbc
+  PINRemoteImage: 3b7cedb118c2d357f87e9eabc7c81ba0202cb236
   Protobuf: 20d79da7f20b5928b80043b05080b816e802659e
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   SVGAPlayer: bae4048710c948dc4de98971e35207d3bbed85ad
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
-  Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
+  Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
   TYCyclePagerView: 0f67b0986995fd614843e819bc974cadd7f98008
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
@@ -164,6 +179,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 9000029b1244b3a4315052b21c5417ddd1b8dfdd
+PODFILE CHECKSUM: 8e4866220cf1adc2eaf3248ab5df9f7b8afe83bd
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3
