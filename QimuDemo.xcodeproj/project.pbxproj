@@ -25,6 +25,7 @@
 		A4442AC023A38F3C00D4AB34 /* xb_svga_college_stem.svga in Resources */ = {isa = PBXBuildFile; fileRef = A4442ABF23A38F3C00D4AB34 /* xb_svga_college_stem.svga */; };
 		A4442AC423A3937000D4AB34 /* BJMGJRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */; };
 		A4442AC723A3966F00D4AB34 /* BJSelectVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */; };
+		A45A691B25A8701800996B97 /* BJDTCoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45A691A25A8701800996B97 /* BJDTCoreTextViewController.m */; };
 		A48CFFF52429E9F70086A6FD /* BJTextureASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */; };
 		A48CFFFB242A22910086A6FD /* BJTextureASCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48CFFFA242A22910086A6FD /* BJTextureASCellNode.m */; };
 		A4A9CA972403D13800A92510 /* QMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9CA962403D13800A92510 /* QMTabBarController.m */; };
@@ -278,6 +279,8 @@
 		A4442AC323A3937000D4AB34 /* BJMGJRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJMGJRouterViewController.m; sourceTree = "<group>"; };
 		A4442AC523A3966F00D4AB34 /* BJSelectVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJSelectVCManager.h; sourceTree = "<group>"; };
 		A4442AC623A3966F00D4AB34 /* BJSelectVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJSelectVCManager.m; sourceTree = "<group>"; };
+		A45A691925A8701800996B97 /* BJDTCoreTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJDTCoreTextViewController.h; sourceTree = "<group>"; };
+		A45A691A25A8701800996B97 /* BJDTCoreTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJDTCoreTextViewController.m; sourceTree = "<group>"; };
 		A48CFFF32429E9F70086A6FD /* BJTextureASViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTextureASViewController.h; sourceTree = "<group>"; };
 		A48CFFF42429E9F70086A6FD /* BJTextureASViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJTextureASViewController.m; sourceTree = "<group>"; };
 		A48CFFF9242A22910086A6FD /* BJTextureASCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJTextureASCellNode.h; sourceTree = "<group>"; };
@@ -1489,6 +1492,8 @@
 			children = (
 				E5A91F2F2333918C00690D2A /* BJLabelViewController.h */,
 				E5A91F2E2333918C00690D2A /* BJLabelViewController.m */,
+				A45A691925A8701800996B97 /* BJDTCoreTextViewController.h */,
+				A45A691A25A8701800996B97 /* BJDTCoreTextViewController.m */,
 			);
 			path = CoreText;
 			sourceTree = "<group>";
@@ -2029,10 +2034,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QimuDemo/Pods-QimuDemo-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DTCoreText/Resources.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2149,6 +2156,7 @@
 				E5246AC52232463E00E1656D /* BJTouchTestView.m in Sources */,
 				E54D90831EE1325E00AE856B /* LiverModel.m in Sources */,
 				E51475DC20CFB3BE00B79605 /* HxToastView.m in Sources */,
+				A45A691B25A8701800996B97 /* BJDTCoreTextViewController.m in Sources */,
 				E57A135A20FC7DCB008C375C /* BunnyCollectionView.m in Sources */,
 				A4354FD5242CAF490092F472 /* XBSegmentedNode.m in Sources */,
 				E5E5A8222240ECFF00E8B20B /* BJTableViewHeightViewController.m in Sources */,

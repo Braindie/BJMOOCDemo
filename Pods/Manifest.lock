@@ -17,6 +17,23 @@ PODS:
   - CYLTabBarController (1.28.4):
     - CYLTabBarController/Core (= 1.28.4)
   - CYLTabBarController/Core (1.28.4)
+  - DTCoreText (1.6.25):
+    - DTCoreText/Core (= 1.6.25)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.25):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.16)
+  - DTFoundation/DTAnimatedGIF (1.7.16)
+  - DTFoundation/DTHTMLParser (1.7.16):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.16):
+    - DTFoundation/Core
   - FBRetainCycleDetector (0.1.4)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
@@ -95,6 +112,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CYLTabBarController (~> 1.28.4)
+  - DTCoreText (~> 1.6.25)
   - FMDB (~> 2.6.2)
   - lottie-ios (~> 2.5.0)
   - Masonry (~> 1.1.0)
@@ -144,6 +162,8 @@ SPEC REPOS:
     - YYText
     - YYWebImage
   trunk:
+    - DTCoreText
+    - DTFoundation
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -152,6 +172,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CYLTabBarController: d7160abd77b3a94626cff123fdfaa4f3badde20d
+  DTCoreText: e92f4cf6b36d9d71ce4436d12cf089d74ab0596b
+  DTFoundation: e7781d9fd2f202bfd451fbbf8cab71ce83b46498
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
@@ -179,6 +201,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 8e4866220cf1adc2eaf3248ab5df9f7b8afe83bd
+PODFILE CHECKSUM: 4731e4f6eb47b3b1411092018e05b7a98d20b037
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
